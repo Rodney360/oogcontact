@@ -40,9 +40,19 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
 
   return (
     <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden pb-32 pt-40 md:pb-28">
-      {/* De foto */}
+      {/*
+        De foto.
+
+        Op een liggend scherm vult hij het hele vlak, en dan zie je de foto ook
+        vrijwel helemaal. Op een staand scherm (een telefoon, of een tablet
+        rechtop) is het beeld veel smaller dan hoog: een vullende foto snijdt
+        er dan zo veel vanaf dat er alleen nog een oog overblijft. Daarom staat
+        hij daar in de bovenste tweederde. De foto wordt kleiner getoond, dus je
+        ziet er meer van, en onderaan loopt hij zacht uit in de achtergrond -
+        geen zichtbare rand, het blijft één geheel. Zie de CSS onderaan.
+      */}
       <div className="absolute inset-0 -z-20" data-scherp={scherp || undefined}>
-        <div className="hero-beeld size-full">
+        <div className="hero-beeld hero-foto w-full">
           <Beeld slot="hero-portret" sizes="100vw" prioriteit vullend />
         </div>
       </div>
@@ -153,6 +163,25 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
       </div>
 
       <style>{`
+        /*
+          Staand scherm: de foto staat bovenin en loopt onderaan uit in het
+          donker. Niet op breedte maar op de verhouding van het scherm, zodat
+          een tablet rechtop hetzelfde krijgt als een telefoon en diezelfde
+          tablet gedraaid gewoon de vullende foto.
+        */
+        .hero-foto {
+          height: 62svh;
+          -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+        }
+        @media (min-aspect-ratio: 1 / 1) {
+          .hero-foto {
+            height: 100%;
+            -webkit-mask-image: none;
+            mask-image: none;
+          }
+        }
+
         /* De foto: van onscherp en iets vergroot naar scherp en op maat. */
         .hero-beeld {
           filter: blur(18px);

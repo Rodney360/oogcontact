@@ -59,3 +59,22 @@ De hele site opnieuw opgebouwd, vanaf niets, als vervanging van WordPress.
   een streep tegen de onderrand, en de voettekst verdwijnt er niet meer achter.
 - **Nog open:** zie `docs/open-punten.md`. Ongewijzigd: de sleutel van de
   online agenda, Resend, Turnstile, het KvK-nummer en de nieuwe winkelfoto's.
+
+---
+
+## 2026-09-16 (avond) — Dennis (Claude Code, cloud)
+
+- **Terugknop gerepareerd.** Het menu onthield op welke pagina het geopend was.
+  Klikte je in het menu door en drukte je daarna op terug, dan kwam je op die
+  pagina terug en stond het menu opeens weer open — met een scherm dat niet
+  meer wilde scrollen. Het menu gaat nu bij elke paginawissel dicht. Twee
+  browsertests erbij, voor mobiel en voor desktop.
+- **Hero-foto meer in beeld op een staand scherm.** Een vullende foto sneed op
+  een telefoon zo veel weg dat er alleen nog een oog overbleef. De foto staat
+  daar nu in de bovenste 62% van het scherm en loopt onderaan zacht uit in de
+  achtergrond. Je ziet er ongeveer anderhalf keer zo veel van. Het schakelt op
+  de verhouding van het scherm, niet op de breedte, dus een tablet rechtop
+  krijgt hetzelfde en diezelfde tablet gedraaid gewoon de vullende foto. Op
+  desktop verandert er niets: daar was de foto al vrijwel helemaal te zien.
+- **Nog open:** zie `docs/open-punten.md`. Het eerste punt is nu een
+  `main`-branch, zodat er weer previews per wijziging komen.

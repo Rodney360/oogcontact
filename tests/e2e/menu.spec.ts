@@ -101,3 +101,48 @@ test.describe('het menu op mobiel', () => {
     await expect(page.getByRole('button', { name: 'Menu openen' })).toBeFocused()
   })
 })
+
+/**
+ * De terugknop van de browser.
+ *
+ * Dit ging eerder mis: het menu onthield op welke pagina het geopend was, en
+ * kwam je met de terugknop op diezelfde pagina terug, dan stond het opeens
+ * weer open - met een scherm dat niet meer wilde scrollen tot gevolg.
+ */
+test.describe('terug met de browserknop', () => {
+  test('op mobiel blijft het menu dicht en kun je gewoon verder scrollen', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'alleen op een telefoon')
+
+    await page.goto('/')
+    await page.getByRole('button', { name: 'Menu openen' }).click()
+    const menu = page.getByRole('navigation', { name: 'Menu' })
+    await expect(menu).toBeVisible()
+    await menu.getByRole('link', { name: 'Over ons', exact: true }).click()
+    await page.waitForURL('**/over-ons/')
+
+    await page.goBack()
+    await page.waitForURL((u) => u.pathname === '/')
+    await expect(menu).toBeHidden()
+
+    // En de pagina mag niet op slot zitten.
+    const voor = await page.evaluate(() => window.scrollY)
+    await page.mouse.wheel(0, 600)
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(voor)
+  })
+
+  test('op desktop staat het uitklapmenu niet vanzelf weer open', async ({ page, isMobile }) => {
+    test.skip(Boolean(isMobile), 'alleen op een breed scherm')
+
+    await page.goto('/')
+    const balk = page.getByRole('navigation', { name: 'Hoofdmenu' })
+    await balk.getByRole('link', { name: 'Aanbod', exact: true }).hover()
+    await balk.getByRole('link', { name: new RegExp(`^${AANBOD[0]?.naam}`) }).first().click()
+    await page.waitForURL(`**${AANBOD[0]?.pad}`)
+
+    // De muis weg van de menubalk, zodat alleen de terugknop nog iets doet.
+    await page.mouse.move(700, 600)
+    await page.goBack()
+    await page.waitForURL((u) => u.pathname === '/')
+    await expect(balk.locator('li > div ul')).toBeHidden()
+  })
+})

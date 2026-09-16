@@ -76,32 +76,42 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
   const pad = usePathname()
   const gescrold = useGescrold()
   /**
-   * De stand van het menu wordt onthouden samen met de pagina waarop het
-   * geopend werd. Ga je naar een andere pagina, dan klopt die pagina niet meer
-   * en is het menu vanzelf dicht - daar is geen apart opruimmoment voor nodig.
+   * Bij elke paginawissel gaat het menu dicht.
+   *
+   * Dat gebeurt hier, tijdens het opbouwen van de balk, en niet achteraf: zo
+   * is het menu al dicht op het moment dat de nieuwe pagina in beeld komt en
+   * zie je het niet nog even staan.
+   *
+   * Eerder werd de pagina bij de stand van het menu bewaard en werd "dicht"
+   * daaruit afgeleid. Dat ging mis bij de terugknop van de browser: kwam je
+   * terug op de pagina waar je het menu geopend had, dan klopte die pagina
+   * weer en stond het menu opeens weer open - met een scherm dat niet meer
+   * wilde scrollen tot gevolg.
    */
-  const [menu, setMenu] = useState<{ open: boolean; submenu: string | null; pad: string }>({
+  const [vorigPad, setVorigPad] = useState(pad)
+  const [menu, setMenu] = useState<{ open: boolean; submenu: string | null }>({
     open: false,
     submenu: null,
-    pad,
   })
-  const opDezePagina = menu.pad === pad
-  const menuOpen = opDezePagina && menu.open
-  const openSubmenu = opDezePagina ? menu.submenu : null
+  if (vorigPad !== pad) {
+    setVorigPad(pad)
+    setMenu({ open: false, submenu: null })
+  }
+  const menuOpen = menu.open
+  const openSubmenu = menu.submenu
 
   const setMenuOpen = useCallback(
     (open: boolean | ((o: boolean) => boolean)) =>
       setMenu((m) => ({
-        pad,
         submenu: null,
-        open: typeof open === 'function' ? open(m.pad === pad && m.open) : open,
+        open: typeof open === 'function' ? open(m.open) : open,
       })),
-    [pad],
+    [],
   )
 
   const setOpenSubmenu = useCallback(
-    (submenu: string | null) => setMenu((m) => ({ pad, open: m.pad === pad && m.open, submenu })),
-    [pad],
+    (submenu: string | null) => setMenu((m) => ({ open: m.open, submenu })),
+    [],
   )
   const menuKnop = useRef<HTMLButtonElement>(null)
   const menuId = useId()
