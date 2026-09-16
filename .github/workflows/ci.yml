@@ -1,0 +1,83 @@
+name: Controle
+
+# Draait bij elke pull request en bij elke wijziging op main. Slaagt dit niet,
+# dan hoort de wijziging niet naar de live site.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  controle:
+    name: Lint, typecheck, contrast en tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Pakketten installeren
+        run: npm ci --no-audit --no-fund
+
+      - name: Codecontrole
+        run: npm run lint
+
+      - name: Typecontrole
+        run: npm run typecheck
+
+      - name: Kleurcontrast (WCAG 2.2 AA)
+        run: npm run check:contrast
+
+      - name: Snelle tests
+        run: npm run test:unit
+
+      - name: Foto's verwerken
+        run: npm run images
+
+      - name: Bouwen
+        run: npm run build
+
+  browsertests:
+    name: Playwright
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Pakketten installeren
+        run: npm ci --no-audit --no-fund
+
+      - name: Testbrowser ophalen
+        run: npx playwright install --with-deps chromium
+
+      - name: Foto's verwerken
+        run: npm run images
+
+      - name: Bouwen
+        run: npm run build
+
+      - name: Browsertests
+        run: npm run test:e2e
+
+      - name: Testrapport bewaren
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-rapport
+          path: playwright-report/
+          retention-days: 14
