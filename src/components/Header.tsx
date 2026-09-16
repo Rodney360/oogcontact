@@ -14,10 +14,29 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useId, useRef, useState } from 'react'
+import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore } from 'react'
 
 import { HOOFDMENU } from '@/content/navigatie'
 import { KnopLink } from '@/components/Knop'
+
+/**
+ * Of de pagina al een stukje naar beneden gescrold is.
+ *
+ * De scrollpositie komt van buiten React, dus useSyncExternalStore. Zo staat
+ * de balk meteen goed als iemand een pagina halverwege opent of herlaadt.
+ */
+function useGescrold(): boolean {
+  const abonneer = useCallback((opWijziging: () => void) => {
+    window.addEventListener('scroll', opWijziging, { passive: true })
+    return () => window.removeEventListener('scroll', opWijziging)
+  }, [])
+
+  return useSyncExternalStore(
+    abonneer,
+    () => window.scrollY > 24,
+    () => false,
+  )
+}
 
 function Brilvorm({ className = '' }: { className?: string }) {
   return (
@@ -35,27 +54,40 @@ function Brilvorm({ className = '' }: { className?: string }) {
 
 export function Header() {
   const pad = usePathname()
-  const [gescrold, setGescrold] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
+  const gescrold = useGescrold()
+  /**
+   * De stand van het menu wordt onthouden samen met de pagina waarop het
+   * geopend werd. Ga je naar een andere pagina, dan klopt die pagina niet meer
+   * en is het menu vanzelf dicht - daar is geen apart opruimmoment voor nodig.
+   */
+  const [menu, setMenu] = useState<{ open: boolean; submenu: string | null; pad: string }>({
+    open: false,
+    submenu: null,
+    pad,
+  })
+  const opDezePagina = menu.pad === pad
+  const menuOpen = opDezePagina && menu.open
+  const openSubmenu = opDezePagina ? menu.submenu : null
+
+  const setMenuOpen = useCallback(
+    (open: boolean | ((o: boolean) => boolean)) =>
+      setMenu((m) => ({
+        pad,
+        submenu: null,
+        open: typeof open === 'function' ? open(m.pad === pad && m.open) : open,
+      })),
+    [pad],
+  )
+
+  const setOpenSubmenu = useCallback(
+    (submenu: string | null) => setMenu((m) => ({ pad, open: m.pad === pad && m.open, submenu })),
+    [pad],
+  )
   const menuKnop = useRef<HTMLButtonElement>(null)
   const menuId = useId()
 
   // De hero staat alleen op de homepage; daar mag de balk doorzichtig beginnen.
   const overHero = pad === '/' && !gescrold
-
-  useEffect(() => {
-    const kijk = () => setGescrold(window.scrollY > 24)
-    kijk()
-    window.addEventListener('scroll', kijk, { passive: true })
-    return () => window.removeEventListener('scroll', kijk)
-  }, [])
-
-  // Bij het wisselen van pagina gaat het menu dicht.
-  useEffect(() => {
-    setMenuOpen(false)
-    setOpenSubmenu(null)
-  }, [pad])
 
   // Zolang het menu open is: niet achterlangs scrollen, en Escape sluit.
   useEffect(() => {
@@ -74,7 +106,7 @@ export function Header() {
       document.body.style.overflow = vorige
       document.removeEventListener('keydown', opToets)
     }
-  }, [menuOpen])
+  }, [menuOpen, setMenuOpen])
 
   const actief = (itemPad: string) =>
     itemPad === '/' ? pad === '/' : pad.startsWith(itemPad.replace(/\/$/, ''))

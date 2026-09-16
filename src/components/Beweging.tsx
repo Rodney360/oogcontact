@@ -12,36 +12,43 @@
  *      of posities. Zo verspringt de pagina nooit tijdens het laden.
  */
 
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from 'react'
 
-/** Leest of de bezoeker minder beweging wil, en blijft dat volgen. */
+/**
+ * Volgt een mediaquery van de browser.
+ *
+ * useSyncExternalStore is hier de juiste manier: de waarde komt van buiten
+ * React, en React weet zo precies wanneer hij opnieuw moet tekenen. Bij het
+ * renderen op de server bestaat `window` niet; dan geven we de veilige waarde
+ * terug die als tweede meegegeven wordt.
+ */
+function useMediaQuery(vraag: string, opDeServer: boolean): boolean {
+  const abonneer = useCallback(
+    (opWijziging: () => void) => {
+      const mq = window.matchMedia(vraag)
+      mq.addEventListener('change', opWijziging)
+      return () => mq.removeEventListener('change', opWijziging)
+    },
+    [vraag],
+  )
+
+  return useSyncExternalStore(
+    abonneer,
+    () => window.matchMedia(vraag).matches,
+    () => opDeServer,
+  )
+}
+
+/** Of de bezoeker in zijn systeem heeft aangegeven minder beweging te willen. */
 export function useMinderBeweging(): boolean {
-  const [minder, setMinder] = useState(true) // veilige startwaarde: geen beweging
-
-  useEffect(() => {
-    const vraag = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const bijwerken = () => setMinder(vraag.matches)
-    bijwerken()
-    vraag.addEventListener('change', bijwerken)
-    return () => vraag.removeEventListener('change', bijwerken)
-  }, [])
-
-  return minder
+  // Op de server gaan we uit van "minder beweging": liever een rustige eerste
+  // weergave dan een animatie die meteen onderbroken wordt.
+  return useMediaQuery('(prefers-reduced-motion: reduce)', true)
 }
 
 /** Of dit een apparaat met een muis is. Alleen daar doen we hover-effecten. */
 export function useHeeftMuis(): boolean {
-  const [muis, setMuis] = useState(false)
-
-  useEffect(() => {
-    const vraag = window.matchMedia('(hover: hover) and (pointer: fine)')
-    const bijwerken = () => setMuis(vraag.matches)
-    bijwerken()
-    vraag.addEventListener('change', bijwerken)
-    return () => vraag.removeEventListener('change', bijwerken)
-  }, [])
-
-  return muis
+  return useMediaQuery('(hover: hover) and (pointer: fine)', false)
 }
 
 /**
@@ -115,11 +122,8 @@ export function Verschijnt({
     const element = ref.current
     if (!element) return
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setZichtbaar(true)
-      return
-    }
-
+    // Wie minder beweging wil, krijgt dit sowieso meteen te zien: globals.css
+    // zet [data-verschijnt] dan hard op zichtbaar. Hier hoeft dus niets extra's.
     const kijker = new IntersectionObserver(
       ([regel]) => {
         if (regel?.isIntersecting) {

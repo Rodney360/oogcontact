@@ -14,7 +14,7 @@
  * geschreven (zie docs/teksten-review.md) - pas dit archief dus niet met de hand aan.
  */
 
-import { mkdir, writeFile, readFile, access } from 'node:fs/promises'
+import { mkdir, writeFile, access } from 'node:fs/promises'
 import { createWriteStream } from 'node:fs'
 import { pipeline } from 'node:stream/promises'
 import path from 'node:path'

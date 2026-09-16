@@ -13,7 +13,7 @@ import 'server-only'
  */
 
 import { DIENSTEN, uitlegVoor } from '../../content/diensten.ts'
-import { WEEK, naarTijd } from '../../content/openingstijden.ts'
+import { WEEK } from '../../content/openingstijden.ts'
 import type { AgendaDienst, BoekingGegevens, BoekingResultaat, VrijeDag } from './soorten.ts'
 
 const BASIS = (process.env.EASYAPPOINTMENTS_URL ?? '').replace(/\/$/, '')
