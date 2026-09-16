@@ -67,27 +67,29 @@ test.describe('Afspraak maken', () => {
     await dienst.click()
 
     // Stap 2: wanneer
-    await expect(page.getByRole('heading', { name: 'Wanneer schikt het?' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Wanneer schikt het?', exact: true })).toBeVisible()
     const eersteDag = page.locator('button[aria-pressed]').filter({ hasText: /dag|tijden/ }).first()
     await expect(eersteDag).toBeVisible({ timeout: 15_000 })
 
-    const tijd = page.locator('button', { hasText: /^\d{1,2}\.\d{2}$/ }).first()
+    const tijd = page.getByRole('button', { name: /^\d{1,2}\.\d{2} uur$/ }).first()
     await expect(tijd).toBeVisible()
     await tijd.click()
 
     await page.getByRole('button', { name: /^Verder met/ }).click()
 
     // Stap 3: je gegevens
-    await expect(page.getByRole('heading', { name: 'Je gegevens' })).toBeVisible()
-    await page.getByLabel('Voornaam').fill('Jantine')
-    await page.getByLabel('Achternaam').fill('de Vries')
-    await page.getByLabel('E-mailadres').fill('jantine@voorbeeld.nl')
-    await page.getByLabel('Telefoonnummer').fill('06 12 34 56 78')
-    await page.getByRole('checkbox', { name: /privacyverklaring/ }).check()
-    await page.getByRole('button', { name: 'Afspraak vastleggen' }).click()
+    await expect(page.getByRole('heading', { name: 'Je gegevens', exact: true })).toBeVisible()
+
+    const boeking = page.locator('form').filter({ hasText: 'Afspraak vastleggen' })
+    await boeking.getByLabel('Voornaam').fill('Jantine')
+    await boeking.getByLabel('Achternaam').fill('de Vries')
+    await boeking.getByLabel('E-mailadres').fill('jantine@voorbeeld.nl')
+    await boeking.getByLabel('Telefoonnummer').fill('06 12 34 56 78')
+    await boeking.getByRole('checkbox', { name: /privacyverklaring/ }).check()
+    await boeking.getByRole('button', { name: 'Afspraak vastleggen' }).click()
 
     // Stap 4: klaar
-    await expect(page.getByRole('heading', { name: 'Tot ziens' })).toBeVisible({ timeout: 20_000 })
+    await expect(page.getByRole('heading', { name: 'Tot ziens', exact: true })).toBeVisible({ timeout: 20_000 })
     await expect(page.getByRole('link', { name: 'Zet in mijn agenda' })).toBeVisible()
   })
 
@@ -97,12 +99,13 @@ test.describe('Afspraak maken', () => {
     await expect(dienst).toBeVisible({ timeout: 15_000 })
     await dienst.click()
 
-    const tijd = page.locator('button', { hasText: /^\d{1,2}\.\d{2}$/ }).first()
+    const tijd = page.getByRole('button', { name: /^\d{1,2}\.\d{2} uur$/ }).first()
     await expect(tijd).toBeVisible({ timeout: 15_000 })
     await tijd.click()
     await page.getByRole('button', { name: /^Verder met/ }).click()
 
-    await page.getByRole('button', { name: 'Afspraak vastleggen' }).click()
-    await expect(page.getByText('Vul je voornaam in.')).toBeVisible()
+    const boeking = page.locator('form').filter({ hasText: 'Afspraak vastleggen' })
+    await boeking.getByRole('button', { name: 'Afspraak vastleggen' }).click()
+    await expect(boeking.getByText('Vul je voornaam in.')).toBeVisible()
   })
 })

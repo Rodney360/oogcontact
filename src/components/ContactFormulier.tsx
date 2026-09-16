@@ -94,7 +94,7 @@ export function ContactFormulier({ licht = false }: { licht?: boolean }) {
 
     setBezig(true)
     try {
-      const antwoord = await fetch('/api/contact', {
+      const antwoord = await fetch('/api/contact/', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(uitslag.data),

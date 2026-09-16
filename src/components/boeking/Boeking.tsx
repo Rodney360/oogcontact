@@ -87,7 +87,7 @@ export function Boeking() {
   // De diensten ophalen zodra de module in beeld komt.
   useEffect(() => {
     let gestopt = false
-    fetch('/api/agenda/diensten')
+    fetch('/api/agenda/diensten/')
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       .then((d: { diensten: AgendaDienst[]; testmodus: boolean }) => {
         if (gestopt) return
@@ -108,7 +108,7 @@ export function Boeking() {
     if (!dienstId) return
     let gestopt = false
 
-    fetch(`/api/agenda/beschikbaarheid?dienst=${encodeURIComponent(dienstId)}&vanaf=${vandaagInNederland()}`)
+    fetch(`/api/agenda/beschikbaarheid/?dienst=${encodeURIComponent(dienstId)}&vanaf=${vandaagInNederland()}`)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       .then((d: { dagen: VrijeDag[] }) => {
         if (!gestopt) setBeschikbaar({ dienstId, dagen: d.dagen })
@@ -200,7 +200,7 @@ export function Boeking() {
             opVerstuur={async (gegevens) => {
               setBezig(true)
               try {
-                const antwoord = await fetch('/api/agenda/boeken', {
+                const antwoord = await fetch('/api/agenda/boeken/', {
                   method: 'POST',
                   headers: { 'content-type': 'application/json' },
                   body: JSON.stringify({ ...gegevens, dienstId: dienst.id, datum, tijd }),

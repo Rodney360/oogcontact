@@ -133,7 +133,7 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
             <OpeningsStatus uitzonderingen={uitzonderingen} />
             <a
               href={`tel:${BEDRIJF.telefoon.link}`}
-              className="text-bijschrift text-tekst-licht-zacht no-underline transition-colors hover:text-messing"
+              className="inline-flex min-h-11 items-center text-bijschrift text-tekst-licht-zacht no-underline transition-colors hover:text-messing"
             >
               {BEDRIJF.telefoon.weergave}
             </a>

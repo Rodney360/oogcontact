@@ -13,6 +13,7 @@ import { Boeking } from '@/components/boeking/Boeking'
 import { Sectie, SectieKop } from '@/components/Sectie'
 import { Vragen } from '@/components/Vragen'
 import { tekst, sectie } from '@/content/teksten/index'
+import { BEDRIJF } from '@/content/bedrijf'
 import { herkomsten } from '@/content/merken'
 import { uitzonderingen, instagram } from '@/lib/beheer'
 import { paginaMeta, JsonLd, vragenJsonLd } from '@/lib/seo'
@@ -20,7 +21,11 @@ import { paginaMeta, JsonLd, vragenJsonLd } from '@/lib/seo'
 const T = tekst('home')
 
 export const metadata: Metadata = paginaMeta({
-  titel: T.metaTitel,
+  // De titel van de homepage bevat bewust de naam van de winkel: het sjabloon
+  // uit de layout ("%s - Oogcontact bij Gerard") geldt alleen voor de pagina's
+  // eronder, niet voor deze. De uitgebreidere formulering uit de tekst staat
+  // in de omschrijving.
+  titel: `${BEDRIJF.naam} \u00b7 opticien in Groningen`,
   omschrijving: T.metaOmschrijving,
   pad: '/',
 })

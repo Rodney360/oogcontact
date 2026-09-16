@@ -39,6 +39,16 @@ test('elke knop en link is groot genoeg om aan te tikken', async ({ page }) => {
 
   for (const element of await page.locator('a, button').all()) {
     if (!(await element.isVisible())) continue
+
+    // Onderdelen die alleen voor schermlezers bestaan (zoals de skip-link in
+    // rust) zijn weggeknipt met clip-path. Die meet je niet met de ogen, dus
+    // de eis van 44x44 geldt daar niet.
+    const weggeknipt = await element.evaluate((el) => {
+      const cs = getComputedStyle(el)
+      return cs.clipPath.includes('inset(50%)') || cs.clipPath.includes('rect(0px, 0px, 0px, 0px)')
+    })
+    if (weggeknipt) continue
+
     const vak = await element.boundingBox()
     if (!vak) continue
     // Links midden in een lopende tekst vallen buiten deze eis (WCAG 2.2, 2.5.8).
@@ -58,7 +68,11 @@ test('elke knop en link is groot genoeg om aan te tikken', async ({ page }) => {
 
 test('met minder beweging staat alles meteen op zijn plek', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
-  await page.goto('/')
+  // Wachten tot het stijlblad er is: de regel die alles zichtbaar maakt staat
+  // daarin, en zonder die regel meet je alleen de beginwaarde uit de HTML.
+  await page.goto('/', { waitUntil: 'networkidle' })
+  await page.waitForFunction(() => getComputedStyle(document.body).backgroundColor !== 'rgba(0, 0, 0, 0)')
+
   // Alles wat normaal pas bij het scrollen verschijnt, is nu meteen zichtbaar.
   const verborgen = await page
     .locator('[data-verschijnt]')

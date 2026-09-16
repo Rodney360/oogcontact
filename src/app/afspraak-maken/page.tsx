@@ -62,7 +62,14 @@ export default function AfspraakMaken() {
 
       {/* De boekingsmodule */}
       <Sectie compact id="online">
-        <Boeking />
+        <h2 className="text-kop-2">Plan je afspraak online</h2>
+        <p className="mt-5 leesbreedte text-lead text-tekst-licht-zacht">
+          In een paar stappen: kies waarvoor je komt, wanneer het schikt, en laat je gegevens
+          achter. Je krijgt meteen een bevestiging per e-mail.
+        </p>
+        <div className="mt-12">
+          <Boeking />
+        </div>
       </Sectie>
 
       {/* Wat de tekst verder vertelt */}

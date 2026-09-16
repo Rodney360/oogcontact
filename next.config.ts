@@ -23,7 +23,9 @@ const csp = [
   "base-uri 'self'",
   "object-src 'none'",
   "frame-ancestors 'none'",
-  'upgrade-insecure-requests',
+  // Alleen live: deze regel maakt van elk http-verzoek een https-verzoek. Dat
+  // hoort zo op het echte domein, maar sloopt het werken op http://localhost.
+  ...(process.env.NODE_ENV === 'production' ? ['upgrade-insecure-requests'] : []),
 ].join('; ')
 
 const securityHeaders = [
@@ -39,6 +41,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   // Alle oude WordPress-URL's eindigden op een slash. Door dat zo te houden
   // blijft elke bestaande link en zoekresultaat gewoon werken.
+  //
+  // Let op: dit geldt ook voor de API-routes. Roep die daarom altijd mét slash
+  // aan (/api/contact/), anders kost elk verzoek een omleiding.
   trailingSlash: true,
 
   reactStrictMode: true,
