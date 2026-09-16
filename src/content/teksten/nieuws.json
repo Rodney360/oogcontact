@@ -1,0 +1,23 @@
+{
+  "slug": "nieuws",
+  "metaTitel": "Nieuws van je opticien in Groningen",
+  "metaOmschrijving": "Blijf op de hoogte van het nieuws bij Oogcontact bij Gerard, je zelfstandige opticien in Groningen. Je leest hier wat er speelt in onze winkel.",
+  "h1": "Nieuws uit onze winkel",
+  "inleiding": "Hier houden we je op de hoogte van wat er speelt bij Oogcontact bij Gerard, je zelfstandige opticien in Groningen. Denk aan nieuwe merken in de collectie, berichten over onze oogmeting en advies, en praktische zaken uit de winkel aan het Overwinningsplein.",
+  "secties": [
+    {
+      "kop": "Nog geen berichten",
+      "alineas": [
+        "Op dit moment staat er nog geen nieuws op deze pagina. Zodra we iets te vertellen hebben, lees je het hier.",
+        "Heb je in de tussentijd een vraag? Bel ons gerust op 050 20 64 015, stuur een WhatsApp naar 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl. Gerard en Gerda denken graag even met je mee."
+      ],
+      "opsomming": []
+    }
+  ],
+  "vragen": [],
+  "oproep": {
+    "kop": "Liever even persoonlijk",
+    "tekst": "Een afspraak is zo gemaakt. We nemen rustig de tijd voor je, met een kop koffie erbij, of het nu gaat om een oogmeting, montuuradvies, contactlenzen of een loepbril. Lukt het je niet binnen onze openingstijden? In overleg plannen we ook een moment daarbuiten, 's avonds bijvoorbeeld.",
+    "knop": "Afspraak maken"
+  }
+}

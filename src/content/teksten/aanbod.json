@@ -1,0 +1,51 @@
+{
+  "slug": "aanbod",
+  "metaTitel": "Ons aanbod als opticien in Groningen",
+  "metaOmschrijving": "Brillen, contactlenzen, zonnebrillen, kinderbrillen en loepbrillen. Bekijk waarvoor je bij ons in Groningen terecht kunt en maak rustig een afspraak.",
+  "h1": "Ons aanbod",
+  "inleiding": "Bij Oogcontact bij Gerard draait alles om scherp en comfortabel zicht. Je vindt bij ons brillen, contactlenzen, zonnebrillen, kinderbrillen en loepbrillen. Wij, Gerard en Gerda, nemen daar graag de tijd voor, met een verse kop koffie erbij. Hieronder lees je kort wat elke categorie inhoudt, zodat je meteen doorklikt naar wat je zoekt.",
+  "secties": [
+    {
+      "kop": "Waar kunnen we je mee helpen?",
+      "alineas": [
+        "Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken, maar op kleinere leveranciers van mooie, stijlvolle monturen. Kies hieronder de categorie die bij je past."
+      ],
+      "opsomming": [
+        {
+          "titel": "Brillen",
+          "tekst": "Stijlvolle monturen van kleine merken uit onder meer Italië, Spanje en Zwitserland, gecombineerd met glazen van Essilor. We kijken samen welk model bij je gezicht past en welk glas aansluit op je dagelijkse kijkbehoefte."
+        },
+        {
+          "titel": "Contactlenzen",
+          "tekst": "Zachte lenzen in dag-, tweewekelijkse en maandvariant, ook met cilinder of multifocaal. Daarnaast harde lenzen, die op maat gemaakt worden en waar je met gemak 1 tot 2 jaar mee doet. Na de aanmeting en een proefperiode kijken we samen of de lenzen je het comfort geven dat je zoekt."
+        },
+        {
+          "titel": "Zonnebrillen",
+          "tekst": "Zonnebrillen die je ogen echt beschermen tegen uv-straling, desgewenst met gepolariseerde glazen tegen hinderlijke schitteringen. De glazen kunnen ook op sterkte, meekleurend of overlopend van donker naar licht."
+        },
+        {
+          "titel": "Kinderbrillen",
+          "tekst": "Een kinderbril moet tegen een stootje kunnen én door je kind zelf mooi gevonden worden. Bij bijziendheid zijn er bovendien speciale glazen die de groei van het oog kunnen afremmen."
+        },
+        {
+          "titel": "Loepbrillen",
+          "tekst": "Handgemaakte loepbrillen van Admetec met bijbehorende verlichting, voor iedereen die in het werk heel nauwkeurig van dichtbij moet kijken. We plannen ruim de tijd in, zowel voor informatie vooraf als voor de aanmeting."
+        }
+      ]
+    },
+    {
+      "kop": "Persoonlijk advies en een precieze oogmeting",
+      "alineas": [
+        "Wat je ook uitkiest, het begint bij goed meten. We hebben ruim 40 jaar ervaring in de optiek, waarvan 15 jaar bij OMC-Hanzekliniek (nu Eyescan). Die medische achtergrond merk je terug in een uitgebreide oogmeting met moderne apparatuur.",
+        "Loop gerust binnen om rond te kijken en monturen te passen. Voor een oogmeting in Groningen of een uitgebreid advies maken we liever een afspraak, zodat we de tijd voor je kunnen nemen. In overleg kan dat ook 's avonds of buiten onze openingstijden."
+      ],
+      "opsomming": []
+    }
+  ],
+  "vragen": [],
+  "oproep": {
+    "kop": "Wij houden graag oogcontact",
+    "tekst": "Wil je overleggen over wat bij je past, of meteen een oogmeting inplannen? Je bent welkom aan het Overwinningsplein 100 in Groningen, de koffie wordt vers gezet. Plan je afspraak online of bel ons op 050 20 64 015.",
+    "knop": "Afspraak maken"
+  }
+}

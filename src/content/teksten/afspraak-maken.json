@@ -1,0 +1,76 @@
+{
+  "slug": "afspraak-maken",
+  "metaTitel": "Afspraak maken bij je opticien in Groningen",
+  "metaOmschrijving": "Plan online je afspraak bij Oogcontact bij Gerard in Groningen, op een moment dat jou schikt. Bellen of appen kan ook, en 's avonds in overleg.",
+  "h1": "Afspraak maken",
+  "inleiding": "Bij Oogcontact bij Gerard, je zelfstandige opticien in Groningen, ben je van harte welkom aan het Overwinningsplein 100. Met een afspraak weten we zeker dat we uitgebreid de tijd voor je hebben: voor de oogmeting, voor het passen en voor de koffie erbij. Hieronder plan je in een paar stappen zelf een moment dat jou uitkomt. Liever dat wij jou bellen? Laat dan je naam en telefoonnummer achter via het terugbelformulier op deze pagina.",
+  "secties": [
+    {
+      "kop": "Kies zelf een moment dat jou uitkomt",
+      "alineas": [
+        "In de agenda zie je precies welke momenten vrij zijn. Je kiest waarvoor je komt, daarna een dag en een tijd. Meer stappen zijn het niet.",
+        "Per soort afspraak reserveren we de tijd die erbij hoort. Zo hoeft niemand zich te haasten: jij niet en wij niet."
+      ],
+      "opsomming": [
+        {
+          "titel": "Oogmeting",
+          "tekst": "Een oogmeting in Groningen met onze moderne apparatuur, rustig en nauwkeurig."
+        },
+        {
+          "titel": "Oogmeting en montuuradvies",
+          "tekst": "De meting en daarna samen zoeken naar een montuur dat bij je past."
+        },
+        {
+          "titel": "Contactlenzen",
+          "tekst": "Een aanmeting, een heraanmeting of een lenscontrole."
+        },
+        {
+          "titel": "Loepbril Admetec",
+          "tekst": "Eerst informatie over het werken met een loepbril (30 minuten), of meteen aanmeten met oogmeting (60 minuten)."
+        },
+        {
+          "titel": "Bril afhalen of bijstellen",
+          "tekst": "Je nieuwe bril ophalen, glazen inmeten met de Visioffice of je montuur laten bijstellen."
+        }
+      ]
+    },
+    {
+      "kop": "Liever even bellen of appen?",
+      "alineas": [
+        "Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 015 of stuur een WhatsApp naar 06 18 89 85 99. Mailen mag ook, naar info@oogcontactbijgerard.nl.",
+        "Past geen enkel moment in de agenda? Een afspraak buiten onze openingstijden kan in overleg, ook 's avonds. Laat het ons weten, dan zoeken we samen een tijd die voor jou werkt.",
+        "Vul je liever het formulier onderaan deze pagina in? Laat je naam en telefoonnummer achter, dan bellen wij jou terug."
+      ],
+      "opsomming": [
+        {
+          "titel": "Woensdag tot en met vrijdag",
+          "tekst": "9.30 tot 17.30 uur"
+        },
+        {
+          "titel": "Zaterdag",
+          "tekst": "10.00 tot 16.00 uur"
+        },
+        {
+          "titel": "Maandag, dinsdag en zondag",
+          "tekst": "Gesloten"
+        }
+      ]
+    },
+    {
+      "kop": "Wat er gebeurt nadat je geboekt hebt",
+      "alineas": [
+        "Je afspraak staat in onze agenda en die tijd houden we voor je vrij. Verder hoef je niets te doen: kom gewoon langs op het gekozen moment.",
+        "Kom je met de auto? Parkeren kan direct voor de deur (betaald). Reis je met de bus, dan stap je pal voor de winkel uit.",
+        "Lukt het toch niet, of wil je je afspraak verzetten? Bel of app ons even, dan zetten we er samen een nieuw moment voor in de plaats.",
+        "En als je binnenstapt: de koffie wordt vers gezet. Wij, Gerard en Gerda, nemen dan rustig de tijd voor je ogen."
+      ],
+      "opsomming": []
+    }
+  ],
+  "vragen": [],
+  "oproep": {
+    "kop": "Zullen we een moment inplannen?",
+    "tekst": "Kies hierboven een dag en tijd die jou uitkomt, of laat je nummer achter in het formulier, dan bellen wij jou terug. Liever direct contact? Bel 050 20 64 015 of app naar 06 18 89 85 99. Wij houden graag oogcontact.",
+    "knop": "Afspraak maken"
+  }
+}

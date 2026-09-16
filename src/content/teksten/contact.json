@@ -1,0 +1,68 @@
+{
+  "slug": "contact",
+  "metaTitel": "Contact en route naar je opticien in Groningen",
+  "metaOmschrijving": "Bel, app of mail ons, of loop gewoon binnen aan het Overwinningsplein 100 in Groningen. Hier vind je onze openingstijden, de route en waar je kunt parkeren.",
+  "h1": "Contact met Oogcontact bij Gerard",
+  "inleiding": "Heb je een vraag, of wil je een afspraak maken? Je bereikt ons via de telefoon of WhatsApp, maar gewoon binnenlopen mag natuurlijk ook. Wij, Gerard en Gerda, nemen graag de tijd voor je, met een verse kop koffie erbij.",
+  "secties": [
+    {
+      "kop": "Hoe je ons bereikt",
+      "alineas": [
+        "Kies de manier die jou het beste uitkomt. Je krijgt bij ons geen callcenter aan de lijn, maar gewoon iemand uit de winkel."
+      ],
+      "opsomming": [
+        {
+          "titel": "Bellen",
+          "tekst": "Bel ons voor advies, een vraag over je bril of lenzen, of om een afspraak in te plannen. Zijn we net in gesprek met een klant in de winkel? Probeer het dan wat later nog eens, of stuur ons een appje."
+        },
+        {
+          "titel": "WhatsApp",
+          "tekst": "Handig voor een korte vraag tussendoor, of om even een foto te sturen van een montuur of een schroefje dat los zit."
+        },
+        {
+          "titel": "Mailen",
+          "tekst": "Voor uitgebreidere vragen mail je ons. We proberen je zo snel mogelijk een persoonlijk antwoord te geven."
+        },
+        {
+          "titel": "Langskomen",
+          "tekst": "Tijdens onze openingstijden ben je ook zonder afspraak van harte welkom in de winkel aan het Overwinningsplein."
+        }
+      ]
+    },
+    {
+      "kop": "Wanneer we open zijn",
+      "alineas": [
+        "Van woensdag tot en met zaterdag staan we voor je klaar. Op maandag, dinsdag en zondag is de winkel gesloten.",
+        "Komen die tijden je niet uit? In overleg plannen we een afspraak buiten onze openingstijden, ook 's avonds. Bel of app ons even, dan zoeken we samen een moment dat past.",
+        "Wil je zeker weten dat we rustig de tijd voor je hebben, bijvoorbeeld voor een oogmeting in Groningen of advies over een loepbril of kinderbril? Plan dan zelf een moment via de pagina Afspraak maken."
+      ],
+      "opsomming": []
+    },
+    {
+      "kop": "Bij de winkel",
+      "alineas": [
+        "Je vindt ons aan het Overwinningsplein 100 in Groningen. De winkel ligt aan het plein, dus je staat zo voor de deur."
+      ],
+      "opsomming": [
+        {
+          "titel": "Parkeren",
+          "tekst": "Parkeren kan direct voor de deur (betaald)."
+        },
+        {
+          "titel": "Met de bus",
+          "tekst": "De bus stopt pal voor de winkel. Een mooie uitkomst als je liever met het openbaar vervoer komt."
+        },
+        {
+          "titel": "Adres",
+          "tekst": "Overwinningsplein 100, 9728 GW Groningen."
+        }
+      ]
+    }
+  ],
+  "vragen": [],
+  "oproep": {
+    "kop": "Liever meteen een afspraak?",
+    "tekst": "Kies online zelf een dag en tijd die je uitkomen, voor een oogmeting, montuuradvies, lenscontrole of een loepbril. De koffie staat klaar. Wij houden graag oogcontact.",
+    "knop": "Afspraak maken"
+  }
+}
