@@ -112,6 +112,42 @@ export async function merken(): Promise<Merk[]> {
   }
 }
 
+/* ---------------------------------------------------------------- instagram */
+
+export type InstagramBericht = {
+  slug: string
+  omschrijving: string
+  afbeelding: string
+  link: string | null
+}
+
+/**
+ * De Instagram-berichten die in het beheerscherm gezet zijn.
+ *
+ * Bewust geen automatische feed: die kan tegenwoordig niet meer zonder een
+ * betaalde dienst of een app-registratie bij Meta, en een zware widget maakt
+ * de pagina traag. Zo blijft het licht en houden Gerard en Gerda zelf de regie.
+ */
+export async function instagram(): Promise<InstagramBericht[]> {
+  try {
+    const alles = await lezer.collections.instagram.all()
+    return alles
+      .map((b) => ({
+        slug: b.slug,
+        omschrijving: b.entry.omschrijving ?? '',
+        afbeelding: b.entry.afbeelding ?? '',
+        link: (b.entry.link ?? '').trim() || null,
+        volgorde: b.entry.volgorde ?? 0,
+      }))
+      .filter((b) => b.afbeelding)
+      .sort((a, b) => a.volgorde - b.volgorde || a.slug.localeCompare(b.slug))
+      .slice(0, 8)
+      .map(({ volgorde: _volgorde, ...rest }) => rest)
+  } catch {
+    return []
+  }
+}
+
 /* ------------------------------------------------------------------- nieuws */
 
 export type Bericht = {

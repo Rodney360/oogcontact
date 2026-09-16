@@ -33,6 +33,7 @@ export default config({
     navigation: {
       'Op de site': ['mededeling', 'nieuws'],
       'De winkel': ['uitzonderingen', 'merken', 'overOns'],
+      Instagram: ['instagram'],
     },
   },
 
@@ -185,6 +186,41 @@ export default config({
               publicPath: '/beeld/nieuws/',
             },
           },
+        }),
+      },
+    }),
+
+    /* ------------------------------------------------------------------ */
+    instagram: collection({
+      label: 'Instagram-berichten',
+      slugField: 'omschrijving',
+      path: 'src/content/beheer/instagram/*',
+      format: { data: 'json' },
+      columns: ['omschrijving'],
+      schema: {
+        omschrijving: fields.slug({
+          name: {
+            label: 'Waar staat op de foto?',
+            description:
+              'Beschrijf kort wat er te zien is. Deze tekst is voor mensen die de foto niet ' +
+              'kunnen zien, dus beschrijf wat er écht op staat.',
+            validation: { isRequired: true },
+          },
+        }),
+        afbeelding: fields.image({
+          label: 'De foto',
+          directory: 'public/beeld/instagram',
+          publicPath: '/beeld/instagram/',
+          validation: { isRequired: true },
+        }),
+        link: fields.url({
+          label: 'Link naar het bericht op Instagram',
+          description: 'Plak hier het adres van het bericht. Niet verplicht.',
+        }),
+        volgorde: fields.integer({
+          label: 'Volgorde',
+          description: 'Lager getal staat vooraan. Laat maar staan als je het niet erg vindt.',
+          defaultValue: 0,
         }),
       },
     }),
