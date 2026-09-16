@@ -18,11 +18,15 @@ src/
   content/        de feiten: openingstijden, diensten, merken, kleuren
     beheer/       wat Gerard en Gerda via /keystatic aanpassen
   lib/            de logica: openingstijden, agenda, e-mail, validatie
+                  veldregels.ts draait ook in de browser, validatie.ts alleen
+                  op de server (die laatste gebruikt Zod, en dat is te zwaar
+                  om mee te sturen naar een bezoeker)
   styles/         globals.css met de huisstijl als Tailwind-tokens
 config/
   beeld.mjs       welke foto op welke plek staat
   url-map.mjs     van oude WordPress-URL naar nieuwe URL
-scripts/          crawlen, beeld verwerken, logo maken, contrast controleren
+scripts/          crawlen, beeld verwerken, logo maken, contrast controleren,
+                  nieuws migreren, url-map en teksten-review genereren
 content-archive/  de complete oude site als bronmateriaal (niet bewerken)
 assets-original/  alle originele foto's van de oude site
 assets-new/       hier komen nieuwe foto's in (zie de README daar)
@@ -40,6 +44,15 @@ npm run test:unit    # alleen de snelle tests
 npm run test:e2e     # de Playwright-tests (browser nodig)
 npm run images       # foto's opnieuw verwerken na een wijziging in config/beeld.mjs
 npm run crawl        # de oude WordPress-site opnieuw ophalen (zelden nodig)
+```
+
+Losse scripts die je zelden nodig hebt:
+
+```bash
+node scripts/maak-logo.mjs               # het logo opnieuw vectoriseren
+node scripts/migreer-nieuws.mjs          # de oude nieuwsberichten overzetten
+node scripts/genereer-url-map.mjs        # docs/url-map.md bijwerken
+node scripts/genereer-teksten-review.mjs # docs/teksten-review.md bijwerken
 ```
 
 ---
@@ -115,6 +128,12 @@ redirects; `next.config.ts` en de tests gebruiken allebei dat bestand.
 **Foto's.** `config/beeld.mjs` bepaalt welke foto waar staat. Een foto wisselen
 is één regel aanpassen en `npm run images` draaien. Verander nooit wat er op
 een foto staat, en schrijf altijd een goede Nederlandse alt-tekst.
+
+**Let op bij het testen.** De formulieren hebben een snelheidsbegrenzer die in
+het geheugen van de server telt: vijf inzendingen per tien minuten. Draai je de
+browsertests een paar keer achter elkaar tegen dezelfde draaiende server, dan
+krijg je een terechte 429. Herstart de server dan even; in de CI start er altijd
+een verse.
 
 **Tests van de logica** draaien rechtstreeks op TypeScript met
 `node --experimental-strip-types`. Daarom gebruiken `src/lib/` en

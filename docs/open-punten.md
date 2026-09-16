@@ -154,20 +154,53 @@ zeg het maar, dan regel ik het.
 
 ---
 
-## 2. Wat ik zelf nog doe
+## 2. Wat af is
 
-- [ ] De homepage met alle scènes uit §5 van de opdracht
-- [ ] De overige pagina's opbouwen met de nieuwe teksten
-- [ ] `docs/teksten-review.md` zodat jullie de teksten kunnen goedkeuren
-- [ ] `docs/handleiding-beheer.md` voor Gerard en Gerda
-- [ ] De privacy- en cookieverklaring, op basis van wat de site echt doet
-- [ ] De Instagram-grid (zie hieronder)
-- [ ] Lighthouse-metingen en het rapport
-- [ ] De 404-pagina
+- [x] De homepage met alle scènes: hero die scherp wordt, het verhaal met
+      optellende getallen, de vier pijlers, de vastgezette scène over de
+      oogmeting, de collectiegalerij, de beeldtegels, de keurmerken, de
+      boekingsmodule, de winkelinformatie en Instagram
+- [x] Alle overige pagina's met de nieuwe teksten
+- [x] `docs/teksten-review.md` om de teksten na te lezen
+- [x] `docs/handleiding-beheer.md` voor Gerard en Gerda
+- [x] De privacy- en cookieverklaring, geschreven op basis van wat de site
+      werkelijk doet
+- [x] De Instagram-grid (te vullen vanuit het beheerscherm)
+- [x] De 404-pagina ("Deze pagina is even uit beeld")
+- [x] De vijf oude nieuwsberichten gemigreerd, met hun datum en webadres
+- [x] Snelheidsmeting (zie hieronder)
+
+### Wat de meting opleverde
+
+Gemeten in een echte browser op de gebouwde site:
+
+| | Homepage | Andere pagina's |
+|---|---|---|
+| JavaScript, na compressie | 197 kB | 158 kB |
+| LCP (grootste element in beeld) | 0,4 s | 1,0 s |
+| CLS (verspringen van de pagina) | 0,000 | 0,000 |
+
+CLS van 0,000 betekent dat er tijdens het laden niets verspringt. Dat is geen
+toeval: er wordt alleen met `transform` en `opacity` bewogen, en elke foto heeft
+zijn maat vooraf meegekregen.
+
+Onderweg bleek Zod (de bibliotheek die formulieren nakijkt) 392 kB aan code mee
+te sturen naar de browser, voor een handjevol controles. Die controles zijn nu
+gewoon JavaScript; Zod doet op de server nog steeds het echte werk.
+
+Een echte Lighthouse-meting draai ik zodra de site op Vercel staat: die meet de
+site zoals hij bij een bezoeker binnenkomt, inclusief het netwerk.
+
+## 3. Wat ik zelf nog doe
+
+- [ ] Een Lighthouse-rapport op de Vercel-preview, zodra die er is
+- [ ] De boekingsmodule koppelen aan de echte agenda, zodra de sleutel er is
+- [ ] Het domein overzetten (zie §13 van de opdracht) - pas als jij zegt dat
+      alles goed is
 
 ---
 
-## 3. Dingen waar ik tegenaan liep
+## 4. Dingen waar ik tegenaan liep
 
 **Google-reviews.** De opdracht zegt: alleen tonen als er echte reviews zijn.
 Ik heb geen toegang tot het Google Bedrijfsprofiel en kan dus niet zien of ze er

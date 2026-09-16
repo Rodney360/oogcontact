@@ -22,6 +22,14 @@ De hele site opnieuw opgebouwd, vanaf niets, als vervanging van WordPress.
   Resend en een beheerscherm (Keystatic) voor nieuws, vakantiemeldingen,
   afwijkende openingstijden en merken. Zonder API-sleutels draait alles in
   testmodus.
+- **Teksten:** opnieuw geschreven op basis van het archief en daarna nagekeken
+  op verzonnen feiten en op de aanspreekvorm. Dat leverde 37 correcties op,
+  waaronder medische claims zonder grond, een verzonnen taakverdeling tussen
+  Gerard en Gerda, en getallen uit 2021 die nu niet meer kloppen. Alles staat
+  op een rij in `docs/teksten-review.md`.
+- **Gemeten:** 107 browsertests op desktop en mobiel groen, 27 snelle tests
+  groen, alle kleurcombinaties voldoen aan WCAG AA. Na compressie 158 tot
+  197 kB JavaScript, LCP tussen 0,4 en 1,0 seconde, CLS 0,000.
 - **Openstaand:** zie `docs/open-punten.md`. Het belangrijkste: de koppeling met
   Vercel, de API-sleutel van de online agenda, het KvK-nummer en de nieuwe
   winkelfoto's.
