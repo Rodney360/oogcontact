@@ -99,3 +99,19 @@ De hele site opnieuw opgebouwd, vanaf niets, als vervanging van WordPress.
   is nu ruimer zonder extra plek in te nemen.
 - Vier browsertests erbij; 120 groen.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-17 — Dennis (Claude Code, cloud)
+
+- **Zwevende pijl terug naar de homepage.** Linksonder, tegenover de
+  WhatsApp-knop rechtsonder. Op een telefoon een rond knopje boven de vaste
+  balk, vanaf tablet met het woord "Home" erbij. Niet te zien op de homepage
+  zelf. Het logo linksboven deed dit al en blijft dat doen; allebei staan nu
+  in een browsertest.
+- **Tekstgroottes schalen nu overal mee.** Alleen de koppen deden dat al; de
+  lopende tekst stond op een vaste 18px en viel op een telefoon daardoor fors
+  uit. Alles staat nu in `clamp()`: lopende tekst 17 -> 18px, inleidingen
+  18 -> 20px, lead 20 -> 28px, koppen 22/28/36 -> 32/48/80px. De regelafstand
+  is op een telefoon iets krapper. Ondergrens blijft 16px, zoals afgesproken.
+- **Nog open:** zie `docs/open-punten.md`.

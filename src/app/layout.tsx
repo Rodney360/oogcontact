@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/next'
 import '@/styles/globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { NaarHome } from '@/components/NaarHome'
 import { SnelleContact } from '@/components/SnelleContact'
 import { SoepelScrollen } from '@/components/Beweging'
 import { BEDRIJF } from '@/content/bedrijf'
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="hoofd">{children}</main>
 
         <Footer />
+        <NaarHome />
         <SnelleContact />
 
         <JsonLd data={bedrijfJsonLd()} />

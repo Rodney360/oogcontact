@@ -39,29 +39,40 @@
   --font-tekst: var(--font-manrope), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   /* --- tekstgroottes ---
-     De bezoekers zijn vaak 45+. De lopende tekst begint daarom op 18px en
-     groeit netjes mee; niets wordt ooit kleiner dan 16px. */
-  --text-bijschrift: 1rem;          /* 16px - alleen labels en bijschriften */
-  --text-bijschrift--line-height: 1.5;
-  --text-basis: 1.125rem;           /* 18px - lopende tekst */
-  --text-basis--line-height: 1.7;
-  --text-groot: 1.25rem;            /* 20px - inleidingen */
-  --text-groot--line-height: 1.65;
-  --text-lead: clamp(1.375rem, 1.1rem + 1vw, 1.75rem);
-  --text-lead--line-height: 1.5;
+     Elke maat groeit mee met de breedte van het scherm: clamp(kleinste,
+     meegroeiend, grootste). Het middelste stuk rekent met vw, dus 1 procent
+     van de schermbreedte.
 
-  --text-kop-4: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+     Waarom zo: op een telefoon staat alles in een smalle kolom, en dan valt
+     dezelfde letter een stuk groter uit dan op een breed scherm. De maten
+     hieronder beginnen daarom kleiner en lopen op tot hun volle grootte rond
+     een scherm van 1000 tot 1400 pixels breed.
+
+     De bezoekers zijn vaak 45+, dus de ondergrens blijft stevig: lopende
+     tekst wordt nooit kleiner dan 17px en niets op de site ooit kleiner dan
+     16px. In het commentaar staat telkens: op een telefoon (390px) -> op een
+     breed scherm. */
+  --text-bijschrift: 1rem;                                    /* 16px, de ondergrens */
+  --text-bijschrift--line-height: 1.5;
+  --text-basis: clamp(1.0625rem, 0.99rem + 0.3vw, 1.125rem);  /* 17 -> 18px, lopende tekst */
+  --text-basis--line-height: 1.65;
+  --text-groot: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);       /* 18 -> 20px, inleidingen */
+  --text-groot--line-height: 1.6;
+  --text-lead: clamp(1.25rem, 0.96rem + 1.2vw, 1.75rem);      /* 20 -> 28px */
+  --text-lead--line-height: 1.45;
+
+  --text-kop-4: clamp(1.1875rem, 1.07rem + 0.45vw, 1.5rem);   /* 19 -> 24px */
   --text-kop-4--line-height: 1.35;
-  --text-kop-3: clamp(1.5rem, 1.25rem + 1.1vw, 2rem);
-  --text-kop-3--line-height: 1.25;
-  --text-kop-2: clamp(1.875rem, 1.4rem + 2.1vw, 3rem);
+  --text-kop-3: clamp(1.375rem, 1.14rem + 0.95vw, 2rem);      /* 22 -> 32px */
+  --text-kop-3--line-height: 1.3;
+  --text-kop-2: clamp(1.75rem, 1.29rem + 1.9vw, 3rem);        /* 28 -> 48px */
   --text-kop-2--line-height: 1.15;
-  --text-kop-1: clamp(2.5rem, 1.6rem + 3.9vw, 5rem);
+  --text-kop-1: clamp(2.25rem, 1.23rem + 4.2vw, 5rem);        /* 36 -> 80px */
   --text-kop-1--line-height: 1.05;
 
   /* --- ritme --- */
   --spacing-sectie: clamp(4rem, 2rem + 8vw, 9rem);
-  --spacing-gutter: 1.5rem;
+  --spacing-gutter: clamp(1.25rem, 1rem + 0.65vw, 1.5rem);    /* 20 -> 24px */
 
   /* --- vormen --- */
   --radius-zacht: 0.5rem;
@@ -93,7 +104,7 @@
     color: var(--color-tekst-licht);
     font-family: var(--font-tekst);
     font-size: var(--text-basis);
-    line-height: 1.7;
+    line-height: var(--text-basis--line-height);
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

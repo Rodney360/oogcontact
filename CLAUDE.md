@@ -73,8 +73,12 @@ WCAG 2.2 AA. Verander je een kleur, pas hem dan op beide plekken aan.
 `next/font`, dus zelf gehost: de browser van de bezoeker legt geen verbinding
 met Google.
 
-**Tekstgrootte.** Lopende tekst begint op **18px**, ook op mobiel. Niets wordt
-kleiner dan 16px. Veel bezoekers zijn 45+ en komen juist voor hun ogen.
+**Tekstgrootte.** Elke maat staat in `globals.css` als een `clamp()`: een
+ondergrens voor een telefoon, een bovengrens voor een breed scherm, en daar
+tussenin groeit hij mee met de schermbreedte. Lopende tekst loopt van **17px**
+op een telefoon naar **18px** vanaf ongeveer 720 pixels breed. **Niets wordt
+ooit kleiner dan 16px** - veel bezoekers zijn 45+ en komen juist voor hun ogen.
+Zet dus nooit een vaste `px`- of `rem`-maat op tekst; gebruik de tokens.
 
 **Beweging.**
 - Alleen `transform` en `opacity`. Nooit iets dat de pagina laat verspringen.
