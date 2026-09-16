@@ -40,10 +40,7 @@ jobs:
       - name: Snelle tests
         run: npm run test:unit
 
-      - name: Foto's verwerken
-        run: npm run images
-
-      - name: Bouwen
+      - name: Bouwen (verwerkt ook de foto's)
         run: npm run build
 
   browsertests:
@@ -65,10 +62,7 @@ jobs:
       - name: Testbrowser ophalen
         run: npx playwright install --with-deps chromium
 
-      - name: Foto's verwerken
-        run: npm run images
-
-      - name: Bouwen
+      - name: Bouwen (verwerkt ook de foto's)
         run: npm run build
 
       - name: Browsertests

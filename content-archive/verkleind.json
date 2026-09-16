@@ -1,0 +1,37 @@
+{
+  "uitgevoerd": "bij de overstap naar de nieuwe site",
+  "waarom": "Een paar bestanden van de oude site waren onnodig groot voor gebruik op een website. Alleen het aantal pixels en de compressie zijn aangepast; er is niets aan de inhoud van de foto’s veranderd.",
+  "maxZijde": 2560,
+  "bestanden": [
+    {
+      "bestand": "assets-original/2021-06/winkel-bewerkt-website-3-1.png",
+      "voorBytes": 23315344,
+      "naBytes": 1738358,
+      "wat": "5436x3388 -> 2560x1596"
+    },
+    {
+      "bestand": "assets-original/2021-06/winkel-bewerkt-website-3.png",
+      "voorBytes": 23315344,
+      "naBytes": 1738358,
+      "wat": "5436x3388 -> 2560x1596"
+    },
+    {
+      "bestand": "assets-original/2022-01/NUVO-4-5-FORMAAT-1080x13502-1.png",
+      "voorBytes": 8557855,
+      "naBytes": 1249346,
+      "wat": "5625x4500 -> 2560x2048"
+    },
+    {
+      "bestand": "assets-original/2022-09/CP_OR02-Space-1.jpg",
+      "voorBytes": 49848893,
+      "naBytes": 28354,
+      "wat": "418x627 -> 418x627"
+    },
+    {
+      "bestand": "assets-original/2022-09/CP_OR02-Space.jpg",
+      "voorBytes": 49848893,
+      "naBytes": 514016,
+      "wat": "5792x8688 -> 1707x2560"
+    }
+  ]
+}

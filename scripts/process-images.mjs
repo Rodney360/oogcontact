@@ -19,7 +19,7 @@
  */
 
 import sharp from 'sharp'
-import { mkdir, writeFile, rm, access } from 'node:fs/promises'
+import { mkdir, writeFile, rm, access, stat, readFile } from 'node:fs/promises'
 import path from 'node:path'
 import os from 'node:os'
 
@@ -39,6 +39,49 @@ const BRONMAPPEN = [path.join(ROOT, 'assets-new'), path.join(ROOT, 'assets-origi
 const TEGELIJK = Math.max(1, Math.min(3, os.cpus().length - 1))
 
 const log = (...a) => console.log('[beeld]', ...a)
+
+/** Met --forceer wordt alles opnieuw gemaakt, ook als het al klaarstaat. */
+const FORCEER = process.argv.includes('--forceer')
+
+/**
+ * Kijkt of het werk al gedaan is.
+ *
+ * Dit draait mee in `npm run build`, en op Vercel staat public/beeld er niet:
+ * daar moet het dus wél gebeuren. Maar als je lokaal nog eens bouwt en er is
+ * niets veranderd, is het zonde om er twee minuten op te wachten.
+ *
+ * Alles moet kloppen voordat we overslaan: het overzichtsbestand moet er zijn,
+ * nieuwer dan config/beeld.mjs, en elk verwacht bestand moet echt bestaan.
+ */
+async function alKlaar() {
+  if (FORCEER) return false
+
+  try {
+    const overzicht = JSON.parse(await readFile(GEGEVENS, 'utf8'))
+    const slots = Object.keys(BEELDEN)
+    if (Object.keys(overzicht).length !== slots.length) return false
+
+    const gegenereerdOp = (await stat(GEGEVENS)).mtimeMs
+    const configOp = (await stat(path.join(ROOT, 'config', 'beeld.mjs'))).mtimeMs
+    if (configOp > gegenereerdOp) return false
+
+    for (const slot of slots) {
+      const gegevens = overzicht[slot]
+      if (!gegevens?.breedtes?.length) return false
+      for (const breedte of gegevens.breedtes) {
+        for (const ext of ['avif', 'webp']) {
+          if (!(await bestaat(path.join(UIT, `${slot}-${breedte}.${ext}`)))) return false
+        }
+      }
+      // Is de bronfoto zelf veranderd, dan moet hij opnieuw verwerkt worden.
+      const bron = await vindBron(gegevens.bron)
+      if (!bron || (await stat(bron)).mtimeMs > gegenereerdOp) return false
+    }
+    return true
+  } catch {
+    return false
+  }
+}
 
 async function bestaat(p) {
   try { await access(p); return true } catch { return false }
@@ -146,6 +189,12 @@ async function inBatches(taken, grootte) {
 }
 
 async function main() {
+  if (await alKlaar()) {
+    log('alles staat al klaar en er is niets veranderd - overgeslagen')
+    log('(draai met --forceer om het toch opnieuw te doen)')
+    return
+  }
+
   await rm(UIT, { recursive: true, force: true })
   await mkdir(UIT, { recursive: true })
 

@@ -11,7 +11,28 @@ import type { Metadata } from 'next'
 import { BEDRIJF, adresOpEenRegel } from '../content/bedrijf.ts'
 import { alsSchemaOrg } from './openingstijden.ts'
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://oogcontactbijgerard.nl'
+/**
+ * Het adres waarop de site draait.
+ *
+ * Op een preview van Vercel is dat een tijdelijk adres. Zolang het echte
+ * domein nog naar de oude WordPress-site wijst, moeten de deelplaatjes en de
+ * canonieke links naar die preview verwijzen: anders halen WhatsApp en Google
+ * daar een plaatje op dat nog van de oude site is.
+ *
+ * Zodra het domein verhuisd is, zet je NEXT_PUBLIC_SITE_URL in Vercel op
+ * https://oogcontactbijgerard.nl en klopt alles weer vanzelf.
+ */
+function bepaalSiteUrl(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL
+
+  // Vercel vult deze zelf in, per deploy.
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL
+  if (vercel) return `https://${vercel}`
+
+  return 'https://oogcontactbijgerard.nl'
+}
+
+export const SITE_URL = bepaalSiteUrl()
 
 /** Bouwt de metagegevens van een pagina. */
 export function paginaMeta({
