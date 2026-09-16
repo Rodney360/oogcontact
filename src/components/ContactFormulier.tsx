@@ -17,7 +17,8 @@ import { Knop } from '@/components/Knop'
 import { Veld, Tekstvak, Keuze, Honeypot } from '@/components/boeking/Velden'
 import { Turnstile } from '@/components/Turnstile'
 import { BEDRIJF, whatsappLink } from '@/content/bedrijf'
-import { contactSchema, LABELS } from '@/lib/validatie'
+import { LABELS } from '@/content/labels'
+import { contactFouten } from '@/lib/veldregels'
 
 type Waarden = {
   voornaam: string
@@ -78,17 +79,17 @@ export function ContactFormulier({ licht = false }: { licht?: boolean }) {
     e.preventDefault()
     setStoring(null)
 
-    const uitslag = contactSchema.safeParse(waarden)
-    if (!uitslag.success) {
-      const nieuw: Record<string, string> = {}
-      for (const [veld, meldingen] of Object.entries(uitslag.error.flatten().fieldErrors)) {
-        if (meldingen?.[0]) nieuw[veld] = meldingen[0]
-      }
-      setFouten(nieuw)
+    const gevonden = contactFouten(waarden)
+    if (Object.keys(gevonden).length > 0) {
+      setFouten(gevonden)
       // Naar het eerste veld dat nog niet klopt, zodat je weet waar je moet zijn.
-      const eerste = document.querySelector<HTMLElement>('[aria-invalid="true"]')
-      eerste?.focus()
-      eerste?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+      // Even wachten tot React de foutmeldingen getekend heeft, anders staat
+      // aria-invalid er nog niet op.
+      requestAnimationFrame(() => {
+        const eerste = document.querySelector<HTMLElement>('[aria-invalid="true"]')
+        eerste?.focus()
+        eerste?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+      })
       return
     }
 
@@ -97,7 +98,7 @@ export function ContactFormulier({ licht = false }: { licht?: boolean }) {
       const antwoord = await fetch('/api/contact/', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(uitslag.data),
+        body: JSON.stringify(waarden),
       })
       const gegevens = await antwoord.json().catch(() => ({}))
 

@@ -12,7 +12,8 @@ import 'server-only'
  */
 
 import { BEDRIJF, adresOpEenRegel, whatsappLink } from '../content/bedrijf.ts'
-import { LABELS, type ContactGegevens } from './validatie.ts'
+import { LABELS } from '../content/labels.ts'
+import type { ContactGegevens } from './validatie.ts'
 
 const SLEUTEL = process.env.RESEND_API_KEY ?? ''
 const AFZENDER = process.env.MAIL_AFZENDER ?? `Oogcontact bij Gerard <website@oogcontactbijgerard.nl>`

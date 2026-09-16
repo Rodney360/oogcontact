@@ -1,139 +1,97 @@
+import 'server-only'
+
 /**
- * De controles op wat bezoekers invullen.
+ * De controle op de server.
  *
- * Deze regels gelden zowel in de browser (meteen feedback tijdens het invullen)
- * als op de server (want wat uit de browser komt is nooit te vertrouwen).
- * Eén bestand, zodat de foutmeldingen overal hetzelfde zijn.
+ * Wat uit de browser komt is nooit te vertrouwen, dus alles wordt hier nog een
+ * keer nagelopen - ook als de browser het al goedgekeurd had.
  *
- * De meldingen zijn in gewone Nederlandse taal en spreken met "je".
+ * De regels en de foutmeldingen komen uit src/lib/veldregels.ts, hetzelfde
+ * bestand dat de browser gebruikt. Zo staat er nergens een andere grens of een
+ * andere melding. Zod zelf blijft op de server: in de browser zou die bijna
+ * 400 kB aan code toevoegen voor een handjevol controles.
  */
 
 import { z } from 'zod'
 
-const TELEFOON = /^[+0][\d\s\-()]{8,19}$/
+import {
+  EMAIL_PATROON,
+  MAX,
+  MELDING,
+  TELEFOON_PATROON,
+} from './veldregels.ts'
 
-const tekst = (min: number, max: number, veld: string) =>
+const naam = (leegMelding: string) =>
   z
     .string()
     .trim()
-    .min(min, `Vul je ${veld} in.`)
-    .max(max, `Dit is wel erg lang. Houd het bij ${max} tekens.`)
+    .min(2, leegMelding)
+    .max(MAX.naam, MELDING.teLang(MAX.naam))
 
-export const contactSchema = z
-  .object({
-    voornaam: tekst(2, 60, 'voornaam'),
-    achternaam: tekst(2, 60, 'achternaam'),
+const telefoon = z
+  .string()
+  .trim()
+  .min(1, MELDING.telefoonLeeg)
+  .regex(TELEFOON_PATROON, MELDING.telefoon)
 
-    telefoon: z
-      .string()
-      .trim()
-      .min(1, 'Vul je telefoonnummer in, dan kunnen we je bereiken.')
-      .regex(TELEFOON, 'Dit lijkt geen geldig telefoonnummer. Bijvoorbeeld: 06 12 34 56 78.'),
+const email = z
+  .string()
+  .trim()
+  .min(1, MELDING.emailLeeg)
+  .regex(EMAIL_PATROON, MELDING.email)
+  .max(MAX.email, MELDING.email)
 
-    email: z
-      .string()
-      .trim()
-      .min(1, 'Vul je e-mailadres in.')
-      .email('Dit lijkt geen geldig e-mailadres. Staat de @ erin?')
-      .max(254),
+export const contactSchema = z.object({
+  voornaam: naam(MELDING.voornaam),
+  achternaam: naam(MELDING.achternaam),
+  telefoon,
+  email,
 
-    keuze: z.enum(['afspraak', 'informatie'], {
-      message: 'Laat ons weten waarvoor je contact opneemt.',
-    }),
+  keuze: z.enum(['afspraak', 'informatie'], { message: MELDING.keuze }),
 
-    voorkeursdagen: z.array(z.enum(['woensdag', 'donderdag', 'vrijdag', 'zaterdag'])).default([]),
-    voorkeursdagdelen: z.array(z.enum(['ochtend', 'middag', 'avond'])).default([]),
+  voorkeursdagen: z.array(z.enum(['woensdag', 'donderdag', 'vrijdag', 'zaterdag'])).default([]),
+  voorkeursdagdelen: z.array(z.enum(['ochtend', 'middag', 'avond'])).default([]),
 
-    onderwerpen: z
-      .array(
-        z.enum([
-          'oogmeting',
-          'brillen',
-          'zonnebrillen',
-          'contactlenzen',
-          'kinderbrillen',
-          'loepbrillen',
-          'bril-bijstellen',
-        ]),
-      )
-      .default([]),
+  onderwerpen: z
+    .array(
+      z.enum([
+        'oogmeting',
+        'brillen',
+        'zonnebrillen',
+        'contactlenzen',
+        'kinderbrillen',
+        'loepbrillen',
+        'bril-bijstellen',
+      ]),
+    )
+    .min(1, MELDING.onderwerpen),
 
-    bericht: z.string().trim().max(2000, 'Houd je bericht bij 2000 tekens.').default(''),
+  bericht: z.string().trim().max(MAX.bericht, MELDING.berichtTeLang).default(''),
 
-    privacy: z.literal(true, {
-      message: 'Je moet akkoord gaan met de privacyverklaring voordat we je gegevens mogen gebruiken.',
-    }),
+  privacy: z.literal(true, { message: MELDING.privacyContact }),
 
-    /**
-     * Honeypot: een veld dat voor mensen onzichtbaar is. Vult een bot het toch
-     * in, dan weten we genoeg. Moet dus leeg blijven.
-     */
-    website: z.string().max(0).optional().default(''),
+  /**
+   * Honeypot: een veld dat voor mensen onzichtbaar is. Vult een bot het toch
+   * in, dan weten we genoeg. Moet dus leeg blijven.
+   */
+  website: z.string().max(0).optional().default(''),
 
-    /** Het bewijs van Cloudflare Turnstile. Leeg als Turnstile niet aanstaat. */
-    turnstileToken: z.string().optional().default(''),
-  })
-  .superRefine((waarden, ctx) => {
-    // Voorkeuren vragen we alleen als iemand een afspraak wil.
-    if (waarden.keuze !== 'afspraak') return
-    if (waarden.voorkeursdagen.length === 0 && waarden.voorkeursdagdelen.length === 0) {
-      // Geen harde eis - liever een afspraakverzoek zonder voorkeur dan geen
-      // verzoek. Dit blijft dus bewust leeg.
-    }
-    if (waarden.onderwerpen.length === 0) {
-      ctx.addIssue({
-        code: 'custom',
-        path: ['onderwerpen'],
-        message: 'Kies waar het over gaat, dan kunnen we ons goed voorbereiden.',
-      })
-    }
-  })
+  /** Het bewijs van Cloudflare Turnstile. Leeg als Turnstile niet aanstaat. */
+  turnstileToken: z.string().optional().default(''),
+})
 
 export type ContactGegevens = z.infer<typeof contactSchema>
 
-/** De labels zoals ze op het scherm staan, ook gebruikt in de e-mail. */
-export const LABELS = {
-  keuze: {
-    afspraak: 'Ik wil graag een afspraak maken',
-    informatie: 'Ik wil graag meer informatie',
-  },
-  dagen: {
-    woensdag: 'Woensdag',
-    donderdag: 'Donderdag',
-    vrijdag: 'Vrijdag',
-    zaterdag: 'Zaterdag',
-  },
-  dagdelen: {
-    ochtend: 'Ochtend',
-    middag: 'Middag',
-    avond: 'Avond (in overleg)',
-  },
-  onderwerpen: {
-    oogmeting: 'Oogmeting',
-    brillen: 'Brillen',
-    zonnebrillen: 'Zonnebrillen',
-    contactlenzen: 'Contactlenzen',
-    kinderbrillen: 'Kinderbrillen',
-    loepbrillen: 'Loepbrillen',
-    'bril-bijstellen': 'Bril bijstellen',
-  },
-} as const
-
 export const boekingSchema = z.object({
-  dienstId: z.string().min(1, 'Kies eerst waarvoor je komt.'),
-  datum: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Kies een dag.'),
-  tijd: z.string().regex(/^\d{2}:\d{2}$/, 'Kies een tijd.'),
-  voornaam: tekst(2, 60, 'voornaam'),
-  achternaam: tekst(2, 60, 'achternaam'),
-  email: z.string().trim().email('Dit lijkt geen geldig e-mailadres. Staat de @ erin?'),
-  telefoon: z
-    .string()
-    .trim()
-    .regex(TELEFOON, 'Dit lijkt geen geldig telefoonnummer. Bijvoorbeeld: 06 12 34 56 78.'),
-  opmerking: z.string().trim().max(1000).optional().default(''),
-  privacy: z.literal(true, {
-    message: 'Je moet akkoord gaan met de privacyverklaring voordat we je afspraak kunnen vastleggen.',
-  }),
+  dienstId: z.string().min(1, MELDING.dienst),
+  datum: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, MELDING.datum),
+  tijd: z.string().regex(/^\d{2}:\d{2}$/, MELDING.tijd),
+  voornaam: naam(MELDING.voornaam),
+  achternaam: naam(MELDING.achternaam),
+  email,
+  telefoon,
+  opmerking: z.string().trim().max(MAX.opmerking).optional().default(''),
+  privacy: z.literal(true, { message: MELDING.privacyBoeking }),
   website: z.string().max(0).optional().default(''),
   turnstileToken: z.string().optional().default(''),
 })

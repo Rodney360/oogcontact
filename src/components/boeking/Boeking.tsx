@@ -20,6 +20,7 @@ import { Veld, Tekstvak, Honeypot } from '@/components/boeking/Velden'
 import { Turnstile } from '@/components/Turnstile'
 import { GROEPEN } from '@/content/diensten'
 import { BEDRIJF, whatsappLink } from '@/content/bedrijf'
+import { boekingFouten } from '@/lib/veldregels'
 import type { AgendaDienst, VrijeDag } from '@/lib/agenda/soorten'
 
 type Stap = 1 | 2 | 3 | 4
@@ -533,17 +534,10 @@ function Gegevens({
     setWaarden((w) => ({ ...w, [sleutel]: waarde }))
 
   const controleer = (): boolean => {
-    const nieuw: Record<string, string> = {}
-    if (waarden.voornaam.trim().length < 2) nieuw.voornaam = 'Vul je voornaam in.'
-    if (waarden.achternaam.trim().length < 2) nieuw.achternaam = 'Vul je achternaam in.'
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(waarden.email.trim()))
-      nieuw.email = 'Dit lijkt geen geldig e-mailadres. Staat de @ erin?'
-    if (!/^[+0][\d\s\-()]{8,19}$/.test(waarden.telefoon.trim()))
-      nieuw.telefoon = 'Dit lijkt geen geldig telefoonnummer. Bijvoorbeeld: 06 12 34 56 78.'
-    if (!waarden.privacy)
-      nieuw.privacy = 'Je moet akkoord gaan met de privacyverklaring voordat we je afspraak kunnen vastleggen.'
-    setFouten(nieuw)
-    return Object.keys(nieuw).length === 0
+    // Dezelfde regels en meldingen als op de server; zie src/lib/veldregels.ts.
+    const gevonden = boekingFouten(waarden)
+    setFouten(gevonden)
+    return Object.keys(gevonden).length === 0
   }
 
   return (
