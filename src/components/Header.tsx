@@ -167,7 +167,7 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
           aria-label="Oogcontact bij Gerard, naar de homepage"
         >
           <Brilvorm className={`w-16 transition-all duration-500 ${overHero ? 'sm:w-20' : ''}`} />
-          <span className="hidden font-kop text-[1.05rem] leading-tight tracking-tight sm:block">
+          <span className="hidden font-kop text-[1.05rem] leading-tight tracking-tight min-[380px]:block">
             Oogcontact
             <span className="block text-bijschrift text-tekst-licht-zacht">bij Gerard</span>
           </span>
@@ -229,9 +229,17 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
         </nav>
 
         <div className="ml-auto flex items-center gap-2 lg:ml-0">
-          <KnopLink href="/afspraak-maken/" uiterlijk="messing" className="text-bijschrift max-[420px]:px-4">
-            Afspraak maken
-          </KnopLink>
+          {/*
+            Op een telefoon staat "Afspraak" al in de vaste balk onderin; een
+            tweede knop hier kost alleen de ruimte die de naam van de winkel
+            nodig heeft. Het verbergen gebeurt op dit omhulsel en niet op de
+            knop zelf, omdat de knop van zichzelf al een display-klasse heeft.
+          */}
+          <span className="hidden md:block">
+            <KnopLink href="/afspraak-maken/" uiterlijk="messing" className="text-bijschrift">
+              Afspraak maken
+            </KnopLink>
+          </span>
 
           <button
             ref={menuKnop}

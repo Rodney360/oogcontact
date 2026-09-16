@@ -87,7 +87,7 @@ export function Meting({ sectie }: { sectie: TekstSectie }) {
           <SectieKop bovenkop="Ultiem nauwkeurig zicht" kop={sectie.kop} inleiding={sectie.alineas[0]} />
 
           <div className="mt-12 overflow-hidden rounded-groot border border-inkt-rand">
-            <Beeld slot="oog-macro" sizes="100vw" vullend />
+            <Beeld slot="meting-scene" sizes="(min-width: 640px) 60vw, 100vw" vullend />
           </div>
 
           <ol className="mt-12 space-y-8">
@@ -187,7 +187,7 @@ export function Meting({ sectie }: { sectie: TekstSectie }) {
               className="size-full transition-transform duration-[1200ms] ease-[var(--ease-rustig)]"
               style={{ transform: `scale(${1 + actief * 0.045})` }}
             >
-              <Beeld slot="oog-macro" sizes="(min-width: 1024px) 45vw, 100vw" vullend />
+              <Beeld slot="meting-scene" sizes="(min-width: 1024px) 45vw, 100vw" vullend />
             </div>
 
             {/* De iris die zich sluit naarmate je verder komt: scherper wordt */}

@@ -97,14 +97,17 @@ export const BEELDEN = {
     stijl: 'neutraal',
   },
 
-  // --- Home: het oog, voor de scene over nauwkeurig meten ---------------
-  'oog-macro': {
-    bron: '2023-02/oog.jpg',
-    verhouding: BREED,
+  // --- Home: de scene over nauwkeurig meten -----------------------------
+  // Er is ook een mooie macrofoto van een oog (2023-02/oog.jpg), maar die is
+  // maar 612px breed en wordt hier op ruim 600px getoond: te weinig. Deze foto
+  // is 2560px breed, blijft dus scherp, en laat bovendien zien waar het om
+  // gaat: Gerard die iemands ogen meet.
+  'meting-scene': {
+    bron: '2021-12/Soof-Geer-apparatuur-scaled.jpg',
+    verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Close-up van een blauw oog, met een lichtpuntje in de iris.',
-    // Het origineel is 612px breed; meer vragen levert alleen wazigheid op.
-    breedtes: [400, 612],
+    alt: 'Gerard kijkt door het meetapparaat terwijl hij iemands ogen onderzoekt.',
+    breedtes: MIDDEN,
     stijl: 'neutraal',
   },
   'meting-apparaat': {

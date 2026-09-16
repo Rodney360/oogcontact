@@ -99,16 +99,18 @@
     "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAQBQCdASoUABQAPu1wsFKppiSiqAgBMB2JYwC90A+4obHdpTy11COPwk8MM0Meo+SAAP66bl4eXvrSVbBmw2+aGM0tQ9JWVfCxnKt8nZTJWfLxTslDsAJQ0yvpxFgvgOgIRFoPFPnY+ftJyrHAFf2L1QPBQFB802sGAlCjDL3qj53YFh0erWSXGPPoyjU3LoX/hRmtDFUGJ7C1PwDll3rfLXDAfC+QydHNv5MbnF4AAA==",
     "bron": "2021-10/IMG_1073-scaled.jpg"
   },
-  "oog-macro": {
-    "alt": "Close-up van een blauw oog, met een lichtpuntje in de iris.",
-    "breedte": 612,
-    "hoogte": 344,
+  "meting-scene": {
+    "alt": "Gerard kijkt door het meetapparaat terwijl hij iemands ogen onderzoekt.",
+    "breedte": 1280,
+    "hoogte": 1707,
     "breedtes": [
       400,
-      612
+      640,
+      900,
+      1280
     ],
-    "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBACdASoUAAsAPu1orU6ppiSiMAgBMB2JagCdMoADgs45bB7P0omhQAD+fo2gXJm6CARjf736JLOw0CVHk+GYequ1sCWvPu6fyHKU6AWlUHIOejxUst8AI/hx8inpaKf/eFvnyK0XNZwdlrnnfkByAAA=",
-    "bron": "2023-02/oog.jpg"
+    "blur": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAwBQCdASoUABsAPu1mq02ppaQiMAgBMB2JQBibA4lcjOj5fLqe8HXcvT6mKWYyrq7dAAD5bGyOQjm+KgHROYVOplC8mZJnqSTXWcUtUiayT69umFvwYhfTfxLWFE54QsB9gOb4HcALP7+Srlkbj6Y9NkLGYC8HESHodNRfSUWokuSU9HANd33hmf/vmG5aUCvrLlYMO3I4g7x8rXgQsLnBPj1TiZY06b9ke0gF+ePAP5usxe+HifuPY7gqhLSMAAA=",
+    "bron": "2021-12/Soof-Geer-apparatuur-scaled.jpg"
   },
   "meting-apparaat": {
     "alt": "De Vision-R 800, het apparaat waarmee de oogmeting wordt gedaan.",
