@@ -12,13 +12,16 @@ niet is — want de site werkt zonder al deze dingen gewoon.
 
 ### 1.1 Nu, om verder te kunnen
 
-**De repository koppelen aan Vercel.**
-Zodra dat gedaan is, krijgt elke branch automatisch een preview-link en gaat een
-merge naar `main` vanzelf live. Ik heb geen Vercel-token of CLI nodig; de
-koppeling tussen GitHub en Vercel doet alles.
-*Wat je doet:* ga naar <https://vercel.com/new>, kies de repository
-`Rodney360/oogcontact`, en klik op Deploy. Meer is het niet — de instellingen
-staan al goed in de repo.
+~~**De repository koppelen aan Vercel.**~~ **Gedaan.** De site staat op
+<https://oogcontact.vercel.app>. Elke push bouwt automatisch een nieuwe versie;
+dat duurt een paar minuten, omdat het bouwen ook alle foto's opnieuw omzet.
+
+**Een `main`-branch maken.**
+Op dit moment is er maar één branch, en die is tegelijk de live site. Daardoor
+gaat elke push meteen live en is er geen preview om eerst naar te kijken.
+*Wat je doet:* GitHub → de repository → Branches → maak `main` aan vanaf de
+huidige branch en zet hem als standaard. Daarna ga ik weer per onderwerp een
+pull request maken, en krijg je bij elke wijziging eerst een preview-link.
 
 **Branch-bescherming op `main`.**
 Zodat er niets per ongeluk rechtstreeks naar de live site gaat en de controles
