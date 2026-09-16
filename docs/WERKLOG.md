@@ -33,3 +33,29 @@ De hele site opnieuw opgebouwd, vanaf niets, als vervanging van WordPress.
 - **Openstaand:** zie `docs/open-punten.md`. Het belangrijkste: de koppeling met
   Vercel, de API-sleutel van de online agenda, het KvK-nummer en de nieuwe
   winkelfoto's.
+
+---
+
+## 2026-09-16 (later) — Dennis (Claude Code, cloud)
+
+- **Menubalk nagelopen.** Alle 17 links (6 in de balk, 5 in het uitklapmenu,
+  op drie schermbreedtes plus mobiel) brengen je naar de juiste pagina. Wat er
+  wél mis was: Escape sloot het uitklapmenu niet, en er zat een fout in de
+  pagina die pas in de live-versie zichtbaar was (zie hieronder). Er staat nu
+  een browsertest op de menubalk zelf: `tests/e2e/menu.spec.ts`.
+- **Verborgen fout opgelost.** In de live-versie klapte React de hele pagina na
+  het laden opnieuw op: een SVG-titel op de kaart en een verkeerd geschreven
+  eigenschap op de foto's ('fetchpriority' in plaats van 'fetchPriority')
+  zorgden ervoor dat de server en de browser niet precies hetzelfde maakten.
+  Dat is niet altijd te zien, maar een klik die net op dat moment valt gaat
+  verloren. Beide zijn gerepareerd; de browser meldt nu op geen enkele pagina
+  nog iets.
+- **Eerste scherm op mobiel rustiger.** De bovenregel herhaalde de kop
+  ("Opticien in Groningen" boven "Je opticien in Groningen") en staat nu op het
+  adres. De inleiding is van vier zinnen naar twee gegaan. "Afspraak maken" en
+  "Bel of app ons" zijn op de telefoon weg uit de hero: die keuzes staan al in
+  de balk onderin, die altijd in beeld blijft. Die balk heeft meer vorm
+  gekregen: hij zweeft nu als een afgerond blok boven de pagina in plaats van
+  een streep tegen de onderrand, en de voettekst verdwijnt er niet meer achter.
+- **Nog open:** zie `docs/open-punten.md`. Ongewijzigd: de sleutel van de
+  online agenda, Resend, Turnstile, het KvK-nummer en de nieuwe winkelfoto's.

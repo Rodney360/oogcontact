@@ -52,8 +52,7 @@ export function Beeld({
         alt={decoratief ? '' : (alt ?? g.alt)}
         aria-hidden={decoratief || undefined}
         loading={prioriteit ? 'eager' : 'lazy'}
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        {...({ fetchpriority: prioriteit ? 'high' : undefined } as any)}
+        fetchPriority={prioriteit ? 'high' : undefined}
         decoding={prioriteit ? 'sync' : 'async'}
         className={`${vullend ? 'h-full w-full object-cover' : ''} ${className}`}
         style={{

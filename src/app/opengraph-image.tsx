@@ -1,3 +1,6 @@
+import { readFile } from 'node:fs/promises'
+import path from 'node:path'
+
 import { ImageResponse } from 'next/og'
 
 import { BEDRIJF, adresOpEenRegel } from '@/content/bedrijf'
@@ -18,7 +21,15 @@ const INKT = '#11151C'
 const IVOOR = '#FBF2E6'
 const MESSING = '#C9A96A'
 
-export default function Afbeelding() {
+export default async function Afbeelding() {
+  // Het logo staat als SVG in public/; next/og kan daar geen bestandspad naar
+  // volgen, dus we lezen hem in en geven hem als data-URI mee.
+  const bestand = await readFile(
+    path.join(process.cwd(), 'public', 'logo', 'oogcontact-bij-gerard-licht.svg'),
+    'utf8',
+  )
+  const logo = `data:image/svg+xml;base64,${Buffer.from(bestand).toString('base64')}`
+
   return new ImageResponse(
     (
       <div
@@ -33,16 +44,8 @@ export default function Afbeelding() {
           fontFamily: 'sans-serif',
         }}
       >
-        {/* De brilvorm uit het logo */}
-        <svg width="230" height="70" viewBox="0 0 120 36">
-          <g fill="none" stroke={IVOOR} strokeWidth="3.4" strokeLinecap="round">
-            <circle cx="30" cy="19" r="14.5" />
-            <circle cx="76" cy="19" r="14.5" />
-            <path d="M44.5 17.5c3.5-2.6 13.5-2.6 17 0" />
-            <path d="M15.5 17.5C12 14.9 6 14.9 2.5 17.5" />
-            <path d="M90.5 17.5c3.5-2.6 9.5-2.6 13 0" />
-          </g>
-        </svg>
+        {/* Het echte logo, als data-URI ingelezen bij het bouwen. */}
+        <img src={logo} alt="" width={320} height={68} />
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ fontSize: 74, color: IVOOR, lineHeight: 1.05, letterSpacing: '-0.02em' }}>

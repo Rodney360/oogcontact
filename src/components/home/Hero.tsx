@@ -39,7 +39,7 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
   const woorden = kop.split(' ')
 
   return (
-    <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden pb-20 pt-40 md:pb-28">
+    <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden pb-32 pt-40 md:pb-28">
       {/* De foto */}
       <div className="absolute inset-0 -z-20" data-scherp={scherp || undefined}>
         <div className="hero-beeld size-full">
@@ -86,11 +86,17 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
 
       <div className="mx-auto w-full max-w-[86rem] px-6">
         <div className="max-w-[46rem]">
+          {/*
+            Hier stond eerder "Opticien in Groningen", precies wat er in de kop
+            eronder ook al staat. Nu staat er waar de winkel te vinden is. De
+            plaatsnaam blijft er bewust af: die staat een regel lager al, en
+            op een telefoon liep de regel daardoor over twee regels.
+          */}
           <p
             className="hero-in text-bijschrift font-semibold uppercase tracking-[0.2em] text-messing"
             style={{ animationDelay: '120ms' }}
           >
-            Opticien in Groningen
+            {BEDRIJF.adres.straat}
           </p>
 
           <h1 className="mt-6 text-kop-1">
@@ -114,8 +120,13 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
             {inleiding}
           </p>
 
+          {/*
+            Alleen vanaf tablet. Op een telefoon staan Bellen, WhatsApp en
+            Afspraak al in de vaste balk onderin, die altijd in beeld blijft.
+            Dezelfde twee knoppen hier maakten het eerste scherm dubbel en druk.
+          */}
           <div
-            className="hero-in mt-10 flex flex-wrap gap-4"
+            className="hero-in mt-10 hidden flex-wrap gap-4 md:flex"
             style={{ animationDelay: `${400 + woorden.length * 85}ms` }}
           >
             <KnopLink href="/afspraak-maken/" uiterlijk="messing" formaat="groot">
@@ -127,7 +138,7 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
           </div>
 
           <div
-            className="hero-in mt-10 flex flex-wrap items-center gap-x-8 gap-y-3"
+            className="hero-in mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 md:mt-10"
             style={{ animationDelay: `${480 + woorden.length * 85}ms` }}
           >
             <OpeningsStatus uitzonderingen={uitzonderingen} />

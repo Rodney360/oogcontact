@@ -20,9 +20,13 @@ export function Kaart({ licht = false }: { licht?: boolean }) {
         style={{ borderColor: rand, backgroundColor: vlak }}
       >
         <svg viewBox="0 0 800 500" className="h-auto w-full" role="img" aria-labelledby="kaart-titel">
+          {/*
+            Bewust één doorlopende tekst en niet uit losse stukjes opgebouwd:
+            een <title> mag maar één tekst bevatten, anders gaat React er
+            anders mee om dan de browser en klopt de pagina niet meer.
+          */}
           <title id="kaart-titel">
-            Plattegrond van de omgeving van {BEDRIJF.naam} aan het {BEDRIJF.adres.straat} in{' '}
-            {BEDRIJF.adres.plaats}.
+            {`Plattegrond van de omgeving van ${BEDRIJF.naam} aan het ${BEDRIJF.adres.straat} in ${BEDRIJF.adres.plaats}.`}
           </title>
 
           {/* De ondergrond */}

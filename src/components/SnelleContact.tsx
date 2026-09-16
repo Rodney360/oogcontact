@@ -3,7 +3,11 @@
 /**
  * De snelle manieren om contact te leggen.
  *
- * Op mobiel: een vaste balk onderin met Bellen, WhatsApp en Afspraak.
+ * Op mobiel: een zwevend blok onderin met Bellen, WhatsApp en Afspraak. Het
+ * ligt bewust los van de onderrand, met een ronding en een schaduw eronder:
+ * zo is het een eigen ding dat boven de pagina zweeft, en niet een streep die
+ * tegen de rand van het scherm aan plakt.
+ *
  * Op desktop: een zwevende WhatsApp-knop rechtsonder.
  *
  * Op de pagina "Afspraak maken" blijven ze weg: daar staat alles al.
@@ -49,17 +53,29 @@ export function SnelleContact() {
 
   return (
     <>
-      {/* Mobiel: vaste balk onderin */}
+      {/*
+        Zorgt dat de laatste regels van de voettekst niet achter het blok
+        verdwijnen. Staat hier omdat dit onderdeel als laatste op de pagina
+        komt, dus onder de voettekst.
+      */}
+      <div aria-hidden="true" className="h-28 md:hidden" />
+
+      {/* Mobiel: een zwevend blok onderin */}
       <nav
         aria-label="Snel contact"
-        className="fixed inset-x-0 bottom-0 z-40 border-t border-inkt-rand bg-inkt/95 backdrop-blur-xl md:hidden"
-        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+        className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-3 pb-3 md:hidden"
+        style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.75rem)' }}
       >
-        <ul className="grid grid-cols-3">
+        <ul
+          className={[
+            'pointer-events-auto grid grid-cols-3 overflow-hidden rounded-kaart',
+            'border border-inkt-rand-sterk bg-inkt/95 shadow-2xl backdrop-blur-xl',
+          ].join(' ')}
+        >
           <li>
             <a
               href={`tel:${BEDRIJF.telefoon.link}`}
-              className="flex min-h-16 flex-col items-center justify-center gap-1 text-bijschrift text-tekst-licht no-underline"
+              className="flex min-h-16 flex-col items-center justify-center gap-1.5 py-3 text-bijschrift text-tekst-licht no-underline"
             >
               <IcoonTelefoon />
               Bellen
@@ -70,7 +86,7 @@ export function SnelleContact() {
               href={whatsappLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-16 flex-col items-center justify-center gap-1 text-bijschrift text-tekst-licht no-underline"
+              className="flex min-h-16 flex-col items-center justify-center gap-1.5 py-3 text-bijschrift text-tekst-licht no-underline"
             >
               <IcoonWhatsApp />
               WhatsApp
@@ -79,7 +95,7 @@ export function SnelleContact() {
           <li>
             <a
               href="/afspraak-maken/"
-              className="flex min-h-16 flex-col items-center justify-center gap-1 bg-messing text-bijschrift font-medium text-inkt no-underline"
+              className="flex min-h-16 flex-col items-center justify-center gap-1.5 bg-messing py-3 text-bijschrift font-semibold text-inkt no-underline"
             >
               <IcoonAgenda />
               Afspraak

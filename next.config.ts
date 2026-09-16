@@ -13,7 +13,14 @@ import { alsNextRedirects } from './config/url-map.mjs'
 const csp = [
   "default-src 'self'",
   // 'unsafe-inline' is nodig voor het opstartscript van Next.js.
-  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://challenges.cloudflare.com",
+  // 'unsafe-eval' staat er alleen bij tijdens het ontwikkelen: React heeft dat
+  // nodig om nette foutmeldingen te kunnen tonen (bijvoorbeeld welk stukje
+  // pagina niet klopt). Live staat het er dus niet bij.
+  [
+    "script-src 'self' 'unsafe-inline'",
+    ...(process.env.NODE_ENV === 'production' ? [] : ["'unsafe-eval'"]),
+    'https://va.vercel-scripts.com https://challenges.cloudflare.com',
+  ].join(' '),
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://i.ytimg.com",
   "font-src 'self'",

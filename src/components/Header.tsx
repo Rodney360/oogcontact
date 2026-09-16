@@ -71,19 +71,6 @@ function useGescrold(): boolean {
   )
 }
 
-function Brilvorm({ className = '' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 120 36" className={className} aria-hidden="true" focusable="false">
-      <g fill="none" stroke="currentColor" strokeWidth="3.4" strokeLinecap="round">
-        <circle cx="30" cy="19" r="14.5" />
-        <circle cx="76" cy="19" r="14.5" />
-        <path d="M44.5 17.5c3.5-2.6 13.5-2.6 17 0" />
-        <path d="M15.5 17.5C12 14.9 6 14.9 2.5 17.5" />
-        <path d="M90.5 17.5c3.5-2.6 9.5-2.6 13 0" />
-      </g>
-    </svg>
-  )
-}
 
 export function Header({ mededeling }: { mededeling: Mededeling | null }) {
   const pad = usePathname()
@@ -118,30 +105,53 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
   )
   const menuKnop = useRef<HTMLButtonElement>(null)
   const menuId = useId()
+  /**
+   * Even een vlaggetje omhoog op het moment vlak na Escape. De aandacht gaat
+   * dan terug naar de knop waar je vandaan kwam, en zonder dit vlaggetje zou
+   * dat het uitklapmenu meteen weer openzetten.
+   */
+  const negeerFocus = useRef(false)
 
   // De hero staat alleen op de homepage; daar mag de balk doorzichtig beginnen.
   // Met een mededeling erboven is doorzichtig niet meer mooi: die balk heeft
   // zijn eigen kleur en dan hoort de rest daar strak op aan te sluiten.
   const overHero = pad === '/' && !gescrold && !mededeling
 
-  // Zolang het menu open is: niet achterlangs scrollen, en Escape sluit.
+  // Zolang het menu op mobiel open is: niet achterlangs scrollen.
   useEffect(() => {
     if (!menuOpen) return
     const vorige = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = vorige
+    }
+  }, [menuOpen])
 
+  /**
+   * Escape sluit wat er open staat: eerst een uitgeklapt onderdeel op desktop,
+   * anders het hele menu op mobiel. De aandacht gaat daarna terug naar de knop
+   * waar je vandaan kwam, zodat je met het toetsenbord niet verdwaalt.
+   */
+  useEffect(() => {
+    if (!menuOpen && !openSubmenu) return
     const opToets = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key !== 'Escape') return
+      if (openSubmenu) {
+        const knop = document.querySelector<HTMLAnchorElement>(
+          `header nav a[href="${openSubmenu}"]`,
+        )
+        negeerFocus.current = true
+        knop?.focus()
+        negeerFocus.current = false
+        setOpenSubmenu(null)
+      } else {
         setMenuOpen(false)
         menuKnop.current?.focus()
       }
     }
     document.addEventListener('keydown', opToets)
-    return () => {
-      document.body.style.overflow = vorige
-      document.removeEventListener('keydown', opToets)
-    }
-  }, [menuOpen, setMenuOpen])
+    return () => document.removeEventListener('keydown', opToets)
+  }, [menuOpen, openSubmenu, setMenuOpen, setOpenSubmenu])
 
   const actief = (itemPad: string) =>
     itemPad === '/' ? pad === '/' : pad.startsWith(itemPad.replace(/\/$/, ''))
@@ -161,16 +171,30 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
           overHero ? 'py-4' : 'py-2',
         ].join(' ')}
       >
+        {/*
+          min-h-11: het logo is maar 36 pixels hoog, maar als link naar de
+          homepage moet het aantikgebied minstens 44 bij 44 zijn.
+        */}
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-3 text-ivoor no-underline transition-opacity hover:opacity-80"
+          className="flex min-h-11 shrink-0 items-center no-underline transition-opacity hover:opacity-80"
           aria-label="Oogcontact bij Gerard, naar de homepage"
         >
-          <Brilvorm className={`w-16 transition-all duration-500 ${overHero ? 'sm:w-20' : ''}`} />
-          <span className="hidden font-kop text-[1.05rem] leading-tight tracking-tight min-[380px]:block">
-            Oogcontact
-            <span className="block text-bijschrift text-tekst-licht-zacht">bij Gerard</span>
-          </span>
+          {/*
+            Het echte logo van de winkel, overgetrokken uit het origineel
+            (zie scripts/maak-logo.mjs). Bewust een <img> en geen inline SVG:
+            het overgetrokken pad is 38 kB en dat wil je niet op elke pagina
+            in de HTML hebben staan. Een SVG valt bovendien niets te
+            optimaliseren, dus next/image voegt hier niets toe.
+          */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo/oogcontact-bij-gerard-licht.svg"
+            alt="Oogcontact bij Gerard"
+            width={946}
+            height={200}
+            className={`w-[168px] transition-all duration-500 sm:w-[200px] ${overHero ? 'sm:w-[228px]' : ''}`}
+          />
         </Link>
 
         {/* Menu op desktop */}
@@ -192,7 +216,10 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
                     'transition-colors duration-200',
                     actief(item.pad) ? 'text-messing' : 'text-tekst-licht hover:text-messing',
                   ].join(' ')}
-                  onFocus={() => setOpenSubmenu(item.kinderen ? item.pad : null)}
+                  onFocus={() => {
+                    if (negeerFocus.current) return
+                    setOpenSubmenu(item.kinderen ? item.pad : null)
+                  }}
                 >
                   {item.naam}
                   {item.kinderen && (
