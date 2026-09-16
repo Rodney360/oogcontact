@@ -10,6 +10,10 @@
  * Op een telefoon staat hij boven de vaste balk met Bellen, WhatsApp en
  * Afspraak, zodat hij die nooit overlapt. Het logo linksboven doet hetzelfde:
  * ook dat brengt je naar de homepage.
+ *
+ * De naam voor schermlezers is bewust "Naar de homepage" en niet "Terug naar
+ * de homepage": die laatste staat al op de 404-pagina, en daar zou je anders
+ * twee knoppen met dezelfde naam naast elkaar krijgen.
  */
 
 import Link from 'next/link'
@@ -22,7 +26,7 @@ export function NaarHome() {
   return (
     <Link
       href="/"
-      aria-label="Terug naar de homepage"
+      aria-label="Naar de homepage"
       className={[
         // Linksonder, en op een telefoon net boven de vaste balk onderin.
         'fixed left-3 z-40 md:bottom-7 md:left-7',

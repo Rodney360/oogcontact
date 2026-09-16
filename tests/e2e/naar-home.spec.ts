@@ -9,13 +9,13 @@ const SUBPAGINAS = ['/contactlenzen/', '/over-ons/', '/contact/', '/nieuws/']
 
 test('de pijl staat niet op de homepage zelf', async ({ page }) => {
   await page.goto('/')
-  await expect(page.getByRole('link', { name: 'Terug naar de homepage' })).toHaveCount(0)
+  await expect(page.getByRole('link', { name: 'Naar de homepage', exact: true })).toHaveCount(0)
 })
 
 test('de pijl brengt je vanaf elke pagina naar de homepage', async ({ page }) => {
   for (const pad of SUBPAGINAS) {
     await page.goto(pad)
-    const pijl = page.getByRole('link', { name: 'Terug naar de homepage' })
+    const pijl = page.getByRole('link', { name: 'Naar de homepage', exact: true })
     await expect(pijl, `${pad} hoort de pijl te tonen`).toBeVisible()
     await pijl.click()
     await page.waitForURL((u) => u.pathname === '/')
@@ -35,7 +35,7 @@ test('de pijl blijft staan tijdens het scrollen en dekt niets belangrijks af', a
   isMobile,
 }) => {
   await page.goto('/contactlenzen/')
-  const pijl = page.getByRole('link', { name: 'Terug naar de homepage' })
+  const pijl = page.getByRole('link', { name: 'Naar de homepage', exact: true })
   const voor = await pijl.boundingBox()
   if (!voor) throw new Error('de pijl heeft geen afmetingen')
 
