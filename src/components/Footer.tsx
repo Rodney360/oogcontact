@@ -8,6 +8,7 @@ import { BEDRIJF, whatsappLink, routeLink } from '@/content/bedrijf'
 import { WEEK, naarTijd, BUITEN_OPENINGSTIJDEN } from '@/content/openingstijden'
 import { VOETMENU } from '@/content/navigatie'
 import { OpeningsStatus } from '@/components/OpeningsStatus'
+import { uitzonderingen } from '@/lib/beheer'
 
 function Kolom({ titel, items }: { titel: string; items: { naam: string; pad: string }[] }) {
   return (
@@ -88,7 +89,7 @@ export function Footer() {
             <h2 className="mb-4 text-bijschrift font-semibold uppercase tracking-[0.14em] text-messing">
               Openingstijden
             </h2>
-            <OpeningsStatus className="mb-4" />
+            <OpeningsStatus className="mb-4" uitzonderingen={uitzonderingen()} />
             <table className="w-full max-w-[18rem] text-basis">
               <caption className="alleen-voor-schermlezers">Onze openingstijden per dag</caption>
               <tbody>

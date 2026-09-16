@@ -18,6 +18,7 @@ import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore }
 
 import { HOOFDMENU } from '@/content/navigatie'
 import { KnopLink } from '@/components/Knop'
+import type { Mededeling } from '@/lib/beheer'
 
 /**
  * Of de pagina al een stukje naar beneden gescrold is.
@@ -25,6 +26,38 @@ import { KnopLink } from '@/components/Knop'
  * De scrollpositie komt van buiten React, dus useSyncExternalStore. Zo staat
  * de balk meteen goed als iemand een pagina halverwege opent of herlaadt.
  */
+/** De mededelingenbalk, bijvoorbeeld voor een vakantiemelding. */
+function Mededelingbalk({ mededeling }: { mededeling: Mededeling }) {
+  const inhoud = (
+    <>
+      <svg viewBox="0 0 20 20" className="size-4 shrink-0" aria-hidden="true">
+        <circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M10 5.5v5M10 13.4v.6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+      <span>{mededeling.tekst}</span>
+    </>
+  )
+
+  return (
+    <div className="bg-messing text-inkt">
+      <div className="mx-auto max-w-[86rem] px-6">
+        {mededeling.link ? (
+          <Link
+            href={mededeling.link}
+            className="flex min-h-11 items-center justify-center gap-2.5 py-2 text-center text-bijschrift font-medium text-inkt underline underline-offset-4"
+          >
+            {inhoud}
+          </Link>
+        ) : (
+          <p className="flex min-h-11 items-center justify-center gap-2.5 py-2 text-center text-bijschrift font-medium">
+            {inhoud}
+          </p>
+        )}
+      </div>
+    </div>
+  )
+}
+
 function useGescrold(): boolean {
   const abonneer = useCallback((opWijziging: () => void) => {
     window.addEventListener('scroll', opWijziging, { passive: true })
@@ -52,7 +85,7 @@ function Brilvorm({ className = '' }: { className?: string }) {
   )
 }
 
-export function Header() {
+export function Header({ mededeling }: { mededeling: Mededeling | null }) {
   const pad = usePathname()
   const gescrold = useGescrold()
   /**
@@ -87,7 +120,9 @@ export function Header() {
   const menuId = useId()
 
   // De hero staat alleen op de homepage; daar mag de balk doorzichtig beginnen.
-  const overHero = pad === '/' && !gescrold
+  // Met een mededeling erboven is doorzichtig niet meer mooi: die balk heeft
+  // zijn eigen kleur en dan hoort de rest daar strak op aan te sluiten.
+  const overHero = pad === '/' && !gescrold && !mededeling
 
   // Zolang het menu open is: niet achterlangs scrollen, en Escape sluit.
   useEffect(() => {
@@ -115,12 +150,17 @@ export function Header() {
     <header
       className={[
         'fixed inset-x-0 top-0 z-50 transition-all duration-500',
-        overHero
-          ? 'bg-transparent py-4'
-          : 'bg-inkt/85 py-2 shadow-[0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl',
+        overHero ? 'bg-transparent' : 'bg-inkt/85 shadow-[0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl',
       ].join(' ')}
     >
-      <div className="mx-auto flex max-w-[86rem] items-center gap-4 px-6">
+      {mededeling && <Mededelingbalk mededeling={mededeling} />}
+
+      <div
+        className={[
+          'mx-auto flex max-w-[86rem] items-center gap-4 px-6 transition-all duration-500',
+          overHero ? 'py-4' : 'py-2',
+        ].join(' ')}
+      >
         <Link
           href="/"
           className="flex shrink-0 items-center gap-3 text-ivoor no-underline transition-opacity hover:opacity-80"

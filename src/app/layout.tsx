@@ -8,6 +8,7 @@ import { Footer } from '@/components/Footer'
 import { SnelleContact } from '@/components/SnelleContact'
 import { SoepelScrollen } from '@/components/Beweging'
 import { BEDRIJF } from '@/content/bedrijf'
+import { huidigeMededeling } from '@/lib/beheer'
 import { SITE_URL, bedrijfJsonLd, JsonLd } from '@/lib/seo'
 
 /**
@@ -72,7 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
 
         <SoepelScrollen />
-        <Header />
+        <Header mededeling={huidigeMededeling()} />
 
         <main id="hoofd">{children}</main>
 
