@@ -1,6 +1,6 @@
 import type { NextConfig } from 'next'
-// @ts-expect-error - config/url-map.mjs is bewust gewoon JavaScript, zodat
-// zowel next.config als de losse scripts hem kunnen gebruiken.
+// config/url-map.mjs is bewust gewoon JavaScript, zodat zowel next.config als
+// de losse scripts en de tests hem kunnen gebruiken.
 import { alsNextRedirects } from './config/url-map.mjs'
 
 /**
