@@ -1,0 +1,191 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Huisstijl Oogcontact bij Gerard
+
+   De kleuren hieronder zijn een kopie van src/content/kleuren.mjs. Dat bestand
+   is de bron; scripts/check-contrast.mjs controleert daar of alles leesbaar
+   genoeg blijft (WCAG 2.2 AA). Pas je hier iets aan, pas het daar dan ook aan.
+--------------------------------------------------------------------------- */
+
+@theme {
+  /* --- kleuren --- */
+  --color-inkt: #11151c;
+  --color-inkt-zacht: #1a202a;
+  --color-inkt-rand: #2a3240;
+  --color-inkt-rand-sterk: #69748a;
+
+  --color-ivoor: #fbf2e6;
+  --color-ivoor-zacht: #f4e9d9;
+  --color-ivoor-rand: #e2d3bc;
+  --color-ivoor-rand-sterk: #8c7f6b;
+
+  --color-tekst: #1b2028;
+  --color-tekst-zacht: #4a5361;
+  --color-tekst-licht: #fbf2e6;
+  --color-tekst-licht-zacht: #b9af9f;
+
+  --color-messing: #c9a96a;
+  --color-messing-diep: #7a5a22;
+  --color-messing-zacht: #e7d3a8;
+
+  --color-open: #6fbf8b;
+  --color-open-diep: #1f6b3c;
+  --color-fout: #ff9b8a;
+  --color-fout-diep: #a32d18;
+
+  /* --- lettertypen (gezet via next/font in src/app/layout.tsx) --- */
+  --font-kop: var(--font-fraunces), ui-serif, Georgia, 'Times New Roman', serif;
+  --font-tekst: var(--font-manrope), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* --- tekstgroottes ---
+     De bezoekers zijn vaak 45+. De lopende tekst begint daarom op 18px en
+     groeit netjes mee; niets wordt ooit kleiner dan 16px. */
+  --text-bijschrift: 1rem;          /* 16px - alleen labels en bijschriften */
+  --text-bijschrift--line-height: 1.5;
+  --text-basis: 1.125rem;           /* 18px - lopende tekst */
+  --text-basis--line-height: 1.7;
+  --text-groot: 1.25rem;            /* 20px - inleidingen */
+  --text-groot--line-height: 1.65;
+  --text-lead: clamp(1.375rem, 1.1rem + 1vw, 1.75rem);
+  --text-lead--line-height: 1.5;
+
+  --text-kop-4: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-kop-4--line-height: 1.35;
+  --text-kop-3: clamp(1.5rem, 1.25rem + 1.1vw, 2rem);
+  --text-kop-3--line-height: 1.25;
+  --text-kop-2: clamp(1.875rem, 1.4rem + 2.1vw, 3rem);
+  --text-kop-2--line-height: 1.15;
+  --text-kop-1: clamp(2.5rem, 1.6rem + 3.9vw, 5rem);
+  --text-kop-1--line-height: 1.05;
+
+  /* --- ritme --- */
+  --spacing-sectie: clamp(4rem, 2rem + 8vw, 9rem);
+  --spacing-gutter: 1.5rem;
+
+  /* --- vormen --- */
+  --radius-zacht: 0.5rem;
+  --radius-kaart: 1rem;
+  --radius-groot: 1.75rem;
+
+  /* --- beweging --- */
+  --ease-rustig: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-scherp: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ---------------------------------------------------------------------------
+   Basis
+--------------------------------------------------------------------------- */
+
+@layer base {
+  * {
+    min-width: 0;
+  }
+
+  html {
+    /* Lenis doet het soepel scrollen; de browser hoeft niets te doen. */
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-inkt);
+    color: var(--color-tekst-licht);
+    font-family: var(--font-tekst);
+    font-size: var(--text-basis);
+    line-height: 1.7;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-kop);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p, li {
+    text-wrap: pretty;
+  }
+
+  /* Overal een duidelijk zichtbare focusring, ook bij toetsenbordbediening. */
+  :focus-visible {
+    outline: 3px solid var(--color-messing);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .op-ivoor :focus-visible,
+  .op-ivoor:focus-visible {
+    outline-color: var(--color-messing-diep);
+  }
+
+  ::selection {
+    background-color: var(--color-messing);
+    color: var(--color-inkt);
+  }
+
+  /* Afbeeldingen gedragen zich als blokken, nooit als tekstregel. */
+  img, svg, video, canvas {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Hulpklassen
+--------------------------------------------------------------------------- */
+
+@layer utilities {
+  /* Alleen voorleesbaar, niet zichtbaar. */
+  .alleen-voor-schermlezers {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Lichte vlakken: draait de tekstkleuren om. */
+  .op-ivoor {
+    background-color: var(--color-ivoor);
+    color: var(--color-tekst);
+  }
+
+  /* De standaard leesbreedte voor lopende tekst: nooit te lange regels. */
+  .leesbreedte {
+    max-width: 68ch;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Rustiger weergave
+
+   Wie in zijn systeem heeft aangegeven minder beweging te willen, krijgt geen
+   vastgezette scenes, geen parallax en geen schuivende tekst. Alleen zachte
+   overgangen die niets verplaatsen.
+--------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Alles wat anders pas bij het scrollen verschijnt, is meteen zichtbaar. */
+  [data-verschijnt] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

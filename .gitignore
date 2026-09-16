@@ -1,0 +1,38 @@
+# afhankelijkheden
+node_modules/
+.pnp
+.pnp.js
+
+# build
+.next/
+out/
+build/
+dist/
+next-env.d.ts
+*.tsbuildinfo
+
+# omgeving en geheimen - NOOIT committen
+.env
+.env.local
+.env.*.local
+
+# testresultaten
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# besturingssysteem en editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Vercel
+.vercel
+
+# verwerkte afbeeldingen worden gegenereerd uit assets-original en assets-new
+# (npm run images) en horen daarom niet in de repo
+/public/beeld/

@@ -1,0 +1,306 @@
+[
+  {
+    "id": 4,
+    "count": 5,
+    "description": "",
+    "link": "https://oogcontactbijgerard.nl/category/geen-categorie/actualiteiten/",
+    "name": "Actualiteiten",
+    "slug": "actualiteiten",
+    "taxonomy": "category",
+    "parent": 1,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.2 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Actualiteiten Archieven - Oogcontact bij Gerard</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://oogcontactbijgerard.nl/category/geen-categorie/actualiteiten/\" />\n<meta property=\"og:locale\" content=\"nl_NL\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Actualiteiten Archieven - Oogcontact bij Gerard\" />\n<meta property=\"og:url\" content=\"https://oogcontactbijgerard.nl/category/geen-categorie/actualiteiten/\" />\n<meta property=\"og:site_name\" content=\"Oogcontact bij Gerard\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/category\\/geen-categorie\\/actualiteiten\\/\",\"url\":\"https:\\/\\/oogcontactbijgerard.nl\\/category\\/geen-categorie\\/actualiteiten\\/\",\"name\":\"Actualiteiten Archieven - Oogcontact bij Gerard\",\"isPartOf\":{\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/category\\/geen-categorie\\/actualiteiten\\/#breadcrumb\"},\"inLanguage\":\"nl-NL\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/category\\/geen-categorie\\/actualiteiten\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/oogcontactbijgerard.nl\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Geen categorie\",\"item\":\"https:\\/\\/oogcontactbijgerard.nl\\/category\\/geen-categorie\\/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Actualiteiten\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#website\",\"url\":\"https:\\/\\/oogcontactbijgerard.nl\\/\",\"name\":\"Oogcontact bij Gerard\",\"description\":\"We houden oogcontact!\",\"publisher\":{\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/oogcontactbijgerard.nl\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"nl-NL\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#organization\",\"name\":\"Oogcontact Bij Gerard\",\"url\":\"https:\\/\\/oogcontactbijgerard.nl\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"nl-NL\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/oogcontactbijgerard.nl\\/wp-content\\/uploads\\/2021\\/03\\/unnamed-2.png\",\"contentUrl\":\"https:\\/\\/oogcontactbijgerard.nl\\/wp-content\\/uploads\\/2021\\/03\\/unnamed-2.png\",\"width\":337,\"height\":113,\"caption\":\"Oogcontact Bij Gerard\"},\"image\":{\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.instagram.com\\/oogcontactbijgerard\\/\",\"https:\\/\\/www.linkedin.com\\/company\\/oogcontact-bij-gerard\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Actualiteiten Archieven - Oogcontact bij Gerard",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://oogcontactbijgerard.nl/category/geen-categorie/actualiteiten/",
+      "og_locale": "nl_NL",
+      "og_type": "article",
+      "og_title": "Actualiteiten Archieven - Oogcontact bij Gerard",
+      "og_url": "https://oogcontactbijgerard.nl/category/geen-categorie/actualiteiten/",
+      "og_site_name": "Oogcontact bij Gerard",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://oogcontactbijgerard.nl/category/geen-categorie/actualiteiten/",
+            "url": "https://oogcontactbijgerard.nl/category/geen-categorie/actualiteiten/",
+            "name": "Actualiteiten Archieven - Oogcontact bij Gerard",
+            "isPartOf": {
+              "@id": "https://oogcontactbijgerard.nl/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://oogcontactbijgerard.nl/category/geen-categorie/actualiteiten/#breadcrumb"
+            },
+            "inLanguage": "nl-NL"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://oogcontactbijgerard.nl/category/geen-categorie/actualiteiten/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://oogcontactbijgerard.nl/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Geen categorie",
+                "item": "https://oogcontactbijgerard.nl/category/geen-categorie/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Actualiteiten"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://oogcontactbijgerard.nl/#website",
+            "url": "https://oogcontactbijgerard.nl/",
+            "name": "Oogcontact bij Gerard",
+            "description": "We houden oogcontact!",
+            "publisher": {
+              "@id": "https://oogcontactbijgerard.nl/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://oogcontactbijgerard.nl/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "nl-NL"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://oogcontactbijgerard.nl/#organization",
+            "name": "Oogcontact Bij Gerard",
+            "url": "https://oogcontactbijgerard.nl/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "nl-NL",
+              "@id": "https://oogcontactbijgerard.nl/#/schema/logo/image/",
+              "url": "https://oogcontactbijgerard.nl/wp-content/uploads/2021/03/unnamed-2.png",
+              "contentUrl": "https://oogcontactbijgerard.nl/wp-content/uploads/2021/03/unnamed-2.png",
+              "width": 337,
+              "height": 113,
+              "caption": "Oogcontact Bij Gerard"
+            },
+            "image": {
+              "@id": "https://oogcontactbijgerard.nl/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.instagram.com/oogcontactbijgerard/",
+              "https://www.linkedin.com/company/oogcontact-bij-gerard/"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://oogcontactbijgerard.nl/wp-json/wp/v2/categories/4",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://oogcontactbijgerard.nl/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://oogcontactbijgerard.nl/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": true,
+          "href": "https://oogcontactbijgerard.nl/wp-json/wp/v2/categories/1"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://oogcontactbijgerard.nl/wp-json/wp/v2/posts?categories=4"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "count": 0,
+    "description": "",
+    "link": "https://oogcontactbijgerard.nl/category/geen-categorie/",
+    "name": "Geen categorie",
+    "slug": "geen-categorie",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.2 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Geen categorie Archieven - Oogcontact bij Gerard</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://oogcontactbijgerard.nl/category/geen-categorie/\" />\n<meta property=\"og:locale\" content=\"nl_NL\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Geen categorie Archieven - Oogcontact bij Gerard\" />\n<meta property=\"og:url\" content=\"https://oogcontactbijgerard.nl/category/geen-categorie/\" />\n<meta property=\"og:site_name\" content=\"Oogcontact bij Gerard\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/category\\/geen-categorie\\/\",\"url\":\"https:\\/\\/oogcontactbijgerard.nl\\/category\\/geen-categorie\\/\",\"name\":\"Geen categorie Archieven - Oogcontact bij Gerard\",\"isPartOf\":{\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/category\\/geen-categorie\\/#breadcrumb\"},\"inLanguage\":\"nl-NL\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/category\\/geen-categorie\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/oogcontactbijgerard.nl\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Geen categorie\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#website\",\"url\":\"https:\\/\\/oogcontactbijgerard.nl\\/\",\"name\":\"Oogcontact bij Gerard\",\"description\":\"We houden oogcontact!\",\"publisher\":{\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/oogcontactbijgerard.nl\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"nl-NL\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#organization\",\"name\":\"Oogcontact Bij Gerard\",\"url\":\"https:\\/\\/oogcontactbijgerard.nl\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"nl-NL\",\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/oogcontactbijgerard.nl\\/wp-content\\/uploads\\/2021\\/03\\/unnamed-2.png\",\"contentUrl\":\"https:\\/\\/oogcontactbijgerard.nl\\/wp-content\\/uploads\\/2021\\/03\\/unnamed-2.png\",\"width\":337,\"height\":113,\"caption\":\"Oogcontact Bij Gerard\"},\"image\":{\"@id\":\"https:\\/\\/oogcontactbijgerard.nl\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.instagram.com\\/oogcontactbijgerard\\/\",\"https:\\/\\/www.linkedin.com\\/company\\/oogcontact-bij-gerard\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Geen categorie Archieven - Oogcontact bij Gerard",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://oogcontactbijgerard.nl/category/geen-categorie/",
+      "og_locale": "nl_NL",
+      "og_type": "article",
+      "og_title": "Geen categorie Archieven - Oogcontact bij Gerard",
+      "og_url": "https://oogcontactbijgerard.nl/category/geen-categorie/",
+      "og_site_name": "Oogcontact bij Gerard",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://oogcontactbijgerard.nl/category/geen-categorie/",
+            "url": "https://oogcontactbijgerard.nl/category/geen-categorie/",
+            "name": "Geen categorie Archieven - Oogcontact bij Gerard",
+            "isPartOf": {
+              "@id": "https://oogcontactbijgerard.nl/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://oogcontactbijgerard.nl/category/geen-categorie/#breadcrumb"
+            },
+            "inLanguage": "nl-NL"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://oogcontactbijgerard.nl/category/geen-categorie/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://oogcontactbijgerard.nl/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Geen categorie"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://oogcontactbijgerard.nl/#website",
+            "url": "https://oogcontactbijgerard.nl/",
+            "name": "Oogcontact bij Gerard",
+            "description": "We houden oogcontact!",
+            "publisher": {
+              "@id": "https://oogcontactbijgerard.nl/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://oogcontactbijgerard.nl/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "nl-NL"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://oogcontactbijgerard.nl/#organization",
+            "name": "Oogcontact Bij Gerard",
+            "url": "https://oogcontactbijgerard.nl/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "nl-NL",
+              "@id": "https://oogcontactbijgerard.nl/#/schema/logo/image/",
+              "url": "https://oogcontactbijgerard.nl/wp-content/uploads/2021/03/unnamed-2.png",
+              "contentUrl": "https://oogcontactbijgerard.nl/wp-content/uploads/2021/03/unnamed-2.png",
+              "width": 337,
+              "height": 113,
+              "caption": "Oogcontact Bij Gerard"
+            },
+            "image": {
+              "@id": "https://oogcontactbijgerard.nl/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.instagram.com/oogcontactbijgerard/",
+              "https://www.linkedin.com/company/oogcontact-bij-gerard/"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://oogcontactbijgerard.nl/wp-json/wp/v2/categories/1",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://oogcontactbijgerard.nl/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://oogcontactbijgerard.nl/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://oogcontactbijgerard.nl/wp-json/wp/v2/posts?categories=1"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
