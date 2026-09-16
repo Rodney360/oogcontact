@@ -78,3 +78,24 @@ De hele site opnieuw opgebouwd, vanaf niets, als vervanging van WordPress.
   desktop verandert er niets: daar was de foto al vrijwel helemaal te zien.
 - **Nog open:** zie `docs/open-punten.md`. Het eerste punt is nu een
   `main`-branch, zodat er weer previews per wijziging komen.
+
+---
+
+## 2026-09-16 (laat) — Dennis (Claude Code, cloud)
+
+- **Menu op mobiel was niet meer dicht te krijgen.** Het opengeklapte menu
+  bedekt het hele scherm en lag daarmee ook over de sluitknop rechtsboven en
+  over het logo heen. Je zag de knop wel, maar hij was niet aan te tikken; op
+  een telefoon kwam je het menu dus alleen nog uit door ergens naartoe te gaan.
+  De bovenste balk ligt nu boven het menu. Daarnaast gaat het menu ook dicht
+  als je naast de onderdelen tikt.
+- **De pagina scrolde achter het open menu door.** `overflow: hidden` was niet
+  genoeg: het soepele scrollen (Lenis) verzet de pagina zelf. Dat wordt nu
+  stilgezet zolang het menu open staat.
+- **Staarten van letters in de kop werden afgesneden.** Elk woord van de kop
+  zit in een vakje dat afsnijdt, zodat het woord van onderaf in beeld kan
+  schuiven. Dat vakje was precies zo hoog als de regel, dus de g van
+  "Groningen" en de p van "opticien" werden onderaan recht afgehakt. Het vakje
+  is nu ruimer zonder extra plek in te nemen.
+- Vier browsertests erbij; 120 groen.
+- **Nog open:** zie `docs/open-punten.md`.

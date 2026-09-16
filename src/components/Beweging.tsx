@@ -51,6 +51,35 @@ export function useHeeftMuis(): boolean {
   return useMediaQuery('(hover: hover) and (pointer: fine)', false)
 }
 
+type SoepelScroller = {
+  raf: (t: number) => void
+  destroy: () => void
+  stop: () => void
+  start: () => void
+}
+
+/**
+ * Het soepele scrollen even stilzetten.
+ *
+ * Nodig zodra er iets over het hele scherm heen ligt, zoals het menu op
+ * mobiel. Alleen `overflow: hidden` op de pagina is dan niet genoeg: het
+ * soepele scrollen verzet de pagina zelf en trekt zich daar niets van aan.
+ * Daarom wordt hier de motor even uitgezet.
+ *
+ * Het staat los van React, omdat degene die het stilzet (de koptekst) en
+ * degene die het aanzet (deze module) niets van elkaar hoeven te weten. Wordt
+ * het soepele scrollen later pas geladen, dan onthoudt `scrollenStil` dat het
+ * meteen stil moet beginnen.
+ */
+let scroller: SoepelScroller | null = null
+let scrollenStil = false
+
+export function zetSoepelScrollenStil(stil: boolean) {
+  scrollenStil = stil
+  if (stil) scroller?.stop()
+  else scroller?.start()
+}
+
 /**
  * Zet het soepele scrollen aan (Lenis). Wordt pas geladen als het nodig is,
  * dus niet bij "minder beweging" en niet op een aanraakscherm, waar het
@@ -63,7 +92,7 @@ export function SoepelScrollen() {
   useEffect(() => {
     if (minder || !muis) return
 
-    let lenis: { raf: (t: number) => void; destroy: () => void } | null = null
+    let lenis: SoepelScroller | null = null
     let frame = 0
     let gestopt = false
 
@@ -74,6 +103,8 @@ export function SoepelScrollen() {
         easing: (t: number) => Math.min(1, 1.001 - 2 ** (-10 * t)),
         smoothWheel: true,
       })
+      scroller = lenis
+      if (scrollenStil) lenis.stop()
       const stap = (tijd: number) => {
         lenis?.raf(tijd)
         frame = requestAnimationFrame(stap)
@@ -84,6 +115,7 @@ export function SoepelScrollen() {
     return () => {
       gestopt = true
       cancelAnimationFrame(frame)
+      if (scroller === lenis) scroller = null
       lenis?.destroy()
     }
   }, [minder, muis])

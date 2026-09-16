@@ -146,3 +146,72 @@ test.describe('terug met de browserknop', () => {
     await expect(balk.locator('li > div ul')).toBeHidden()
   })
 })
+
+/**
+ * Het menu weer dicht krijgen.
+ *
+ * Dit ging mis: het opengeklapte menu bedekt het hele scherm en lag daarmee
+ * ook over de sluitknop heen. Je zag de knop wel, maar hij was niet aan te
+ * tikken - op een telefoon kwam je het menu daardoor alleen nog uit door
+ * ergens naartoe te gaan.
+ */
+test.describe('het menu weer dicht krijgen', () => {
+  test.skip(({ isMobile }) => !isMobile, 'alleen op een telefoon')
+
+  const knop = (page: import('@playwright/test').Page) => page.locator('header button[aria-controls]')
+
+  test('met dezelfde knop rechtsboven', async ({ page }) => {
+    await page.goto('/')
+    const menu = page.getByRole('navigation', { name: 'Menu' })
+
+    await knop(page).click()
+    await expect(menu).toBeVisible()
+    await expect(knop(page)).toHaveAttribute('aria-expanded', 'true')
+
+    await knop(page).click({ timeout: 5000 })
+    await expect(menu).toBeHidden()
+    await expect(knop(page)).toHaveAttribute('aria-expanded', 'false')
+  })
+
+  test('door naast de onderdelen te tikken', async ({ page }) => {
+    await page.goto('/')
+    const menu = page.getByRole('navigation', { name: 'Menu' })
+    await knop(page).click()
+    await expect(menu).toBeVisible()
+
+    const scherm = page.viewportSize()
+    if (!scherm) throw new Error('geen schermmaat')
+    await page.mouse.click(Math.round(scherm.width / 2), scherm.height - 40)
+    await expect(menu).toBeHidden()
+  })
+
+  test('de pagina scrolt niet achter het menu door', async ({ page }) => {
+    await page.goto('/')
+    await knop(page).click()
+    await expect(page.getByRole('navigation', { name: 'Menu' })).toBeVisible()
+
+    const voor = await page.evaluate(() => window.scrollY)
+    await page.mouse.wheel(0, 600)
+    await page.waitForTimeout(700)
+    expect(await page.evaluate(() => window.scrollY)).toBe(voor)
+  })
+})
+
+/**
+ * De kop op de homepage schuift woord voor woord in beeld. Het vakje dat
+ * daarvoor afsnijdt moet ruimer zijn dan de regel zelf, anders worden de
+ * staarten van letters als de g en de p onderaan recht afgesneden.
+ */
+test('de staarten van de letters in de kop worden niet afgesneden', async ({ page }) => {
+  await page.goto('/')
+  const ruimte = await page.evaluate(() => {
+    const buiten = document.querySelector('h1 > span') as HTMLElement | null
+    const binnen = buiten?.firstElementChild as HTMLElement | null
+    if (!buiten || !binnen) return null
+    const maat = parseFloat(getComputedStyle(buiten).fontSize)
+    return { onder: buiten.clientHeight - binnen.offsetHeight, maat }
+  })
+  expect(ruimte, 'de kop hoort uit losse woorden te bestaan').not.toBeNull()
+  // Ruim genoeg voor een g of een p: minstens 0,15 keer de letterhoogte.
+  expect(ruimte!.onder).toBeGreaterThan(ruimte!.maat * 0.15)
+})

@@ -18,6 +18,7 @@ import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore }
 
 import { HOOFDMENU } from '@/content/navigatie'
 import { KnopLink } from '@/components/Knop'
+import { zetSoepelScrollenStil } from '@/components/Beweging'
 import type { Mededeling } from '@/lib/beheer'
 
 /**
@@ -39,7 +40,7 @@ function Mededelingbalk({ mededeling }: { mededeling: Mededeling }) {
   )
 
   return (
-    <div className="bg-messing text-inkt">
+    <div className="relative z-50 bg-messing text-inkt">
       <div className="mx-auto max-w-[86rem] px-6">
         {mededeling.link ? (
           <Link
@@ -127,13 +128,21 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
   // zijn eigen kleur en dan hoort de rest daar strak op aan te sluiten.
   const overHero = pad === '/' && !gescrold && !mededeling
 
-  // Zolang het menu op mobiel open is: niet achterlangs scrollen.
+  /**
+   * Zolang het menu open is: niet achterlangs scrollen.
+   *
+   * Twee dingen zijn daarvoor nodig. `overflow: hidden` houdt het gewone
+   * scrollen tegen, en het soepele scrollen moet apart stilgezet worden:
+   * dat verzet de pagina zelf en trekt zich van `overflow` niets aan.
+   */
   useEffect(() => {
     if (!menuOpen) return
     const vorige = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+    zetSoepelScrollenStil(true)
     return () => {
       document.body.style.overflow = vorige
+      zetSoepelScrollenStil(false)
     }
   }, [menuOpen])
 
@@ -175,9 +184,16 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
     >
       {mededeling && <Mededelingbalk mededeling={mededeling} />}
 
+      {/*
+        relative z-50: de balk zelf moet boven het opengeklapte menu liggen.
+        Het menupaneel hieronder is fixed en bedekt het hele scherm; zonder dit
+        lag het over de sluitknop en het logo heen. De knop was dan wel te zien,
+        maar niet aan te tikken - op een telefoon kwam je het menu daardoor
+        alleen nog uit door ergens naartoe te gaan.
+      */}
       <div
         className={[
-          'mx-auto flex max-w-[86rem] items-center gap-4 px-6 transition-all duration-500',
+          'relative z-50 mx-auto flex max-w-[86rem] items-center gap-4 px-6 transition-all duration-500',
           overHero ? 'py-4' : 'py-2',
         ].join(' ')}
       >
@@ -298,13 +314,29 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
         </div>
       </div>
 
-      {/* Menu op mobiel: het hele scherm */}
+      {/*
+        Menu op mobiel: het hele scherm.
+
+        Tik je naast de onderdelen - op de lege ruimte eronder of ernaast - dan
+        gaat het menu ook dicht. Dat is wat de meeste mensen als eerste
+        proberen. De knop rechtsboven blijft gewoon werken; die ligt nu boven
+        dit paneel.
+      */}
       <div
         id={menuId}
         hidden={!menuOpen}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) setMenuOpen(false)
+        }}
         className="fixed inset-0 top-0 z-40 overflow-y-auto bg-inkt/98 pb-28 pt-24 backdrop-blur-2xl lg:hidden"
       >
-        <nav aria-label="Menu" className="px-6">
+        <nav
+          aria-label="Menu"
+          className="px-6"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setMenuOpen(false)
+          }}
+        >
           <ul className="space-y-1">
             {HOOFDMENU.map((item, i) => (
               <li

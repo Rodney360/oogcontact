@@ -109,9 +109,22 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
             {BEDRIJF.adres.straat}
           </p>
 
+          {/*
+            Elk woord zit in een vakje dat afsnijdt wat erbuiten valt; daardoor
+            kan het woord van onderaf in beeld schuiven.
+
+            Dat vakje was precies zo hoog als de regel, en daar past de staart
+            van een letter niet in: de g van "Groningen" en de p van "opticien"
+            werden onderaan recht afgesneden. Vandaar de ruimte onderaan het
+            vakje, die er met een even grote negatieve marge weer af gehaald
+            wordt - het vakje is dus ruimer, maar neemt geen extra plek in.
+          */}
           <h1 className="mt-6 text-kop-1">
             {woorden.map((woord, i) => (
-              <span key={`${woord}-${i}`} className="inline-block overflow-hidden align-bottom">
+              <span
+                key={`${woord}-${i}`}
+                className="inline-block overflow-hidden align-bottom pb-[0.24em] -mb-[0.24em]"
+              >
                 <span
                   className="hero-woord inline-block"
                   style={{ animationDelay: `${260 + i * 85}ms` }}
@@ -199,7 +212,9 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
           animation: hero-woord-op 800ms var(--ease-rustig) both;
         }
         @keyframes hero-woord-op {
-          from { opacity: 0; transform: translate3d(0, 105%, 0); }
+          /* 135%: het vakje is onderaan ruimer geworden (zie de kop hierboven),
+             dus het woord moet verder weg beginnen om echt uit beeld te zijn. */
+          from { opacity: 0; transform: translate3d(0, 135%, 0); }
           to   { opacity: 1; transform: none; }
         }
 
