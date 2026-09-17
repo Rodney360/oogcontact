@@ -1,15 +1,53 @@
 /**
- * Twee wegen terug naar de homepage: het logo linksboven en de zwevende pijl
- * linksonder. Allebei moeten ze het op elke pagina doen.
+ * Twee wegen terug: het logo linksboven en het zwevende knopje linksonder.
+ *
+ * Buiten de homepage brengen ze je naar de homepage. Sta je al op de
+ * homepage, dan brengen ze je naar de bovenkant van de pagina - dat deed het
+ * logo eerst niet, en dan gebeurde er bij een klik dus helemaal niets.
  */
 
 import { test, expect } from '@playwright/test'
 
 const SUBPAGINAS = ['/contactlenzen/', '/over-ons/', '/contact/', '/nieuws/']
 
-test('de pijl staat niet op de homepage zelf', async ({ page }) => {
+/** Een eind naar beneden, zoals iemand die de pagina doorleest. */
+async function scrollOmlaag(page: import('@playwright/test').Page, tot = 3000) {
+  await page.evaluate((y) => window.scrollTo(0, y), tot)
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(tot / 2)
+}
+
+test('bovenaan de homepage staat er geen knopje linksonder', async ({ page }) => {
   await page.goto('/')
   await expect(page.getByRole('link', { name: 'Naar de homepage', exact: true })).toHaveCount(0)
+  await expect(page.getByRole('link', { name: 'Naar boven', exact: true })).toHaveCount(0)
+})
+
+test('het logo brengt je op de homepage terug naar boven', async ({ page }) => {
+  await page.goto('/')
+  await scrollOmlaag(page)
+
+  const logo = page.locator('header a[aria-label^="Oogcontact"]')
+  await expect(logo).toHaveAttribute('aria-label', 'Oogcontact bij Gerard, terug naar boven')
+  await logo.click()
+
+  await expect.poll(() => page.evaluate(() => window.scrollY), {
+    message: 'na een klik op het logo hoor je bovenaan te staan',
+    timeout: 5000,
+  }).toBeLessThan(5)
+  expect(new URL(page.url()).pathname).toBe('/')
+})
+
+test('het knopje linksonder wordt op de homepage een pijl naar boven', async ({ page }) => {
+  await page.goto('/')
+  await scrollOmlaag(page)
+
+  const naarBoven = page.getByRole('link', { name: 'Naar boven', exact: true })
+  await expect(naarBoven).toBeVisible()
+  await naarBoven.click()
+
+  await expect.poll(() => page.evaluate(() => window.scrollY), { timeout: 5000 }).toBeLessThan(5)
+  // En daarna is hij weer weg, want je staat al boven.
+  await expect(naarBoven).toBeHidden()
 })
 
 test('de pijl brengt je vanaf elke pagina naar de homepage', async ({ page }) => {
@@ -19,14 +57,17 @@ test('de pijl brengt je vanaf elke pagina naar de homepage', async ({ page }) =>
     await expect(pijl, `${pad} hoort de pijl te tonen`).toBeVisible()
     await pijl.click()
     await page.waitForURL((u) => u.pathname === '/')
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5)
   }
 })
 
 test('het logo brengt je vanaf elke pagina naar de homepage', async ({ page }) => {
   for (const pad of SUBPAGINAS) {
     await page.goto(pad)
-    await page.locator('header a[aria-label*="homepage"]').click()
+    await scrollOmlaag(page, 1200)
+    await page.locator('header a[aria-label$="naar de homepage"]').click()
     await page.waitForURL((u) => u.pathname === '/')
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5)
   }
 })
 

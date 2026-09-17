@@ -18,7 +18,7 @@ import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore }
 
 import { HOOFDMENU } from '@/content/navigatie'
 import { KnopLink } from '@/components/Knop'
-import { zetSoepelScrollenStil } from '@/components/Beweging'
+import { scrollNaarBoven, zetSoepelScrollenStil } from '@/components/Beweging'
 import type { Mededeling } from '@/lib/beheer'
 
 /**
@@ -201,10 +201,26 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
           min-h-11: het logo is maar 36 pixels hoog, maar als link naar de
           homepage moet het aantikgebied minstens 44 bij 44 zijn.
         */}
+        {/*
+          Sta je al op de homepage, dan valt er niets te navigeren en gebeurde
+          er bij een klik op het logo dus niets. Dat is precies het moment
+          waarop je het gebruikt: ergens halverwege een lange pagina. Nu brengt
+          het logo je daar rustig terug naar boven.
+        */}
         <Link
           href="/"
+          onClick={(e) => {
+            setMenuOpen(false)
+            if (pad !== '/') return
+            e.preventDefault()
+            scrollNaarBoven()
+          }}
           className="flex min-h-11 shrink-0 items-center no-underline transition-opacity hover:opacity-80"
-          aria-label="Oogcontact bij Gerard, naar de homepage"
+          aria-label={
+            pad === '/'
+              ? 'Oogcontact bij Gerard, terug naar boven'
+              : 'Oogcontact bij Gerard, naar de homepage'
+          }
         >
           {/*
             Het echte logo van de winkel, overgetrokken uit het origineel

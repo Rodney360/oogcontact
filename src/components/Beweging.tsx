@@ -56,6 +56,7 @@ type SoepelScroller = {
   destroy: () => void
   stop: () => void
   start: () => void
+  scrollTo: (doel: number) => void
 }
 
 /**
@@ -78,6 +79,22 @@ export function zetSoepelScrollenStil(stil: boolean) {
   scrollenStil = stil
   if (stil) scroller?.stop()
   else scroller?.start()
+}
+
+/**
+ * Rustig terug naar de bovenkant van de pagina.
+ *
+ * Draait het soepele scrollen, dan doet dat het werk. Anders vraagt hij het
+ * aan de browser zelf - en wie minder beweging wil, springt er meteen naartoe
+ * in plaats van dat het hele scherm langsvliegt.
+ */
+export function scrollNaarBoven() {
+  if (scroller) {
+    scroller.scrollTo(0)
+    return
+  }
+  const minder = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  window.scrollTo({ top: 0, behavior: minder ? 'auto' : 'smooth' })
 }
 
 /**

@@ -115,3 +115,20 @@ De hele site opnieuw opgebouwd, vanaf niets, als vervanging van WordPress.
   18 -> 20px, lead 20 -> 28px, koppen 22/28/36 -> 32/48/80px. De regelafstand
   is op een telefoon iets krapper. Ondergrens blijft 16px, zoals afgesproken.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-17 (later) — Dennis (Claude Code, cloud)
+
+- **Logo op de homepage deed niets.** Stond je al op de homepage, dan viel er
+  voor de browser niets te navigeren en bleef je staan waar je was — precies
+  op het moment dat je het logo gebruikt, namelijk halverwege een lange
+  pagina. Het logo brengt je daar nu rustig terug naar boven. Vanaf een andere
+  pagina gaat het gewoon naar de homepage, bovenaan.
+- **Het zwevende knopje linksonder doet nu mee.** Op de homepage wordt het een
+  pijl omhoog ("Naar boven"), die pas verschijnt zodra je een schermhoogte ver
+  bent. Elders blijft het de pijl naar links terug naar de homepage.
+- Het soepele scrollen doet het scrollen als dat aanstaat; bij "minder
+  beweging" spring je er meteen naartoe in plaats van dat het scherm
+  langsvliegt. Vier browsertests erbij; 132 groen.
+- **Nog open:** zie `docs/open-punten.md`.
