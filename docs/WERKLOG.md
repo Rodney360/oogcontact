@@ -132,3 +132,25 @@ De hele site opnieuw opgebouwd, vanaf niets, als vervanging van WordPress.
   beweging" spring je er meteen naartoe in plaats van dat het scherm
   langsvliegt. Vier browsertests erbij; 132 groen.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-17 (avond) — Dennis (Claude Code, cloud)
+
+- **Hero-tekst kleiner en rustiger.** De kop gaat van 36 naar 32px op een
+  telefoon (68 in plaats van 80px op een breed scherm), de inleiding van 20
+  naar 18px (24 in plaats van 28). Eigen tokens `--text-hero` en
+  `--text-hero-lead`, want die tekst staat over een foto en mag rustiger zijn
+  dan een kop op een egale achtergrond. De openingsstatus en het
+  telefoonnummer blijven zoals ze waren (16px).
+- **"Scherper" bleek niet aan de weergave te liggen.** Nagemeten: met en
+  zonder de resterende transform van de animatie is het beeld pixel voor pixel
+  identiek, en `-webkit-font-smoothing` maakt ook niets uit. De tekst stond
+  gewoon half over het gezicht heen, en dat leest als onscherp.
+- **Foto op een staand scherm van 62 naar 40svh.** Nu staat de foto bovenin en
+  de tekst eronder op een egale achtergrond. Dat levert bovendien meer foto
+  op: in een lager vak wordt hij minder ver opgeblazen, dus zie je ongeveer
+  tweederde in plaats van veertig procent. Op een liggend scherm verandert er
+  niets; daar is het contrast achter de tekst 14,5:1 voor de kop en 7,7:1 voor
+  de inleiding, ruim boven de norm.
+- **Nog open:** zie `docs/open-punten.md`.

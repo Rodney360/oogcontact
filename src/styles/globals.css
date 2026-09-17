@@ -70,6 +70,13 @@
   --text-kop-1: clamp(2.25rem, 1.23rem + 4.2vw, 5rem);        /* 36 -> 80px */
   --text-kop-1--line-height: 1.05;
 
+  /* De hero heeft eigen maten: die tekst staat over een foto heen en mag
+     daarom wat rustiger zijn dan een kop op een egale achtergrond. */
+  --text-hero: clamp(2rem, 1.15rem + 3.5vw, 4.25rem);         /* 32 -> 68px */
+  --text-hero--line-height: 1.08;
+  --text-hero-lead: clamp(1.125rem, 0.99rem + 0.6vw, 1.5rem); /* 18 -> 24px */
+  --text-hero-lead--line-height: 1.5;
+
   /* --- ritme --- */
   --spacing-sectie: clamp(4rem, 2rem + 8vw, 9rem);
   --spacing-gutter: clamp(1.25rem, 1rem + 0.65vw, 1.5rem);    /* 20 -> 24px */

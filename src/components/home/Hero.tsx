@@ -119,7 +119,7 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
             vakje, die er met een even grote negatieve marge weer af gehaald
             wordt - het vakje is dus ruimer, maar neemt geen extra plek in.
           */}
-          <h1 className="mt-6 text-kop-1">
+          <h1 className="mt-5 text-hero md:mt-6">
             {woorden.map((woord, i) => (
               <span
                 key={`${woord}-${i}`}
@@ -137,7 +137,7 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
           </h1>
 
           <p
-            className="hero-in mt-8 max-w-[38rem] text-lead text-tekst-licht-zacht"
+            className="hero-in mt-6 max-w-[38rem] text-hero-lead text-tekst-licht-zacht md:mt-8"
             style={{ animationDelay: `${300 + woorden.length * 85}ms` }}
           >
             {inleiding}
@@ -183,9 +183,18 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
           tablet gedraaid gewoon de vullende foto.
         */
         .hero-foto {
-          height: 62svh;
-          -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
-          mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+          /*
+            40svh: de foto houdt de bovenkant van het scherm, de tekst staat
+            eronder op een egale achtergrond. Dat leest een stuk rustiger dan
+            tekst die half over een gezicht heen valt.
+
+            En het levert ook nog eens meer foto op: in een lager vak wordt de
+            foto minder ver opgeblazen, dus zie je er breder gezien meer van -
+            ongeveer tweederde in plaats van veertig procent.
+          */
+          height: 40svh;
+          -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
         }
         @media (min-aspect-ratio: 1 / 1) {
           .hero-foto {
