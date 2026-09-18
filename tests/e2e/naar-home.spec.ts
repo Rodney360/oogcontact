@@ -4,6 +4,10 @@
  * Buiten de homepage brengen ze je naar de homepage. Sta je al op de
  * homepage, dan brengen ze je naar de bovenkant van de pagina - dat deed het
  * logo eerst niet, en dan gebeurde er bij een klik dus helemaal niets.
+ *
+ * Het zwevende knopje is er alleen vanaf tablet. Op een telefoon staat onderin
+ * al een vaste balk, en dan kwam dit knopje telkens over een knop of over een
+ * regel tekst te liggen. Het logo doet daar hetzelfde werk.
  */
 
 import { test, expect } from '@playwright/test'
@@ -37,7 +41,9 @@ test('het logo brengt je op de homepage terug naar boven', async ({ page }) => {
   expect(new URL(page.url()).pathname).toBe('/')
 })
 
-test('het knopje linksonder wordt op de homepage een pijl naar boven', async ({ page }) => {
+test('het knopje linksonder wordt op de homepage een pijl naar boven', async ({ page, isMobile }) => {
+  test.skip(Boolean(isMobile), 'het knopje is er alleen vanaf tablet')
+
   await page.goto('/')
   await scrollOmlaag(page)
 
@@ -50,7 +56,9 @@ test('het knopje linksonder wordt op de homepage een pijl naar boven', async ({ 
   await expect(naarBoven).toBeHidden()
 })
 
-test('de pijl brengt je vanaf elke pagina naar de homepage', async ({ page }) => {
+test('de pijl brengt je vanaf elke pagina naar de homepage', async ({ page, isMobile }) => {
+  test.skip(Boolean(isMobile), 'het knopje is er alleen vanaf tablet')
+
   for (const pad of SUBPAGINAS) {
     await page.goto(pad)
     const pijl = page.getByRole('link', { name: 'Naar de homepage', exact: true })
@@ -71,10 +79,9 @@ test('het logo brengt je vanaf elke pagina naar de homepage', async ({ page }) =
   }
 })
 
-test('de pijl blijft staan tijdens het scrollen en dekt niets belangrijks af', async ({
-  page,
-  isMobile,
-}) => {
+test('de pijl blijft staan tijdens het scrollen', async ({ page, isMobile }) => {
+  test.skip(Boolean(isMobile), 'het knopje is er alleen vanaf tablet')
+
   await page.goto('/contactlenzen/')
   const pijl = page.getByRole('link', { name: 'Naar de homepage', exact: true })
   const voor = await pijl.boundingBox()
@@ -95,10 +102,19 @@ test('de pijl blijft staan tijdens het scrollen en dekt niets belangrijks af', a
   // wordt er niet op de pixel nauwkeurig gemeten.
   expect(na.y).toBeGreaterThan(scherm.height / 2)
   expect(na.y + na.height).toBeLessThanOrEqual(scherm.height)
+})
 
-  // Op een telefoon mag hij de vaste balk onderin niet overlappen.
-  if (isMobile) {
-    const balk = await page.locator('nav[aria-label="Snel contact"] ul').boundingBox()
-    if (balk) expect(voor.y + voor.height).toBeLessThanOrEqual(balk.y)
+test('op een telefoon staat het zwevende knopje er niet', async ({ page, isMobile }) => {
+  test.skip(!isMobile, 'alleen op een telefoon')
+
+  for (const pad of ['/', '/contactlenzen/']) {
+    await page.goto(pad)
+    await page.evaluate(() => window.scrollTo(0, 3000))
+    await page.waitForTimeout(400)
+    await expect(page.getByRole('link', { name: 'Naar de homepage', exact: true })).toBeHidden()
+    await expect(page.getByRole('link', { name: 'Naar boven', exact: true })).toBeHidden()
   }
+
+  // Het logo doet daar het werk, en dat staat er wel.
+  await expect(page.locator('header a[aria-label^="Oogcontact"]')).toBeVisible()
 })

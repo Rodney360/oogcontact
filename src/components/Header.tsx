@@ -179,7 +179,9 @@ export function Header({ mededeling }: { mededeling: Mededeling | null }) {
     <header
       className={[
         'fixed inset-x-0 top-0 z-50 transition-all duration-500',
-        overHero ? 'bg-transparent' : 'bg-inkt/85 shadow-[0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl',
+        // bg-inkt/95: op 85% schemerde elke lichte foto die eronderdoor
+        // schoof door de balk heen, en dat flikkerde achter het logo langs.
+        overHero ? 'bg-transparent' : 'bg-inkt/95 shadow-[0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl',
       ].join(' ')}
     >
       {mededeling && <Mededelingbalk mededeling={mededeling} />}

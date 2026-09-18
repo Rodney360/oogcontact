@@ -154,3 +154,27 @@ De hele site opnieuw opgebouwd, vanaf niets, als vervanging van WordPress.
   niets; daar is het contrast achter de tekst 14,5:1 voor de kop en 7,7:1 voor
   de inleiding, ruim boven de norm.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-18 — Dennis (Claude Code, cloud)
+
+Nagelopen op vijf toestelmaten (iPhone SE 375x667, Galaxy A 360x740, iPhone 13
+mini 375x812, iPhone 15 393x852, iPhone 15 Pro Max 430x932). Op de grote
+toestellen zag het er goed uit, op de kleine niet.
+
+- **Hero paste zich niet aan het toestel aan.** De foto had een vaste hoogte
+  (40% van het scherm), maar de tekst begint op een kleine telefoon veel hoger
+  dan op een grote. Op een SE liep de foto daardoor 86px over de tekst heen.
+  De foto krijgt nu precies de ruimte die boven de tekst overblijft: een strook
+  van 181px op een SE, 505px op een Pro Max, en nergens nog overlap.
+- **Koptekstbalk minder doorschijnend** (85 naar 95 procent). Elke lichte foto
+  die eronderdoor schoof, schemerde erdoorheen en flikkerde achter het logo
+  langs.
+- **Zwevende knopje linksonder alleen nog vanaf tablet.** Op een telefoon lag
+  het op bijna elke schermafdruk over een knop of een regel tekst heen, en op
+  de lichte stukken was het een donkere vlek. Het logo bovenin doet precies
+  hetzelfde en staat altijd in beeld.
+- Nagemeten en niet aangepast: de foto's zijn hooguit 0,65 scherm hoog en de
+  witruimte tussen de secties zit al op de ondergrens. Daar zat de onrust niet.
+- **Nog open:** zie `docs/open-punten.md`.

@@ -39,20 +39,30 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
   const woorden = kop.split(' ')
 
   return (
-    <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden pb-32 pt-40 md:pb-28">
+    <section className="hero relative isolate flex min-h-[100svh] flex-col overflow-hidden">
       {/*
         De foto.
 
-        Op een liggend scherm vult hij het hele vlak, en dan zie je de foto ook
-        vrijwel helemaal. Op een staand scherm (een telefoon, of een tablet
-        rechtop) is het beeld veel smaller dan hoog: een vullende foto snijdt
-        er dan zo veel vanaf dat er alleen nog een oog overblijft. Daarom staat
-        hij daar in de bovenste tweederde. De foto wordt kleiner getoond, dus je
-        ziet er meer van, en onderaan loopt hij zacht uit in de achtergrond -
-        geen zichtbare rand, het blijft één geheel. Zie de CSS onderaan.
+        Op een liggend scherm vult hij het hele vlak en staat de tekst eroverheen;
+        daar zie je de foto vrijwel helemaal en blijft de tekst goed leesbaar.
+
+        Op een staand scherm (een telefoon, of een tablet rechtop) is het beeld
+        veel smaller dan hoog. Een vullende foto snijdt er dan zo veel vanaf dat
+        er alleen nog een oog overblijft, en de tekst valt er half overheen.
+        Daarom krijgt de foto daar precies de ruimte die boven de tekst
+        overblijft: `flex-1`. Op een kleine telefoon is dat een strook, op een
+        grote bijna het halve scherm - en in beide gevallen staat de tekst
+        eronder op een egale achtergrond.
+
+        Dat een lager vak ook nog eens meer foto laat zien, is meegenomen: hoe
+        lager het vak, hoe minder ver de foto wordt opgeblazen om de breedte te
+        vullen. Zie verder de CSS onderaan dit bestand.
       */}
-      <div className="absolute inset-0 -z-20" data-scherp={scherp || undefined}>
-        <div className="hero-beeld hero-foto w-full">
+      <div
+        className="hero-fotovak relative -z-20 min-h-[20svh] w-full flex-1"
+        data-scherp={scherp || undefined}
+      >
+        <div className="hero-beeld hero-foto absolute inset-0">
           <Beeld slot="hero-portret" sizes="100vw" prioriteit vullend />
         </div>
       </div>
@@ -94,7 +104,7 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
         <circle cx="200" cy="200" r="44" fill="var(--color-inkt)" opacity="0.5" />
       </svg>
 
-      <div className="mx-auto w-full max-w-[86rem] px-6">
+      <div className="hero-tekst relative mx-auto w-full max-w-[86rem] px-6 pb-32">
         <div className="max-w-[46rem]">
           {/*
             Hier stond eerder "Opticien in Groningen", precies wat er in de kop
@@ -177,28 +187,31 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
 
       <style>{`
         /*
-          Staand scherm: de foto staat bovenin en loopt onderaan uit in het
-          donker. Niet op breedte maar op de verhouding van het scherm, zodat
-          een tablet rechtop hetzelfde krijgt als een telefoon en diezelfde
-          tablet gedraaid gewoon de vullende foto.
+          Staand scherm: de foto pakt de ruimte boven de tekst en loopt
+          onderaan zacht uit in het donker, zodat er geen rand te zien is.
+
+          Er wordt op de verhouding van het scherm geschakeld en niet op de
+          breedte: een tablet rechtop krijgt dan hetzelfde als een telefoon, en
+          diezelfde tablet gedraaid gewoon de vullende foto.
         */
         .hero-foto {
-          /*
-            40svh: de foto houdt de bovenkant van het scherm, de tekst staat
-            eronder op een egale achtergrond. Dat leest een stuk rustiger dan
-            tekst die half over een gezicht heen valt.
-
-            En het levert ook nog eens meer foto op: in een lager vak wordt de
-            foto minder ver opgeblazen, dus zie je er breder gezien meer van -
-            ongeveer tweederde in plaats van veertig procent.
-          */
-          height: 40svh;
-          -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
-          mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+          -webkit-mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
         }
+
         @media (min-aspect-ratio: 1 / 1) {
+          /* Liggend scherm: foto over het hele vlak, tekst eroverheen. */
+          .hero { justify-content: flex-end; }
+          .hero-fotovak {
+            position: absolute;
+            inset: 0;
+            flex: none;
+          }
+          .hero-tekst {
+            padding-top: 10rem;
+            padding-bottom: 7rem;
+          }
           .hero-foto {
-            height: 100%;
             -webkit-mask-image: none;
             mask-image: none;
           }
