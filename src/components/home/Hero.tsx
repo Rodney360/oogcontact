@@ -107,16 +107,18 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
       <div className="hero-tekst relative mx-auto w-full max-w-[86rem] px-6 pb-32">
         <div className="max-w-[46rem]">
           {/*
-            Hier stond eerder "Opticien in Groningen", precies wat er in de kop
-            eronder ook al staat. Nu staat er waar de winkel te vinden is. De
-            plaatsnaam blijft er bewust af: die staat een regel lager al, en
-            op een telefoon liep de regel daardoor over twee regels.
+            De bovenregel zegt wat we zijn en waar; de kop eronder zegt wat je
+            krijgt. Bewust kort: er past op een telefoon maar ongeveer 24
+            tekens op een regel, en zodra het er twee worden wordt het eerste
+            scherm meteen onrustig. "Overwinningsplein 100, Groningen" paste
+            daarom niet - het adres staat verderop bij "Bezoek de winkel" en in
+            de voettekst.
           */}
           <p
             className="hero-in text-bijschrift font-semibold uppercase tracking-[0.2em] text-messing"
             style={{ animationDelay: '120ms' }}
           >
-            {BEDRIJF.adres.straat}
+            Opticien in {BEDRIJF.adres.plaats}
           </p>
 
           {/*

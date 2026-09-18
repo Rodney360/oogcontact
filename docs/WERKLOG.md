@@ -178,3 +178,21 @@ toestellen zag het er goed uit, op de kleine niet.
 - Nagemeten en niet aangepast: de foto's zijn hooguit 0,65 scherm hoog en de
   witruimte tussen de secties zit al op de ondergrens. Daar zat de onrust niet.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-18 (later) — Dennis (Claude Code, cloud)
+
+- **"Advies op maat" als kop op de homepage.** Dat was de titel van de oude
+  WordPress-homepage, dus het is hun eigen claim en niets nieuws. Het staat nu
+  op de grootste plek van de site. De bovenregel werd "Opticien in Groningen",
+  zodat die zoekterm zichtbaar op de pagina blijft staan nu de kop hem niet
+  meer bevat; hij staat ook nog in de paginatitel, de meta-omschrijving en de
+  gegevens voor Google.
+- Het adres is uit de hero gehaald. Gemeten: "Overwinningsplein 100,
+  Groningen" loopt op een telefoon over twee regels, en dat maakt het eerste
+  scherm juist weer onrustig. Het adres staat verderop bij "Bezoek de winkel",
+  in de voettekst en op de contactpagina.
+- De inleiding begint nu met "Rust, tijd en aandacht" in plaats van "Rust, tijd
+  en eerlijk advies": anders stond "advies" twee keer vlak onder elkaar.
+- **Nog open:** zie `docs/open-punten.md`.
