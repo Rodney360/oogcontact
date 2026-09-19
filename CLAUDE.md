@@ -100,6 +100,11 @@ maakt daar automatisch een preview-link bij. Nooit rechtstreeks naar `main`.
 **Begin altijd vanaf de nieuwste `main`.** Eén onderwerp per branch, kleine
 pull requests, met de preview-link erbij.
 
+**Er werken meerdere mensen aan.** Haal dus altijd eerst `main` binnen, houd
+branches klein en kortlevend, en werk niet tegelijk met een ander in hetzelfde
+bestand. Hoe je iemand toegang geeft en hoe je samenwerkt zonder elkaar in de
+weg te zitten, staat in `docs/samen-werken.md`.
+
 **Gerard en Gerda werken mee via Keystatic.** Wat zij daar opslaan (nieuws,
 vakantiemelding, openingstijden, merken) komt als commit in de repo. Haal dus
 altijd eerst `main` binnen voordat je begint, los conflicten netjes op en

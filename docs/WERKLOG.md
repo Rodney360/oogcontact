@@ -196,3 +196,18 @@ toestellen zag het er goed uit, op de kleine niet.
 - De inleiding begint nu met "Rust, tijd en aandacht" in plaats van "Rust, tijd
   en eerlijk advies": anders stond "advies" twee keer vlak onder elkaar.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-19 — Dennis (Claude Code, cloud)
+
+- **Klaargezet voor een tweede persoon.** `docs/samen-werken.md` beschrijft in
+  stappen hoe je iemand toegang geeft (GitHub, Claude, Vercel) en hoe je daarna
+  samenwerkt zonder elkaar te overschrijven.
+- Er staat nu een sjabloon voor pull requests in `.github/pull_request_template.md`,
+  met een lijstje van wat er nagekeken moet zijn en een plek voor de preview-link.
+- **Blijft het dringendst:** er is nog steeds maar één branch, en die is
+  tegelijk de live site. Met twee mensen gaat dat mis. Stap 1 en 2 van
+  `docs/samen-werken.md` zetten dat recht; dat kan alleen de eigenaar van de
+  repository doen.
+- **Nog open:** zie `docs/open-punten.md`.

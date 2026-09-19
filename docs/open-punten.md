@@ -16,12 +16,15 @@ niet is — want de site werkt zonder al deze dingen gewoon.
 <https://oogcontact.vercel.app>. Elke push bouwt automatisch een nieuwe versie;
 dat duurt een paar minuten, omdat het bouwen ook alle foto's opnieuw omzet.
 
-**Een `main`-branch maken.**
+**Een `main`-branch maken. Nu het dringendst.**
 Op dit moment is er maar één branch, en die is tegelijk de live site. Daardoor
-gaat elke push meteen live en is er geen preview om eerst naar te kijken.
+gaat elke push meteen live en is er geen preview om eerst naar te kijken. Zodra
+er een tweede persoon meewerkt gaat dat ook echt mis: jullie overschrijven
+elkaar.
 *Wat je doet:* GitHub → de repository → Branches → maak `main` aan vanaf de
-huidige branch en zet hem als standaard. Daarna ga ik weer per onderwerp een
-pull request maken, en krijg je bij elke wijziging eerst een preview-link.
+huidige branch en zet hem als standaard. Daarna in Vercel bij Settings → Git de
+Production Branch op `main` zetten. Volledige uitleg in stappen:
+`docs/samen-werken.md`.
 
 **Branch-bescherming op `main`.**
 Zodat er niets per ongeluk rechtstreeks naar de live site gaat en de controles
