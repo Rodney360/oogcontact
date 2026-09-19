@@ -59,16 +59,118 @@ een eigen preview-link. Dat is precies wat je wilt — dan kun je eerst kijken.
 
 **2b. Zorgen dat er niets per ongeluk live gaat.**
 
-1. **Settings → Branches → Add branch protection rule** (of *Add ruleset*).
-2. Branch name pattern: `main`.
-3. Vink aan:
-   - **Require a pull request before merging**
-   - **Require status checks to pass** → kies `Lint, typecheck, contrast en
-     tests` en `Playwright`
+Dit is het enige stukje GitHub waar je echt even moet opletten: het formulier
+staat vol met vinkjes, en de meeste moet je juist *niet* aanzetten. Hieronder
+staat precies wat je doet.
+
+Ga naar <https://github.com/Rodney360/oogcontact/settings/branches>.
+
+GitHub laat je een van twee schermen zien. Kijk welke tekst je ziet:
+
+- Zie je een knop **Add branch protection rule** → volg **variant A**.
+- Zie je alleen **Rulesets** of **New ruleset** → volg **variant B**.
+
+---
+
+### Variant A — "Add branch protection rule"
+
+Klik op **Add branch protection rule**. Je krijgt één lange pagina.
+
+**Bovenaan: Branch name pattern**
+
+Typ: `main`
+
+Meer niet. Geen sterretjes, geen slashes.
+
+**Daaronder: een lijst vinkjes.** Loop hem van boven naar beneden langs:
+
+| Wat er staat | Wat je doet |
+|---|---|
+| Require a pull request before merging | **Aanvinken** |
+| ↳ Require approvals | **Uitvinken** (zie de waarschuwing hieronder) |
+| ↳ Dismiss stale pull request approvals… | Laat staan |
+| ↳ Require review from Code Owners | Laat staan |
+| ↳ Require approval of the most recent… | Laat staan |
+| ↳ Restrict who can dismiss pull request reviews | Laat staan |
+| ↳ Allow specified actors to bypass… | Laat staan |
+| Require status checks to pass before merging | **Voorlopig overslaan** (zie onderaan) |
+| Require conversation resolution before merging | **Aanvinken** |
+| Require signed commits | Laat staan |
+| Require linear history | Laat staan |
+| Require deployments to succeed before merging | Laat staan |
+| Lock branch | Laat staan |
+| Do not allow bypassing the above settings | Laat staan |
+| Restrict who can push to matching branches | Laat staan |
+| Allow force pushes | Laat staan (uit) |
+| Allow deletions | Laat staan (uit) |
+
+Klik onderaan op **Create** (of **Save changes**).
+
+> **Waarschuwing bij "Require approvals".** Zodra je *Require a pull request*
+> aanvinkt, zet GitHub daaronder vaak vanzelf *Require approvals* aan, met 1
+> goedkeuring. Dat klinkt logisch, maar je mag je eigen pull request niet
+> goedkeuren. Werk je alleen, dan zit je daarmee klem. Zet hem dus uit, of zet
+> het getal op **0**. Zodra er een tweede persoon meewerkt kun je hem alsnog
+> op 1 zetten — dan kijken jullie elkaars werk na, en dat is precies de
+> bedoeling.
+
+---
+
+### Variant B — "Rulesets"
+
+1. **New ruleset → New branch ruleset**.
+2. **Ruleset Name**: `Beschermde main`
+3. **Enforcement status**: zet op **Active**.
+4. **Bypass list**: laat leeg.
+5. **Target branches** → **Add target** → **Include default branch**.
+6. Daaronder de lijst **Rules**:
+
+| Wat er staat | Wat je doet |
+|---|---|
+| Restrict creations | Laat staan |
+| Restrict updates | Laat staan |
+| Restrict deletions | **Aanvinken** |
+| Require linear history | Laat staan |
+| Require deployments to succeed | Laat staan |
+| Require signed commits | Laat staan |
+| Require a pull request before merging | **Aanvinken** |
+| ↳ Required approvals | Zet op **0** |
+| ↳ Dismiss stale reviews on push | Laat staan |
+| ↳ Require review from Code Owners | Laat staan |
+| ↳ Require approval of the most recent push | Laat staan |
+| ↳ Require conversation resolution | **Aanvinken** |
+| Require status checks to pass | **Voorlopig overslaan** |
+| Block force pushes | **Aanvinken** |
+| Require code scanning results | Laat staan |
+
+7. Klik onderaan op **Create**.
+
+---
+
+### De controles pas later aanzetten
+
+*Require status checks to pass* laat je nu nog met rust. Dat vinkje heeft een
+zoekveldje waarin je moet aanwijzen wélke controles moeten slagen — en die
+verschijnen daar pas nadat ze één keer gedraaid hebben.
+
+Dus:
+
+1. Nu: de regel aanmaken zonder dat vinkje.
+2. Bij de eerstvolgende pull request draait de controle voor het eerst.
+3. Daarna kom je hier terug (**Edit** bij de regel), vinkt **Require status
+   checks to pass** aan, en kiest in het zoekveldje:
+   - `Lint, typecheck, contrast en tests`
+   - `Playwright`
 4. Opslaan.
 
-Vanaf nu kan niemand — ook jij niet, ook ik niet — zomaar iets naar de live
-site duwen. Alles gaat via een pull request die eerst groen moet zijn.
+Vanaf dat moment kan niemand — ook jij niet, ook ik niet — zomaar iets naar de
+live site duwen. Alles gaat via een pull request die eerst groen moet zijn.
+
+### Hoe je controleert dat het werkt
+
+Ga naar <https://github.com/Rodney360/oogcontact/branches>. Achter `main`
+hoort nu een schildje of het woord **Protected** te staan. Staat dat er, dan
+is het gelukt.
 
 ---
 
