@@ -47,19 +47,22 @@ export const BEELDEN = {
     breedtes: MIDDEN,
     stijl: 'warm',
   },
+  // De twee portretten: eigen foto's uit de winkel, staand aangeleverd (9:16).
+  // Ze worden bijgesneden op 3:4 en in zwart-wit gezet, net als hiervoor, zodat
+  // ze naast elkaar één geheel blijven.
   'gerard-portret': {
-    bron: '2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1024-scaled.jpg',
+    bron: 'Geer close up aan tafel.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret in zwart-wit van Gerard met bril, in de winkel.',
+    alt: 'Portret in zwart-wit van Gerard met bril, lachend voor de monturenwand in de winkel.',
     breedtes: MIDDEN,
     stijl: 'zwartwit',
   },
   'gerda-portret': {
-    bron: '2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1027-scaled.jpg',
+    bron: 'Ger close up refr.ruimte.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret in zwart-wit van Gerda met bril, in de winkel.',
+    alt: 'Portret in zwart-wit van Gerda met bril, lachend in de meetruimte.',
     breedtes: MIDDEN,
     stijl: 'zwartwit',
   },

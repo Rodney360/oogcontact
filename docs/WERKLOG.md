@@ -365,3 +365,17 @@ toestellen zag het er goed uit, op de kleine niet.
   Gerard achter de spleetlamp, met de Vision-R 800 boven hem.
 - Gerard heeft in één keer een hele reeks nieuwe winkelfoto's geüpload naar
   `assets-new/`. Alleen deze is nu in gebruik; de rest staat klaar.
+
+---
+
+## 2026-09-20 (heel laat) — Gerard (Claude Code, cloud)
+
+- **De twee zwart-witportretten bij "Het verhaal van Gerard en Gerda" zijn
+  vervangen** door eigen foto's uit de winkel: `Geer close up aan tafel.jpg`
+  voor Gerard en `Ger close up refr.ruimte.jpg` voor Gerda. Allebei 2268 x 4032,
+  bijgesneden op 3:4 en nog steeds in zwart-wit, zodat ze naast elkaar één
+  geheel blijven.
+- Let op: diezelfde twee foto's staan ook op `/over-ons/`, bij de namen van
+  Gerard en Gerda. Die veranderen dus mee.
+- Nieuwe alt-teksten, beschreven naar wat er echt op staat.
+- **Nog open:** zie `docs/open-punten.md`.
