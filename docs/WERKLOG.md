@@ -324,8 +324,10 @@ toestellen zag het er goed uit, op de kleine niet.
 - `vercel.json` (nieuw) zet het automatische live zetten door Vercel zelf uit
   voor `main`, zodat het niet dubbel gebeurt. Previews blijven ongewijzigd:
   die maakt Vercel nog gewoon zelf, bij elke branch en pull request.
-- **Nog te doen door Dennis, eenmalig:** drie sleutels klaarzetten op GitHub
-  (`VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`). Vijf minuten, in
-  stappen in `docs/samen-werken.md`. Tot die tijd stopt de taak met een
-  melding die zegt welke ontbreekt, en blijft de live site staan.
+- **Nog te doen door Dennis, eenmalig:** één sleutel klaarzetten in de kluis
+  van GitHub (`VERCEL_TOKEN`). De twee kenmerken van het project staan in
+  `ci.yml` zelf — dat zijn geen wachtwoorden, ze staan ook in de berichtjes
+  die Vercel bij elke pull request achterlaat. Twee minuten, in stappen in
+  `docs/samen-werken.md`. Tot die tijd stopt de taak met een melding en blijft
+  de live site staan.
 - **Nog open:** PR #1 samenvoegen, en zie verder `docs/open-punten.md`.

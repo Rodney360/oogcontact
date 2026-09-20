@@ -40,10 +40,11 @@ persoon. Daardoor bleef de site staan toen Gerard zijn eerste pull requests
 samenvoegde. Het live zetten gebeurt nu door GitHub in plaats van door Vercel,
 met een sleutel in plaats van een naam — dus het maakt niet meer uit wie de
 wijziging maakt of samenvoegt, en een rode versie kan niet meer live.
-*Wat je doet:* eenmalig drie sleutels klaarzetten op GitHub. Vijf minuten, in
-stappen beschreven in `docs/samen-werken.md` onder "Live zetten zonder dat
-Dennis erbij hoeft". Zolang dat niet gebeurd is, stopt de taak met een melding
-en blijft de live site staan waar hij staat.
+*Wat je doet:* eenmalig één sleutel klaarzetten in de kluis van GitHub
+(`VERCEL_TOKEN`). Twee minuten, in stappen beschreven in
+`docs/samen-werken.md` onder "Live zetten zonder dat Dennis erbij hoeft".
+Zolang dat niet gebeurd is, stopt de taak met een melding en blijft de live
+site staan waar hij staat.
 
 Hieronder stond eerder wat je moest instellen; dat is gedaan:
 *Wat je doet:* GitHub → de repository → Settings → Branches → Add branch

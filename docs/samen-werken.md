@@ -454,11 +454,21 @@ minuten later live dan vroeger, want eerst draait de hele controle en pas
 daarna het bouwen. Dat is de prijs voor twee dingen: iedereen kan live zetten,
 en er gaat nooit meer een rode versie de deur uit.
 
-### Eenmalig instellen (Dennis, 5 minuten)
+### Eenmalig instellen (Dennis, 2 minuten)
 
-Alleen de eigenaar van het Vercel-account kan dit doen. Daarna nooit meer.
+Er is nog één ding nodig, en alleen de eigenaar van het Vercel-account kan het
+doen. Daarna nooit meer.
 
-**1. Maak een sleutel aan bij Vercel.**
+De twee kenmerken van het project (`VERCEL_ORG_ID` en `VERCEL_PROJECT_ID`)
+staan al in `.github/workflows/ci.yml`. Dat zijn geen wachtwoorden: ze staan in
+het adres van je Vercel-pagina en in de berichtjes die Vercel bij elke pull
+request achterlaat, en zonder de sleutel hieronder kun je er niets mee.
+
+Wat er nog mist is de **sleutel**. Die hoort in de kluis van GitHub, niet in een
+bestand: wat eenmaal in de repository staat, blijft voor altijd in de
+geschiedenis staan, ook als je het later weghaalt.
+
+**1. Maak de sleutel aan bij Vercel.**
 
 Ga naar <https://vercel.com/account/tokens> → **Create Token**.
 
@@ -470,42 +480,38 @@ Ga naar <https://vercel.com/account/tokens> → **Create Token**.
 
 Klik **Create**. Je ziet de sleutel **één keer** — laat het scherm open staan.
 
-**2. Zoek de twee nummers van het project op.**
+**2. Zet hem in de kluis van GitHub.**
 
-In Vercel → project `oogcontact` → **Settings** → **General**. Daar staat
-**Project ID** (begint met `prj_`). Het nummer van je account (**Team ID**,
-begint met `team_`) staat onder je accountinstellingen, ook bij General.
+Open in een tweede tabblad
+<https://github.com/Rodney360/oogcontact/settings/secrets/actions> →
+**New repository secret**:
 
-Dit zijn geen wachtwoorden — ze staan gewoon in het adres van je Vercel-pagina
-en in de berichtjes die Vercel bij elke pull request achterlaat. Ze horen er
-alleen bij zodat GitHub weet welk project hij moet bijwerken.
-
-**3. Zet ze alle drie klaar op GitHub.**
-
-Ga naar <https://github.com/Rodney360/oogcontact/settings/secrets/actions> →
-**New repository secret**. Drie keer, met precies deze namen:
-
-| Name | Secret |
+| Veld | Wat je invult |
 |---|---|
-| `VERCEL_TOKEN` | de sleutel uit stap 1 |
-| `VERCEL_ORG_ID` | het `team_…`-nummer uit stap 2 |
-| `VERCEL_PROJECT_ID` | het `prj_…`-nummer uit stap 2 |
+| Name | `VERCEL_TOKEN` |
+| Secret | de sleutel uit stap 1 |
 
-Let op de namen: hoofdletters en liggende streepjes, precies zo. Typ je er één
-verkeerd, dan stopt de taak met een melding die zegt welke ontbreekt.
+Let op de naam: hoofdletters en een liggend streepje, precies zo. Klik
+**Add secret**.
 
-**4. Klaar.** De eerstvolgende wijziging die op `main` komt, gaat er vanzelf
+**3. Klaar.** De eerstvolgende wijziging die op `main` komt, gaat er vanzelf
 mee live. Je ziet het gebeuren op
 <https://github.com/Rodney360/oogcontact/actions> — onderaan de rij staat dan
 **Live zetten**, met het adres van de nieuwe versie erbij.
+
+> Verandert de sleutel ooit, of is hij per ongeluk ergens anders terechtgekomen
+> — in een chat, een mailtje, een schermafdruk — verwijder hem dan bij Vercel en
+> maak een nieuwe. Een sleutel geeft volledige toegang tot het account: deployen,
+> projecten aanpassen en de omgevingsvariabelen uitlezen. Het vervangen kost een
+> minuut en er gaat niets van verloren.
 
 ### Als het toch niet lukt
 
 | Wat je ziet | Wat je doet |
 |---|---|
-| "Nog niet ingesteld: VERCEL_TOKEN" | Stap 3 is niet af, of er staat een typefout in een naam. |
-| "Not authorized" of "Forbidden" | De sleutel is verlopen of hoort bij het verkeerde account. Maak een nieuwe (stap 1) en werk `VERCEL_TOKEN` bij. |
-| "Project not found" | `VERCEL_ORG_ID` of `VERCEL_PROJECT_ID` klopt niet. Haal ze opnieuw op in stap 2. |
+| "VERCEL_TOKEN is nog niet ingesteld" | Stap 2 is niet af, of er staat een typefout in de naam. |
+| "Not authorized" of "Forbidden" | De sleutel is verlopen, ingetrokken of hoort bij het verkeerde account. Maak een nieuwe (stap 1) en werk `VERCEL_TOKEN` bij. |
+| "Project not found" | De twee nummers in `ci.yml` kloppen niet meer, bijvoorbeeld omdat het project hernoemd is. Haal ze op in Vercel onder Settings → General. |
 | De taak "Live zetten" draait helemaal niet | Dan is de controle of zijn de browsertests rood. Los dat eerst op — zo hoort het te werken. |
 
 ### Als je er helemaal vanaf wilt

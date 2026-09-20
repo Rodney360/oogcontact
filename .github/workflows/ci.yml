@@ -96,9 +96,17 @@ jobs:
     timeout-minutes: 20
 
     env:
+      # De sleutel is het enige echte geheim. Die staat in de repository-secrets
+      # van GitHub en komt nooit in een bestand terecht.
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      # Deze twee zijn geen geheimen maar kenmerken: ze staan in het adres van
+      # de Vercel-pagina en in de berichtjes die Vercel bij elke pull request
+      # achterlaat. Zonder de sleutel hierboven kun je er niets mee. Ze staan
+      # hier zodat er maar een ding hoeft te worden ingesteld. Wil je ze toch
+      # liever als secret zetten, doe dat dan onder dezelfde naam - een secret
+      # wint van de waarde die hier staat.
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID || 'team_4zwVTn2YD0nTxzI9MqtDdFKa' }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID || 'prj_1aGOCYhVoZCwy5KCbhQ7aitseZUK' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -108,14 +116,10 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
 
-      - name: Kijken of de drie sleutels klaarstaan
+      - name: Kijken of de sleutel klaarstaat
         run: |
-          ontbreekt=""
-          [ -n "$VERCEL_TOKEN" ] || ontbreekt="$ontbreekt VERCEL_TOKEN"
-          [ -n "$VERCEL_ORG_ID" ] || ontbreekt="$ontbreekt VERCEL_ORG_ID"
-          [ -n "$VERCEL_PROJECT_ID" ] || ontbreekt="$ontbreekt VERCEL_PROJECT_ID"
-          if [ -n "$ontbreekt" ]; then
-            echo "::error::Nog niet ingesteld:$ontbreekt. Zet ze klaar onder Settings -> Secrets and variables -> Actions. In stappen: docs/samen-werken.md, 'Live zetten zonder dat Dennis erbij hoeft'."
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "::error::VERCEL_TOKEN is nog niet ingesteld. Zet hem klaar onder Settings -> Secrets and variables -> Actions. In stappen: docs/samen-werken.md, 'Live zetten zonder dat Dennis erbij hoeft'."
             exit 1
           fi
 
