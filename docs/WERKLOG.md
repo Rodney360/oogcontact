@@ -254,3 +254,25 @@ toestellen zag het er goed uit, op de kleine niet.
 - Fraunces wordt nu ook cursief geladen, zodat de browser de letters niet zelf
   scheef hoeft te zetten.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (nog later) — Dennis (Claude Code, cloud)
+
+- **Uitgezocht waarom de live site achterliep** na het samenvoegen van Gerards
+  pull request. Niet de code: die bouwt hier, bouwt op Vercel en de controle op
+  GitHub is groen, ook op `main` zelf. Vercel blokkeerde het live zetten omdat
+  de **schrijver** van de samengevoegde commit (`gbugel`) geen toegang heeft
+  tot het Vercel-project. Op een privé-repository bouwt Vercel alleen commits
+  van iemand die daar wél bij kan, en op het gratis abonnement is dat één
+  persoon. Bij "Squash and merge" zet GitHub de opener van de pull request als
+  schrijver — vandaar dat de preview wél klaarkwam en het live zetten niet.
+- De drie uitwegen staan uitgeschreven in `docs/samen-werken.md` en de keuze
+  staat als eerste punt in `docs/open-punten.md`: zelf samenvoegen met "Create
+  a merge commit", de repository openbaar maken, of Vercel Pro.
+- **`main` binnengehaald** in deze branch, zodat Gerards cursieve "op maat"
+  erbij zit. Enige botsing zat in dit werklog; beide stukken staan er nog.
+  Nagekeken: 27 snelle tests, bouwen en 130 browsertests groen, en de
+  Vercel-preview van deze branch kwam gewoon klaar.
+- **Nog open:** PR #1 samenvoegen (dat zet meteen ook Gerards wijziging live),
+  stap 4 (preview-toegang voor gbugel) en de keuze hierboven.

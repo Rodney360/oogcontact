@@ -360,6 +360,51 @@ wat er gebeurd is.
 
 ---
 
+## Let op: op het gratis Vercel-abonnement zet alleen jouw commit live
+
+Dit kwam er op 20 september meteen uit, de eerste keer dat er werk van je
+vader samengevoegd werd. De wijziging stond wel in `main`, maar kwam niet op
+de live site. In Vercel stond die regel op **Blocked**.
+
+**Wat er gebeurt.** De repository is privé. Vercel bouwt een privé-repository
+alleen als de **schrijver van de commit** ook toegang heeft tot het project op
+Vercel. Op het gratis abonnement (Hobby) is dat precies één persoon: de
+eigenaar van het Vercel-account. Iemand anders toevoegen kan daar niet.
+
+**Waarom het bij de een wel goed ging en bij de ander niet.** Kijk naar wie er
+als schrijver onder een commit staat:
+
+| Commit | Schrijver | Vercel |
+|---|---|---|
+| Werk uit een Claude-sessie | `Claude <noreply@anthropic.com>` | bouwt gewoon |
+| Een pull request samengevoegd met **Squash** | de persoon die de pull request opende | **geblokkeerd** als dat niet de eigenaar is |
+
+Bij "Squash and merge" zet GitHub de opener van de pull request als schrijver
+van de nieuwe commit op `main`. Vandaar dat de preview van je vader wél klaar
+kwam en het live zetten daarna niet.
+
+**Wat je nu doet — kies er één:**
+
+1. **Zelf samenvoegen met "Create a merge commit"** in plaats van "Squash and
+   merge". Dan sta jij als schrijver onder de commit die op `main` komt, en
+   bouwt Vercel hem gewoon. Dit is gratis en verandert verder niets.
+2. **De repository openbaar maken.** De regel geldt alleen voor privé-
+   repositories. Er staan geen sleutels of wachtwoorden in — die staan in
+   Vercel — dus dat kan veilig. Bijkomend voordeel: de ruleset op `main` gaat
+   dan ook echt werken (zie hierboven). Nadeel: iedereen kan de code, de
+   teksten en het archief van de oude site inzien. Overleg dit met Gerard en
+   Gerda.
+3. **Vercel Pro nemen** en je vader aan het team toevoegen. Dan mag hij zelf
+   ook live zetten. Dit kost geld per maand.
+
+**Eenmalig weer live krijgen als het toch gebeurt:** ga in Vercel naar
+Deployments, klik op de drie puntjes (`...`) achter de geblokkeerde regel en
+kies **Redeploy**. Lukt dat niet, dan is de betrouwbare weg: zorg dat er een
+nieuwe commit op `main` komt met jou als schrijver — bijvoorbeeld door de
+volgende pull request zelf samen te voegen met "Create a merge commit".
+
+---
+
 ## Wat je vooral niet moet doen
 
 - **Geen sleutels in de repo.** Wachtwoorden en API-sleutels horen in Vercel,
@@ -380,3 +425,5 @@ wat er gebeurd is.
 | De controle op GitHub is rood | Klik op de rode kruisjes bij de pull request; daar staat wat er misging. Plak dat in Claude en vraag hem het op te lossen. |
 | Geen preview-link bij de pull request | Stap 2a is nog niet gedaan, of Vercel is nog aan het bouwen (een paar minuten; de foto's worden opnieuw verwerkt). |
 | Conflict bij het samenvoegen | Jullie hebben in hetzelfde bestand gewerkt. Vraag Claude: "los het conflict met main op". |
+| Een regel in Vercel staat op **Blocked** | De schrijver van die commit heeft geen toegang tot het Vercel-project. Zie "Let op: op het gratis Vercel-abonnement zet alleen jouw commit live" hierboven. |
+| De wijziging staat in `main`, maar de live site verandert niet | Kijk in Vercel bij Deployments naar de bovenste regel met het label `Production`. Staat daar `Blocked` of `Error`, dan is het live zetten misgegaan — niet het samenvoegen. |

@@ -33,6 +33,19 @@ repository openbaar wordt of het account overgaat naar GitHub Team. Tot die
 tijd geldt de afspraak in `docs/samen-werken.md`: alles via een pull request,
 en nooit samenvoegen als de controle rood is.
 
+**Beslissen hoe je vaders werk live komt. Nu het dringendst.**
+Vercel bouwt een privé-repository alleen als de schrijver van de commit ook
+toegang heeft tot het project op Vercel. Op het gratis abonnement is dat
+precies één persoon: jij. Toen op 20 september de eerste pull request van je
+vader samengevoegd werd, bleef de live site daardoor staan waar hij stond; in
+Vercel stond die regel op **Blocked**. Het samenvoegen zelf ging goed, alleen
+het live zetten niet.
+*Wat je doet:* kies er één — zelf samenvoegen met "Create a merge commit" in
+plaats van "Squash and merge" (gratis, verandert verder niets), de repository
+openbaar maken (dan vervalt de regel, en de ruleset op `main` gaat meteen ook
+werken), of Vercel Pro nemen en je vader aan het team toevoegen (kost geld).
+De afweging staat uitgeschreven in `docs/samen-werken.md`.
+
 Hieronder stond eerder wat je moest instellen; dat is gedaan:
 *Wat je doet:* GitHub → de repository → Settings → Branches → Add branch
 protection rule → naam `main` → vink aan: "Require a pull request before
