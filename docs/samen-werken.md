@@ -220,20 +220,35 @@ Staat dat er niet, dan slaapt hij nog — zie hierboven.
 Hij heeft een GitHub-account nodig. Heeft hij dat niet, dan maakt hij er eerst
 een aan op <https://github.com/signup> — gratis, twee minuten.
 
+**Wat je eerst nodig hebt:** zijn **GitHub-gebruikersnaam**. Niet zijn
+weergavenaam ("Gerard Bugel") en niet zijn e-mailadres — zoeken op e-mail werkt
+meestal niet, omdat dat standaard verborgen staat.
+
+Hij vindt zijn gebruikersnaam zo: inloggen op github.com, rechtsboven op zijn
+profielfoto klikken, en bovenin het uitklapmenu staat "Signed in as **xxx**".
+
 1. Ga naar <https://github.com/Rodney360/oogcontact/settings/access>.
-2. Klik **Add people**.
-3. Vul zijn GitHub-gebruikersnaam of e-mailadres in.
-4. Kies rol **Write**.
-5. Klik **Add**.
+2. Klik op de groene knop **Add people**.
+3. Er opent een venstertje met een zoekveld. Typ zijn gebruikersnaam.
+4. **Onder het zoekveld klapt een regeltje uit** met zijn profielfoto en
+   gebruikersnaam. Daar klik je op. (Geen aparte pagina; het verschijnt in
+   hetzelfde venstertje terwijl je typt. Komt er niets: typ minstens drie
+   letters, en controleer de spelling.)
+5. Klik op **Add [naam] to this repository**.
 
 Hij krijgt een uitnodiging per mail. **Die moet hij aannemen**, anders werkt de
-rest niet.
+rest niet. Komt de mail niet aan, dan kan hij ook rechtstreeks naar
+<https://github.com/Rodney360/oogcontact/invitations>. Een uitnodiging verloopt
+na zeven dagen.
 
-> **Waarom Write en niet Admin?** Met Write kan hij alles wat nodig is: code
-> lezen, branches maken, pull requests openen. Admin geeft daarbovenop het
-> recht om de repository te verwijderen en de beveiliging uit te zetten. Dat
-> heeft hij niet nodig. Wil je later dat hij ook pull requests kan goedkeuren
-> en samenvoegen, dan is **Maintain** genoeg.
+> **Je krijgt geen keuze tussen rollen, en dat hoort zo.** Deze repository staat
+> onder een persoonlijk account. De rollen Read / Triage / Write / Maintain /
+> Admin bestaan alleen bij repositories van een organisatie. Wie je hier
+> toevoegt krijgt schrijfrechten: code lezen, branches maken, pull requests
+> openen en samenvoegen. Wat hij *niet* kan: de instellingen van de repository
+> aanpassen of hem verwijderen. Dat is precies genoeg.
+>
+> Zie je tóch een lijst met rollen, kies dan **Write**.
 
 ---
 
