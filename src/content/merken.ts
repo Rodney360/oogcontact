@@ -27,17 +27,14 @@ export const MERKEN: Merk[] = [
   { naam: 'Gigi Studios', herkomst: 'Spanje', soorten: ['monturen', 'zonnebrillen'], herkomstBevestigd: false },
   { naam: 'Gotti', herkomst: 'Zwitserland', soorten: ['monturen', 'zonnebrillen'], herkomstBevestigd: false },
   { naam: 'Einstoffen', herkomst: 'Zwitserland', soorten: ['monturen', 'zonnebrillen'], herkomstBevestigd: false },
-  { naam: 'Liu Jo', herkomst: 'Italië', soorten: ['monturen', 'zonnebrillen'], herkomstBevestigd: false },
   { naam: 'Caroline Abram', herkomst: 'Frankrijk', soorten: ['monturen'], herkomstBevestigd: false },
   { naam: 'Odette Lunettes', herkomst: 'België', soorten: ['monturen', 'zonnebrillen'], herkomstBevestigd: false },
   { naam: 'Gloryfy', herkomst: 'Oostenrijk', soorten: ['sport', 'zonnebrillen'], toelichting: 'Onbreekbare sportbrillen.', herkomstBevestigd: false },
   { naam: 'Randolph', herkomst: null, soorten: ['zonnebrillen'], herkomstBevestigd: false },
   { naam: 'Penn and Ink', herkomst: null, soorten: ['monturen', 'zonnebrillen'], herkomstBevestigd: false },
   { naam: 'Bloomdale', herkomst: null, soorten: ['monturen'], herkomstBevestigd: false },
-  { naam: 'Baruch', herkomst: null, soorten: ['monturen'], herkomstBevestigd: false },
-  { naam: 'Colibris', herkomst: null, soorten: ['monturen', 'zonnebrillen'], herkomstBevestigd: false },
   { naam: 'Visionario', herkomst: null, soorten: ['zonnebrillen'], herkomstBevestigd: false },
-  { naam: 'Calvin Klein', herkomst: null, soorten: ['monturen'], herkomstBevestigd: false },
+  { naam: 'Serengeti', herkomst: null, soorten: ['zonnebrillen'], herkomstBevestigd: false },
 ]
 
 /** Glazen en loepbrillen zijn geen montuurmerken, maar horen er wel bij. */

@@ -90,9 +90,9 @@ Daarom meten wij in stappen van 0,01 dioptrie, met de AVA-technologie van Essilo
 
 #### De collectie
 
-Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken. Gerda zoekt kleine leveranciers uit die stijlvolle monturen van uitstekende kwaliteit maken, vooral uit Italië en Spanje, aangevuld met degelijk werk uit Zwitserland.
+Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken. We zoeken kleine leveranciers uit die stijlvolle monturen van uitstekende kwaliteit maken, vooral uit Italië en Spanje, aangevuld met degelijk werk uit Zwitserland.
 
-Zo vind je bij ons monturen die je niet in elke winkel tegenkomt: Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Baruch, Caroline Abram, Colibris, Visionario, Calvin Klein en Liu Jo. Voor sport is er Gloryfy, en voor in de zon ook Randolph.
+Zo vind je bij ons monturen die je niet in elke winkel tegenkomt: Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Caroline Abram en Visionario. Voor sport is er Gloryfy, en voor in de zon Randolph en Serengeti.
 
 Kijk gerust rond en pas alles wat je mooi vindt. We zeggen eerlijk wat bij je gezicht past en wat niet.
 
@@ -250,7 +250,7 @@ Monturen zijn er in veel vormen, kleuren en maten. Het mooiste montuur valt eige
 
 Het materiaal bepaalt hoeveel we later nog kunnen aanpassen. Kies je acetaat of een ander kunststof, dan moet de neusmaat meteen goed zijn. Bij titanium, stainless steel of hout met neuspads kunnen we de neusmaat wel bijstellen.
 
-De kleinere merken zoeken we samen uit; Gerda etaleert ze in de winkel. Je vindt bij ons onder andere Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Baruch, Calvin Klein, Liu Jo, Caroline Abram en Colibris, en Gloryfy voor sportbrillen.
+De kleinere merken zoeken we samen uit; Gerda etaleert ze in de winkel. Je vindt bij ons onder andere Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale en Caroline Abram, en Gloryfy voor sportbrillen.
 
 Pas gerust alles wat je aanstaat. Voor een uitgebreide oogmeting maken we daarna graag een afspraak met je.
 
@@ -480,7 +480,7 @@ Naast zonnebrillen ben je bij ons ook welkom voor een gewone bril, contactlenzen
 
 We hebben bewust niet gekozen voor de grote modemerken, maar voor kleinere leveranciers die stijlvolle monturen maken. Deze kleinere merken zoeken we samen uit; Gerda etaleert ze in de winkel.
 
-Je vindt bij ons onder andere Odette Lunettes, Einstoffen, Gigi Studios, Liu Jo, Etnia Barcelona, Visionario, Penn and Ink, Colibris en Gotti. Voor sport hebben we de onbreekbare Gloryfy-brillen. Al deze merken voldoen aan de beschermingseisen. (Zet Randolph als open punt: 'Voeren we Randolph ook als zonnebril, en voldoet dat merk aan dezelfde beschermingseisen?')
+Je vindt bij ons onder andere Odette Lunettes, Einstoffen, Gigi Studios, Etnia Barcelona, Visionario, Penn and Ink, Serengeti en Gotti. Voor sport hebben we de onbreekbare Gloryfy-brillen. Al deze merken voldoen aan de beschermingseisen.
 
 Pas gerust wat je mooi vindt. We zeggen het eerlijk als een model niet goed op je gezicht staat, en we denken net zo graag mee als je er zelf nog niet uit bent.
 

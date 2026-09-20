@@ -562,3 +562,19 @@ toestellen zag het er goed uit, op de kleine niet.
   repository openbaar is, wordt hij wél afgedwongen. Even nalopen of de regels
   staan zoals je ze wilt — zie `docs/open-punten.md`.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (merken) — Gerard (Claude Code, cloud)
+
+- **Vier merken eruit** (Calvin Klein, Baruch, Colibris en Liu Jo) en **Serengeti
+  erbij** als zonnebrilmerk. Aangepast in `src/content/merken.ts` en in de
+  merkenrijtjes op de homepage, de brillenpagina en de zonnebrillenpagina.
+- **Er stond een notitie van mij op de site.** In de zonnebrillentekst stond
+  letterlijk "(Zet Randolph als open punt: ...)". Die is eruit, de vraag staat
+  nu in `docs/open-punten.md`, en de test die zulke restjes vangt is
+  aangescherpt zodat er niets meer tussen "zet" en "als open punt" mag staan.
+- **Let op:** Liu Jo was het enige Italiaanse merk. Op zes plekken staat nog
+  "vooral uit Italië en Spanje", terwijl de landen op de homepage nu uit de
+  merkenlijst komen en Italië er niet meer bij zit. Vraag staat in
+  `docs/open-punten.md`.
