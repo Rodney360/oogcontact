@@ -227,3 +227,17 @@ toestellen zag het er goed uit, op de kleine niet.
   draait en er een preview-link komt.
 - **Nog open:** zie `docs/open-punten.md`. De volgende stap is je vader
   toevoegen (stap 3 in `docs/samen-werken.md`).
+
+---
+
+## 2026-09-20 (later) — Dennis (Claude Code, cloud)
+
+- Je vader (`gbugel`) is toegevoegd met schrijfrechten en heeft de uitnodiging
+  aangenomen. Zijn eerste testsessie liep goed: `npm run check` groen,
+  exitcode 0.
+- Wat daarbij opviel: Node gaf bij elke testronde een waarschuwing
+  (`MODULE_TYPELESS_PACKAGE_JSON`) die eruitzag alsof er iets mis was. Er stond
+  geen `"type"` in package.json. Nu wel — dat is veilig, want het project heeft
+  geen enkel los `.js`-bestand. Nagekeken: 27 snelle tests, bouwen en 130
+  browsertests allemaal groen, en de waarschuwing is weg.
+- **Nog open:** PR #1 samenvoegen, en stap 4 (preview-toegang voor gbugel).
