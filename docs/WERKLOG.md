@@ -271,3 +271,17 @@ toestellen zag het er goed uit, op de kleine niet.
 - **Dringend:** zolang dit niet geregeld is, kan Gerard geen enkele preview
   bekijken en moet hij wachten tot iets live staat.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (nacht) — Gerard (Claude Code, cloud)
+
+- **De foto bij "Ultiem nauwkeurig zicht" op de homepage is kleiner.** In de
+  versie zonder vastgezette scène (tablet, en iedereen die minder beweging
+  gevraagd heeft) stond hij op de volle kolombreedte: 1326 bij 1768 pixels op
+  een scherm van 1440 breed, dus hoger dan het scherm zelf. Nu maximaal 480
+  pixels breed, in dezelfde 4:5-verhouding als de vastgezette versie. Op een
+  telefoon verandert er niets.
+- **Nog te doen:** Gerard heeft een nieuwe foto ("Geer spleetlamp") die deze
+  moet vervangen. Die staat nog niet in de repo; zodra hij in `assets-new/`
+  staat, is het één regel in `config/beeld.mjs` plus een nieuwe alt-tekst.

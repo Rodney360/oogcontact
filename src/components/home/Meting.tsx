@@ -86,8 +86,15 @@ export function Meting({ sectie }: { sectie: TekstSectie }) {
         <div className="mx-auto max-w-[86rem] px-6">
           <SectieKop bovenkop="Ultiem nauwkeurig zicht" kop={sectie.kop} inleiding={sectie.alineas[0]} />
 
-          <div className="mt-12 overflow-hidden rounded-groot border border-inkt-rand">
-            <Beeld slot="meting-scene" sizes="(min-width: 640px) 60vw, 100vw" vullend />
+          {/*
+            Het beeld stond hier op de volle breedte van de kolom. Omdat deze
+            foto staand is, werd hij op een breed scherm hoger dan het scherm
+            zelf - ruim 1700 pixels. Nu heeft hij dezelfde verhouding als in de
+            vastgezette versie hierboven, met een bovengrens aan de breedte. Op
+            een telefoon verandert er niets: daar is de kolom toch al smaller.
+          */}
+          <div className="mt-12 aspect-4/5 w-full max-w-[30rem] overflow-hidden rounded-groot border border-inkt-rand">
+            <Beeld slot="meting-scene" sizes="(min-width: 34rem) 480px, 100vw" vullend />
           </div>
 
           <ol className="mt-12 space-y-8">
