@@ -214,6 +214,36 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-09-20 — Dennis (Claude Code, cloud)
+
+- `main` is aangemaakt en is nu de standaardbranch; Vercel zet alleen `main`
+  nog live en elke andere branch krijgt een preview.
+- De ruleset "Beschermde main" staat klaar, maar **slaapt**: GitHub dwingt
+  regels niet af op een privé-repository onder een persoonlijk account. Dat is
+  bewust zo gelaten voor nu. De afspraak die het vangnet vervangt staat in
+  `docs/samen-werken.md`: alles via een pull request, en nooit samenvoegen als
+  de controle rood is.
+- Eerste pull request geopend, zodat de controle op GitHub voor het eerst
+  draait en er een preview-link komt.
+- **Nog open:** zie `docs/open-punten.md`. De volgende stap is je vader
+  toevoegen (stap 3 in `docs/samen-werken.md`).
+
+---
+
+## 2026-09-20 (later) — Dennis (Claude Code, cloud)
+
+- Je vader (`gbugel`) is toegevoegd met schrijfrechten en heeft de uitnodiging
+  aangenomen. Zijn eerste testsessie liep goed: `npm run check` groen,
+  exitcode 0.
+- Wat daarbij opviel: Node gaf bij elke testronde een waarschuwing
+  (`MODULE_TYPELESS_PACKAGE_JSON`) die eruitzag alsof er iets mis was. Er stond
+  geen `"type"` in package.json. Nu wel — dat is veilig, want het project heeft
+  geen enkel los `.js`-bestand. Nagekeken: 27 snelle tests, bouwen en 130
+  browsertests allemaal groen, en de waarschuwing is weg.
+- **Nog open:** PR #1 samenvoegen, en stap 4 (preview-toegang voor gbugel).
+
+---
+
 ## 2026-09-20 — Gerard (Claude Code, cloud)
 
 - **"op maat" in de kop van de homepage valt nu op:** cursief en in het messing
@@ -224,6 +254,28 @@ toestellen zag het er goed uit, op de kleine niet.
 - Fraunces wordt nu ook cursief geladen, zodat de browser de letters niet zelf
   scheef hoeft te zetten.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (nog later) — Dennis (Claude Code, cloud)
+
+- **Uitgezocht waarom de live site achterliep** na het samenvoegen van Gerards
+  pull request. Niet de code: die bouwt hier, bouwt op Vercel en de controle op
+  GitHub is groen, ook op `main` zelf. Vercel blokkeerde het live zetten omdat
+  de **schrijver** van de samengevoegde commit (`gbugel`) geen toegang heeft
+  tot het Vercel-project. Op een privé-repository bouwt Vercel alleen commits
+  van iemand die daar wél bij kan, en op het gratis abonnement is dat één
+  persoon. Bij "Squash and merge" zet GitHub de opener van de pull request als
+  schrijver — vandaar dat de preview wél klaarkwam en het live zetten niet.
+- De drie uitwegen staan uitgeschreven in `docs/samen-werken.md` en de keuze
+  staat als eerste punt in `docs/open-punten.md`: zelf samenvoegen met "Create
+  a merge commit", de repository openbaar maken, of Vercel Pro.
+- **`main` binnengehaald** in deze branch, zodat Gerards cursieve "op maat"
+  erbij zit. Enige botsing zat in dit werklog; beide stukken staan er nog.
+  Nagekeken: 27 snelle tests, bouwen en 130 browsertests groen, en de
+  Vercel-preview van deze branch kwam gewoon klaar.
+- **Nog open:** PR #1 samenvoegen (dat zet meteen ook Gerards wijziging live),
+  stap 4 (preview-toegang voor gbugel) en de keuze hierboven.
 
 ---
 
@@ -254,6 +306,31 @@ toestellen zag het er goed uit, op de kleine niet.
   staan: parkeren kan direct voor de deur, de bus stopt pal voor de winkel.
 - `docs/teksten-review.md` opnieuw gegenereerd.
 - **Nog open:** zie `docs/open-punten.md`; de agendakoppeling wacht nog op OO2.
+
+---
+
+## 2026-09-20 (eind van de dag) — Dennis (Claude Code, cloud)
+
+- **Live zetten gaat nu via GitHub in plaats van via Vercel.** Gerard moest
+  steeds wachten tot Dennis zijn werk live zette: Vercel bouwt een privé-
+  repository alleen als de schrijver van de commit ook toegang heeft tot het
+  Vercel-project, en op het gratis abonnement is dat één persoon. Twee
+  samenvoegingen bleven daardoor hangen. De taak **"Live zetten"** in
+  `.github/workflows/ci.yml` doet het nu met een sleutel in plaats van met een
+  naam, dus het maakt niet meer uit wie de wijziging maakt of samenvoegt.
+- Die taak draait alleen op `main` en alleen als de controle én de
+  browsertests groen zijn. Een kapotte versie kan dus niet meer live — dat kon
+  eerst wél, want Vercel keek nergens naar.
+- `vercel.json` (nieuw) zet het automatische live zetten door Vercel zelf uit
+  voor `main`, zodat het niet dubbel gebeurt. Previews blijven ongewijzigd:
+  die maakt Vercel nog gewoon zelf, bij elke branch en pull request.
+- **Nog te doen door Dennis, eenmalig:** één sleutel klaarzetten in de kluis
+  van GitHub (`VERCEL_TOKEN`). De twee kenmerken van het project staan in
+  `ci.yml` zelf — dat zijn geen wachtwoorden, ze staan ook in de berichtjes
+  die Vercel bij elke pull request achterlaat. Twee minuten, in stappen in
+  `docs/samen-werken.md`. Tot die tijd stopt de taak met een melding en blijft
+  de live site staan.
+- **Nog open:** PR #1 samenvoegen, en zie verder `docs/open-punten.md`.
 
 ---
 
