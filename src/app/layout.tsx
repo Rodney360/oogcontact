@@ -24,6 +24,10 @@ const fraunces = Fraunces({
   display: 'swap',
   variable: '--font-fraunces',
   axes: ['SOFT', 'WONK', 'opsz'],
+  // Ook de echte cursieve versie, voor het accent in de kop op de homepage.
+  // Zonder deze regel zet de browser de letters zelf scheef, en dat is bij een
+  // schreefletter als Fraunces goed te zien.
+  style: ['normal', 'italic'],
 })
 
 const manrope = Manrope({

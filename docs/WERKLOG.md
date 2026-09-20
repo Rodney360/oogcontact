@@ -211,3 +211,16 @@ toestellen zag het er goed uit, op de kleine niet.
   `docs/samen-werken.md` zetten dat recht; dat kan alleen de eigenaar van de
   repository doen.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 — Gerard (Claude Code, cloud)
+
+- **"op maat" in de kop van de homepage valt nu op:** cursief en in het messing
+  van de Afspraak-knop, net als de slogan in de voettekst.
+- De nadruk staat in de tekst zelf (`"Advies *op maat*"` in
+  `src/content/teksten/home.json`); de Hero leest die sterretjes. Schrijf je
+  later een andere kop, dan verhuist de nadruk gewoon mee.
+- Fraunces wordt nu ook cursief geladen, zodat de browser de letters niet zelf
+  scheef hoeft te zetten.
+- **Nog open:** zie `docs/open-punten.md`.

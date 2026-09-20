@@ -26,6 +26,27 @@ type Props = {
   uitzonderingen: Uitzondering[]
 }
 
+/**
+ * De kop komt uit home.json en mag daar een deel tussen sterretjes hebben:
+ * "Advies *op maat*". Dat deel krijgt het messing accent en staat cursief,
+ * net als de slogan in de voettekst. Zo staat de nadruk bij de tekst zelf:
+ * wordt de kop later anders, dan verhuist de nadruk gewoon mee en hoeft er
+ * aan deze component niets te veranderen.
+ *
+ * Elk woord blijft een eigen woord, want ze schuiven één voor één in beeld.
+ */
+function leesKop(kop: string): { woord: string; accent: boolean }[] {
+  return kop
+    .split(/(\*[^*]+\*)/g)
+    .flatMap((deel) => {
+      const accent = deel.startsWith('*') && deel.endsWith('*')
+      return (accent ? deel.slice(1, -1) : deel)
+        .split(' ')
+        .filter(Boolean)
+        .map((woord) => ({ woord, accent }))
+    })
+}
+
 export function Hero({ kop, inleiding, uitzonderingen }: Props) {
   const [scherp, setScherp] = useState(false)
 
@@ -36,7 +57,7 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
     return () => cancelAnimationFrame(t)
   }, [])
 
-  const woorden = kop.split(' ')
+  const woorden = leesKop(kop)
 
   return (
     <section className="hero relative isolate flex min-h-[100svh] flex-col overflow-hidden">
@@ -132,13 +153,13 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
             wordt - het vakje is dus ruimer, maar neemt geen extra plek in.
           */}
           <h1 className="mt-5 text-hero md:mt-6">
-            {woorden.map((woord, i) => (
+            {woorden.map(({ woord, accent }, i) => (
               <span
                 key={`${woord}-${i}`}
                 className="inline-block overflow-hidden align-bottom pb-[0.24em] -mb-[0.24em]"
               >
                 <span
-                  className="hero-woord inline-block"
+                  className={`hero-woord inline-block${accent ? ' italic text-messing' : ''}`}
                   style={{ animationDelay: `${260 + i * 85}ms` }}
                 >
                   {woord}
