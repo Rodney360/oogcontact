@@ -379,3 +379,16 @@ toestellen zag het er goed uit, op de kleine niet.
   Gerard en Gerda. Die veranderen dus mee.
 - Nieuwe alt-teksten, beschreven naar wat er echt op staat.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (afsluitend) — Gerard (Claude Code, cloud)
+
+- **Nieuwe foto bij de loepbrillen:** `loepbril-verlichting.webp` in plaats van
+  het Admetec-model. Te zien op de aanbodtegel op de homepage en boven aan
+  `/loepbrillen/`.
+- Het origineel is liggend (1166 x 763), en in het staande vak van 3:4 komt er
+  zonder opblazen maar 572 pixels breed uit. De breedtes staan daarom op
+  [400, 572]; op een scherm met veel pixels is hij daardoor iets zachter dan de
+  andere tegels. Een staande foto van dezelfde loepbril zou dat oplossen.
+- **Nog open:** zie `docs/open-punten.md`.

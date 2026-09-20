@@ -208,12 +208,14 @@ export const BEELDEN = {
     breedtes: [320, 480, 667],
     stijl: 'warm',
   },
+  // Het origineel is liggend (1166 x 763). In het staande vak van 3:4 past er
+  // dus maar 572 pixels breed uit zonder op te blazen; vandaar deze breedtes.
   'aanbod-loepbrillen': {
-    bron: '2025-06/butterfly-model-admetec.jpg',
+    bron: 'loepbril-verlichting.webp',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Een loepbril van Admetec, met vergrotende loepjes in de glazen.',
-    breedtes: [400, 640, 874],
+    alt: 'Close-up van een loepbril: twee loepjes in de glazen en een lampje op het montuur.',
+    breedtes: [400, 572],
     stijl: 'neutraal',
   },
 
