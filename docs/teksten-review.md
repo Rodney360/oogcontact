@@ -51,7 +51,7 @@ Dit overzicht is gemaakt op basis van de bestanden in `src/content/teksten/`.
 
 **Advies *op maat***
 
-Rust, tijd en aandacht. Gerard en Gerda meten je ogen nauwkeurig en zoeken samen met je een bril die echt bij je past.
+Rust, tijd en aandacht. Gerard meet je ogen nauwkeurig, daarna zoekt Gerda samen met je het montuur dat echt bij je past.
 
 #### Zo komt alles weer scherp
 
@@ -337,7 +337,7 @@ Wil je je ogen laten meten of rustig monturen passen? Maak een afspraak, dan nem
 
 **Contactlenzen die bij jouw ogen passen**
 
-Een contactlens voelt pas goed als hij echt bij je oog past. Daarom nemen wij, Gerard en Gerda, rustig de tijd om je ogen te meten en samen met je te kijken welke lens daarbij hoort. Als zelfstandige opticien in Groningen werken we met moderne apparatuur en met een medische achtergrond. En ja, de koffie staat klaar.
+Een contactlens voelt pas goed als hij echt bij je oog past. Daarom neemt Gerard rustig de tijd om je ogen te meten, en kijken we samen met je welke lens daarbij hoort. Als zelfstandige opticien in Groningen werken we met moderne apparatuur en met een medische achtergrond. En ja, de koffie staat klaar.
 
 #### Wat je bij ons kunt verwachten
 
@@ -943,6 +943,7 @@ Daarom raden we je aan een afspraak te maken, dan weet je zeker dat we rustig me
 
 Een afspraak maak je online via de pagina Afspraak maken, of je belt, mailt of appt ons. Van oogmeting en montuuradvies tot lenzen aanmeten, een loepbril of even je montuur laten bijstellen: er is altijd ruimte om het rustig te doen.
 
+- **Ieder zijn vak** — De oogmeting doet Gerard: meten, nameten en uitleggen wat eruit komt. Daarna neemt Gerda het over en zoekt zij het montuur dat bij je gezicht en je dagelijks leven past. Twee paar ogen aan dezelfde tafel.
 - **Alle tijd voor je** — We plannen ruim, zodat je nooit het gevoel hebt dat je moet opschieten.
 - **Verse koffie** — De koffie wordt vers gezet. Kijken en kiezen mag gerust even duren.
 - **Persoonlijk advies** — We adviseren op basis van jouw ogen, jouw gezicht en jouw dagelijkse bezigheden, niet op basis van wat toevallig op voorraad ligt.

@@ -449,3 +449,18 @@ toestellen zag het er goed uit, op de kleine niet.
   ogen, daarna loopt Gerda met je langs de wand en pakt het montuur dat bij je
   gezicht hoort.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (wie doet wat) — Gerard (Claude Code, cloud)
+
+- **Rechtgezet: de oogmeting doet Gerard, niet allebei.** Stond zo in de eerste
+  zin van de homepage en in de inleiding van de contactlenzenpagina.
+- De homepage begint nu met: "Rust, tijd en aandacht. Gerard meet je ogen
+  nauwkeurig, daarna zoekt Gerda samen met je het montuur dat echt bij je past."
+  Daarmee staat de taakverdeling meteen in het eerste wat iemand leest.
+- **Nieuw kaartje "Ieder zijn vak"** bij "Hoe wij werken" op Over ons, dat het
+  wat uitgebreider vertelt.
+- Zinnen als "wij, Gerard en Gerda, nemen de tijd voor je" zijn blijven staan:
+  die gaan over de winkel, niet over wie meet.
+- **Nog open:** zie `docs/open-punten.md`.
