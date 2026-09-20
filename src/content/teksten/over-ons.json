@@ -15,15 +15,11 @@
       "opsomming": [
         {
           "titel": "Parkeren voor de deur",
-          "tekst": "Parkeren kan direct voor de winkel (betaald)."
+          "tekst": "Parkeren kan direct voor de winkel."
         },
         {
           "titel": "Met de bus",
           "tekst": "De bus stopt pal voor de winkel, een mooie uitkomst als je met het openbaar vervoer komt."
-        },
-        {
-          "titel": "Buiten openingstijden",
-          "tekst": "Komt het je overdag niet uit? In overleg maken we ook een afspraak buiten onze openingstijden, ook 's avonds."
         }
       ]
     },
@@ -91,16 +87,12 @@
       "antwoord": "Woensdag, donderdag en vrijdag zijn we open van 9.30 tot 17.30 uur en zaterdag van 10.00 tot 16.00 uur. Op maandag, dinsdag en zondag zijn we gesloten."
     },
     {
-      "vraag": "Kan ik ook 's avonds of buiten openingstijden terecht?",
-      "antwoord": "Dat kan in overleg. Komt het je overdag niet uit, laat het ons weten, dan zoeken we samen een moment dat wel past, ook 's avonds."
-    },
-    {
       "vraag": "Hoe maak ik een afspraak?",
       "antwoord": "Online via de pagina Afspraak maken, of bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl."
     },
     {
       "vraag": "Waar kan ik parkeren?",
-      "antwoord": "Parkeren kan direct voor de deur (betaald). Kom je met het openbaar vervoer, dan stopt de bus pal voor de winkel."
+      "antwoord": "Parkeren kan direct voor de deur. Kom je met het openbaar vervoer, dan stopt de bus pal voor de winkel."
     },
     {
       "vraag": "Waar vind ik de winkel?",

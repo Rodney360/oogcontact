@@ -9,7 +9,6 @@ import { KnopLink } from '@/components/Knop'
 import { OpeningsStatus } from '@/components/OpeningsStatus'
 import { tekst } from '@/content/teksten/index'
 import { BEDRIJF, whatsappLink } from '@/content/bedrijf'
-import { BUITEN_OPENINGSTIJDEN } from '@/content/openingstijden'
 import { uitzonderingen } from '@/lib/beheer'
 import { paginaMeta, JsonLd, kruimelsJsonLd } from '@/lib/seo'
 
@@ -52,9 +51,6 @@ export default function AfspraakMaken() {
                   WhatsApp
                 </KnopLink>
               </div>
-              <p className="mt-5 text-bijschrift leading-relaxed text-tekst-licht-zacht">
-                {BUITEN_OPENINGSTIJDEN}
-              </p>
             </div>
           </Verschijnt>
         </div>

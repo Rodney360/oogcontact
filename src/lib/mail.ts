@@ -271,7 +271,7 @@ export async function stuurAfspraakBevestiging(afspraak: {
          ${regel('Waar', adresOpEenRegel())}
        </table>
        <p style="margin:0 0 16px;">
-         Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel.
+         Parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
          De koffie staat klaar.
        </p>
        <p style="margin:0 0 24px;">

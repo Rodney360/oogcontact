@@ -407,7 +407,7 @@ function KiesMoment({
           >
             appje
           </a>
-          , dan zoeken we samen een moment. Ook buiten onze openingstijden is er vaak wat mogelijk.
+          , dan zoeken we samen een moment.
         </p>
       </div>
     )

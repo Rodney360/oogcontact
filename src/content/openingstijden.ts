@@ -58,6 +58,3 @@ export type Uitzondering = {
   reden: string
 }
 
-/** Afspraken buiten de openingstijden zijn in overleg mogelijk, ook 's avonds. */
-export const BUITEN_OPENINGSTIJDEN =
-  'Een afspraak buiten onze openingstijden is in overleg mogelijk, ook ’s avonds.'

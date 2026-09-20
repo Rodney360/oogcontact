@@ -103,15 +103,11 @@
     {
       "vraag": "Kan een zonnebril ook op sterkte?",
       "antwoord": "Ja. De glazen kunnen op sterkte, met glazen van Essilor. Je kunt kiezen voor degradé (overlopend van donker naar licht), meekleurend, spiegelglazen, of glazen volledig in de kleur van het origineel van de zonnebril die je uitkiest."
-    },
-    {
-      "vraag": "Kan ik buiten de openingstijden terecht?",
-      "antwoord": "In overleg is dat mogelijk, ook 's avonds. Bel of app ons even, dan zoeken we samen een moment dat jou uitkomt."
     }
   ],
   "oproep": {
     "kop": "Kom rustig passen",
-    "tekst": "Wil je zien wat er in de kast staat en ontdekken wat je staat? Plan een afspraak voor een oogmeting en montuuradvies, of loop gewoon binnen aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel. Wij houden graag oogcontact.",
+    "tekst": "Wil je zien wat er in de kast staat en ontdekken wat je staat? Plan een afspraak voor een oogmeting en montuuradvies, of loop gewoon binnen aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel. Wij houden graag oogcontact.",
     "knop": "Afspraak maken"
   }
 }
