@@ -138,6 +138,19 @@ De nieuwe winkelfoto's kunnen erin zodra ze er zijn. Zet ze in `assets-new/`
 en wijs ze aan in `config/beeld.mjs`; in `assets-new/README.md` staat precies
 hoe. De oude foto's blijven gewoon beschikbaar.
 
+**Nog te maken: een foto van het slijpen.** Op de site staat nu dat de glazen
+in de eigen werkplaats geslepen worden (bij "Hoe wij werken" op Over ons en bij
+"Glazen" op de brillenpagina). Een foto daarbij maakt het pas echt. Wat werkt:
+
+- Liggend fotograferen, niet staand.
+- De slijpmachine herkenbaar in beeld, en Gerard erbij die hem bedient - handen
+  bezig, niet poserend.
+- Van iets opzij, zodat je diepte krijgt.
+- Gewoon met de telefoon is prima; die levert ruim genoeg pixels.
+
+Zet hem in `assets-new/` en zeg welke het is, dan komt hij op beide plekken te
+staan.
+
 Een paar bestaande foto's zijn kleiner dan waar ze staan:
 
 | Foto | Waar hij staat | Formaat |
