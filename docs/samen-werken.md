@@ -460,9 +460,11 @@ Er is nog één ding nodig, en alleen de eigenaar van het Vercel-account kan het
 doen. Daarna nooit meer.
 
 De twee kenmerken van het project (`VERCEL_ORG_ID` en `VERCEL_PROJECT_ID`)
-staan al in `.github/workflows/ci.yml`. Dat zijn geen wachtwoorden: ze staan in
-het adres van je Vercel-pagina en in de berichtjes die Vercel bij elke pull
-request achterlaat, en zonder de sleutel hieronder kun je er niets mee.
+staan met de waarde erbij in `.github/workflows/ci.yml`. Dat zijn geen
+wachtwoorden: ze staan in het adres van je Vercel-pagina en in de berichtjes
+die Vercel bij elke pull request achterlaat, en zonder de sleutel hieronder kun
+je er niets mee. Zet ze **niet** ook als secret — dat heeft geen nut en het
+ging de eerste keer juist daarop mis.
 
 Wat er nog mist is de **sleutel**. Die hoort in de kluis van GitHub, niet in een
 bestand: wat eenmaal in de repository staat, blijft voor altijd in de
@@ -511,7 +513,8 @@ mee live. Je ziet het gebeuren op
 |---|---|
 | "VERCEL_TOKEN is nog niet ingesteld" | Stap 2 is niet af, of er staat een typefout in de naam. |
 | "Not authorized" of "Forbidden" | De sleutel is verlopen, ingetrokken of hoort bij het verkeerde account. Maak een nieuwe (stap 1) en werk `VERCEL_TOKEN` bij. |
-| "Project not found" | De twee nummers in `ci.yml` kloppen niet meer, bijvoorbeeld omdat het project hernoemd is. Haal ze op in Vercel onder Settings → General. |
+| "Could not retrieve Project Settings" | De twee nummers in `ci.yml` kloppen niet meer, bijvoorbeeld omdat het project hernoemd of verplaatst is. Haal ze op in Vercel onder Settings → General. Staan ze ook als secret, haal die dan weg: een secret wint niet meer, maar verwarring blijft. |
+| Je wilt het opnieuw proberen zonder iets te veranderen | Ga naar <https://github.com/Rodney360/oogcontact/actions>, kies links **Controle**, klik rechtsboven op **Run workflow** en kies `main`. |
 | De taak "Live zetten" draait helemaal niet | Dan is de controle of zijn de browsertests rood. Los dat eerst op — zo hoort het te werken. |
 
 ### Als je er helemaal vanaf wilt

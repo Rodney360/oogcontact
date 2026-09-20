@@ -331,3 +331,22 @@ toestellen zag het er goed uit, op de kleine niet.
   `docs/samen-werken.md`. Tot die tijd stopt de taak met een melding en blijft
   de live site staan.
 - **Nog open:** PR #1 samenvoegen, en zie verder `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (avond) — Dennis (Claude Code, cloud)
+
+- **PR #1 samengevoegd.** De controle en de 130 browsertests waren groen op
+  `main`, maar de nieuwe taak **Live zetten** viel om op de eerste Vercel-stap:
+  `Could not retrieve Project Settings`. De site bleef daardoor staan zoals hij
+  stond — precies zoals het hoort: mislukt live zetten verandert niets.
+- **Oorzaak:** de twee kenmerken van het project stonden als secret in GitHub.
+  Een secret kun je niet nakijken, dus een typefout of twee verwisselde waarden
+  merk je pas als het misgaat. Ze staan nu met de waarde erbij in `ci.yml` —
+  het zijn geen wachtwoorden, ze staan ook in Vercels eigen berichten bij elke
+  pull request. Alleen de sleutel blijft in de kluis.
+- **Twee dingen erbij** om de volgende keer sneller te zijn: de stap "Kijken
+  bij wie de sleutel hoort" (`vercel whoami`) zegt meteen of het aan de sleutel
+  ligt of aan het project, en met **Run workflow** op de Actions-pagina kun je
+  het live zetten opnieuw proberen zonder eerst iets aan de site te veranderen.
+- **Nog open:** zie `docs/open-punten.md`.

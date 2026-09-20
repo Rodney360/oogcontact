@@ -6,6 +6,9 @@ on:
   pull_request:
   push:
     branches: [main]
+  # Een knop op de Actions-pagina ("Run workflow"), om het live zetten met de
+  # hand opnieuw te proberen zonder dat er iets aan de site hoeft te veranderen.
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -90,7 +93,7 @@ jobs:
     #
     # vercel.json zet het automatisch live zetten door Vercel zelf uit voor
     # main, zodat het niet twee keer gebeurt.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     needs: [controle, browsertests]
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -99,14 +102,16 @@ jobs:
       # De sleutel is het enige echte geheim. Die staat in de repository-secrets
       # van GitHub en komt nooit in een bestand terecht.
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      # Deze twee zijn geen geheimen maar kenmerken: ze staan in het adres van
-      # de Vercel-pagina en in de berichtjes die Vercel bij elke pull request
-      # achterlaat. Zonder de sleutel hierboven kun je er niets mee. Ze staan
-      # hier zodat er maar een ding hoeft te worden ingesteld. Wil je ze toch
-      # liever als secret zetten, doe dat dan onder dezelfde naam - een secret
-      # wint van de waarde die hier staat.
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID || 'team_4zwVTn2YD0nTxzI9MqtDdFKa' }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID || 'prj_1aGOCYhVoZCwy5KCbhQ7aitseZUK' }}
+      # Deze twee zijn geen geheimen maar kenmerken van het project: ze staan in
+      # het adres van de Vercel-pagina en in de berichtjes die Vercel bij elke
+      # pull request achterlaat. Zonder de sleutel hierboven kun je er niets mee.
+      #
+      # Ze staan hier met de waarde erbij en niet als secret. Dat is met opzet:
+      # de eerste poging liep hierop stuk. Een secret kun je niet nakijken, dus
+      # een typefout of twee verwisselde waarden zie je pas als het misgaat, en
+      # dan zegt Vercel alleen "Could not retrieve Project Settings".
+      VERCEL_ORG_ID: team_4zwVTn2YD0nTxzI9MqtDdFKa
+      VERCEL_PROJECT_ID: prj_1aGOCYhVoZCwy5KCbhQ7aitseZUK
 
     steps:
       - uses: actions/checkout@v4
@@ -125,6 +130,13 @@ jobs:
 
       - name: Vercel-opdrachtregel installeren
         run: npm install --global vercel@latest
+
+      - name: Kijken bij wie de sleutel hoort
+        # Deze stap kost een seconde en scheelt veel zoekwerk: lukt hij niet,
+        # dan ligt het aan de sleutel. Lukt hij wel en gaat de volgende stap
+        # alsnog mis, dan ligt het aan het project. De uitvoer is een
+        # gebruikersnaam, geen geheim.
+        run: vercel whoami --token="$VERCEL_TOKEN"
 
       - name: Instellingen van het project ophalen
         run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
