@@ -14,7 +14,13 @@ export type Dienst = {
   naam: string
   /** Waarom je hiervoor komt, in gewone taal. */
   uitleg: string
-  /** Duur in minuten, voor zover bekend uit de agenda. */
+  /**
+   * Duur in minuten, zoals Gerard en Gerda hem hanteren. Staat er null, dan
+   * rekent de boekingsmodule met een half uur.
+   *
+   * Let op: draait de koppeling met de agenda, dan wint de duur die daar
+   * ingesteld staat. Verandert er hier iets, verander het dan ook in OO2.
+   */
   duurMinuten: number | null
   /** Waar deze dienst bij hoort, voor het groeperen in de boekingsmodule. */
   groep: 'ogen meten' | 'brillen' | 'contactlenzen' | 'loepbrillen'
@@ -29,7 +35,7 @@ export const DIENSTEN: Dienst[] = [
     uitleg:
       'De meest complete afspraak: we meten je ogen en zoeken daarna samen een montuur ' +
       'dat bij je gezicht en je dagelijks leven past.',
-    duurMinuten: null,
+    duurMinuten: 90,
     groep: 'ogen meten',
     uitgelicht: true,
   },
@@ -37,7 +43,7 @@ export const DIENSTEN: Dienst[] = [
     sleutel: 'Oogmeting',
     naam: 'Oogmeting',
     uitleg: 'We meten je ogen tot op de honderdste nauwkeurig en meten ook je oogdruk.',
-    duurMinuten: null,
+    duurMinuten: 60,
     groep: 'ogen meten',
     uitgelicht: true,
   },
@@ -61,7 +67,7 @@ export const DIENSTEN: Dienst[] = [
     sleutel: 'Montuur bijstellen',
     naam: 'Montuur bijstellen',
     uitleg: 'Zit je bril scheef of knelt hij? Dan zetten we hem weer goed. Kort en zo gepiept.',
-    duurMinuten: null,
+    duurMinuten: 15,
     groep: 'brillen',
   },
   {
@@ -70,7 +76,7 @@ export const DIENSTEN: Dienst[] = [
     uitleg:
       'De eerste keer lenzen. We doen een oogmeting en een topografisch onderzoek en zoeken ' +
       'de lens die bij jouw ogen past.',
-    duurMinuten: null,
+    duurMinuten: 60,
     groep: 'contactlenzen',
     uitgelicht: true,
   },
@@ -78,7 +84,7 @@ export const DIENSTEN: Dienst[] = [
     sleutel: 'Lenzen heraanmeting',
     naam: 'Contactlenzen opnieuw aanmeten',
     uitleg: 'Je draagt al lenzen, maar er is iets veranderd. We kijken opnieuw wat past.',
-    duurMinuten: null,
+    duurMinuten: 45,
     groep: 'contactlenzen',
   },
   {

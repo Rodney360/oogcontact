@@ -392,3 +392,16 @@ toestellen zag het er goed uit, op de kleine niet.
   [400, 572]; op een scherm met veel pixels is hij daardoor iets zachter dan de
   andere tegels. Een staande foto van dezelfde loepbril zou dat oplossen.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (avond, tijden) — Gerard (Claude Code, cloud)
+
+- **Nieuwe tijden bij het afspraak maken**, op verzoek van Gerard en Gerda:
+  oogmeting 60 minuten, oogmeting en montuuradvies 90, montuur bijstellen 15,
+  contactlenzen aanmeten 60, contactlenzen opnieuw aanmeten 45. De rest blijft
+  op een half uur. Overal staat "ongeveer" ervoor, zoals hiervoor ook.
+- **Let op:** dit is de lijst van de site. Draait straks de koppeling met de
+  agenda, dan wint de duur die in OO2 staat. Die moet daar dus ook aangepast
+  worden, anders lopen ze uit elkaar.
+- **Nog open:** zie `docs/open-punten.md`.
