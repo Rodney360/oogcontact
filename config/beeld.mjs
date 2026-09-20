@@ -247,14 +247,6 @@ export const BEELDEN = {
     breedtes: MIDDEN,
     stijl: 'warm',
   },
-  'winkel-koffie': {
-    bron: '2021-11/Winkel-helemaal-3-scaled.jpg',
-    verhouding: LIGGEND,
-    zwaartepunt: 'attention',
-    alt: 'De balie in de winkel met het koffieapparaat en een vaas met bloemen.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
-  },
 }
 
 /** Het beeld dat gedeeld wordt als iemand een link doorstuurt. */

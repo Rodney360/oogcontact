@@ -463,4 +463,10 @@ toestellen zag het er goed uit, op de kleine niet.
   wat uitgebreider vertelt.
 - Zinnen als "wij, Gerard en Gerda, nemen de tijd voor je" zijn blijven staan:
   die gaan over de winkel, niet over wie meet.
+- **Ook het aanmeten van contactlenzen doet Gerard**, bevestigd door hemzelf.
+- **De dubbele winkelfoto op Over ons is weg.** Daar stonden twee
+  overzichtsfoto's van dezelfde ruimte onder elkaar. De nieuwste blijft; de
+  oude (`Winkel-helemaal-3`) is eruit, ook als slot in `config/beeld.mjs`.
+  Eronder staat nu de foto van Gerard en Gerda in de deuropening, net als
+  hiervoor.
 - **Nog open:** zie `docs/open-punten.md`.
