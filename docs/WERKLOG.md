@@ -419,3 +419,15 @@ toestellen zag het er goed uit, op de kleine niet.
 - `docs/teksten-review.md` opnieuw gegenereerd.
 - **Nog open:** zie `docs/open-punten.md`; het live zetten wacht nog op een
   Vercel-token met toegang tot het team.
+
+---
+
+## 2026-09-20 (werkplaats) — Gerard (Claude Code, cloud)
+
+- **De eigen werkplaats staat nu op de site.** Gerard en Gerda slijpen de glazen
+  zelf; dat stond nergens. Er is een kaartje "Eigen werkplaats" bij "Hoe wij
+  werken" op Over ons, en een alinea bij "Glazen" op de brillenpagina.
+- Bewust geen uitspraak over hoe snel een bril daardoor klaar is - dat weet ik
+  niet en dat mag ik niet verzinnen.
+- **Nog te maken:** een foto van het slijpen, liggend, met Gerard aan de
+  machine. Wat er op zo'n foto moet staan, staat in `docs/open-punten.md`.

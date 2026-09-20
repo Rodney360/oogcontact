@@ -262,6 +262,8 @@ Enkelvoudige glazen hebben één sterkte, voor veraf of voor dichtbij. Door comp
 
 Bij Oogcontact bij Gerard is het Eyezen-glas van Essilor daarom de nieuwe standaard. We meten in honderdsten, en het glas beschermt je ogen tegen schadelijk uv- en blauwviolet licht.
 
+De glazen slijpen we zelf, in de werkplaats in de winkel. Dat is precies werk: hoe het glas in je montuur valt bepaalt of je bril recht zit en of het montuur niet onder spanning komt te staan. Door het zelf te doen houden we dat in de hand, en hoeft je bril daarvoor niet de deur uit.
+
 #### Multifocale glazen
 
 Met een multifocaal glas zie je scherp van dichtbij, veraf en op alle afstanden daartussenin. Je hoeft dus niet steeds van bril te wisselen als je van je boek naar buiten kijkt.
@@ -945,6 +947,7 @@ Een afspraak maak je online via de pagina Afspraak maken, of je belt, mailt of a
 - **Verse koffie** — De koffie wordt vers gezet. Kijken en kiezen mag gerust even duren.
 - **Persoonlijk advies** — We adviseren op basis van jouw ogen, jouw gezicht en jouw dagelijkse bezigheden, niet op basis van wat toevallig op voorraad ligt.
 - **Samen kiezen** — Gerard en Gerda denken samen met je mee: over de vorm en de kleur die bij je passen en over de techniek achter je glazen en lenzen.
+- **Eigen werkplaats** — De glazen slijpen we zelf, in de werkplaats in de winkel. Zo bepalen we zelf hoe ze in je montuur komen te zitten, en hoeft je bril daarvoor niet de deur uit.
 
 #### Waar we voor staan
 
