@@ -33,18 +33,17 @@ repository openbaar wordt of het account overgaat naar GitHub Team. Tot die
 tijd geldt de afspraak in `docs/samen-werken.md`: alles via een pull request,
 en nooit samenvoegen als de controle rood is.
 
-**Beslissen hoe je vaders werk live komt. Nu het dringendst.**
-Vercel bouwt een privé-repository alleen als de schrijver van de commit ook
-toegang heeft tot het project op Vercel. Op het gratis abonnement is dat
-precies één persoon: jij. Toen op 20 september de eerste pull request van je
-vader samengevoegd werd, bleef de live site daardoor staan waar hij stond; in
-Vercel stond die regel op **Blocked**. Het samenvoegen zelf ging goed, alleen
-het live zetten niet.
-*Wat je doet:* kies er één — zelf samenvoegen met "Create a merge commit" in
-plaats van "Squash and merge" (gratis, verandert verder niets), de repository
-openbaar maken (dan vervalt de regel, en de ruleset op `main` gaat meteen ook
-werken), of Vercel Pro nemen en je vader aan het team toevoegen (kost geld).
-De afweging staat uitgeschreven in `docs/samen-werken.md`.
+~~**Beslissen hoe je vaders werk live komt.**~~ **Opgelost, op één stap na.**
+Vercel bouwde een privé-repository alleen als de schrijver van de commit ook
+toegang heeft tot het Vercel-project; op het gratis abonnement is dat één
+persoon. Daardoor bleef de site staan toen Gerard zijn eerste pull requests
+samenvoegde. Het live zetten gebeurt nu door GitHub in plaats van door Vercel,
+met een sleutel in plaats van een naam — dus het maakt niet meer uit wie de
+wijziging maakt of samenvoegt, en een rode versie kan niet meer live.
+*Wat je doet:* eenmalig drie sleutels klaarzetten op GitHub. Vijf minuten, in
+stappen beschreven in `docs/samen-werken.md` onder "Live zetten zonder dat
+Dennis erbij hoeft". Zolang dat niet gebeurd is, stopt de taak met een melding
+en blijft de live site staan waar hij staat.
 
 Hieronder stond eerder wat je moest instellen; dat is gedaan:
 *Wat je doet:* GitHub → de repository → Settings → Branches → Add branch

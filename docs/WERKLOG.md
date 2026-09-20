@@ -306,3 +306,26 @@ toestellen zag het er goed uit, op de kleine niet.
   staan: parkeren kan direct voor de deur, de bus stopt pal voor de winkel.
 - `docs/teksten-review.md` opnieuw gegenereerd.
 - **Nog open:** zie `docs/open-punten.md`; de agendakoppeling wacht nog op OO2.
+
+---
+
+## 2026-09-20 (eind van de dag) — Dennis (Claude Code, cloud)
+
+- **Live zetten gaat nu via GitHub in plaats van via Vercel.** Gerard moest
+  steeds wachten tot Dennis zijn werk live zette: Vercel bouwt een privé-
+  repository alleen als de schrijver van de commit ook toegang heeft tot het
+  Vercel-project, en op het gratis abonnement is dat één persoon. Twee
+  samenvoegingen bleven daardoor hangen. De taak **"Live zetten"** in
+  `.github/workflows/ci.yml` doet het nu met een sleutel in plaats van met een
+  naam, dus het maakt niet meer uit wie de wijziging maakt of samenvoegt.
+- Die taak draait alleen op `main` en alleen als de controle én de
+  browsertests groen zijn. Een kapotte versie kan dus niet meer live — dat kon
+  eerst wél, want Vercel keek nergens naar.
+- `vercel.json` (nieuw) zet het automatische live zetten door Vercel zelf uit
+  voor `main`, zodat het niet dubbel gebeurt. Previews blijven ongewijzigd:
+  die maakt Vercel nog gewoon zelf, bij elke branch en pull request.
+- **Nog te doen door Dennis, eenmalig:** drie sleutels klaarzetten op GitHub
+  (`VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`). Vijf minuten, in
+  stappen in `docs/samen-werken.md`. Tot die tijd stopt de taak met een
+  melding die zegt welke ontbreekt, en blijft de live site staan.
+- **Nog open:** PR #1 samenvoegen, en zie verder `docs/open-punten.md`.
