@@ -359,6 +359,9 @@ toestellen zag het er goed uit, op de kleine niet.
   een scherm van 1440 breed, dus hoger dan het scherm zelf. Nu maximaal 480
   pixels breed, in dezelfde 4:5-verhouding als de vastgezette versie. Op een
   telefoon verandert er niets.
-- **Nog te doen:** Gerard heeft een nieuwe foto ("Geer spleetlamp") die deze
-  moet vervangen. Die staat nog niet in de repo; zodra hij in `assets-new/`
-  staat, is het één regel in `config/beeld.mjs` plus een nieuwe alt-tekst.
+- **En de foto is vervangen.** `assets-new/Geer spleetlamp.jpg` (3213 x 5712)
+  staat nu op die plek, in 4:5 - precies de verhouding waarin hij op de pagina
+  komt, zodat hij daarna niet nog eens bijgesneden wordt. Nieuwe alt-tekst:
+  Gerard achter de spleetlamp, met de Vision-R 800 boven hem.
+- Gerard heeft in één keer een hele reeks nieuwe winkelfoto's geüpload naar
+  `assets-new/`. Alleen deze is nu in gebruik; de rest staat klaar.

@@ -17,6 +17,7 @@
 /** @typedef {{bron: string, verhouding: [number, number]|null, zwaartepunt?: string, alt: string, breedtes: number[], stijl?: 'warm'|'neutraal'|'zwartwit'}} Beeld */
 
 const PORTRET = /** @type {[number, number]} */ ([3, 4])
+const STAAND = /** @type {[number, number]} */ ([4, 5])
 const LIGGEND = /** @type {[number, number]} */ ([3, 2])
 const BREED = /** @type {[number, number]} */ ([16, 9])
 const VIERKANT = /** @type {[number, number]} */ ([1, 1])
@@ -98,15 +99,17 @@ export const BEELDEN = {
   },
 
   // --- Home: de scene over nauwkeurig meten -----------------------------
-  // Er is ook een mooie macrofoto van een oog (2023-02/oog.jpg), maar die is
-  // maar 612px breed en wordt hier op ruim 600px getoond: te weinig. Deze foto
-  // is 2560px breed, blijft dus scherp, en laat bovendien zien waar het om
-  // gaat: Gerard die iemands ogen meet.
+  // Nieuwe foto van Gerard achter de spleetlamp (3213 x 5712), ruim genoeg
+  // voor elke maat hier. Het origineel is een staande telefoonfoto, dus er
+  // gaat flink wat van boven en onder af; 4:5 is precies de verhouding
+  // waarin hij op de pagina staat, zodat hij daarna niet nog eens
+  // bijgesneden wordt. 'attention' laat sharp zelf het gezicht en het
+  // apparaat vasthouden.
   'meting-scene': {
-    bron: '2021-12/Soof-Geer-apparatuur-scaled.jpg',
-    verhouding: PORTRET,
+    bron: 'Geer spleetlamp.jpg',
+    verhouding: STAAND,
     zwaartepunt: 'attention',
-    alt: 'Gerard kijkt door het meetapparaat terwijl hij iemands ogen onderzoekt.',
+    alt: 'Gerard kijkt door de spleetlamp in de meetruimte, met de Vision-R 800 boven hem.',
     breedtes: MIDDEN,
     stijl: 'neutraal',
   },
