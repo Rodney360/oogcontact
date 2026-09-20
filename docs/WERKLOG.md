@@ -264,6 +264,10 @@ toestellen zag het er goed uit, op de kleine niet.
   preview-deploys zitten achter Deployment Protection. `docs/vercel-toegang.md`
   beschrijft de snelle oplossing (het slot eraf) en de echte (het project
   overzetten naar Gerard), met een bericht dat doorgestuurd kan worden.
+- **Overzetten bleek niet te kunnen:** Vercel laat alleen overzetten naar een
+  team waar je zelf in zit, dus bood het alleen "Create Team" aan. Het document
+  beschrijft nu ook de weg die wel werkt: Gerard maakt er zelf een project van
+  uit dezelfde repository, en daarna verhuist het domein.
 - **Dringend:** zolang dit niet geregeld is, kan Gerard geen enkele preview
   bekijken en moet hij wachten tot iets live staat.
 - **Nog open:** zie `docs/open-punten.md`.

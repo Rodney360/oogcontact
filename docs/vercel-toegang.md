@@ -61,6 +61,48 @@ zonder dat ze het goed doen:
 Daarna maakt Vercel bij elke pull request weer een preview, en kan Gerard die
 zelf openen.
 
+## Lukt "Transfer Project" niet?
+
+Dat gebeurt: Vercel laat je alleen overzetten naar een team waar je zelf in
+zit. Staat Gerards account daar niet tussen, dan biedt Vercel alleen
+*Create Team* aan en houdt het op.
+
+Er is dan een weg die altijd werkt: **Gerard maakt er zelf een nieuw project
+van.** Vercel bouwt gewoon opnieuw uit dezelfde repository; er hoeft niets aan
+de code te veranderen.
+
+1. Gerard logt in op <https://vercel.com> met zijn eigen account en koppelt dat
+   aan GitHub.
+2. **Add New → Project** → kies de repository `Rodney360/oogcontact`.
+   Ziet hij hem niet staan, dan moet de Vercel-app nog toegang krijgen tot die
+   repository; dat doet de eigenaar van de repository eenmalig.
+3. Instellingen overnemen: framework **Next.js**, de rest kan op de standaard
+   blijven staan.
+4. **Environment Variables overtypen.** Die staan niet in de repo, dus haal ze
+   uit het oude project: `EASYAPPOINTMENTS_*`, `RESEND_API_KEY`,
+   `MAIL_AFZENDER`, `MAIL_ONTVANGER`, `TURNSTILE_*`, `NEXT_PUBLIC_SITE_URL`.
+   Zie `.env.example` voor de volledige lijst.
+5. **Deployment Protection uitzetten** in het nieuwe project, zodat previews
+   meteen te openen zijn.
+6. Laat het een keer bouwen en kijk of de site klopt op de nieuwe Vercel-URL.
+
+**Pas als dat goed is, het domein verhuizen.** Een domein kan maar bij één
+project horen:
+
+1. Eerst in het **oude** project: Settings → Domains → `oogcontactbijgerard.nl`
+   verwijderen.
+2. Daarna in het **nieuwe** project: Settings → Domains → toevoegen.
+
+Wijst het domein al naar Vercel, dan zit er een paar minuten tussen waarin de
+site er niet uit ziet zoals het hoort. Doe dit dus op een rustig moment, niet
+vlak voor sluitingstijd. Staat het domein nog helemaal niet bij Vercel, dan is
+dit juist het makkelijkste moment om over te stappen.
+
+**Koppel daarna het oude project los van GitHub** (Settings → Git →
+Disconnect), of verwijder het. Anders bouwen straks twee projecten bij elke
+push, krijg je dubbele meldingen onder elke pull request, en weet niemand meer
+welke preview de goede is.
+
 ## Zolang het nog niet geregeld is
 
 Alles wat we maken gaat via een pull request naar `main`, en `main` staat live.
@@ -87,7 +129,9 @@ versie in je browsercache.
 >    → Vercel Authentication → Disabled → Save.
 > 2. Het project overzetten naar mijn account, zodat ik dit soort dingen
 >    voortaan zelf kan: Settings → General → Transfer Project → `g-bugel-6898`.
->    Ik accepteer het verzoek dan meteen.
+>    Ik accepteer het verzoek dan meteen. Staat mijn account daar niet tussen
+>    (je ziet dan alleen "Create Team"), laat het dan even weten — dan zet ik
+>    er zelf een nieuw project naast en verhuizen we het domein daarna.
 >
 > Ik ga vanaf nu het meeste werk aan de site doen, dus het scheelt ons allebei
 > tijd als ik er zelf bij kan.
