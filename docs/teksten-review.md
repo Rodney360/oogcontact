@@ -150,7 +150,7 @@ Wil je eerst weten wat een Admetec loepbril voor je werk kan betekenen, kies dan
 
 **Zullen we eens goed naar je ogen kijken?**
 
-Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl. De koffie staat klaar.
+Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
 
 *Knop:* Afspraak maken
 
@@ -261,6 +261,8 @@ Laat je ogen elke twee jaar controleren, dat is ons advies. Zo weet je zeker dat
 Enkelvoudige glazen hebben één sterkte, voor veraf of voor dichtbij. Door computers, laptops, tablets en telefoons vraagt een gewone dag steeds meer van je ogen, en een standaard enkelvoudig glas sluit daar niet altijd meer op aan.
 
 Bij Oogcontact bij Gerard is het Eyezen-glas van Essilor daarom de nieuwe standaard. We meten in honderdsten, en het glas beschermt je ogen tegen schadelijk uv- en blauwviolet licht.
+
+De glazen slijpen we zelf, in de werkplaats in de winkel. Dat is precies werk: hoe het glas in je montuur valt bepaalt of je bril recht zit en of het montuur niet onder spanning komt te staan. Door het zelf te doen houden we dat in de hand, en hoeft je bril daarvoor niet de deur uit.
 
 #### Multifocale glazen
 
@@ -945,6 +947,7 @@ Een afspraak maak je online via de pagina Afspraak maken, of je belt, mailt of a
 - **Verse koffie** — De koffie wordt vers gezet. Kijken en kiezen mag gerust even duren.
 - **Persoonlijk advies** — We adviseren op basis van jouw ogen, jouw gezicht en jouw dagelijkse bezigheden, niet op basis van wat toevallig op voorraad ligt.
 - **Samen kiezen** — Gerard en Gerda denken samen met je mee: over de vorm en de kleur die bij je passen en over de techniek achter je glazen en lenzen.
+- **Eigen werkplaats** — De glazen slijpen we zelf, in de werkplaats in de winkel. Zo bepalen we zelf hoe ze in je montuur komen te zitten, en hoeft je bril daarvoor niet de deur uit.
 
 #### Waar we voor staan
 

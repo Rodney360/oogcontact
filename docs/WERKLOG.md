@@ -350,3 +350,103 @@ toestellen zag het er goed uit, op de kleine niet.
   ligt of aan het project, en met **Run workflow** op de Actions-pagina kun je
   het live zetten opnieuw proberen zonder eerst iets aan de site te veranderen.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (laat) — Gerard (Claude Code, cloud)
+
+- **Vastgelegd waarom preview-links niet te openen zijn:** het Vercel-project
+  staat in het team `projects-c1cc`, Gerard logt in met `g-bugel-6898`, en
+  preview-deploys zitten achter Deployment Protection. `docs/vercel-toegang.md`
+  beschrijft de snelle oplossing (het slot eraf) en de echte (het project
+  overzetten naar Gerard), met een bericht dat doorgestuurd kan worden.
+- **Overzetten bleek niet te kunnen:** Vercel laat alleen overzetten naar een
+  team waar je zelf in zit, dus bood het alleen "Create Team" aan. Het document
+  beschrijft nu ook de weg die wel werkt: Gerard maakt er zelf een project van
+  uit dezelfde repository, en daarna verhuist het domein.
+- **Dringend:** zolang dit niet geregeld is, kan Gerard geen enkele preview
+  bekijken en moet hij wachten tot iets live staat.
+- **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (nacht) — Gerard (Claude Code, cloud)
+
+- **De foto bij "Ultiem nauwkeurig zicht" op de homepage is kleiner.** In de
+  versie zonder vastgezette scène (tablet, en iedereen die minder beweging
+  gevraagd heeft) stond hij op de volle kolombreedte: 1326 bij 1768 pixels op
+  een scherm van 1440 breed, dus hoger dan het scherm zelf. Nu maximaal 480
+  pixels breed, in dezelfde 4:5-verhouding als de vastgezette versie. Op een
+  telefoon verandert er niets.
+- **En de foto is vervangen.** `assets-new/Geer spleetlamp.jpg` (3213 x 5712)
+  staat nu op die plek, in 4:5 - precies de verhouding waarin hij op de pagina
+  komt, zodat hij daarna niet nog eens bijgesneden wordt. Nieuwe alt-tekst:
+  Gerard achter de spleetlamp, met de Vision-R 800 boven hem.
+- Gerard heeft in één keer een hele reeks nieuwe winkelfoto's geüpload naar
+  `assets-new/`. Alleen deze is nu in gebruik; de rest staat klaar.
+
+---
+
+## 2026-09-20 (heel laat) — Gerard (Claude Code, cloud)
+
+- **De twee zwart-witportretten bij "Het verhaal van Gerard en Gerda" zijn
+  vervangen** door eigen foto's uit de winkel: `Geer close up aan tafel.jpg`
+  voor Gerard en `Ger close up refr.ruimte.jpg` voor Gerda. Allebei 2268 x 4032,
+  bijgesneden op 3:4 en nog steeds in zwart-wit, zodat ze naast elkaar één
+  geheel blijven.
+- Let op: diezelfde twee foto's staan ook op `/over-ons/`, bij de namen van
+  Gerard en Gerda. Die veranderen dus mee.
+- Nieuwe alt-teksten, beschreven naar wat er echt op staat.
+- **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (afsluitend) — Gerard (Claude Code, cloud)
+
+- **Nieuwe foto bij de loepbrillen:** `loepbril-verlichting.webp` in plaats van
+  het Admetec-model. Te zien op de aanbodtegel op de homepage en boven aan
+  `/loepbrillen/`.
+- Het origineel is liggend (1166 x 763), en in het staande vak van 3:4 komt er
+  zonder opblazen maar 572 pixels breed uit. De breedtes staan daarom op
+  [400, 572]; op een scherm met veel pixels is hij daardoor iets zachter dan de
+  andere tegels. Een staande foto van dezelfde loepbril zou dat oplossen.
+- **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (avond, tijden) — Gerard (Claude Code, cloud)
+
+- **Nieuwe tijden bij het afspraak maken**, op verzoek van Gerard en Gerda:
+  oogmeting 60 minuten, oogmeting en montuuradvies 90, montuur bijstellen 15,
+  contactlenzen aanmeten 60, contactlenzen opnieuw aanmeten 45. De rest blijft
+  op een half uur. Overal staat "ongeveer" ervoor, zoals hiervoor ook.
+- **Let op:** dit is de lijst van de site. Draait straks de koppeling met de
+  agenda, dan wint de duur die in OO2 staat. Die moet daar dus ook aangepast
+  worden, anders lopen ze uit elkaar.
+- **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (avond, koffie) — Gerard (Claude Code, cloud)
+
+- **"De koffie staat klaar." weggehaald** uit het blok "Zullen we eens goed naar
+  je ogen kijken?" onderaan de homepage. De zin stond daar achter het
+  mailadres. Alleen in dat ene tekstvak; elders op de site blijft hij staan.
+- **De uitleg bij Lenscontrole klopte niet** en is vervangen door de tekst van
+  Gerard en Gerda zelf: de reguliere controle, of de lenzen nog comfortabel
+  zitten, of de sterkte nog goed is, en de conditie van de ogen.
+- `docs/teksten-review.md` opnieuw gegenereerd.
+- **Nog open:** zie `docs/open-punten.md`; het live zetten wacht nog op een
+  Vercel-token met toegang tot het team.
+
+---
+
+## 2026-09-20 (werkplaats) — Gerard (Claude Code, cloud)
+
+- **De eigen werkplaats staat nu op de site.** Gerard en Gerda slijpen de glazen
+  zelf; dat stond nergens. Er is een kaartje "Eigen werkplaats" bij "Hoe wij
+  werken" op Over ons, en een alinea bij "Glazen" op de brillenpagina.
+- Bewust geen uitspraak over hoe snel een bril daardoor klaar is - dat weet ik
+  niet en dat mag ik niet verzinnen.
+- **Nog te maken:** een foto van het slijpen, liggend, met Gerard aan de
+  machine. Wat er op zo'n foto moet staan, staat in `docs/open-punten.md`.
