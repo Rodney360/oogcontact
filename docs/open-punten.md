@@ -96,21 +96,6 @@ meeste tegen. Dit is een extra laag, geen noodzaak.
 
 ### 1.3 Gegevens die ik niet zelf mag verzinnen
 
-**Voeren jullie nog monturen uit Italië?** Liu Jo is uit de collectie gehaald,
-en dat was het enige Italiaanse merk in de lijst. Op zes plekken staat nog
-"vooral uit Italië en Spanje" (homepage, over ons, collectie, aanbod, de
-meta-teksten en llms.txt), terwijl de landen die de homepage zelf toont nu
-België, Frankrijk, Oostenrijk, Spanje en Zwitserland zijn. Dat spreekt elkaar
-tegen. Zeg even wat klopt, dan zet ik het recht:
-
-- wel Italiaanse merken → welke, dan zet ik het merk in de lijst;
-- geen Italiaanse merken meer → dan haal ik Italië uit die zes teksten.
-
-**Randolph als zonnebril.** In de tekst op de zonnebrillenpagina stond een
-notitie van mezelf: voeren jullie Randolph ook als zonnebril, en voldoet dat
-merk aan dezelfde beschermingseisen als de rest? Die notitie stond per ongeluk
-op de site en is eruit gehaald; de vraag staat nog open.
-
 
 
 | Wat | Waarvoor | Wat er nu staat |

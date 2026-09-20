@@ -90,7 +90,7 @@ Daarom meten wij in stappen van 0,01 dioptrie, met de AVA-technologie van Essilo
 
 #### De collectie
 
-Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken. We zoeken kleine leveranciers uit die stijlvolle monturen van uitstekende kwaliteit maken, vooral uit Italië en Spanje, aangevuld met degelijk werk uit Zwitserland.
+Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken. We zoeken kleine leveranciers uit die stijlvolle monturen van uitstekende kwaliteit maken, vooral uit Spanje en Zwitserland, aangevuld met werk uit Frankrijk, België en Nederland.
 
 Zo vind je bij ons monturen die je niet in elke winkel tegenkomt: Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Caroline Abram en Visionario. Voor sport is er Gloryfy, en voor in de zon Randolph en Serengeti.
 
@@ -177,7 +177,7 @@ Bij Oogcontact bij Gerard draait alles om scherp en comfortabel zicht. Je vindt 
 
 Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken, maar op kleinere leveranciers van mooie, stijlvolle monturen. Kies hieronder de categorie die bij je past.
 
-- **Brillen** — Stijlvolle monturen van kleine merken uit onder meer Italië, Spanje en Zwitserland, gecombineerd met glazen van Essilor. We kijken samen welk model bij je gezicht past en welk glas aansluit op je dagelijkse kijkbehoefte.
+- **Brillen** — Stijlvolle monturen van kleine merken uit onder meer Spanje, Zwitserland en Nederland, gecombineerd met glazen van Essilor. We kijken samen welk model bij je gezicht past en welk glas aansluit op je dagelijkse kijkbehoefte.
 - **Contactlenzen** — Zachte lenzen in dag-, tweewekelijkse en maandvariant, ook met cilinder of multifocaal. Daarnaast harde lenzen, die op maat gemaakt worden en waar je met gemak 1 tot 2 jaar mee doet. Na de aanmeting en een proefperiode kijken we samen of de lenzen je het comfort geven dat je zoekt.
 - **Zonnebrillen** — Zonnebrillen die je ogen echt beschermen tegen uv-straling, desgewenst met gepolariseerde glazen tegen hinderlijke schitteringen. De glazen kunnen ook op sterkte, meekleurend of overlopend van donker naar licht.
 - **Kinderbrillen** — Een kinderbril moet tegen een stootje kunnen én door je kind zelf mooi gevonden worden. Bij bijziendheid zijn er bovendien speciale glazen die de groei van het oog kunnen afremmen.
@@ -480,7 +480,7 @@ Naast zonnebrillen ben je bij ons ook welkom voor een gewone bril, contactlenzen
 
 We hebben bewust niet gekozen voor de grote modemerken, maar voor kleinere leveranciers die stijlvolle monturen maken. Deze kleinere merken zoeken we samen uit; Gerda etaleert ze in de winkel.
 
-Je vindt bij ons onder andere Odette Lunettes, Einstoffen, Gigi Studios, Etnia Barcelona, Visionario, Penn and Ink, Serengeti en Gotti. Voor sport hebben we de onbreekbare Gloryfy-brillen. Al deze merken voldoen aan de beschermingseisen.
+Je vindt bij ons onder andere Odette Lunettes, Einstoffen, Gigi Studios, Etnia Barcelona, Visionario, Penn and Ink, Randolph, Serengeti en Gotti. Voor sport hebben we de onbreekbare Gloryfy-brillen. Al deze merken voldoen aan de beschermingseisen.
 
 Pas gerust wat je mooi vindt. We zeggen het eerlijk als een model niet goed op je gezicht staat, en we denken net zo graag mee als je er zelf nog niet uit bent.
 
@@ -801,13 +801,13 @@ Wil je zelf ervaren wat meten tot op 0,01 dioptrie met je zicht doet? Plan een o
 ### Wat Google laat zien
 
 > **Collectie & merken bij je opticien in Groningen**
-> Monturen van kleine makers uit Italië, Spanje en Zwitserland. Bij Oogcontact bij Gerard neem je rustig de tijd om te passen, met een kop koffie erbij.
+> Monturen van kleine makers uit Spanje, Zwitserland en Nederland. Bij Oogcontact bij Gerard neem je rustig de tijd om te passen, met een kop koffie erbij.
 
 ### De tekst op de pagina
 
 **Onze collectie: monturen van kleine makers**
 
-Een bril draag je elke dag, dus die mag meer zijn dan een hulpmiddel. Daarom zoeken wij, Gerard en Gerda, onze monturen zelf uit bij kleine makers, vooral in Italië en Spanje en daarnaast in Zwitserland. Je vindt bij ons een zorgvuldig gekozen collectie in plaats van een greep uit de catalogus. Kom gerust langs om te passen; de koffie wordt vers gezet.
+Een bril draag je elke dag, dus die mag meer zijn dan een hulpmiddel. Daarom zoeken wij, Gerard en Gerda, onze monturen zelf uit bij kleine makers, vooral in Spanje en Zwitserland en daarnaast dichter bij huis. Je vindt bij ons een zorgvuldig gekozen collectie in plaats van een greep uit de catalogus. Kom gerust langs om te passen; de koffie wordt vers gezet.
 
 #### Bewust gekozen voor kleine makers
 
@@ -871,7 +871,7 @@ De nadruk ligt op kleine leveranciers van stijlvolle monturen. Daarnaast staan e
 
 **Waar komen de monturen vandaan?**
 
-Vooral uit Italië en Spanje. Daarnaast voeren we degelijke en stijlvolle monturen uit Zwitserland.
+Vooral uit Spanje en Zwitserland. Daarnaast voeren we monturen uit Frankrijk, België, Oostenrijk en Nederland.
 
 **Kan ik mijn bril later laten bijstellen?**
 
@@ -912,7 +912,7 @@ Oogcontact bij Gerard is een zelfstandige opticien aan het Overwinningsplein in 
 
 Onze winkel voelt als het verlengstuk van onze woonkamer. Gerard heeft bijna alles zelf verbouwd, waardoor de sfeer precies is zoals we hem voor ogen hadden: rustig, warm en op je gemak. Jij voelt je hier hopelijk net zo thuis als wij.
 
-Voor de monturen kozen we bewust niet voor de grote modemerken. Ons oog viel op kleine leveranciers van stijlvolle, kwalitatief uitstekende brillen, vooral uit Italië en Spanje en daarnaast degelijke monturen uit Zwitserland. Zo vind je bij ons iets wat je niet overal ziet.
+Voor de monturen kozen we bewust niet voor de grote modemerken. Ons oog viel op kleine leveranciers van stijlvolle, kwalitatief uitstekende brillen, vooral uit Spanje en Zwitserland en daarnaast monturen uit Frankrijk, België en Nederland. Zo vind je bij ons iets wat je niet overal ziet.
 
 Je bent welkom voor brillen, zonnebrillen, contactlenzen, een kinderbril of een loepbril. Langskomen is eenvoudig: parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
 

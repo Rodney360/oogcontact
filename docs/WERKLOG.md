@@ -574,7 +574,12 @@ toestellen zag het er goed uit, op de kleine niet.
   letterlijk "(Zet Randolph als open punt: ...)". Die is eruit, de vraag staat
   nu in `docs/open-punten.md`, en de test die zulke restjes vangt is
   aangescherpt zodat er niets meer tussen "zet" en "als open punt" mag staan.
-- **Let op:** Liu Jo was het enige Italiaanse merk. Op zes plekken staat nog
-  "vooral uit Italië en Spanje", terwijl de landen op de homepage nu uit de
-  merkenlijst komen en Italië er niet meer bij zit. Vraag staat in
-  `docs/open-punten.md`.
+- **Italië is van de site af.** Liu Jo was het enige Italiaanse merk, en Gerard
+  bevestigde dat er geen Italiaanse merken meer gevoerd worden. Op zes plekken
+  aangepast: homepage, Over ons, collectie (tekst, meta en een vraag), aanbod
+  en llms.txt. De landen die de homepage toont zijn nu België, Frankrijk,
+  Nederland, Oostenrijk, Spanje en Zwitserland.
+- **Bloomdale komt uit Nederland**, bevestigd door Gerard. Daarmee is dat de
+  eerste herkomst in de lijst die niet meer onder voorbehoud staat.
+- **Randolph is een zonnebrilmerk**, ook bevestigd, en staat nu in het rijtje op
+  de zonnebrillenpagina.

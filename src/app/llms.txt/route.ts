@@ -77,8 +77,8 @@ ${diensten}
 ## Collectie
 
 Bewust geen nadruk op de grote modemerken, maar op kleine leveranciers van
-stijlvolle, kwalitatief sterke monturen, vooral uit Italië en Spanje, ook uit
-Zwitserland.
+stijlvolle, kwalitatief sterke monturen, vooral uit Spanje en Zwitserland, ook
+uit Frankrijk, België, Oostenrijk en Nederland.
 
 Merken: ${merken}.
 

@@ -32,7 +32,7 @@ export const MERKEN: Merk[] = [
   { naam: 'Gloryfy', herkomst: 'Oostenrijk', soorten: ['sport', 'zonnebrillen'], toelichting: 'Onbreekbare sportbrillen.', herkomstBevestigd: false },
   { naam: 'Randolph', herkomst: null, soorten: ['zonnebrillen'], herkomstBevestigd: false },
   { naam: 'Penn and Ink', herkomst: null, soorten: ['monturen', 'zonnebrillen'], herkomstBevestigd: false },
-  { naam: 'Bloomdale', herkomst: null, soorten: ['monturen'], herkomstBevestigd: false },
+  { naam: 'Bloomdale', herkomst: 'Nederland', soorten: ['monturen'], herkomstBevestigd: true },
   { naam: 'Visionario', herkomst: null, soorten: ['zonnebrillen'], herkomstBevestigd: false },
   { naam: 'Serengeti', herkomst: null, soorten: ['zonnebrillen'], herkomstBevestigd: false },
 ]
