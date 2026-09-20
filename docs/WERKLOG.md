@@ -240,3 +240,17 @@ toestellen zag het er goed uit, op de kleine niet.
   `docs/open-punten.md` en `.env.example` zeggen nu het juiste.
 - **Nog open:** de koppeling zelf. Die kan pas als OO2 de API aanzet of als
   inloggen met een beheerdersaccount blijkt te werken.
+
+---
+
+## 2026-09-20 (avond) — Gerard (Claude Code, cloud)
+
+- **Afspraken buiten openingstijden zijn van de site af.** Die service bieden we
+  niet meer aan. Weg uit dertien paginateksten, uit drie veelgestelde vragen,
+  uit het blokje op /over-ons/, uit de boekingsmodule, uit llms.txt en uit de
+  voettekst. De constante `BUITEN_OPENINGSTIJDEN` bestaat niet meer.
+- **"(betaald)" is bij het parkeren weggehaald**, overal waar het stond: de
+  paginateksten, llms.txt en de bevestigingsmail. De informatie zelf blijft
+  staan: parkeren kan direct voor de deur, de bus stopt pal voor de winkel.
+- `docs/teksten-review.md` opnieuw gegenereerd.
+- **Nog open:** zie `docs/open-punten.md`; de agendakoppeling wacht nog op OO2.

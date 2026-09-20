@@ -20,7 +20,7 @@ Dit overzicht is gemaakt op basis van de bestanden in `src/content/teksten/`.
 
 ## Inhoud
 
-- [Je opticien in Groningen](#home) — `/`
+- [Advies *op maat*](#home) — `/`
 - [Ons aanbod](#aanbod) — `/aanbod/`
 - [Brillen en brillenglazen](#brillen) — `/brillen/`
 - [Contactlenzen die bij jouw ogen passen](#contactlenzen) — `/contactlenzen/`
@@ -38,7 +38,7 @@ Dit overzicht is gemaakt op basis van de bestanden in `src/content/teksten/`.
 
 <a id="home"></a>
 
-## Je opticien in Groningen
+## Advies *op maat*
 
 **Op de site:** `/`
 
@@ -49,9 +49,9 @@ Dit overzicht is gemaakt op basis van de bestanden in `src/content/teksten/`.
 
 ### De tekst op de pagina
 
-**Je opticien in Groningen**
+**Advies *op maat***
 
-Bij Oogcontact bij Gerard aan het Overwinningsplein vind je rust, tijd en een eerlijk advies. Gerard en Gerda meten je ogen met moderne apparatuur en zoeken samen met je naar een bril die echt bij je past. De koffie wordt vers gezet. Wij houden graag oogcontact.
+Rust, tijd en aandacht. Gerard en Gerda meten je ogen nauwkeurig en zoeken samen met je een bril die echt bij je past.
 
 #### Zo komt alles weer scherp
 
@@ -76,7 +76,7 @@ Een bril draag je elke dag. Dan is het fijn als er iemand goed naar je gekeken h
 - **Aandacht voor jou** — We plannen ruim de tijd in, zodat niemand hoeft te haasten. Je gaat naar huis met een goed product en een goed gevoel.
 - **Modernste apparatuur** — Met onze apparatuur meten we je ogen tot in honderdsten nauwkeurig. Je oogdruk meten we standaard mee.
 - **Ervaring** — Ruim veertig jaar optiek, waarvan vijftien jaar in een medische setting. Die achtergrond klinkt door in elk advies dat we geven.
-- **Locatie** — Je parkeert direct voor de deur (betaald) en de bus stopt pal voor de winkel. Overwinningsplein 100 in Groningen.
+- **Locatie** — Je parkeert direct voor de deur en de bus stopt pal voor de winkel. Overwinningsplein 100 in Groningen.
 
 #### Ultiem nauwkeurig zicht
 
@@ -108,9 +108,7 @@ Voor jou betekent dat vooral dit: je hebt te maken met een vakman en een vakvrou
 
 #### Bezoek de winkel
 
-Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel, handig als je met het openbaar vervoer komt.
-
-Schikt het niet tijdens onze openingstijden? In overleg maken we ook daarbuiten een afspraak, ook 's avonds. Laat het ons weten, dan kijken we wat mogelijk is.
+Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel, handig als je met het openbaar vervoer komt.
 
 En verder: de koffie wordt vers gezet. Kom gerust binnen om rond te kijken.
 
@@ -132,13 +130,9 @@ Bij ons aan het Overwinningsplein 100. We meten je ogen met een precisie van 0,0
 
 Woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en zaterdag van 10.00 tot 16.00 uur. Op maandag, dinsdag en zondag zijn we gesloten.
 
-**Kan ik ook buiten de openingstijden langskomen?**
-
-Dat kan in overleg, ook 's avonds. Bel 050 20 64 015 of app ons op 06 18 89 85 99, dan zoeken we samen een moment dat jou schikt.
-
 **Hoe kom ik bij jullie en waar parkeer ik?**
 
-Parkeren kan direct voor de deur (betaald). Kom je met het openbaar vervoer, dan is dat net zo makkelijk: de bus stopt pal voor de winkel.
+Parkeren kan direct voor de deur. Kom je met het openbaar vervoer, dan is dat net zo makkelijk: de bus stopt pal voor de winkel.
 
 **Hoe vaak moet ik mijn ogen laten controleren?**
 
@@ -193,7 +187,7 @@ Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken, maar op
 
 Wat je ook uitkiest, het begint bij goed meten. We hebben ruim 40 jaar ervaring in de optiek, waarvan 15 jaar bij OMC-Hanzekliniek (nu Eyescan). Die medische achtergrond merk je terug in een uitgebreide oogmeting met moderne apparatuur.
 
-Loop gerust binnen om rond te kijken en monturen te passen. Voor een oogmeting in Groningen of een uitgebreid advies maken we liever een afspraak, zodat we de tijd voor je kunnen nemen. In overleg kan dat ook 's avonds of buiten onze openingstijden.
+Loop gerust binnen om rond te kijken en monturen te passen. Voor een oogmeting in Groningen of een uitgebreid advies maken we liever een afspraak, zodat we de tijd voor je kunnen nemen.
 
 #### De uitnodiging onderaan
 
@@ -226,9 +220,9 @@ Je bril draag je elke dag, en hij hoort bij je gezicht. Daarom nemen wij, Gerard
 
 Je bent van harte welkom om binnen te lopen, rond te kijken en monturen te passen. Er is geen haast en je hoeft niets te beslissen. Vind je het prettig als we meekijken, dan doen we dat graag.
 
-Wil je je ogen laten meten, maak dan een afspraak. Zo weet je zeker dat we uitgebreid de tijd voor je hebben en niet tussendoor moeten schakelen. Lukt een moment onder werktijd niet, dan kijken we in overleg naar een afspraak buiten onze openingstijden, ook 's avonds.
+Wil je je ogen laten meten, maak dan een afspraak. Zo weet je zeker dat we uitgebreid de tijd voor je hebben en niet tussendoor moeten schakelen.
 
-Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel. Je staat dus zo binnen, met een kop verse koffie erbij.
+Parkeren kan direct voor de deur en de bus stopt pal voor de winkel. Je staat dus zo binnen, met een kop verse koffie erbij.
 
 #### Hoe het advies gaat
 
@@ -298,7 +292,7 @@ Wij raden aan om elke twee jaar langs te gaan bij de opticien. Zo weet je zeker 
 
 **Moet ik een afspraak maken of kan ik zomaar binnenlopen?**
 
-Rondkijken en monturen passen kan altijd zonder afspraak. Voor een oogmeting in Groningen maak je beter wel een afspraak, dan nemen we uitgebreid de tijd voor je. Komt het je overdag niet uit, dan plannen we in overleg een moment buiten de openingstijden, ook 's avonds.
+Rondkijken en monturen passen kan altijd zonder afspraak. Voor een oogmeting in Groningen maak je beter wel een afspraak, dan nemen we uitgebreid de tijd voor je.
 
 **Meten jullie ook mijn oogdruk?**
 
@@ -403,9 +397,9 @@ Zit een lens tussendoor niet lekker of twijfel je ergens over? Bel ons gerust op
 
 #### Langskomen aan het Overwinningsplein
 
-Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel.
+Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
 
-We zijn open op woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en op zaterdag van 10.00 tot 16.00 uur. Op maandag, dinsdag en zondag zijn we gesloten. Komt dat niet uit? In overleg maken we een afspraak buiten onze openingstijden, ook 's avonds.
+We zijn open op woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en op zaterdag van 10.00 tot 16.00 uur. Op maandag, dinsdag en zondag zijn we gesloten.
 
 Naast contactlenzen kun je bij ons terecht voor een oogmeting, brillen en zonnebrillen, een kinderbril en een loepbril. Loop gerust binnen om te kijken en te vragen; de koffie wordt vers gezet.
 
@@ -478,7 +472,7 @@ Achter de winkel zit ruim 40 jaar ervaring in de optiek, waarvan 15 jaar bij OMC
 
 Samen kijken we naar de vorm van je gezicht, naar je sterkte en naar wat je met de bril gaat doen. Fietsen op een winterse ochtend vraagt iets anders dan een week aan zee. Wil je een oogmeting in Groningen combineren met het uitzoeken van een zonnebril, kies dan in de online agenda voor Oogmeting & montuuradvies.
 
-Naast zonnebrillen ben je bij ons ook welkom voor een gewone bril, contactlenzen, een kinderbril of een loepbril. Past het je niet tijdens onze openingstijden? In overleg plannen we een afspraak daarbuiten, ook 's avonds.
+Naast zonnebrillen ben je bij ons ook welkom voor een gewone bril, contactlenzen, een kinderbril of een loepbril.
 
 #### De merken die je bij ons vindt
 
@@ -521,13 +515,13 @@ Een gepolariseerd glas neutraliseert hinderlijke schitteringen, bijvoorbeeld van
 
 **Moet ik een afspraak maken of kan ik binnenlopen?**
 
-Binnenlopen om te kijken en te passen mag tijdens onze openingstijden: woensdag tot en met vrijdag van 9.30 tot 17.30 uur en zaterdag van 10.00 tot 16.00 uur. Wil je een oogmeting of uitgebreid advies, maak dan een afspraak. Lukt dat overdag niet, dan plannen we in overleg een moment buiten openingstijden, ook 's avonds.
+Binnenlopen om te kijken en te passen mag tijdens onze openingstijden: woensdag tot en met vrijdag van 9.30 tot 17.30 uur en zaterdag van 10.00 tot 16.00 uur. Wil je een oogmeting of uitgebreid advies, maak dan een afspraak.
 
 #### De uitnodiging onderaan
 
 **Kom je zonnebril uitzoeken**
 
-Wil je advies over een zonnebril die je ogen goed beschermt? Maak een afspraak via de pagina Afspraak maken, bel 050 20 64 015 of stuur een WhatsApp naar 06 18 89 85 99. Je bent ook zonder afspraak welkom aan het Overwinningsplein 100 in Groningen. De bus stopt pal voor de winkel en parkeren kan direct voor de deur (betaald). Wij houden graag oogcontact.
+Wil je advies over een zonnebril die je ogen goed beschermt? Maak een afspraak via de pagina Afspraak maken, bel 050 20 64 015 of stuur een WhatsApp naar 06 18 89 85 99. Je bent ook zonder afspraak welkom aan het Overwinningsplein 100 in Groningen. De bus stopt pal voor de winkel en parkeren kan direct voor de deur. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -587,7 +581,7 @@ Wij, Gerard en Gerda, runnen de winkel samen aan het Overwinningsplein 100. We h
 
 Bij ons betekent dat vooral: geen gehaast advies. Er staat koffie klaar en je krijgt eerlijk te horen wat we zien.
 
-Past een afspraak onder schooltijd niet? Op zaterdag zijn we open van 10.00 tot 16.00 uur, en een afspraak buiten onze openingstijden kan in overleg, ook 's avonds. Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel.
+Past een afspraak onder schooltijd niet? Op zaterdag zijn we open van 10.00 tot 16.00 uur. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
 
 #### Veelgestelde vragen
 
@@ -610,10 +604,6 @@ Kies ontspiegelde glazen tegen schitteringen, let goed op de pasvorm en neem fle
 **Kan ik zonder afspraak langskomen om te kijken?**
 
 Ja, je bent samen met je kind van harte welkom om binnen te lopen, rond te kijken en te passen. Voor een oogmeting adviseren we wel een afspraak, zodat we uitgebreid de tijd voor jullie kunnen nemen.
-
-**Mijn kind zit op school tot laat. Kunnen we buiten de openingstijden terecht?**
-
-Dat kan in overleg, ook 's avonds. Op zaterdag zijn we open van 10.00 tot 16.00 uur en van woensdag tot en met vrijdag van 9.30 tot 17.30 uur. Bel of app ons even, dan zoeken we samen een moment dat past.
 
 #### De uitnodiging onderaan
 
@@ -667,9 +657,9 @@ Beide afspraken plan je op de pagina Afspraak maken. Weet je niet welke van de t
 
 Achter ons advies zit ruim veertig jaar ervaring in de optiek, waarvan vijftien jaar bij OMC-Hanzekliniek, het huidige Eyescan. Die medische achtergrond nemen we mee in elke oogmeting die we doen.
 
-Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel. De koffie staat klaar.
+Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel. De koffie staat klaar.
 
-We zijn open op woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en op zaterdag van 10.00 tot 16.00 uur. Komt dat niet uit met je werk? In overleg plannen we een afspraak buiten openingstijden, ook 's avonds.
+We zijn open op woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en op zaterdag van 10.00 tot 16.00 uur.
 
 #### Veelgestelde vragen
 
@@ -762,11 +752,11 @@ Werk je met een loepbril? Voor het aanmeten van een Admetec loepbril plannen we 
 
 #### Langskomen aan het Overwinningsplein
 
-Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel.
+Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
 
 We zijn open op woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en op zaterdag van 10.00 tot 16.00 uur. Maandag, dinsdag en zondag zijn we gesloten.
 
-Komt dat niet uit? Een afspraak buiten onze openingstijden is in overleg mogelijk, ook 's avonds. Bel 050 20 64 015, app ons via 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
+Wil je langskomen? Bel 050 20 64 015, app ons via 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl, dan plannen we samen een moment.
 
 #### Veelgestelde vragen
 
@@ -794,7 +784,7 @@ Je bent altijd welkom om rond te kijken en de winkel te bekijken. Voor een oogme
 
 **Wij houden graag oogcontact**
 
-Wil je zelf ervaren wat meten tot op 0,01 dioptrie met je zicht doet? Plan een oogmeting bij Oogcontact bij Gerard. We nemen rustig de tijd voor je en de koffie wordt vers gezet. Lukt het overdag niet, dan kijken we samen naar een moment buiten onze openingstijden.
+Wil je zelf ervaren wat meten tot op 0,01 dioptrie met je zicht doet? Plan een oogmeting bij Oogcontact bij Gerard. We nemen rustig de tijd voor je en de koffie wordt vers gezet.
 
 *Knop:* Afspraak maken
 
@@ -889,15 +879,11 @@ Ja. Zit je bril scheef of zakt hij af, dan stellen we hem weer voor je af. Je ku
 
 Ja. De glazen kunnen op sterkte, met glazen van Essilor. Je kunt kiezen voor degradé (overlopend van donker naar licht), meekleurend, spiegelglazen, of glazen volledig in de kleur van het origineel van de zonnebril die je uitkiest.
 
-**Kan ik buiten de openingstijden terecht?**
-
-In overleg is dat mogelijk, ook 's avonds. Bel of app ons even, dan zoeken we samen een moment dat jou uitkomt.
-
 #### De uitnodiging onderaan
 
 **Kom rustig passen**
 
-Wil je zien wat er in de kast staat en ontdekken wat je staat? Plan een afspraak voor een oogmeting en montuuradvies, of loop gewoon binnen aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel. Wij houden graag oogcontact.
+Wil je zien wat er in de kast staat en ontdekken wat je staat? Plan een afspraak voor een oogmeting en montuuradvies, of loop gewoon binnen aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -928,9 +914,8 @@ Voor de monturen kozen we bewust niet voor de grote modemerken. Ons oog viel op 
 
 Je bent welkom voor brillen, zonnebrillen, contactlenzen, een kinderbril of een loepbril. Langskomen is eenvoudig: parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
 
-- **Parkeren voor de deur** — Parkeren kan direct voor de winkel (betaald).
+- **Parkeren voor de deur** — Parkeren kan direct voor de winkel.
 - **Met de bus** — De bus stopt pal voor de winkel, een mooie uitkomst als je met het openbaar vervoer komt.
-- **Buiten openingstijden** — Komt het je overdag niet uit? In overleg maken we ook een afspraak buiten onze openingstijden, ook 's avonds.
 
 #### Wie is Gerard
 
@@ -979,17 +964,13 @@ Ja, je bent zonder afspraak van harte welkom in onze winkel. Wil je zeker weten 
 
 Woensdag, donderdag en vrijdag zijn we open van 9.30 tot 17.30 uur en zaterdag van 10.00 tot 16.00 uur. Op maandag, dinsdag en zondag zijn we gesloten.
 
-**Kan ik ook 's avonds of buiten openingstijden terecht?**
-
-Dat kan in overleg. Komt het je overdag niet uit, laat het ons weten, dan zoeken we samen een moment dat wel past, ook 's avonds.
-
 **Hoe maak ik een afspraak?**
 
 Online via de pagina Afspraak maken, of bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
 
 **Waar kan ik parkeren?**
 
-Parkeren kan direct voor de deur (betaald). Kom je met het openbaar vervoer, dan stopt de bus pal voor de winkel.
+Parkeren kan direct voor de deur. Kom je met het openbaar vervoer, dan stopt de bus pal voor de winkel.
 
 **Waar vind ik de winkel?**
 
@@ -1032,7 +1013,7 @@ Heb je in de tussentijd een vraag? Bel ons gerust op 050 20 64 015, stuur een Wh
 
 **Liever even persoonlijk**
 
-Een afspraak is zo gemaakt. We nemen rustig de tijd voor je, met een kop koffie erbij, of het nu gaat om een oogmeting, montuuradvies, contactlenzen of een loepbril. Lukt het je niet binnen onze openingstijden? In overleg plannen we ook een moment daarbuiten, 's avonds bijvoorbeeld.
+Een afspraak is zo gemaakt. We nemen rustig de tijd voor je, met een kop koffie erbij, of het nu gaat om een oogmeting, montuuradvies, contactlenzen of een loepbril.
 
 *Knop:* Afspraak maken
 
@@ -1047,7 +1028,7 @@ Een afspraak is zo gemaakt. We nemen rustig de tijd voor je, met een kop koffie 
 ### Wat Google laat zien
 
 > **Afspraak maken bij je opticien in Groningen**
-> Plan online je afspraak bij Oogcontact bij Gerard in Groningen, op een moment dat jou schikt. Bellen of appen kan ook, en 's avonds in overleg.
+> Plan online je afspraak bij Oogcontact bij Gerard in Groningen, op een moment dat jou schikt. Bellen of appen kan natuurlijk ook.
 
 ### De tekst op de pagina
 
@@ -1071,7 +1052,7 @@ Per soort afspraak reserveren we de tijd die erbij hoort. Zo hoeft niemand zich 
 
 Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 015 of stuur een WhatsApp naar 06 18 89 85 99. Mailen mag ook, naar info@oogcontactbijgerard.nl.
 
-Past geen enkel moment in de agenda? Een afspraak buiten onze openingstijden kan in overleg, ook 's avonds. Laat het ons weten, dan zoeken we samen een tijd die voor jou werkt.
+Past geen enkel moment in de agenda? Bel of app ons even, dan zoeken we samen een tijd die voor jou werkt.
 
 Vul je liever het formulier onderaan deze pagina in? Laat je naam en telefoonnummer achter, dan bellen wij jou terug.
 
@@ -1083,7 +1064,7 @@ Vul je liever het formulier onderaan deze pagina in? Laat je naam en telefoonnum
 
 Je afspraak staat in onze agenda en die tijd houden we voor je vrij. Verder hoef je niets te doen: kom gewoon langs op het gekozen moment.
 
-Kom je met de auto? Parkeren kan direct voor de deur (betaald). Reis je met de bus, dan stap je pal voor de winkel uit.
+Kom je met de auto? Parkeren kan direct voor de deur. Reis je met de bus, dan stap je pal voor de winkel uit.
 
 Lukt het toch niet, of wil je je afspraak verzetten? Bel of app ons even, dan zetten we er samen een nieuw moment voor in de plaats.
 
@@ -1129,7 +1110,7 @@ Kies de manier die jou het beste uitkomt. Je krijgt bij ons geen callcenter aan 
 
 Van woensdag tot en met zaterdag staan we voor je klaar. Op maandag, dinsdag en zondag is de winkel gesloten.
 
-Komen die tijden je niet uit? In overleg plannen we een afspraak buiten onze openingstijden, ook 's avonds. Bel of app ons even, dan zoeken we samen een moment dat past.
+Komen die tijden je niet uit? Bel of app ons even, dan zoeken we samen een moment dat past.
 
 Wil je zeker weten dat we rustig de tijd voor je hebben, bijvoorbeeld voor een oogmeting in Groningen of advies over een loepbril of kinderbril? Plan dan zelf een moment via de pagina Afspraak maken.
 
@@ -1137,7 +1118,7 @@ Wil je zeker weten dat we rustig de tijd voor je hebben, bijvoorbeeld voor een o
 
 Je vindt ons aan het Overwinningsplein 100 in Groningen. De winkel ligt aan het plein, dus je staat zo voor de deur.
 
-- **Parkeren** — Parkeren kan direct voor de deur (betaald).
+- **Parkeren** — Parkeren kan direct voor de deur.
 - **Met de bus** — De bus stopt pal voor de winkel. Een mooie uitkomst als je liever met het openbaar vervoer komt.
 - **Adres** — Overwinningsplein 100, 9728 GW Groningen.
 
