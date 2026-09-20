@@ -149,6 +149,12 @@ een verse.
 `src/content/` onderling relatieve imports mét `.ts`-extensie, en het
 alias `@/` alleen in `src/app/` en `src/components/`.
 
+**`"type": "module"` in package.json.** Het hele project is ESM; er staat geen
+enkel los `.js`-bestand in (alles is `.mjs`, `.ts` of `.tsx`). Zonder dat veld
+gaf Node bij elke testronde een waarschuwing dat het bestandstype niet
+vaststaat — onschuldig, maar het leidde af van het echte resultaat. Zet je ooit
+een `.js`-bestand neer, dan wordt dat dus ook als ESM gelezen.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
