@@ -18,7 +18,7 @@ import Link from 'next/link'
 import { Knop } from '@/components/Knop'
 import { Veld, Tekstvak, Honeypot } from '@/components/boeking/Velden'
 import { Turnstile } from '@/components/Turnstile'
-import { GROEPEN } from '@/content/diensten'
+import { GROEPEN, ONDERWERPEN } from '@/content/diensten'
 import { BEDRIJF, whatsappLink } from '@/content/bedrijf'
 import { boekingFouten } from '@/lib/veldregels'
 import type { AgendaDienst, VrijeDag } from '@/lib/agenda/soorten'
@@ -152,7 +152,10 @@ export function Boeking({ voor }: BoekingProps = {}) {
   // een lege lijst helpt niemand.
   const zichtbaar = useMemo(() => {
     if (!diensten || !voor || allesTonen) return diensten
-    const passend = diensten.filter((d) => d.groep === voor)
+    // De agenda levert de groep als gewone tekst aan, dus vergelijken doen we
+    // ook op tekst: onze eigen namen zijn daar een deelverzameling van.
+    const groepen: readonly string[] = ONDERWERPEN[voor] ?? [voor]
+    const passend = diensten.filter((d) => groepen.includes(d.groep))
     return passend.length > 0 ? passend : diensten
   }, [diensten, voor, allesTonen])
 

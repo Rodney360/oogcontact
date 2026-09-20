@@ -510,6 +510,16 @@ toestellen zag het er goed uit, op de kleine niet.
   naar `/afspraak-maken/?voor=loepbrillen`, en dan staan in stap 1 alleen de
   twee loepbrilafspraken. Eronder staat "Laat alles zien" voor wie toch iets
   anders zoekt.
-- Werkt voor elke groep: `?voor=contactlenzen` of `?voor=brillen` kan net zo
-  goed, mocht dat later ergens handig zijn.
+- **Nu op alle vijf de aanbodpagina's.** Welke afspraken bij welke pagina horen
+  staat in `ONDERWERPEN` in `src/content/diensten.ts`:
+
+  | Pagina | Wat je ziet |
+  |---|---|
+  | brillen, zonnebrillen, kinderbrillen | oogmeting, oogmeting en montuuradvies, glazen inmeten, bril afhalen, montuur bijstellen (5) |
+  | contactlenzen | aanmeten, opnieuw aanmeten, lenscontrole (3) |
+  | loepbrillen | informatie, aanmeten en oogmeting (2) |
+
+- De agenda kent geen aparte afspraken voor zonnebrillen en kinderbrillen; dat
+  begint allebei met een oogmeting en loopt verder als een gewone bril. Die
+  pagina's krijgen daarom dezelfde lijst als de brillenpagina.
 - **Nog open:** zie `docs/open-punten.md`.
