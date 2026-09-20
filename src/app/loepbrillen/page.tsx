@@ -18,6 +18,9 @@ export default function Loepbrillen() {
       tekst={T}
       beeldSlot="aanbod-loepbrillen"
       bovenkop="Loepbrillen"
+      // De knop onderaan gaat naar de boekingsmodule met alleen de twee
+      // loepbrilafspraken erin.
+      oproepPad="/afspraak-maken/?voor=loepbrillen"
       kruimels={[
         { naam: 'Home', pad: '/' },
         { naam: 'Aanbod', pad: '/aanbod/' },

@@ -116,14 +116,17 @@ export function Footer() {
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             <span className="text-bijschrift text-tekst-licht-zacht">Aangesloten bij</span>
             {keurmerken.map((k) => (
-              <span
+              <a
                 key={k.naam}
-                className="rounded-zacht border border-inkt-rand-sterk px-3 py-1.5 text-bijschrift font-semibold tracking-wider text-tekst-licht"
+                href={k.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center rounded-zacht border border-inkt-rand-sterk px-3 text-bijschrift font-semibold tracking-wider text-tekst-licht no-underline transition-colors hover:border-messing hover:text-messing"
                 title={k.omschrijving}
               >
                 {k.naam}
                 <span className="alleen-voor-schermlezers">: {k.omschrijving}</span>
-              </span>
+              </a>
             ))}
           </div>
 
