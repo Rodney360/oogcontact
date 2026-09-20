@@ -276,3 +276,33 @@ toestellen zag het er goed uit, op de kleine niet.
   Vercel-preview van deze branch kwam gewoon klaar.
 - **Nog open:** PR #1 samenvoegen (dat zet meteen ook Gerards wijziging live),
   stap 4 (preview-toegang voor gbugel) en de keuze hierboven.
+
+---
+
+## 2026-09-20 (later) — Gerard (Claude Code, cloud)
+
+- **Controlepagina voor de agenda:** `/agenda-controle/` loopt de koppeling met
+  OO2 stap voor stap na en zegt in gewone taal waar het hangt — adres,
+  inloggegevens, diensten, medewerker, vrije tijden. Geen sleutels in beeld,
+  niet in het menu, niet in de sitemap, en op `noindex`.
+- **`docs/agenda-koppelen.md`** is nieuw: drie manieren om de koppeling te
+  leggen, met een mail aan OO2 die je kunt overnemen.
+- **Rechtgezet:** in het beheerscherm van OO2 is géén knop om een API-sleutel
+  aan te maken; bij Easy!Appointments staat die in een bestand op de server.
+  `docs/open-punten.md` en `.env.example` zeggen nu het juiste.
+- **Nog open:** de koppeling zelf. Die kan pas als OO2 de API aanzet of als
+  inloggen met een beheerdersaccount blijkt te werken.
+
+---
+
+## 2026-09-20 (avond) — Gerard (Claude Code, cloud)
+
+- **Afspraken buiten openingstijden zijn van de site af.** Die service bieden we
+  niet meer aan. Weg uit dertien paginateksten, uit drie veelgestelde vragen,
+  uit het blokje op /over-ons/, uit de boekingsmodule, uit llms.txt en uit de
+  voettekst. De constante `BUITEN_OPENINGSTIJDEN` bestaat niet meer.
+- **"(betaald)" is bij het parkeren weggehaald**, overal waar het stond: de
+  paginateksten, llms.txt en de bevestigingsmail. De informatie zelf blijft
+  staan: parkeren kan direct voor de deur, de bus stopt pal voor de winkel.
+- `docs/teksten-review.md` opnieuw gegenereerd.
+- **Nog open:** zie `docs/open-punten.md`; de agendakoppeling wacht nog op OO2.

@@ -9,7 +9,7 @@ import { Sectie, SectieKop } from '@/components/Sectie'
 import { OpeningsStatus } from '@/components/OpeningsStatus'
 import { Kaart } from '@/components/Kaart'
 import { BEDRIJF, routeLink, whatsappLink } from '@/content/bedrijf'
-import { WEEK, naarTijd, BUITEN_OPENINGSTIJDEN } from '@/content/openingstijden'
+import { WEEK, naarTijd } from '@/content/openingstijden'
 import type { Uitzondering } from '@/content/openingstijden'
 import type { TekstSectie } from '@/content/teksten'
 
@@ -64,10 +64,6 @@ export function BezoekDeWinkel({
                   })}
                 </tbody>
               </table>
-
-              <p className="mt-5 text-bijschrift leading-relaxed text-tekst-zacht">
-                {BUITEN_OPENINGSTIJDEN}
-              </p>
             </div>
           </Verschijnt>
 

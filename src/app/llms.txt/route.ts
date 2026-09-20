@@ -9,7 +9,7 @@
  */
 
 import { BEDRIJF, adresOpEenRegel } from '@/content/bedrijf'
-import { WEEK, naarTijd, BUITEN_OPENINGSTIJDEN } from '@/content/openingstijden'
+import { WEEK, naarTijd } from '@/content/openingstijden'
 import { DIENSTEN } from '@/content/diensten'
 import { MERKEN, LEVERANCIERS } from '@/content/merken'
 import { ONGEWIJZIGD, NIEUW } from '../../../config/url-map.mjs'
@@ -43,7 +43,7 @@ ${BEDRIJF.slogan}
 ## Waar we zitten
 
 ${adresOpEenRegel()}, Nederland.
-Parkeren kan direct voor de deur (betaald). De bus stopt pal voor de winkel.
+Parkeren kan direct voor de deur. De bus stopt pal voor de winkel.
 
 ## Contact
 
@@ -55,8 +55,6 @@ Parkeren kan direct voor de deur (betaald). De bus stopt pal voor de winkel.
 ## Openingstijden (Europe/Amsterdam)
 
 ${openingstijden}
-
-${BUITEN_OPENINGSTIJDEN}
 
 Let op: er kunnen afwijkende dagen zijn voor feestdagen en vakantie. De
 actuele status staat op ${SITE_URL}/contact/.

@@ -57,10 +57,14 @@ merging" en "Require status checks to pass".
 Ik heb gecontroleerd dat de API bestaat en werkt: `oogcontactbijgerard.oo2.online`
 antwoordt met "niet ingelogd" in plaats van "bestaat niet". Er is dus alleen een
 sleutel nodig, geen verbouwing.
-*Wat je doet:* log in op <https://oogcontactbijgerard.oo2.online>, ga naar
-Instellingen → API (of Integrations → API), zet de API aan en kopieer de
-sleutel. Stuur hem naar mij, of zet hem zelf in Vercel onder Settings →
-Environment Variables als `EASYAPPOINTMENTS_API_KEY`.
+*Wat je doet:* zie `docs/agenda-koppelen.md` - daar staan de drie manieren op
+een rij, met een mail aan OO2 die je kunt overnemen.
+*Let op:* in het beheerscherm van OO2 is **geen** knop te vinden om een sleutel
+aan te maken; bij Easy!Appointments staat die in een bestand op de server, waar
+je als klant niet bij kunt. Werkt het inloggen met de gebruikersnaam en het
+wachtwoord van een beheerder ook niet (`EASYAPPOINTMENTS_GEBRUIKER` en
+`EASYAPPOINTMENTS_WACHTWOORD` in Vercel), dan moet OO2 de API aanzetten.
+*Waar je ziet hoe het ervoor staat:* op de site onder `/agenda-controle/`.
 *Zolang die er niet is:* de boekingsmodule draait in testmodus met
 voorbeeldtijden, met een duidelijke melding erbij dat het een test is. De
 bezoeker kan intussen gewoon bellen of appen.

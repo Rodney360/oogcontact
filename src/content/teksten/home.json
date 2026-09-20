@@ -54,7 +54,7 @@
         },
         {
           "titel": "Locatie",
-          "tekst": "Je parkeert direct voor de deur (betaald) en de bus stopt pal voor de winkel. Overwinningsplein 100 in Groningen."
+          "tekst": "Je parkeert direct voor de deur en de bus stopt pal voor de winkel. Overwinningsplein 100 in Groningen."
         }
       ]
     },
@@ -106,8 +106,7 @@
     {
       "kop": "Bezoek de winkel",
       "alineas": [
-        "Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur (betaald) en de bus stopt pal voor de winkel, handig als je met het openbaar vervoer komt.",
-        "Schikt het niet tijdens onze openingstijden? In overleg maken we ook daarbuiten een afspraak, ook 's avonds. Laat het ons weten, dan kijken we wat mogelijk is.",
+        "Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel, handig als je met het openbaar vervoer komt.",
         "En verder: de koffie wordt vers gezet. Kom gerust binnen om rond te kijken."
       ],
       "opsomming": [
@@ -140,12 +139,8 @@
       "antwoord": "Woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en zaterdag van 10.00 tot 16.00 uur. Op maandag, dinsdag en zondag zijn we gesloten."
     },
     {
-      "vraag": "Kan ik ook buiten de openingstijden langskomen?",
-      "antwoord": "Dat kan in overleg, ook 's avonds. Bel 050 20 64 015 of app ons op 06 18 89 85 99, dan zoeken we samen een moment dat jou schikt."
-    },
-    {
       "vraag": "Hoe kom ik bij jullie en waar parkeer ik?",
-      "antwoord": "Parkeren kan direct voor de deur (betaald). Kom je met het openbaar vervoer, dan is dat net zo makkelijk: de bus stopt pal voor de winkel."
+      "antwoord": "Parkeren kan direct voor de deur. Kom je met het openbaar vervoer, dan is dat net zo makkelijk: de bus stopt pal voor de winkel."
     },
     {
       "vraag": "Hoe vaak moet ik mijn ogen laten controleren?",

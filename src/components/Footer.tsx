@@ -5,7 +5,7 @@
 import Link from 'next/link'
 
 import { BEDRIJF, whatsappLink, routeLink } from '@/content/bedrijf'
-import { WEEK, naarTijd, BUITEN_OPENINGSTIJDEN } from '@/content/openingstijden'
+import { WEEK, naarTijd } from '@/content/openingstijden'
 import { VOETMENU } from '@/content/navigatie'
 import { OpeningsStatus } from '@/components/OpeningsStatus'
 import { uitzonderingen } from '@/lib/beheer'
@@ -108,9 +108,6 @@ export function Footer() {
                 })}
               </tbody>
             </table>
-            <p className="mt-4 max-w-[22rem] text-bijschrift leading-relaxed text-tekst-licht-zacht">
-              {BUITEN_OPENINGSTIJDEN}
-            </p>
           </div>
         </div>
 

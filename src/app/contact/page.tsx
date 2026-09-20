@@ -9,7 +9,7 @@ import { Kaart } from '@/components/Kaart'
 import { Beeld } from '@/components/Beeld'
 import { tekst } from '@/content/teksten/index'
 import { BEDRIJF, adresOpEenRegel, whatsappLink, routeLink } from '@/content/bedrijf'
-import { WEEK, naarTijd, BUITEN_OPENINGSTIJDEN } from '@/content/openingstijden'
+import { WEEK, naarTijd } from '@/content/openingstijden'
 import { uitzonderingen } from '@/lib/beheer'
 import { paginaMeta, JsonLd, kruimelsJsonLd } from '@/lib/seo'
 
@@ -111,10 +111,6 @@ export default function Contact() {
                     })}
                   </tbody>
                 </table>
-
-                <p className="mt-5 text-bijschrift leading-relaxed text-tekst-zacht">
-                  {BUITEN_OPENINGSTIJDEN}
-                </p>
               </div>
             </Verschijnt>
 
