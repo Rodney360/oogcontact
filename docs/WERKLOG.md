@@ -405,3 +405,14 @@ toestellen zag het er goed uit, op de kleine niet.
   agenda, dan wint de duur die in OO2 staat. Die moet daar dus ook aangepast
   worden, anders lopen ze uit elkaar.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (avond, koffie) — Gerard (Claude Code, cloud)
+
+- **"De koffie staat klaar." weggehaald** uit het blok "Zullen we eens goed naar
+  je ogen kijken?" onderaan de homepage. De zin stond daar achter het
+  mailadres. Alleen in dat ene tekstvak; elders op de site blijft hij staan.
+- `docs/teksten-review.md` opnieuw gegenereerd.
+- **Nog open:** zie `docs/open-punten.md`; het live zetten wacht nog op een
+  Vercel-token met toegang tot het team.

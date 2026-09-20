@@ -150,7 +150,7 @@ Wil je eerst weten wat een Admetec loepbril voor je werk kan betekenen, kies dan
 
 **Zullen we eens goed naar je ogen kijken?**
 
-Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl. De koffie staat klaar.
+Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
 
 *Knop:* Afspraak maken
 
