@@ -96,6 +96,8 @@ meeste tegen. Dit is een extra laag, geen noodzaak.
 
 ### 1.3 Gegevens die ik niet zelf mag verzinnen
 
+
+
 | Wat | Waarvoor | Wat er nu staat |
 |---|---|---|
 | **KvK-nummer** | Hoort in de voettekst. Verplicht voor een webshop, netjes voor een winkel. | De regel wordt weggelaten zolang het nummer er niet is. |
