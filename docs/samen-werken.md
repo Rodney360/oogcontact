@@ -237,11 +237,16 @@ rest niet.
 
 ---
 
-## Stap 4 — Hem toegang geven tot Vercel (jij, 2 minuten)
+## Stap 4 — Hem de preview laten zien (jij, 2 minuten)
 
-Alleen nodig als hij ook bij de instellingen en de sleutels moet kunnen. Wil
-hij alleen aan de site werken, dan kun je deze stap overslaan: de previews
-zijn ook zonder Vercel-account te bekijken.
+**Dit is niet optioneel.** De preview-links van Vercel zitten achter een
+inlogscherm: wie niet bij het Vercel-project kan, krijgt een loginpagina in
+plaats van de site. Zonder dit kan hij dus nooit kijken naar wat hij zelf
+gemaakt heeft voordat het live gaat.
+
+Kies één van twee:
+
+**A. Hem toevoegen aan Vercel** (als hij toch aan de site gaat werken)
 
 1. Ga naar je project op <https://vercel.com>.
 2. **Settings → Members** (of bovenin bij je team → **Members**).
@@ -249,6 +254,22 @@ zijn ook zonder Vercel-account te bekijken.
 
 > **Let op:** wie bij Vercel kan, kan ook bij de API-sleutels (de online agenda,
 > de e-mail). Geef dit alleen aan iemand die dat mag zien.
+
+**B. Het inlogscherm van de previews uitzetten** (als hij er verder niets te
+zoeken heeft)
+
+1. Project → **Settings → Deployment Protection**.
+2. Bij **Vercel Authentication**: uitzetten, of op *alleen productie* zetten.
+3. Opslaan.
+
+Daarna is elke preview-link te openen door iedereen die hem heeft. Dat is voor
+deze site geen ramp — het is toch een openbare winkelsite — maar bedenk dat een
+preview ook werk kan bevatten dat nog niet af is, en dat de boekingsmodule en
+het formulier daar in testmodus staan.
+
+> Wil je alleen af en toe iets laten zien zonder een van beide? Op een
+> deployment in Vercel zit ook een **Share**-knop, die een tijdelijke link
+> maakt waar geen login voor nodig is.
 
 ---
 
