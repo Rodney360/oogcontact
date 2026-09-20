@@ -481,3 +481,17 @@ toestellen zag het er goed uit, op de kleine niet.
 - De alt-tekst zegt niet meer "lachend", want op deze foto kijkt hij rustig.
 - **Nog open:** zie `docs/open-punten.md`; het live zetten wacht nog op een
   Vercel-token met toegang tot het team.
+
+---
+
+## 2026-09-20 (waarom live zetten strandt) — Gerard (Claude Code, cloud)
+
+- **De oorzaak van het mislukte live zetten staat nu vast** en is opgeschreven
+  in `docs/vercel-toegang.md`: `VERCEL_TOKEN` bestaat wel, maar heeft geen
+  toegang tot het team `projects-c1cc`. De stap "Instellingen van het project
+  ophalen" faalt met "Could not retrieve Project Settings". De twee kenmerken
+  in `ci.yml` kloppen wel; het is dus de sleutel.
+- **Wat er moet gebeuren:** een nieuwe token met dat team als bereik, in GitHub
+  zetten, en bij de laatste mislukte run op "Re-run failed jobs" drukken. Dan
+  gaat alles wat op `main` klaarstaat in één keer live.
+- Dezelfde oorzaak houdt ook de preview-links op slot.
