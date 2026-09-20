@@ -298,5 +298,18 @@
     ],
     "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoUAA0APu1iqU2ppaQiMAgBMB2JZQCdACIAaYIgU9frh0DDBAAA9kdDIwN4v8s/y+zBMdgVeX1ZkJNf3Mflov1huQiMikxLqfFnkxdv6bZa3FwlGhaXpm7WbRF+9GyJ42/xevTtPxqeF3vKCoG6YW7LPiQM0vJsCglgJwiuAAA=",
     "bron": "2021-06/Winkel-GerGeer-2.jpg"
+  },
+  "visioffice": {
+    "alt": "De Visioffice-zuil in de winkel, met het scherm aan, naast een wand vol monturen.",
+    "breedte": 1280,
+    "hoogte": 1707,
+    "breedtes": [
+      400,
+      640,
+      900,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoUABsAPuVgpU2pJaOiMAwBIByJQBhmhAqaAYH+JaWzuSURGAmA8SwpR70gAAD9HfWuXmGOTvHOSn3cWsh+1KxGIazNnLGJGJNzzpBO1Wyt4W+r17boeTrFAp5Mn2v2UbH23Wvf1dm2oRvRy+B+6pzEYdLh+5Zh3067hAhqGIC1cYvj6wG+0KCrXjlj5VrlCI0ZtH/JsiXVoV3E9Ksa2yb34q5m8zkHxCE+njwAAAA=",
+    "bron": "Visioffice foto winkel.jpg"
   }
 }

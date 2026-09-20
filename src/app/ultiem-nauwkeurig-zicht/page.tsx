@@ -21,6 +21,7 @@ export default function UltiemNauwkeurigZicht() {
       tekst={T}
       beeldSlot="meting-apparaat"
       bovenkop="Nauwkeurig meten"
+      beeldBijSectie={{ kop: 'Van meting naar glas: inmeten met Visioffice', slot: 'visioffice' }}
       kruimels={[
         { naam: 'Home', pad: '/' },
         { naam: 'Ultiem nauwkeurig zicht', pad: '/ultiem-nauwkeurig-zicht/' },
