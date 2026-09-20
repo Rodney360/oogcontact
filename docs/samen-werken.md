@@ -163,14 +163,55 @@ Dus:
    - `Playwright`
 4. Opslaan.
 
-Vanaf dat moment kan niemand — ook jij niet, ook ik niet — zomaar iets naar de
-live site duwen. Alles gaat via een pull request die eerst groen moet zijn.
+### Let op: op dit account wordt de regel niet afgedwongen
+
+Bij het aanmaken meldt GitHub dit:
+
+> Your rulesets won't be enforced on this private repository until you move to
+> GitHub Team organization account.
+
+Dat klopt en het is niet op te lossen met een vinkje. Op een **privé**-repository
+onder een gewoon persoonlijk account doet GitHub niets met deze regels. De
+ruleset staat er wel, hij slaapt alleen.
+
+**Wat je daardoor mist, en wat niet:**
+
+| | Werkt het? |
+|---|---|
+| Wijzigen via een pull request | ja |
+| Preview-link per branch van Vercel | ja |
+| De controle draait op elke pull request | ja |
+| Groen of rood zien vóór je samenvoegt | ja |
+| GitHub die je tegenhoudt als het rood is | **nee** |
+
+Je ziet dus nog steeds alles; je wordt alleen niet fysiek gestopt. Het verschil
+is een vangnet, niet de werkwijze zelf.
+
+**De afspraak die het vangnet vervangt.** Zolang dit zo is, geldt gewoon:
+
+1. Niemand duwt rechtstreeks naar `main`. Alles gaat via een pull request.
+2. Vóór je op **Merge** drukt kijk je naar het blok onderaan de pull request.
+   Staat daar een groen vinkje bij **All checks have passed**, dan mag het.
+   Staat er een rood kruisje, dan niet — hoe klein de wijziging ook lijkt.
+3. Rood? Klik op **Details**, plak de foutmelding in Claude en vraag hem het
+   op te lossen.
+
+**Wil je het vangnet er alsnog bij?** Twee manieren:
+
+- De repository **openbaar** maken. Dan worden rulesets gratis afgedwongen.
+  Maar dan kan iedereen ook de originele foto's en het complete archief van de
+  oude site zien. Geen sleutels — die staan in Vercel — maar het is wel
+  materiaal van Gerard en Gerda. Dat is hun beslissing.
+- **Betalen** voor GitHub Team. Zie <https://github.com/pricing>.
+
+Ga je later alsnog over, dan hoef je niets opnieuw in te stellen: de ruleset
+staat er al en begint vanzelf te werken.
 
 ### Hoe je controleert dat het werkt
 
-Ga naar <https://github.com/Rodney360/oogcontact/branches>. Achter `main`
-hoort nu een schildje of het woord **Protected** te staan. Staat dat er, dan
-is het gelukt.
+Ga naar <https://github.com/Rodney360/oogcontact/branches>. Staat er achter
+`main` een schildje of het woord **Protected**, dan wordt de regel afgedwongen.
+Staat dat er niet, dan slaapt hij nog — zie hierboven.
 
 ---
 

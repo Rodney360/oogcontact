@@ -211,3 +211,19 @@ toestellen zag het er goed uit, op de kleine niet.
   `docs/samen-werken.md` zetten dat recht; dat kan alleen de eigenaar van de
   repository doen.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 — Dennis (Claude Code, cloud)
+
+- `main` is aangemaakt en is nu de standaardbranch; Vercel zet alleen `main`
+  nog live en elke andere branch krijgt een preview.
+- De ruleset "Beschermde main" staat klaar, maar **slaapt**: GitHub dwingt
+  regels niet af op een privé-repository onder een persoonlijk account. Dat is
+  bewust zo gelaten voor nu. De afspraak die het vangnet vervangt staat in
+  `docs/samen-werken.md`: alles via een pull request, en nooit samenvoegen als
+  de controle rood is.
+- Eerste pull request geopend, zodat de controle op GitHub voor het eerst
+  draait en er een preview-link komt.
+- **Nog open:** zie `docs/open-punten.md`. De volgende stap is je vader
+  toevoegen (stap 3 in `docs/samen-werken.md`).

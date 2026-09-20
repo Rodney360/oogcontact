@@ -26,10 +26,14 @@ huidige branch en zet hem als standaard. Daarna in Vercel bij Settings → Git d
 Production Branch op `main` zetten. Volledige uitleg in stappen:
 `docs/samen-werken.md`.
 
-**Branch-bescherming op `main`.**
-Zodat er niets per ongeluk rechtstreeks naar de live site gaat en de controles
-altijd eerst moeten slagen. Ik kan dit niet zelf instellen; daar heb ik
-beheerrechten op de repository voor nodig.
+~~**Branch-bescherming op `main`.**~~ **Aangemaakt, maar slaapt.** GitHub dwingt
+regels niet af op een privé-repository onder een persoonlijk account. De
+ruleset "Beschermde main" staat klaar en begint vanzelf te werken zodra de
+repository openbaar wordt of het account overgaat naar GitHub Team. Tot die
+tijd geldt de afspraak in `docs/samen-werken.md`: alles via een pull request,
+en nooit samenvoegen als de controle rood is.
+
+Hieronder stond eerder wat je moest instellen; dat is gedaan:
 *Wat je doet:* GitHub → de repository → Settings → Branches → Add branch
 protection rule → naam `main` → vink aan: "Require a pull request before
 merging" en "Require status checks to pass".
