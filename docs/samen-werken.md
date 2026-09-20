@@ -419,113 +419,48 @@ wat er gebeurd is.
 
 ---
 
-## Live zetten zonder dat Dennis erbij hoeft
+## Live zetten: Vercel doet het zelf
 
-Dit kwam er op 20 september meteen uit, de eerste keer dat werk van Gerard
-samengevoegd werd. De wijziging stond wel in `main`, maar kwam niet op de live
-site. In Vercel stond die regel op **Blocked**.
+Zodra er iets op `main` terechtkomt, zet Vercel dat binnen een paar minuten
+live. Wie de wijziging gemaakt of samengevoegd heeft maakt niet uit. Er hoeft
+niemand op een knop te drukken.
 
-**Wat er gebeurde.** De repository is privé. Vercel bouwt een privé-repository
-alleen als de **schrijver van de commit** ook toegang heeft tot het project op
-Vercel. Op het gratis abonnement (Hobby) is dat precies één persoon: de
-eigenaar. En bij "Squash and merge" zet GitHub de opener van de pull request
-als schrijver van de nieuwe commit op `main`. Vandaar dat de preview van Gerard
-wél klaarkwam en het live zetten daarna niet.
+Dat was op 20 september een dag lang niet zo, en de reden is het onthouden
+waard.
 
-**Hoe het nu geregeld is.** Het live zetten gebeurt niet meer door Vercel zelf,
-maar door GitHub, met een **sleutel in plaats van een naam**. Daardoor maakt het
-niet meer uit wie de wijziging gemaakt of samengevoegd heeft. Gerard kan dus
-gewoon zelf samenvoegen.
+**Wat er misging.** De repository was toen privé. Vercel bouwt een privé-
+repository alleen als de **schrijver van de commit** ook toegang heeft tot het
+project op Vercel, en op het gratis abonnement is dat precies één persoon: de
+eigenaar. Bij "Squash and merge" zet GitHub de opener van de pull request als
+schrijver van de commit op `main`. Alles wat Gerard samenvoegde bleef daardoor
+hangen op **Blocked** — negen wijzigingen op een rij, terwijl de controle
+gewoon groen was.
 
-Het zit in twee bestanden:
+**Wat het opgelost heeft.** De repository is openbaar gemaakt. Die regel van
+Vercel geldt namelijk alleen voor privé-repositories. Meer was er niet nodig.
 
-- **`.github/workflows/ci.yml`**, de taak **"Live zetten"**. Die draait alleen
-  bij een wijziging op `main`, en alleen als de controle en de browsertests
-  allebei groen zijn. Een kapotte versie gaat dus nooit meer live — dat kon
-  eerst wél.
-- **`vercel.json`** zet het automatische live zetten door Vercel zelf uit voor
-  `main` (`git.deploymentEnabled`), zodat het niet twee keer gebeurt.
+Onderweg is er nog een omweg gebouwd — het live zetten via GitHub met een
+Vercel-sleutel — maar die is er weer uit. Wil je ooit terug naar privé, dan
+komt hetzelfde probleem terug en staat die omweg beschreven in de
+geschiedenis van `.github/workflows/ci.yml` rond 20 september.
 
-Previews blijven precies zoals ze waren: die maakt Vercel nog gewoon zelf, bij
-elke branch en elke pull request.
+**Wat openbaar betekent.** Iedereen kan de code, de teksten en het archief van
+de oude site lezen. Wachtwoorden en sleutels staan er niet in — die horen in
+Vercel — en klantgegevens ook niet. Wat er wel in staat is het werk zelf, en
+dat is bij een website die toch al voor iedereen te zien is geen geheim.
 
-**Wat je ervoor terugkrijgt en wat het kost:** een wijziging staat nu een paar
-minuten later live dan vroeger, want eerst draait de hele controle en pas
-daarna het bouwen. Dat is de prijs voor twee dingen: iedereen kan live zetten,
-en er gaat nooit meer een rode versie de deur uit.
+**Bijkomend voordeel:** de ruleset op `main` (zie hierboven) wordt nu wél
+afgedwongen. GitHub dwingt regels niet af op een privé-repository onder een
+persoonlijk account; op een openbare wel. Loop dus even na of de regels daar
+staan zoals je ze wilt — ze doen vanaf nu echt iets.
 
-### Eenmalig instellen (Dennis, 2 minuten)
-
-Er is nog één ding nodig, en alleen de eigenaar van het Vercel-account kan het
-doen. Daarna nooit meer.
-
-De twee kenmerken van het project (`VERCEL_ORG_ID` en `VERCEL_PROJECT_ID`)
-staan met de waarde erbij in `.github/workflows/ci.yml`. Dat zijn geen
-wachtwoorden: ze staan in het adres van je Vercel-pagina en in de berichtjes
-die Vercel bij elke pull request achterlaat, en zonder de sleutel hieronder kun
-je er niets mee. Zet ze **niet** ook als secret — dat heeft geen nut en het
-ging de eerste keer juist daarop mis.
-
-Wat er nog mist is de **sleutel**. Die hoort in de kluis van GitHub, niet in een
-bestand: wat eenmaal in de repository staat, blijft voor altijd in de
-geschiedenis staan, ook als je het later weghaalt.
-
-**1. Maak de sleutel aan bij Vercel.**
-
-Ga naar <https://vercel.com/account/tokens> → **Create Token**.
-
-| Veld | Wat je invult |
-|---|---|
-| Token Name | `github-actions-oogcontact` |
-| Scope | je eigen account (`projects-c1cc`) |
-| Expiration | `No Expiration`, of een jaar als je hem liever ververst |
-
-Klik **Create**. Je ziet de sleutel **één keer** — laat het scherm open staan.
-
-**2. Zet hem in de kluis van GitHub.**
-
-Open in een tweede tabblad
-<https://github.com/Rodney360/oogcontact/settings/secrets/actions> →
-**New repository secret**:
-
-| Veld | Wat je invult |
-|---|---|
-| Name | `VERCEL_TOKEN` |
-| Secret | de sleutel uit stap 1 |
-
-Let op de naam: hoofdletters en een liggend streepje, precies zo. Klik
-**Add secret**.
-
-**3. Klaar.** De eerstvolgende wijziging die op `main` komt, gaat er vanzelf
-mee live. Je ziet het gebeuren op
-<https://github.com/Rodney360/oogcontact/actions> — onderaan de rij staat dan
-**Live zetten**, met het adres van de nieuwe versie erbij.
-
-> Verandert de sleutel ooit, of is hij per ongeluk ergens anders terechtgekomen
-> — in een chat, een mailtje, een schermafdruk — verwijder hem dan bij Vercel en
-> maak een nieuwe. Een sleutel geeft volledige toegang tot het account: deployen,
-> projecten aanpassen en de omgevingsvariabelen uitlezen. Het vervangen kost een
-> minuut en er gaat niets van verloren.
-
-### Als het toch niet lukt
+### Als de site niet bijwerkt
 
 | Wat je ziet | Wat je doet |
 |---|---|
-| "VERCEL_TOKEN is nog niet ingesteld" | Stap 2 is niet af, of er staat een typefout in de naam. |
-| "Not authorized" of "Forbidden" | De sleutel is verlopen, ingetrokken of hoort bij het verkeerde account. Maak een nieuwe (stap 1) en werk `VERCEL_TOKEN` bij. |
-| "Could not retrieve Project Settings" | De twee nummers in `ci.yml` kloppen niet meer, bijvoorbeeld omdat het project hernoemd of verplaatst is. Haal ze op in Vercel onder Settings → General. Staan ze ook als secret, haal die dan weg: een secret wint niet meer, maar verwarring blijft. |
-| Je wilt het opnieuw proberen zonder iets te veranderen | Ga naar <https://github.com/Rodney360/oogcontact/actions>, kies links **Controle**, klik rechtsboven op **Run workflow** en kies `main`. |
-| De taak "Live zetten" draait helemaal niet | Dan is de controle of zijn de browsertests rood. Los dat eerst op — zo hoort het te werken. |
-
-### Als je er helemaal vanaf wilt
-
-De regel van Vercel geldt alleen voor **privé**-repositories. Maak je de
-repository openbaar, dan vervalt hij vanzelf en kan deze hele constructie weer
-weg. Er staan geen sleutels of wachtwoorden in de repo — die staan in Vercel —
-dus dat kan veilig. Bijkomend voordeel: de ruleset op `main` (zie hierboven)
-gaat dan ook echt werken. Nadeel: iedereen kan de code, de teksten en het
-archief van de oude site inzien. Dat is iets om met Gerard en Gerda te
-bespreken.
+| De wijziging staat in `main`, maar de site verandert niet | Kijk in Vercel bij **Deployments** naar de bovenste regel met het label `Production`. Staat daar `Error`, klik erop en lees de eerste rode regel in het logboek. |
+| Een regel staat op **Blocked** | Dan staat de repository weer op privé. Zie hierboven. |
+| Je wilt het met de hand opnieuw proberen | Vercel → **Deployments** → **Create Deployment** → kies **Branch** en vul `main` in. |
 
 ---
 
@@ -549,5 +484,5 @@ bespreken.
 | De controle op GitHub is rood | Klik op de rode kruisjes bij de pull request; daar staat wat er misging. Plak dat in Claude en vraag hem het op te lossen. |
 | Geen preview-link bij de pull request | Stap 2a is nog niet gedaan, of Vercel is nog aan het bouwen (een paar minuten; de foto's worden opnieuw verwerkt). |
 | Conflict bij het samenvoegen | Jullie hebben in hetzelfde bestand gewerkt. Vraag Claude: "los het conflict met main op". |
-| Een regel in Vercel staat op **Blocked** | Dat hoort niet meer voor te komen. Gebeurt het toch: zie "Live zetten zonder dat Dennis erbij hoeft" hierboven. |
-| De wijziging staat in `main`, maar de live site verandert niet | Kijk op <https://github.com/Rodney360/oogcontact/actions> bij de bovenste regel of de taak **Live zetten** groen is. Is hij rood, klik erop: daar staat wat er misging. Is hij er niet, dan was de controle rood. |
+| Een regel in Vercel staat op **Blocked** | Dan staat de repository weer op privé. Zie "Live zetten: Vercel doet het zelf" hierboven. |
+| De wijziging staat in `main`, maar de live site verandert niet | Kijk in Vercel bij **Deployments** naar de bovenste regel met het label `Production`. |

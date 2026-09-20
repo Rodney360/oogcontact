@@ -33,18 +33,24 @@ repository openbaar wordt of het account overgaat naar GitHub Team. Tot die
 tijd geldt de afspraak in `docs/samen-werken.md`: alles via een pull request,
 en nooit samenvoegen als de controle rood is.
 
-~~**Beslissen hoe je vaders werk live komt.**~~ **Opgelost, op één stap na.**
-Vercel bouwde een privé-repository alleen als de schrijver van de commit ook
-toegang heeft tot het Vercel-project; op het gratis abonnement is dat één
-persoon. Daardoor bleef de site staan toen Gerard zijn eerste pull requests
-samenvoegde. Het live zetten gebeurt nu door GitHub in plaats van door Vercel,
-met een sleutel in plaats van een naam — dus het maakt niet meer uit wie de
-wijziging maakt of samenvoegt, en een rode versie kan niet meer live.
-*Wat je doet:* eenmalig één sleutel klaarzetten in de kluis van GitHub
-(`VERCEL_TOKEN`). Twee minuten, in stappen beschreven in
-`docs/samen-werken.md` onder "Live zetten zonder dat Dennis erbij hoeft".
-Zolang dat niet gebeurd is, stopt de taak met een melding en blijft de live
-site staan waar hij staat.
+~~**Beslissen hoe je vaders werk live komt.**~~ **Opgelost.** De repository is
+openbaar gemaakt. De regel van Vercel — een privé-repository wordt alleen
+gebouwd als de schrijver van de commit ook toegang heeft tot het project, en op
+het gratis abonnement is dat één persoon — geldt niet voor openbare
+repositories. Vercel zet `main` dus weer gewoon zelf live, ongeacht wie er
+samenvoegt. De omweg via GitHub die daar een dag voor gebouwd was, is er weer
+uit.
+
+**De ruleset op `main` nalopen. Nieuw.**
+Die is al die tijd aangemaakt maar niet afgedwongen, omdat GitHub dat niet doet
+op een privé-repository onder een persoonlijk account. Nu de repository
+openbaar is, doet hij dat wél — en dat is vanaf nu dus echt van invloed op wat
+je kunt samenvoegen.
+*Wat je doet:* kijk op <https://github.com/Rodney360/oogcontact/settings/rules>
+of de regels staan zoals je ze wilt. Let vooral op "Require approvals": staat
+die op 1 of hoger, dan kan niemand meer zijn eigen pull request samenvoegen
+zonder dat de ander er eerst naar kijkt. Dat kan precies zijn wat je wilt, maar
+weet dat het er staat.
 
 Hieronder stond eerder wat je moest instellen; dat is gedaan:
 *Wat je doet:* GitHub → de repository → Settings → Branches → Add branch

@@ -26,7 +26,7 @@
     "bron": "2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1017-scaled.jpg"
   },
   "gerard-portret": {
-    "alt": "Portret in zwart-wit van Gerard met bril, lachend voor de monturenwand in de winkel.",
+    "alt": "Portret in zwart-wit van Gerard met bril, voor de monturenwand in de winkel.",
     "breedte": 1280,
     "hoogte": 1707,
     "breedtes": [
@@ -35,8 +35,8 @@
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBACdASoUABsAPu1qr1CppaQiqAqpMB2JaQAAF4tLkf3xrCXnMZcRwM5Ae+AAAP7q44aEgeDKqP7TBl8TZroKhOOHuZcMQYLgXywWLPGBhEXOcxXjDt7l/lDJEe92oYJS0LBt7QVaZHE7PBsF3ys65mPfXLL73+GnUpfRU2+xg/VjI/qaAcotlqD7ncCpQ592cQVpzRLaXkxQG0TeKVGdkWczG8n/AFArqB6vNCnGAtYSlDmcCb4VCdQHewxHZwAAAA==",
-    "bron": "Geer close up aan tafel.jpg"
+    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADwBACdASoUABsAPu1oqk8ppiOiMBgIATAdiWkAACn+hClTBbpLaga3qhlK6LPZ9gAA/tOXIHk7qNzu+7z1cG0tpMR556ffGRmg2hPQl5cMChB/0kmQLlWPrDE+fF6D9fHb5d2M/GrcryReEQc1D3kxZChvDjTmXSR5eYD7/cuPsykYF6rJR66jRtCAH3PGu1VscdpGQkwqK4/tJKqH8Gf7XBI00IGNwAA=",
+    "bron": "Geer close-up 2.jpg"
   },
   "gerda-portret": {
     "alt": "Portret in zwart-wit van Gerda met bril, lachend in de meetruimte.",
@@ -261,7 +261,7 @@
     "bron": "loepbril-verlichting.webp"
   },
   "winkel-tafel": {
-    "alt": "De winkel van binnen: visgraatvloer, een lange eiken tafel met leren stoelen en wanden vol brillen.",
+    "alt": "De winkel van binnen: visgraatvloer, een lange eiken tafel met stoelen, en wanden vol monturen.",
     "breedte": 1920,
     "hoogte": 1080,
     "breedtes": [
@@ -270,8 +270,8 @@
       1440,
       1920
     ],
-    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JagCdMoR3ACW0iZ+7O8AA94xj1I4W2oyYUf1XRBBlXNHccD51K4l/TiLx5JtujwKG95k3s/ilH1zeyp9v3vfgPKOjMdC4G8MEIGZY1OSUxhJE2LVz6UyoUjyAAA==",
-    "bron": "2021-06/winkel-bewerkt-website-3.png"
+    "blur": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoUAAsAPu1iqU2ppaOiMAgBMB2JbACsAB6XhhNe5FGR0caDkAD+ZNl6QF/R/bZI0Dfdh09KSC54e/HNRPzqO3ZY69nDaOXyEKlhawU8Ueakj3m2Y/qfZA7Rxr9nsxhnvFlNYOGvzfpglrcLeGa6S/LnYLfG2hr2dWnRgwAA",
+    "bron": "Winkel alles.jpg"
   },
   "winkel-gevel": {
     "alt": "De winkel van buiten in de avond, met het verlichte logo Oogcontact by Gerard op de ruit.",
@@ -298,18 +298,5 @@
     ],
     "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoUAA0APu1iqU2ppaQiMAgBMB2JZQCdACIAaYIgU9frh0DDBAAA9kdDIwN4v8s/y+zBMdgVeX1ZkJNf3Mflov1huQiMikxLqfFnkxdv6bZa3FwlGhaXpm7WbRF+9GyJ42/xevTtPxqeF3vKCoG6YW7LPiQM0vJsCglgJwiuAAA=",
     "bron": "2021-06/Winkel-GerGeer-2.jpg"
-  },
-  "winkel-koffie": {
-    "alt": "De balie in de winkel met het koffieapparaat en een vaas met bloemen.",
-    "breedte": 1280,
-    "hoogte": 853,
-    "breedtes": [
-      400,
-      640,
-      900,
-      1280
-    ],
-    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JYwCsACIIhRorXOKAv8+xKAD0bNQfCrZIE/rxgzao9VeRquTiiKNvoJj5oEhHPaOF2940gS+05igU8XtYVD8Y0ehPfdwnm1wBeNgsPg6KTykVfVz/CoVT4ESFx54QAAA=",
-    "bron": "2021-11/Winkel-helemaal-3-scaled.jpg"
   }
 }

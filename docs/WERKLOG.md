@@ -500,3 +500,24 @@ toestellen zag het er goed uit, op de kleine niet.
 - De alt-tekst zegt niet meer "lachend", want op deze foto kijkt hij rustig.
 - **Nog open:** zie `docs/open-punten.md`; het live zetten wacht nog op een
   Vercel-token met toegang tot het team.
+
+---
+
+## 2026-09-20 (laat) — Dennis (Claude Code, cloud)
+
+- **De repository is openbaar gemaakt, en dat loste alles op.** De hele dag
+  bleef werk van Gerard hangen op `Blocked`: Vercel bouwt een privé-repository
+  alleen als de schrijver van de commit ook toegang heeft tot het project, en
+  op het gratis abonnement is dat één persoon. Negen samenvoegingen stonden
+  daardoor niet online, terwijl de controle steeds groen was. Die regel geldt
+  niet voor openbare repositories.
+- **De omweg is eruit.** De taak "Live zetten" in `ci.yml` en `vercel.json`
+  zijn verwijderd. Vercel zet `main` weer zelf live, zoals in het begin —
+  alleen nu voor iedereen die samenvoegt. Eenvoudiger dan het was.
+- Wat we onderweg wél hebben overgehouden: de controle en de browsertests
+  draaien nog steeds bij elke pull request en bij elke wijziging op `main`.
+- **Nieuw aandachtspunt:** de ruleset op `main` sliep omdat GitHub regels niet
+  afdwingt op een privé-repository onder een persoonlijk account. Nu de
+  repository openbaar is, wordt hij wél afgedwongen. Even nalopen of de regels
+  staan zoals je ze wilt — zie `docs/open-punten.md`.
+- **Nog open:** zie `docs/open-punten.md`.
