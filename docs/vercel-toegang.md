@@ -103,6 +103,44 @@ Disconnect), of verwijder het. Anders bouwen straks twee projecten bij elke
 push, krijg je dubbele meldingen onder elke pull request, en weet niemand meer
 welke preview de goede is.
 
+## Het live zetten strandt op dezelfde oorzaak
+
+Sinds het live zetten via GitHub loopt (de taak "Live zetten" in
+`.github/workflows/ci.yml`), mislukt die taak bij elke samenvoeging naar `main`.
+De site blijft daardoor staan zoals hij is, terwijl `main` allang verder is.
+
+Wat de uitslag op GitHub laat zien:
+
+| Stap | Uitkomst |
+|---|---|
+| Kijken of de sleutel klaarstaat | gelukt - `VERCEL_TOKEN` bestaat dus |
+| Instellingen van het project ophalen | **mislukt** |
+
+De foutmelding daarbij:
+
+```
+Error: Could not retrieve Project Settings.
+```
+
+De twee kenmerken in `ci.yml` kloppen: `VERCEL_ORG_ID` en `VERCEL_PROJECT_ID`
+zijn dezelfde als in de berichtjes die Vercel bij elke pull request achterlaat.
+Het is dus niet de instelling maar de **sleutel** die geen toegang heeft tot het
+team `projects-c1cc`. Zo'n sleutel is waarschijnlijk aangemaakt onder een
+persoonlijk account; dan ziet hij het project simpelweg niet.
+
+**De oplossing:** een nieuwe token aanmaken met dat team als bereik.
+
+1. Vercel → **Account Settings → Tokens → Create Token**.
+2. Bij **Scope** het team `projects-c1cc` kiezen, niet het persoonlijke account.
+3. De token kopiëren.
+4. GitHub → **Settings → Secrets and variables → Actions** → `VERCEL_TOKEN`
+   bijwerken.
+5. Bij de laatste mislukte run op **Re-run failed jobs** drukken. Alles wat op
+   `main` staat te wachten gaat dan in één keer live.
+
+Dit is dezelfde oorzaak als het slot op de preview-links hierboven: het project
+zit in een team waar de rest niet bij kan.
+
 ## Zolang het nog niet geregeld is
 
 Alles wat we maken gaat via een pull request naar `main`, en `main` staat live.

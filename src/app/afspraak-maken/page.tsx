@@ -25,7 +25,19 @@ const KRUIMELS = [
   { naam: 'Afspraak maken', pad: '/afspraak-maken/' },
 ]
 
-export default function AfspraakMaken() {
+/**
+ * Met ?voor=loepbrillen in het adres toont de boekingsmodule in stap 1 alleen
+ * de afspraken van dat onderwerp. Zo komt iemand die op de loepbrillenpagina
+ * op "Afspraak maken" klikt niet in de hele lijst terecht. De rest blijft één
+ * klik weg.
+ */
+export default async function AfspraakMaken({
+  searchParams,
+}: {
+  searchParams: Promise<{ [sleutel: string]: string | string[] | undefined }>
+}) {
+  const gevraagd = (await searchParams).voor
+  const voor = typeof gevraagd === 'string' ? gevraagd : undefined
   const afwijkendeDagen = uitzonderingen()
 
   return (
@@ -64,7 +76,7 @@ export default function AfspraakMaken() {
           achter. Je krijgt meteen een bevestiging per e-mail.
         </p>
         <div className="mt-12">
-          <Boeking />
+          <Boeking voor={voor} />
         </div>
       </Sectie>
 

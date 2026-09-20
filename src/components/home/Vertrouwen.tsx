@@ -26,7 +26,16 @@ export function Vertrouwen({ sectie }: { sectie: TekstSectie }) {
             {BEDRIJF.keurmerken.map((keurmerk, i) => (
               <Verschijnt key={keurmerk.naam} als="li" vertraging={i * 0.1}>
                 <div className="h-full rounded-kaart border border-inkt-rand bg-inkt-zacht p-6">
-                  <p className="font-kop text-kop-3 tracking-wide text-messing">{keurmerk.naam}</p>
+                  <p className="font-kop text-kop-3 tracking-wide text-messing">
+                    <a
+                      href={keurmerk.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-messing underline decoration-messing/40 underline-offset-8 hover:decoration-messing"
+                    >
+                      {keurmerk.naam}
+                    </a>
+                  </p>
                   <p className="mt-3 text-basis text-tekst-licht-zacht">{keurmerk.omschrijving}</p>
                 </div>
               </Verschijnt>

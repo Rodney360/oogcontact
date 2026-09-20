@@ -129,7 +129,16 @@ export default function OverOns() {
             <ul className="mt-8 grid gap-5 md:grid-cols-2">
               {BEDRIJF.keurmerken.map((keurmerk) => (
                 <li key={keurmerk.naam} className="rounded-kaart border border-ivoor-rand bg-ivoor-zacht p-6">
-                  <p className="font-kop text-kop-3 tracking-wide text-messing-diep">{keurmerk.naam}</p>
+                  <p className="font-kop text-kop-3 tracking-wide text-messing-diep">
+                    <a
+                      href={keurmerk.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-messing-diep underline decoration-messing-diep/40 underline-offset-8 hover:decoration-messing-diep"
+                    >
+                      {keurmerk.naam}
+                    </a>
+                  </p>
                   <p className="mt-3 text-basis text-tekst-zacht">{keurmerk.omschrijving}</p>
                 </li>
               ))}

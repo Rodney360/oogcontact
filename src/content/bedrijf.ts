@@ -57,8 +57,16 @@ export const BEDRIJF = {
   },
 
   keurmerken: [
-    { naam: 'ANVC', omschrijving: 'Algemene Nederlandse Vereniging van Contactlensspecialisten' },
-    { naam: 'NUVO', omschrijving: 'Brancheorganisatie voor optiekbedrijven' },
+    {
+      naam: 'ANVC',
+      omschrijving: 'Algemene Nederlandse Vereniging van Contactlensspecialisten',
+      url: 'https://anvc.nl/',
+    },
+    {
+      naam: 'NUVO',
+      omschrijving: 'Nederlandse Unie van Optiekbedrijven',
+      url: 'https://www.nuvo.nl/',
+    },
   ],
 
   /** 1 mei 2021: de dag dat de winkel openging. */
