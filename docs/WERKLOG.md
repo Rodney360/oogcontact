@@ -583,3 +583,18 @@ toestellen zag het er goed uit, op de kleine niet.
   eerste herkomst in de lijst die niet meer onder voorbehoud staat.
 - **Randolph is een zonnebrilmerk**, ook bevestigd, en staat nu in het rijtje op
   de zonnebrillenpagina.
+
+---
+
+## 2026-09-20 (Visioffice) — Gerard (Claude Code, cloud)
+
+- **Foto van de Visioffice erbij** op `/ultiem-nauwkeurig-zicht/`, onder de
+  sectie "Van meting naar glas: inmeten met Visioffice". Bewust smal gehouden
+  (maximaal 352 pixels breed): hij staat middenin lopende tekst, niet als
+  banner.
+- Het origineel is een staande telefoonfoto; hij wordt vanaf de bovenkant
+  bijgesneden (`north`), want daar staat het scherm met de naam erop.
+  `attention` koos de onderkant en sneed dat scherm af.
+- `InhoudsPagina` kan nu een foto bij één sectie zetten (`beeldBijSectie`).
+  Klopt de kop niet, dan komt er gewoon geen foto; er verdwijnt nooit tekst.
+- Voorlopig alleen daar, op verzoek van Gerard.

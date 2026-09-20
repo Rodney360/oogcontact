@@ -125,6 +125,19 @@ export const BEELDEN = {
     stijl: 'neutraal',
   },
 
+  // De Visioffice-zuil in de winkel, bij het stuk over inmeten op
+  // /ultiem-nauwkeurig-zicht/. Het origineel is een staande telefoonfoto; hij
+  // wordt vanaf de bovenkant bijgesneden ('north'), want daar staat het scherm
+  // met de naam erop. 'attention' koos de onderkant en sneed dat scherm af.
+  visioffice: {
+    bron: 'Visioffice foto winkel.jpg',
+    verhouding: PORTRET,
+    zwaartepunt: 'north',
+    alt: 'De Visioffice-zuil in de winkel, met het scherm aan, naast een wand vol monturen.',
+    breedtes: MIDDEN,
+    stijl: 'warm',
+  },
+
   // --- De collectie ------------------------------------------------------
   'collectie-1': {
     bron: '2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1030-scaled.jpg',
