@@ -14,6 +14,9 @@ import 'server-only'
 
 import { DIENSTEN, uitlegVoor } from '../../content/diensten.ts'
 import { WEEK } from '../../content/openingstijden.ts'
+import { inNederland } from '../openingstijden.ts'
+import { statusVan, verklaarStatus } from './controle.ts'
+import type { Bevinding, Diagnose } from './controle.ts'
 import type { AgendaDienst, BoekingGegevens, BoekingResultaat, VrijeDag } from './soorten.ts'
 
 const BASIS = (process.env.EASYAPPOINTMENTS_URL ?? '').replace(/\/$/, '')
@@ -249,5 +252,122 @@ export async function boekAfspraak(gegevens: BoekingGegevens): Promise<BoekingRe
       melding:
         'De agenda is even niet bereikbaar. Bel ons gerust, of probeer het over een paar minuten opnieuw.',
     }
+  }
+}
+
+/* ------------------------------------------------------------------ controle */
+
+/**
+ * Loopt de koppeling met de agenda stap voor stap na en vertelt in gewone taal
+ * wat er goed gaat en wat niet. Te zien op /agenda-controle/.
+ *
+ * Er komt hier nooit een sleutel of wachtwoord in de uitkomst te staan: alleen
+ * of ze er zijn, en of de agenda ze accepteert.
+ */
+export async function controleerAgenda(): Promise<Diagnose> {
+  const bevindingen: Bevinding[] = []
+  const modus: Diagnose['modus'] = TESTMODUS ? 'testmodus' : SLEUTEL ? 'sleutel' : 'gebruikersnaam'
+
+  bevindingen.push({
+    naam: 'Het adres van de agenda',
+    goed: Boolean(BASIS),
+    uitleg: BASIS ? `De site kijkt naar ${BASIS}.` : 'Er is nog geen adres ingesteld.',
+    watNu: BASIS
+      ? undefined
+      : 'Zet EASYAPPOINTMENTS_URL in Vercel op https://oogcontactbijgerard.oo2.online en bouw opnieuw.',
+  })
+
+  bevindingen.push({
+    naam: 'De inloggegevens',
+    goed: !TESTMODUS,
+    uitleg: TESTMODUS
+      ? 'Die zijn er nog niet. Daarom doet de site alsof.'
+      : modus === 'sleutel'
+        ? 'Er staat een sleutel klaar.'
+        : 'Er staat een gebruikersnaam met wachtwoord klaar.',
+    watNu: TESTMODUS
+      ? 'Zet in Vercel een sleutel (EASYAPPOINTMENTS_API_KEY) of een gebruikersnaam en ' +
+        'wachtwoord (EASYAPPOINTMENTS_GEBRUIKER en EASYAPPOINTMENTS_WACHTWOORD). ' +
+        'De stappen staan in docs/agenda-koppelen.md.'
+      : undefined,
+  })
+
+  if (TESTMODUS) {
+    return {
+      modus,
+      bevindingen,
+      goed: false,
+      kortom:
+        'De agenda draait in testmodus: bezoekers zien voorbeeldtijden en er wordt niets echt geboekt.',
+    }
+  }
+
+  // Vanaf hier praten we echt met de agenda. Gaat een stap mis, dan heeft
+  // doorgaan geen zin: de volgende stap heeft de vorige nodig.
+  let dienstId = ''
+  try {
+    const diensten = await haalDiensten()
+    dienstId = diensten[0]?.id ?? ''
+    bevindingen.push({
+      naam: 'De diensten',
+      goed: diensten.length > 0,
+      uitleg: diensten.length
+        ? `De agenda gaf ${diensten.length} ${diensten.length === 1 ? 'dienst' : 'diensten'} terug: ` +
+          `${diensten.map((d) => d.naam).join(', ')}.`
+        : 'De agenda liet ons binnen, maar gaf geen enkele dienst terug.',
+      watNu: diensten.length
+        ? undefined
+        : 'Zet in de agenda minstens één dienst klaar, bijvoorbeeld "Oogmeting", en ververs deze pagina.',
+    })
+    if (!diensten.length) {
+      return { modus, bevindingen, goed: false, kortom: 'De agenda is bereikbaar, maar nog leeg.' }
+    }
+  } catch (fout) {
+    const uitleg = verklaarStatus(statusVan(fout))
+    bevindingen.push({ naam: 'De diensten', goed: false, ...uitleg })
+    return { modus, bevindingen, goed: false, kortom: 'De site komt nog niet bij de agenda binnen.' }
+  }
+
+  try {
+    const providers = await haal<EaProvider[]>('/providers')
+    bevindingen.push({
+      naam: 'De medewerker',
+      goed: providers.length > 0,
+      uitleg: providers.length
+        ? `Er ${providers.length === 1 ? 'staat 1 medewerker' : `staan ${providers.length} medewerkers`} in de agenda.`
+        : 'Er staat geen medewerker in de agenda.',
+      watNu: providers.length
+        ? undefined
+        : 'Zet in de agenda een medewerker klaar en koppel de diensten eraan; anders zijn er nooit vrije tijden.',
+    })
+  } catch (fout) {
+    const uitleg = verklaarStatus(statusVan(fout))
+    bevindingen.push({ naam: 'De medewerker', goed: false, ...uitleg })
+    return { modus, bevindingen, goed: false, kortom: 'De agenda is bereikbaar, maar nog niet compleet.' }
+  }
+
+  const vandaag = inNederland(new Date()).datum
+  const dagen = await haalBeschikbaarheid(dienstId, vandaag, 14)
+  const momenten = dagen.reduce((totaal, d) => totaal + d.tijden.length, 0)
+  bevindingen.push({
+    naam: 'De vrije tijden',
+    goed: momenten > 0,
+    uitleg: momenten
+      ? `In de komende veertien dagen zijn er ${momenten} vrije momenten, verdeeld over ${dagen.length} dagen.`
+      : 'In de komende veertien dagen staat geen enkel vrij moment.',
+    watNu: momenten
+      ? undefined
+      : 'Dat kan kloppen als de agenda vol zit. Staan er wel openingstijden in de agenda zelf, ' +
+        'en is de dienst aan de medewerker gekoppeld? Controleer dat in OO2.',
+  })
+
+  const goed = bevindingen.every((b) => b.goed)
+  return {
+    modus,
+    bevindingen,
+    goed,
+    kortom: goed
+      ? 'De koppeling werkt: bezoekers zien de echte tijden en een afspraak komt in de agenda te staan.'
+      : 'De agenda is bereikbaar, maar er is nog iets niet af.',
   }
 }

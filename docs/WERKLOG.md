@@ -224,3 +224,19 @@ toestellen zag het er goed uit, op de kleine niet.
 - Fraunces wordt nu ook cursief geladen, zodat de browser de letters niet zelf
   scheef hoeft te zetten.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (later) — Gerard (Claude Code, cloud)
+
+- **Controlepagina voor de agenda:** `/agenda-controle/` loopt de koppeling met
+  OO2 stap voor stap na en zegt in gewone taal waar het hangt — adres,
+  inloggegevens, diensten, medewerker, vrije tijden. Geen sleutels in beeld,
+  niet in het menu, niet in de sitemap, en op `noindex`.
+- **`docs/agenda-koppelen.md`** is nieuw: drie manieren om de koppeling te
+  leggen, met een mail aan OO2 die je kunt overnemen.
+- **Rechtgezet:** in het beheerscherm van OO2 is géén knop om een API-sleutel
+  aan te maken; bij Easy!Appointments staat die in een bestand op de server.
+  `docs/open-punten.md` en `.env.example` zeggen nu het juiste.
+- **Nog open:** de koppeling zelf. Die kan pas als OO2 de API aanzet of als
+  inloggen met een beheerdersaccount blijkt te werken.
