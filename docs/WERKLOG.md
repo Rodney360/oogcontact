@@ -334,6 +334,25 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-09-20 (avond) — Dennis (Claude Code, cloud)
+
+- **PR #1 samengevoegd.** De controle en de 130 browsertests waren groen op
+  `main`, maar de nieuwe taak **Live zetten** viel om op de eerste Vercel-stap:
+  `Could not retrieve Project Settings`. De site bleef daardoor staan zoals hij
+  stond — precies zoals het hoort: mislukt live zetten verandert niets.
+- **Oorzaak:** de twee kenmerken van het project stonden als secret in GitHub.
+  Een secret kun je niet nakijken, dus een typefout of twee verwisselde waarden
+  merk je pas als het misgaat. Ze staan nu met de waarde erbij in `ci.yml` —
+  het zijn geen wachtwoorden, ze staan ook in Vercels eigen berichten bij elke
+  pull request. Alleen de sleutel blijft in de kluis.
+- **Twee dingen erbij** om de volgende keer sneller te zijn: de stap "Kijken
+  bij wie de sleutel hoort" (`vercel whoami`) zegt meteen of het aan de sleutel
+  ligt of aan het project, en met **Run workflow** op de Actions-pagina kun je
+  het live zetten opnieuw proberen zonder eerst iets aan de site te veranderen.
+- **Nog open:** zie `docs/open-punten.md`.
+
+---
+
 ## 2026-09-20 (laat) — Gerard (Claude Code, cloud)
 
 - **Vastgelegd waarom preview-links niet te openen zijn:** het Vercel-project
@@ -522,4 +541,24 @@ toestellen zag het er goed uit, op de kleine niet.
 - De agenda kent geen aparte afspraken voor zonnebrillen en kinderbrillen; dat
   begint allebei met een oogmeting en loopt verder als een gewone bril. Die
   pagina's krijgen daarom dezelfde lijst als de brillenpagina.
+
+---
+
+## 2026-09-20 (laat) — Dennis (Claude Code, cloud)
+
+- **De repository is openbaar gemaakt, en dat loste alles op.** De hele dag
+  bleef werk van Gerard hangen op `Blocked`: Vercel bouwt een privé-repository
+  alleen als de schrijver van de commit ook toegang heeft tot het project, en
+  op het gratis abonnement is dat één persoon. Negen samenvoegingen stonden
+  daardoor niet online, terwijl de controle steeds groen was. Die regel geldt
+  niet voor openbare repositories.
+- **De omweg is eruit.** De taak "Live zetten" in `ci.yml` en `vercel.json`
+  zijn verwijderd. Vercel zet `main` weer zelf live, zoals in het begin —
+  alleen nu voor iedereen die samenvoegt. Eenvoudiger dan het was.
+- Wat we onderweg wél hebben overgehouden: de controle en de browsertests
+  draaien nog steeds bij elke pull request en bij elke wijziging op `main`.
+- **Nieuw aandachtspunt:** de ruleset op `main` sliep omdat GitHub regels niet
+  afdwingt op een privé-repository onder een persoonlijk account. Nu de
+  repository openbaar is, wordt hij wél afgedwongen. Even nalopen of de regels
+  staan zoals je ze wilt — zie `docs/open-punten.md`.
 - **Nog open:** zie `docs/open-punten.md`.
