@@ -118,6 +118,25 @@ export const DIENSTEN: Dienst[] = [
 
 export const GROEPEN = ['ogen meten', 'brillen', 'contactlenzen', 'loepbrillen'] as const
 
+/**
+ * Welke afspraken horen bij welke pagina.
+ *
+ * Klik je op een aanbodpagina op "Afspraak maken", dan staan in stap 1 alleen
+ * de afspraken die daarbij passen (`?voor=...` in het adres). Dat scheelt
+ * kiezen uit tien dingen waarvan er acht niet over jouw vraag gaan.
+ *
+ * De agenda kent geen aparte afspraken voor zonnebrillen en kinderbrillen: dat
+ * begint allebei met een oogmeting en loopt verder als een gewone bril. Die
+ * pagina's krijgen daarom dezelfde lijst als de brillenpagina.
+ */
+export const ONDERWERPEN: Record<string, readonly Dienst['groep'][]> = {
+  brillen: ['ogen meten', 'brillen'],
+  zonnebrillen: ['ogen meten', 'brillen'],
+  kinderbrillen: ['ogen meten', 'brillen'],
+  contactlenzen: ['contactlenzen'],
+  loepbrillen: ['loepbrillen'],
+}
+
 /** De uitleg bij een dienst uit de agenda, op naam gezocht. */
 export function uitlegVoor(naamUitAgenda: string): Dienst | undefined {
   const genormaliseerd = naamUitAgenda.trim().toLowerCase()

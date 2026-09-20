@@ -481,3 +481,45 @@ toestellen zag het er goed uit, op de kleine niet.
 - De alt-tekst zegt niet meer "lachend", want op deze foto kijkt hij rustig.
 - **Nog open:** zie `docs/open-punten.md`; het live zetten wacht nog op een
   Vercel-token met toegang tot het team.
+
+---
+
+## 2026-09-20 (waarom live zetten strandt) — Gerard (Claude Code, cloud)
+
+- **De oorzaak van het mislukte live zetten staat nu vast** en is opgeschreven
+  in `docs/vercel-toegang.md`: `VERCEL_TOKEN` bestaat wel, maar heeft geen
+  toegang tot het team `projects-c1cc`. De stap "Instellingen van het project
+  ophalen" faalt met "Could not retrieve Project Settings". De twee kenmerken
+  in `ci.yml` kloppen wel; het is dus de sleutel.
+- **Wat er moet gebeuren:** een nieuwe token met dat team als bereik, in GitHub
+  zetten, en bij de laatste mislukte run op "Re-run failed jobs" drukken. Dan
+  gaat alles wat op `main` klaarstaat in één keer live.
+- Dezelfde oorzaak houdt ook de preview-links op slot.
+
+---
+
+## 2026-09-20 (keurmerken en loepbrillen) — Gerard (Claude Code, cloud)
+
+- **ANVC en NUVO verwijzen nu naar hun eigen site**: anvc.nl en nuvo.nl. Op drie
+  plekken: de voettekst, het blok "Vertrouwen" op de homepage en de pagina Over
+  ons. De pillen in de voettekst zijn meteen 44 pixels hoog geworden, zoals de
+  huisstijlregel voor knoppen vraagt.
+- Bij NUVO stond "Brancheorganisatie voor optiekbedrijven"; dat is nu de eigen
+  naam: Nederlandse Unie van Optiekbedrijven.
+- **De knop op de loepbrillenpagina leidt naar een kortere lijst.** Hij gaat
+  naar `/afspraak-maken/?voor=loepbrillen`, en dan staan in stap 1 alleen de
+  twee loepbrilafspraken. Eronder staat "Laat alles zien" voor wie toch iets
+  anders zoekt.
+- **Nu op alle vijf de aanbodpagina's.** Welke afspraken bij welke pagina horen
+  staat in `ONDERWERPEN` in `src/content/diensten.ts`:
+
+  | Pagina | Wat je ziet |
+  |---|---|
+  | brillen, zonnebrillen, kinderbrillen | oogmeting, oogmeting en montuuradvies, glazen inmeten, bril afhalen, montuur bijstellen (5) |
+  | contactlenzen | aanmeten, opnieuw aanmeten, lenscontrole (3) |
+  | loepbrillen | informatie, aanmeten en oogmeting (2) |
+
+- De agenda kent geen aparte afspraken voor zonnebrillen en kinderbrillen; dat
+  begint allebei met een oogmeting en loopt verder als een gewone bril. Die
+  pagina's krijgen daarom dezelfde lijst als de brillenpagina.
+- **Nog open:** zie `docs/open-punten.md`.

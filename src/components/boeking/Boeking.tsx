@@ -18,7 +18,7 @@ import Link from 'next/link'
 import { Knop } from '@/components/Knop'
 import { Veld, Tekstvak, Honeypot } from '@/components/boeking/Velden'
 import { Turnstile } from '@/components/Turnstile'
-import { GROEPEN } from '@/content/diensten'
+import { GROEPEN, ONDERWERPEN } from '@/content/diensten'
 import { BEDRIJF, whatsappLink } from '@/content/bedrijf'
 import { boekingFouten } from '@/lib/veldregels'
 import type { AgendaDienst, VrijeDag } from '@/lib/agenda/soorten'
@@ -54,7 +54,16 @@ function vandaagInNederland(): string {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(new Date())
 }
 
-export function Boeking() {
+type BoekingProps = {
+  /**
+   * Kom je van een pagina over één onderwerp - de loepbrillen bijvoorbeeld -
+   * dan staan in stap 1 alleen de afspraken van dat onderwerp. Scheelt kiezen.
+   * De bezoeker kan de rest altijd alsnog laten zien.
+   */
+  voor?: string
+}
+
+export function Boeking({ voor }: BoekingProps = {}) {
   const [stap, setStap] = useState<Stap>(1)
   const [diensten, setDiensten] = useState<AgendaDienst[] | null>(null)
   const [dienst, setDienst] = useState<AgendaDienst | null>(null)
@@ -65,6 +74,7 @@ export function Boeking() {
   const [gekozenDatum, setGekozenDatum] = useState<string | null>(null)
   const [gekozenTijd, setGekozenTijd] = useState<string | null>(null)
   const [testmodus, setTestmodus] = useState(false)
+  const [allesTonen, setAllesTonen] = useState(false)
   // Gaat omhoog als de tijden opnieuw opgehaald moeten worden, bijvoorbeeld
   // omdat iemand anders net hetzelfde moment pakte.
   const [herlaadSleutel, setHerlaadSleutel] = useState(0)
@@ -137,6 +147,20 @@ export function Boeking() {
     return dag && gekozenTijd && dag.tijden.includes(gekozenTijd) ? gekozenTijd : null
   }, [dagen, datum, gekozenTijd])
 
+  // Wat er in stap 1 te kiezen valt. Past er niets bij het onderwerp - de
+  // agenda kan andere namen gebruiken dan wij - dan tonen we gewoon alles;
+  // een lege lijst helpt niemand.
+  const zichtbaar = useMemo(() => {
+    if (!diensten || !voor || allesTonen) return diensten
+    // De agenda levert de groep als gewone tekst aan, dus vergelijken doen we
+    // ook op tekst: onze eigen namen zijn daar een deelverzameling van.
+    const groepen: readonly string[] = ONDERWERPEN[voor] ?? [voor]
+    const passend = diensten.filter((d) => groepen.includes(d.groep))
+    return passend.length > 0 ? passend : diensten
+  }, [diensten, voor, allesTonen])
+
+  const ingekort = Boolean(diensten && zichtbaar && zichtbaar.length < diensten.length)
+
   if (storing === 'onbereikbaar' && !diensten) {
     return <AgendaOnbereikbaar />
   }
@@ -168,14 +192,28 @@ export function Boeking() {
         )}
 
         {stap === 1 && (
-          <KiesDienst
-            diensten={diensten}
-            gekozen={dienst}
-            opKeuze={(d) => {
-              setDienst(d)
-              setStap(2)
-            }}
-          />
+          <>
+            <KiesDienst
+              diensten={zichtbaar}
+              gekozen={dienst}
+              opKeuze={(d) => {
+                setDienst(d)
+                setStap(2)
+              }}
+            />
+            {ingekort && (
+              <p className="mt-6 text-bijschrift text-tekst-licht-zacht">
+                Je ziet nu alleen de afspraken voor {voor}.{' '}
+                <button
+                  type="button"
+                  onClick={() => setAllesTonen(true)}
+                  className="text-messing underline underline-offset-4"
+                >
+                  Laat alles zien
+                </button>
+              </p>
+            )}
+          </>
         )}
 
         {stap === 2 && dienst && (

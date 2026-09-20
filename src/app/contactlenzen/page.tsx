@@ -18,6 +18,8 @@ export default function Contactlenzen() {
       tekst={T}
       beeldSlot="aanbod-contactlenzen"
       bovenkop="Contactlenzen"
+      // De knop onderaan toont in stap 1 alleen de afspraken die hierbij horen.
+      oproepPad="/afspraak-maken/?voor=contactlenzen"
       kruimels={[
         { naam: 'Home', pad: '/' },
         { naam: 'Aanbod', pad: '/aanbod/' },

@@ -18,6 +18,8 @@ export default function Brillen() {
       tekst={T}
       beeldSlot="aanbod-brillen"
       bovenkop="Brillen en glazen"
+      // De knop onderaan toont in stap 1 alleen de afspraken die hierbij horen.
+      oproepPad="/afspraak-maken/?voor=brillen"
       kruimels={[
         { naam: 'Home', pad: '/' },
         { naam: 'Aanbod', pad: '/aanbod/' },

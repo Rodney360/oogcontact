@@ -27,9 +27,11 @@ type Props = {
   kruimels: { naam: string; pad: string }[]
   /** Extra blokken, tussen de tekst en de veelgestelde vragen. */
   children?: ReactNode
+  /** Waar de knop onderaan naartoe gaat, als dat niet gewoon /afspraak-maken/ is. */
+  oproepPad?: string
 }
 
-export function InhoudsPagina({ tekst, beeldSlot, bovenkop, kruimels, children }: Props) {
+export function InhoudsPagina({ tekst, beeldSlot, bovenkop, kruimels, children, oproepPad }: Props) {
   return (
     <>
       <JsonLd data={kruimelsJsonLd(kruimels)} />
@@ -107,7 +109,7 @@ export function InhoudsPagina({ tekst, beeldSlot, bovenkop, kruimels, children }
         )}
       </Sectie>
 
-      <Oproep kop={tekst.oproep.kop} tekst={tekst.oproep.tekst} knop={tekst.oproep.knop} />
+      <Oproep kop={tekst.oproep.kop} tekst={tekst.oproep.tekst} knop={tekst.oproep.knop} pad={oproepPad} />
     </>
   )
 }
