@@ -332,6 +332,64 @@ Zie `docs/handleiding-beheer.md`.
 
 ---
 
+## Prompts om te kopiëren
+
+Twee stukken tekst die je vader (of jij) in Claude kan plakken. Ze schelen
+uitleg, en ze houden de afspraken uit deze handleiding op één plek.
+
+### De standaardstart — plak dit bij elke nieuwe sessie
+
+```text
+Je werkt aan de website van Oogcontact bij Gerard, in de repository
+Rodney360/oogcontact. Lees eerst CLAUDE.md.
+
+Begin zo:
+1. Haal de nieuwste main binnen.
+2. Maak daarvandaan een nieuwe branch voor dit ene onderwerp.
+
+Wat ik veranderd wil hebben:
+
+>>> HIER IN GEWONE TAAL OPSCHRIJVEN WAT ER ANDERS MOET <<<
+
+Waar ik je aan houd:
+- Verzin geen feiten. Merknamen, prijzen, openingstijden, keurmerken en
+  diensten komen alleen van de huidige site, van de online agenda, of van mij.
+  Weet je iets niet zeker: vraag het mij. Krijg je geen antwoord, zet er dan
+  een TODO bij en noteer het in docs/open-punten.md.
+- Overal "je" en "jij", nooit "u".
+- Tekst nooit kleiner dan 16 pixels.
+- Verander nooit wat er op een foto staat, en schrijf altijd een goede
+  Nederlandse alt-tekst.
+- Leg in gewone taal uit wat je gedaan hebt. Ik ben geen programmeur.
+
+Als je klaar bent:
+1. Draai `npm run check` en laat me zien wat eruit komt. Lukt bouwen of de
+   browsertests niet in deze omgeving, zeg dat dan gewoon - de controle op
+   GitHub vangt dat af.
+2. Commit en push naar je eigen branch.
+3. Open een pull request en geef me de preview-link van Vercel erbij.
+4. Voeg hem NIET zelf samen. Dennis doet dat, met "Create a merge commit".
+5. Schrijf twee tot vier regels in docs/WERKLOG.md.
+```
+
+### De ontbrekende gegevens invullen — een klus die alleen Gerard kan doen
+
+```text
+Lees docs/open-punten.md. Daarin staat welke gegevens er nog ontbreken op de
+site: dingen die alleen ik weet, zoals het KvK-nummer en welke merken we
+voeren.
+
+Loop dat met mij door. Stel me één vraag tegelijk, in gewone taal, en zet mijn
+antwoord daarna op de juiste plek in de site. Weet ik iets niet, sla het dan
+over en laat de TODO staan - verzin niets.
+
+Als we klaar zijn: `npm run check`, pushen naar een eigen branch, een pull
+request openen met de preview-link erbij, en twee tot vier regels in
+docs/WERKLOG.md. Niet zelf samenvoegen.
+```
+
+---
+
 ## Hoe je daarna samenwerkt zonder elkaar in de weg te zitten
 
 **Eén onderwerp per branch.** Niet "allerlei kleine dingen", maar
