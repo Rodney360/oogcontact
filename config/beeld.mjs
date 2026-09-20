@@ -51,10 +51,10 @@ export const BEELDEN = {
   // Ze worden bijgesneden op 3:4 en in zwart-wit gezet, net als hiervoor, zodat
   // ze naast elkaar één geheel blijven.
   'gerard-portret': {
-    bron: 'Geer close up aan tafel.jpg',
+    bron: 'Geer close-up 2.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret in zwart-wit van Gerard met bril, lachend voor de monturenwand in de winkel.',
+    alt: 'Portret in zwart-wit van Gerard met bril, voor de monturenwand in de winkel.',
     breedtes: MIDDEN,
     stijl: 'zwartwit',
   },

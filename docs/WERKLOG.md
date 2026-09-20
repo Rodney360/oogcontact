@@ -470,3 +470,14 @@ toestellen zag het er goed uit, op de kleine niet.
   Eronder staat nu de foto van Gerard en Gerda in de deuropening, net als
   hiervoor.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (portret omgewisseld) — Gerard (Claude Code, cloud)
+
+- **Ander portret van Gerard:** `Geer close-up 2.jpg` in plaats van
+  `Geer close up aan tafel.jpg`. Rustiger beeld, en de achtergrond is bijna
+  helemaal monturenwand, wat naast het portret van Gerda beter samengaat.
+- De alt-tekst zegt niet meer "lachend", want op deze foto kijkt hij rustig.
+- **Nog open:** zie `docs/open-punten.md`; het live zetten wacht nog op een
+  Vercel-token met toegang tot het team.
