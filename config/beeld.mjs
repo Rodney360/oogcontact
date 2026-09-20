@@ -17,6 +17,7 @@
 /** @typedef {{bron: string, verhouding: [number, number]|null, zwaartepunt?: string, alt: string, breedtes: number[], stijl?: 'warm'|'neutraal'|'zwartwit'}} Beeld */
 
 const PORTRET = /** @type {[number, number]} */ ([3, 4])
+const STAAND = /** @type {[number, number]} */ ([4, 5])
 const LIGGEND = /** @type {[number, number]} */ ([3, 2])
 const BREED = /** @type {[number, number]} */ ([16, 9])
 const VIERKANT = /** @type {[number, number]} */ ([1, 1])
@@ -46,19 +47,22 @@ export const BEELDEN = {
     breedtes: MIDDEN,
     stijl: 'warm',
   },
+  // De twee portretten: eigen foto's uit de winkel, staand aangeleverd (9:16).
+  // Ze worden bijgesneden op 3:4 en in zwart-wit gezet, net als hiervoor, zodat
+  // ze naast elkaar één geheel blijven.
   'gerard-portret': {
-    bron: '2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1024-scaled.jpg',
+    bron: 'Geer close up aan tafel.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret in zwart-wit van Gerard met bril, in de winkel.',
+    alt: 'Portret in zwart-wit van Gerard met bril, lachend voor de monturenwand in de winkel.',
     breedtes: MIDDEN,
     stijl: 'zwartwit',
   },
   'gerda-portret': {
-    bron: '2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1027-scaled.jpg',
+    bron: 'Ger close up refr.ruimte.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret in zwart-wit van Gerda met bril, in de winkel.',
+    alt: 'Portret in zwart-wit van Gerda met bril, lachend in de meetruimte.',
     breedtes: MIDDEN,
     stijl: 'zwartwit',
   },
@@ -98,15 +102,17 @@ export const BEELDEN = {
   },
 
   // --- Home: de scene over nauwkeurig meten -----------------------------
-  // Er is ook een mooie macrofoto van een oog (2023-02/oog.jpg), maar die is
-  // maar 612px breed en wordt hier op ruim 600px getoond: te weinig. Deze foto
-  // is 2560px breed, blijft dus scherp, en laat bovendien zien waar het om
-  // gaat: Gerard die iemands ogen meet.
+  // Nieuwe foto van Gerard achter de spleetlamp (3213 x 5712), ruim genoeg
+  // voor elke maat hier. Het origineel is een staande telefoonfoto, dus er
+  // gaat flink wat van boven en onder af; 4:5 is precies de verhouding
+  // waarin hij op de pagina staat, zodat hij daarna niet nog eens
+  // bijgesneden wordt. 'attention' laat sharp zelf het gezicht en het
+  // apparaat vasthouden.
   'meting-scene': {
-    bron: '2021-12/Soof-Geer-apparatuur-scaled.jpg',
-    verhouding: PORTRET,
+    bron: 'Geer spleetlamp.jpg',
+    verhouding: STAAND,
     zwaartepunt: 'attention',
-    alt: 'Gerard kijkt door het meetapparaat terwijl hij iemands ogen onderzoekt.',
+    alt: 'Gerard kijkt door de spleetlamp in de meetruimte, met de Vision-R 800 boven hem.',
     breedtes: MIDDEN,
     stijl: 'neutraal',
   },
@@ -202,12 +208,14 @@ export const BEELDEN = {
     breedtes: [320, 480, 667],
     stijl: 'warm',
   },
+  // Het origineel is liggend (1166 x 763). In het staande vak van 3:4 past er
+  // dus maar 572 pixels breed uit zonder op te blazen; vandaar deze breedtes.
   'aanbod-loepbrillen': {
-    bron: '2025-06/butterfly-model-admetec.jpg',
+    bron: 'loepbril-verlichting.webp',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Een loepbril van Admetec, met vergrotende loepjes in de glazen.',
-    breedtes: [400, 640, 874],
+    alt: 'Close-up van een loepbril: twee loepjes in de glazen en een lampje op het montuur.',
+    breedtes: [400, 572],
     stijl: 'neutraal',
   },
 

@@ -331,3 +331,64 @@ toestellen zag het er goed uit, op de kleine niet.
   `docs/samen-werken.md`. Tot die tijd stopt de taak met een melding en blijft
   de live site staan.
 - **Nog open:** PR #1 samenvoegen, en zie verder `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (laat) — Gerard (Claude Code, cloud)
+
+- **Vastgelegd waarom preview-links niet te openen zijn:** het Vercel-project
+  staat in het team `projects-c1cc`, Gerard logt in met `g-bugel-6898`, en
+  preview-deploys zitten achter Deployment Protection. `docs/vercel-toegang.md`
+  beschrijft de snelle oplossing (het slot eraf) en de echte (het project
+  overzetten naar Gerard), met een bericht dat doorgestuurd kan worden.
+- **Overzetten bleek niet te kunnen:** Vercel laat alleen overzetten naar een
+  team waar je zelf in zit, dus bood het alleen "Create Team" aan. Het document
+  beschrijft nu ook de weg die wel werkt: Gerard maakt er zelf een project van
+  uit dezelfde repository, en daarna verhuist het domein.
+- **Dringend:** zolang dit niet geregeld is, kan Gerard geen enkele preview
+  bekijken en moet hij wachten tot iets live staat.
+- **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (nacht) — Gerard (Claude Code, cloud)
+
+- **De foto bij "Ultiem nauwkeurig zicht" op de homepage is kleiner.** In de
+  versie zonder vastgezette scène (tablet, en iedereen die minder beweging
+  gevraagd heeft) stond hij op de volle kolombreedte: 1326 bij 1768 pixels op
+  een scherm van 1440 breed, dus hoger dan het scherm zelf. Nu maximaal 480
+  pixels breed, in dezelfde 4:5-verhouding als de vastgezette versie. Op een
+  telefoon verandert er niets.
+- **En de foto is vervangen.** `assets-new/Geer spleetlamp.jpg` (3213 x 5712)
+  staat nu op die plek, in 4:5 - precies de verhouding waarin hij op de pagina
+  komt, zodat hij daarna niet nog eens bijgesneden wordt. Nieuwe alt-tekst:
+  Gerard achter de spleetlamp, met de Vision-R 800 boven hem.
+- Gerard heeft in één keer een hele reeks nieuwe winkelfoto's geüpload naar
+  `assets-new/`. Alleen deze is nu in gebruik; de rest staat klaar.
+
+---
+
+## 2026-09-20 (heel laat) — Gerard (Claude Code, cloud)
+
+- **De twee zwart-witportretten bij "Het verhaal van Gerard en Gerda" zijn
+  vervangen** door eigen foto's uit de winkel: `Geer close up aan tafel.jpg`
+  voor Gerard en `Ger close up refr.ruimte.jpg` voor Gerda. Allebei 2268 x 4032,
+  bijgesneden op 3:4 en nog steeds in zwart-wit, zodat ze naast elkaar één
+  geheel blijven.
+- Let op: diezelfde twee foto's staan ook op `/over-ons/`, bij de namen van
+  Gerard en Gerda. Die veranderen dus mee.
+- Nieuwe alt-teksten, beschreven naar wat er echt op staat.
+- **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (afsluitend) — Gerard (Claude Code, cloud)
+
+- **Nieuwe foto bij de loepbrillen:** `loepbril-verlichting.webp` in plaats van
+  het Admetec-model. Te zien op de aanbodtegel op de homepage en boven aan
+  `/loepbrillen/`.
+- Het origineel is liggend (1166 x 763), en in het staande vak van 3:4 komt er
+  zonder opblazen maar 572 pixels breed uit. De breedtes staan daarom op
+  [400, 572]; op een scherm met veel pixels is hij daardoor iets zachter dan de
+  andere tegels. Een staande foto van dezelfde loepbril zou dat oplossen.
+- **Nog open:** zie `docs/open-punten.md`.
