@@ -26,7 +26,7 @@
     "bron": "2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1017-scaled.jpg"
   },
   "gerard-portret": {
-    "alt": "Portret in zwart-wit van Gerard met bril, in de winkel.",
+    "alt": "Portret in zwart-wit van Gerard met bril, lachend voor de monturenwand in de winkel.",
     "breedte": 1280,
     "hoogte": 1707,
     "breedtes": [
@@ -35,11 +35,11 @@
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBACdASoUABsAPu1qqFAppiOiqA1RMB2JaQAIEC6QDhq+njdE2BWQ8I+WnvQAAP7yo+CiyTHb5n+M98Qfkz+4sb8PNcb6F5Q33anfuwocDIebLaqWFZQWkuOYFBVqTdq98G5hC8gAVgWiN9ixXYb7A7V1V2N7lNyXf9RHTv/WmclpmvkHdfVdQAAAAA==",
-    "bron": "2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1024-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBACdASoUABsAPu1qr1CppaQiqAqpMB2JaQAAF4tLkf3xrCXnMZcRwM5Ae+AAAP7q44aEgeDKqP7TBl8TZroKhOOHuZcMQYLgXywWLPGBhEXOcxXjDt7l/lDJEe92oYJS0LBt7QVaZHE7PBsF3ys65mPfXLL73+GnUpfRU2+xg/VjI/qaAcotlqD7ncCpQ592cQVpzRLaXkxQG0TeKVGdkWczG8n/AFArqB6vNCnGAtYSlDmcCb4VCdQHewxHZwAAAA==",
+    "bron": "Geer close up aan tafel.jpg"
   },
   "gerda-portret": {
-    "alt": "Portret in zwart-wit van Gerda met bril, in de winkel.",
+    "alt": "Portret in zwart-wit van Gerda met bril, lachend in de meetruimte.",
     "breedte": 1280,
     "hoogte": 1707,
     "breedtes": [
@@ -48,8 +48,8 @@
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBQCdASoUABsAPu1qr1AppaSiqAqpMB2JaQAAKqTiBBcnKgj/7/6Y37IZd3D2etGl8CzoAAD+9DKjvZzlzh2zBudx91UV2DMrEaeZ1lIyIuMlgLaDm9WwbXOpP+P70PNQDwYnZA//pVRoB9Y+VQ1BLgUUCnhvnkhxTkXJypg+brreY6TjSO3qkH/EowITKoh9puDdDKEUL3zkXvIM/Ig9K0aI/ZdG6EkYfpKTVcgAAA==",
-    "bron": "2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1027-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAAAQBQCdASoUABsAPu1srVCppaQiqAqpMB2JaQAAL2jmDo+WclcI317EG2vcmvwVzMYAAP7pHqTia8yy7NVugy+qd5JC6+yaoIzHYmpqYaLI9Jgh8ugiBXbUrit6v7ga0BarGEGG+gahQpUaKJ+ooTqx3hdtRKRnugx86R8iF6deDH5LZRPev8qszC7HqfB7ccXHsBHPkD0wjnogpw6s+mrR0tMMuN6s71qDF+tnAgfzDaUk0elzP9PEKtF128AA",
+    "bron": "Ger close up refr.ruimte.jpg"
   },
   "pijler-aandacht": {
     "alt": "De grote eiken tafel in de winkel, met stoelen eromheen en bloemen erop.",
@@ -100,17 +100,17 @@
     "bron": "2021-10/IMG_1073-scaled.jpg"
   },
   "meting-scene": {
-    "alt": "Gerard kijkt door het meetapparaat terwijl hij iemands ogen onderzoekt.",
+    "alt": "Gerard kijkt door de spleetlamp in de meetruimte, met de Vision-R 800 boven hem.",
     "breedte": 1280,
-    "hoogte": 1707,
+    "hoogte": 1600,
     "breedtes": [
       400,
       640,
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAwBQCdASoUABsAPu1mq02ppaQiMAgBMB2JQBibA4lcjOj5fLqe8HXcvT6mKWYyrq7dAAD5bGyOQjm+KgHROYVOplC8mZJnqSTXWcUtUiayT69umFvwYhfTfxLWFE54QsB9gOb4HcALP7+Srlkbj6Y9NkLGYC8HESHodNRfSUWokuSU9HANd33hmf/vmG5aUCvrLlYMO3I4g7x8rXgQsLnBPj1TiZY06b9ke0gF+ePAP5usxe+HifuPY7gqhLSMAAA=",
-    "bron": "2021-12/Soof-Geer-apparatuur-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAACQBQCdASoUABkAPu1sq1EppaOiqAqpMB2JQBb3MZAO/rLWqWKbtyOBVT6feFgm9+XA1VEtEAD+k6Wb3nKDqxJ0DHC3uoJScyXM2InIRUpmuAvYAHEwwIoGaDLfDQDw3l0frYC1g82svzqTdsGsbjbLpxIrW+5GA5Tv1rNbNbtEK168/SIIDu0pClxXaker9LWxAwCQBOQ847ssZZoGz/3B0DzGhhUR1ivc/6qTGPOs4rnmzmdoN9cInrSSSptD8m/wOzHO2w9+us3dAsoV46bfcqXa9V0D1t2PsM0AAAA=",
+    "bron": "Geer spleetlamp.jpg"
   },
   "meting-apparaat": {
     "alt": "De Vision-R 800, het apparaat waarmee de oogmeting wordt gedaan.",
@@ -250,16 +250,15 @@
     "bron": "2023-03/OogcontactbijGerard-Kinderbrillen.jpg"
   },
   "aanbod-loepbrillen": {
-    "alt": "Een loepbril van Admetec, met vergrotende loepjes in de glazen.",
-    "breedte": 874,
-    "hoogte": 1165,
+    "alt": "Close-up van een loepbril: twee loepjes in de glazen en een lampje op het montuur.",
+    "breedte": 572,
+    "hoogte": 763,
     "breedtes": [
       400,
-      640,
-      874
+      572
     ],
-    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAADwBQCdASoUABsAPu1urlKppiQiqAgBMB2JYgCdMoM98R0VYEUUE2FUR6/3GLSELIDKHy2WIW2rgADONUCdN5OTMK1anBL+G02PbC9A8PUFNjKHuXjL2QogifrbIb8RiwAFnNyOtdX1llmPoG7h+U4v5PJT2QHahnUAzOV9f7f4X6BXux4DY4ejOdyA9bRrWV0h+13yWsKIA7YBSb6RuuLk0/rAoshEr89TI5rrFFauB8X8mCkqd30SHQgf1/gU48MbnjE1cccjVkdWPo4GDm8kxXSdrRC5LhgpsuL3hAA=",
-    "bron": "2025-06/butterfly-model-admetec.jpg"
+    "blur": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADQBACdASoUABsAPu1wsFIppiSiqAgBMB2JZwAD5UEQUwTb+Tf3wVChxLJM3aLIAAD9m/OXoo164YIUW7LmvTKIi5FHbX8VFWlbDeZo2D2+DmVOZrOoxRgVuc55+xpv8NhrcvLkW98Vq6D7XvQAAmeL+4svBK4OLGfJjei3EpH1JzT6ij5Ijqqqikz55GdowdNh0XL0oGiEgAAA",
+    "bron": "loepbril-verlichting.webp"
   },
   "winkel-tafel": {
     "alt": "De winkel van binnen: visgraatvloer, een lange eiken tafel met leren stoelen en wanden vol brillen.",
