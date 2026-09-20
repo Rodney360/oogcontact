@@ -1,0 +1,95 @@
+# Vercel: wie is de eigenaar, en waarom je previews niet kunt openen
+
+Kort de situatie, want hier lopen twee dingen door elkaar:
+
+- De **repository** staat op GitHub onder `Rodney360`. Gerard werkt daar als
+  medewerker en kan gewoon pull requests samenvoegen. Daar is niets mis mee.
+- Het **Vercel-project** staat in het team `projects-c1cc`. Dat zie je aan elke
+  preview-link: `oogcontact-git-...-projects-c1cc.vercel.app`.
+- Gerard logt in op Vercel met het account `g-bugel-6898`. Dat account zit niet
+  in dat team.
+
+Daardoor gebeurt dit: je opent een preview-link, je bent ingelogd bij Vercel,
+en je krijgt alsnog "geen toegang". Niet omdat de link stuk is, maar omdat
+preview-deploys standaard achter een slot zitten (*Deployment Protection*), en
+dat slot alleen openzwaait voor leden van het team dat het project bezit.
+
+Het komt steeds terug omdat het slot per deployment werkt. Een **Share**-link
+helpt één keer, voor één bouw; de volgende push zit weer dicht. Alleen de
+instelling op het project geldt voor alles wat erna komt.
+
+---
+
+## De snelle oplossing (twee minuten, door de eigenaar)
+
+Iemand die bij het team `projects-c1cc` kan:
+
+1. Ga naar
+   <https://vercel.com/projects-c1cc/oogcontact/settings/deployment-protection>.
+2. Zet **Vercel Authentication** op **Disabled** (of haal *Standard Protection*
+   weg).
+3. **Save**.
+
+Daarna werkt elke preview-link, voor iedereen met de link. Die links zijn niet
+te vinden via Google, maar wel openbaar. Voor deze site is dat prima: er staat
+niets geheims op een preview.
+
+## De echte oplossing: het project overzetten
+
+Zolang het project in een ander team staat, blijft Gerard voor elk wissewasje
+afhankelijk van iemand anders — voor het slot, voor de omgevingsvariabelen van
+de agenda en de e-mail, en voor het domein. Als Gerard degene is die er vanaf nu
+het meest in werkt, hoort het project bij zijn account.
+
+**Wie het doet:** de eigenaar van `projects-c1cc` start het, Gerard accepteert.
+
+1. Vercel → project **oogcontact** → **Settings → General**.
+2. Helemaal onderaan: **Transfer Project**.
+3. Kies als bestemming het account van Gerard (`g-bugel-6898`).
+4. Gerard krijgt een verzoek en accepteert dat.
+
+**Loop daarna deze vier dingen na**, want die willen nog weleens meeverhuizen
+zonder dat ze het goed doen:
+
+- Staan de **Environment Variables** er nog? (`EASYAPPOINTMENTS_*`,
+  `RESEND_API_KEY`, `TURNSTILE_*`, `NEXT_PUBLIC_SITE_URL`.)
+- Staat het **domein** `oogcontactbijgerard.nl` er nog bij, en is het geldig?
+- Is de koppeling met de **GitHub-repository** nog intact? Zo niet: opnieuw
+  koppelen via Settings → Git.
+- Staat **Deployment Protection** uit? (Zie hierboven.)
+
+Daarna maakt Vercel bij elke pull request weer een preview, en kan Gerard die
+zelf openen.
+
+## Zolang het nog niet geregeld is
+
+Alles wat we maken gaat via een pull request naar `main`, en `main` staat live.
+De productiesite heeft dat slot niet. Kijk dus gewoon op
+<https://oogcontactbijgerard.nl> — ook voor de verborgen pagina
+`/agenda-controle/`. Ververs wel hard (Ctrl+Shift+R), anders kijk je naar de
+versie in je browsercache.
+
+---
+
+## Bericht dat je kunt doorsturen
+
+> Hoi,
+>
+> De previews van het Vercel-project `oogcontact` kan ik niet openen. Ik ben wel
+> ingelogd bij Vercel (als `g-bugel-6898`), maar het project staat in het team
+> `projects-c1cc` en daar zit ik niet in. Preview-deploys staan achter
+> Deployment Protection, dus ik krijg "geen toegang".
+>
+> Zou je twee dingen willen doen?
+>
+> 1. Deployment Protection uitzetten:
+>    https://vercel.com/projects-c1cc/oogcontact/settings/deployment-protection
+>    → Vercel Authentication → Disabled → Save.
+> 2. Het project overzetten naar mijn account, zodat ik dit soort dingen
+>    voortaan zelf kan: Settings → General → Transfer Project → `g-bugel-6898`.
+>    Ik accepteer het verzoek dan meteen.
+>
+> Ik ga vanaf nu het meeste werk aan de site doen, dus het scheelt ons allebei
+> tijd als ik er zelf bij kan.
+>
+> Bedankt!

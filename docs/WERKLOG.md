@@ -254,3 +254,16 @@ toestellen zag het er goed uit, op de kleine niet.
   staan: parkeren kan direct voor de deur, de bus stopt pal voor de winkel.
 - `docs/teksten-review.md` opnieuw gegenereerd.
 - **Nog open:** zie `docs/open-punten.md`; de agendakoppeling wacht nog op OO2.
+
+---
+
+## 2026-09-20 (laat) — Gerard (Claude Code, cloud)
+
+- **Vastgelegd waarom preview-links niet te openen zijn:** het Vercel-project
+  staat in het team `projects-c1cc`, Gerard logt in met `g-bugel-6898`, en
+  preview-deploys zitten achter Deployment Protection. `docs/vercel-toegang.md`
+  beschrijft de snelle oplossing (het slot eraf) en de echte (het project
+  overzetten naar Gerard), met een bericht dat doorgestuurd kan worden.
+- **Dringend:** zolang dit niet geregeld is, kan Gerard geen enkele preview
+  bekijken en moet hij wachten tot iets live staat.
+- **Nog open:** zie `docs/open-punten.md`.
