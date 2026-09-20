@@ -90,7 +90,9 @@ export const DIENSTEN: Dienst[] = [
   {
     sleutel: 'Lenscontrole',
     naam: 'Lenscontrole',
-    uitleg: 'De controle na een proefperiode: zitten de lenzen goed en bevalt het?',
+    uitleg:
+      'De reguliere lenscontrole. Zitten de lenzen nog comfortabel? Is de sterkte nog goed? ' +
+      'Daarnaast kijken we naar de conditie van je ogen.',
     duurMinuten: null,
     groep: 'contactlenzen',
   },
