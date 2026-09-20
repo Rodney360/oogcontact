@@ -51,7 +51,7 @@ Dit overzicht is gemaakt op basis van de bestanden in `src/content/teksten/`.
 
 **Advies *op maat***
 
-Rust, tijd en aandacht. Gerard en Gerda meten je ogen nauwkeurig en zoeken samen met je een bril die echt bij je past.
+Rust, tijd en aandacht. Gerard meet je ogen nauwkeurig, daarna zoekt Gerda samen met je het montuur dat echt bij je past.
 
 #### Zo komt alles weer scherp
 
@@ -61,7 +61,7 @@ Net als bij een oogmeting: je kijkt, wij stellen bij, en opeens valt alles op zi
 
 Ons eerste oogcontact was als collega's bij OMC-Hanzekliniek, het huidige Eyescan. Daar groeide het vak, en daar groeide ook de wens: ooit samen een eigen optiekzaak, op de juiste plek en op onze eigen manier.
 
-Op 1 mei 2021 ging die winkel open aan het Overwinningsplein in Groningen. Gerard verbouwde bijna alles zelf, Gerda koos de kleinere merken uit en etaleert ze in de winkel. Zo werd de zaak het verlengstuk van onze woonkamer.
+Op 1 mei 2021 ging die winkel open aan het Overwinningsplein in Groningen. Gerard verbouwde bijna alles zelf, de kleinere merken zochten we samen uit en Gerda etaleert ze in de winkel. Zo werd de zaak het verlengstuk van onze woonkamer.
 
 Dat merk je zodra je binnenkomt. Je wordt niet even afgehandeld, je wordt ontvangen. Met een verse kop koffie en alle tijd die je nodig hebt.
 
@@ -250,7 +250,7 @@ Monturen zijn er in veel vormen, kleuren en maten. Het mooiste montuur valt eige
 
 Het materiaal bepaalt hoeveel we later nog kunnen aanpassen. Kies je acetaat of een ander kunststof, dan moet de neusmaat meteen goed zijn. Bij titanium, stainless steel of hout met neuspads kunnen we de neusmaat wel bijstellen.
 
-Gerda doet de inkoop van de kleinere merken en etaleert ze in de winkel. Je vindt bij ons onder andere Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Baruch, Calvin Klein, Liu Jo, Caroline Abram en Colibris, en Gloryfy voor sportbrillen.
+De kleinere merken zoeken we samen uit; Gerda etaleert ze in de winkel. Je vindt bij ons onder andere Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Baruch, Calvin Klein, Liu Jo, Caroline Abram en Colibris, en Gloryfy voor sportbrillen.
 
 Pas gerust alles wat je aanstaat. Voor een uitgebreide oogmeting maken we daarna graag een afspraak met je.
 
@@ -337,7 +337,7 @@ Wil je je ogen laten meten of rustig monturen passen? Maak een afspraak, dan nem
 
 **Contactlenzen die bij jouw ogen passen**
 
-Een contactlens voelt pas goed als hij echt bij je oog past. Daarom nemen wij, Gerard en Gerda, rustig de tijd om je ogen te meten en samen met je te kijken welke lens daarbij hoort. Als zelfstandige opticien in Groningen werken we met moderne apparatuur en met een medische achtergrond. En ja, de koffie staat klaar.
+Een contactlens voelt pas goed als hij echt bij je oog past. Daarom neemt Gerard rustig de tijd om je ogen te meten, en kijken we samen met je welke lens daarbij hoort. Als zelfstandige opticien in Groningen werken we met moderne apparatuur en met een medische achtergrond. En ja, de koffie staat klaar.
 
 #### Wat je bij ons kunt verwachten
 
@@ -478,7 +478,7 @@ Naast zonnebrillen ben je bij ons ook welkom voor een gewone bril, contactlenzen
 
 #### De merken die je bij ons vindt
 
-We hebben bewust niet gekozen voor de grote modemerken, maar voor kleinere leveranciers die stijlvolle monturen maken. Gerda doet de inkoop van deze kleinere merken en etaleert ze in de winkel.
+We hebben bewust niet gekozen voor de grote modemerken, maar voor kleinere leveranciers die stijlvolle monturen maken. Deze kleinere merken zoeken we samen uit; Gerda etaleert ze in de winkel.
 
 Je vindt bij ons onder andere Odette Lunettes, Einstoffen, Gigi Studios, Liu Jo, Etnia Barcelona, Visionario, Penn and Ink, Colibris en Gotti. Voor sport hebben we de onbreekbare Gloryfy-brillen. Al deze merken voldoen aan de beschermingseisen. (Zet Randolph als open punt: 'Voeren we Randolph ook als zonnebril, en voldoet dat merk aan dezelfde beschermingseisen?')
 
@@ -813,15 +813,15 @@ Een bril draag je elke dag, dus die mag meer zijn dan een hulpmiddel. Daarom zoe
 
 Toen we de winkel inrichtten, hebben we bewust niet gekozen voor de grote, bekende modemerken. Ons oog viel op kleine leveranciers die stijlvolle monturen maken van uitstekende kwaliteit. Brillen die je niet in elke winkelstraat tegenkomt.
 
-Het zwaartepunt ligt bij die kleine makers. Daarnaast staan er ook een paar bekendere modemerken in de kast, simpelweg omdat ze goed gemaakt zijn en prettig zitten. Wat telt is dat een montuur bij jou past, niet welke naam er op de poot staat.
+Het zwaartepunt ligt bij die kleine makers. Daarnaast hangen er ook een paar bekendere modemerken aan de wand, simpelweg omdat ze goed gemaakt zijn en prettig zitten. Wat telt is dat een montuur bij jou past, niet welke naam er op de poot staat.
 
-Welke merken er staan, wisselt met de collectie. Kom gerust langs om te zien wat er nu in de kast ligt. Twijfel je of we een bepaald merk hebben? Bel of app ons even, dan zeggen we het eerlijk.
+Welke merken er hangen, wisselt met de collectie. Kom gerust langs om te zien wat er nu aan de wand hangt. Twijfel je of we een bepaald merk hebben? Bel of app ons even, dan zeggen we het eerlijk.
 
-#### Gerda doet de inkoop
+#### De monturen kiezen we samen uit
 
-Gerda kiest de merken uit. Ze reist de collecties af en let daarbij op materiaal, afwerking en draagcomfort. En vooral op de vraag die er echt toe doet: maakt dit montuur een gezicht mooier?
+De merken kiezen we samen. We reizen de collecties af en letten op materiaal, afwerking en draagcomfort. En vooral op de vraag die er echt toe doet: maakt dit montuur een gezicht mooier?
 
-Ze verzorgt ook het etaleren. De winkel is voor ons het verlengstuk van onze woonkamer. Daar voelen we ons thuis, en dat gevoel gunnen we jou ook als je binnenkomt.
+Het etaleren doet Gerda. De winkel is voor ons het verlengstuk van onze woonkamer. Daar voelen we ons thuis, en dat gevoel gunnen we jou ook als je binnenkomt.
 
 Doordat we zelf inkopen bij kleinere leveranciers, kunnen we kiezen op kwaliteit in plaats van op wat toevallig hard loopt. Dat scheelt je later gedoe: een montuur dat goed gemaakt is, blijft langer mooi zitten.
 
@@ -836,7 +836,7 @@ Zakt je bril na verloop van tijd af of staat hij scheef? Dan stellen we hem weer
 
 #### Passen doe je hier op je gemak
 
-Je bent welkom om rustig rond te kijken. Pak gerust uit de kast wat je aanstaat, zet het op en kijk in de spiegel. Voor rondkijken en passen hoef je geen afspraak te maken.
+Je bent welkom om rustig rond te kijken. Pak gerust van de wand wat je aanstaat, zet het op en kijk in de spiegel. Voor rondkijken en passen hoef je geen afspraak te maken.
 
 Wil je dat we meekijken, dan schuiven we aan. We zeggen eerlijk wat we ervan vinden, want je hebt niets aan een compliment over een bril die je niet staat. En als je even wilt nadenken, dan is dat prima.
 
@@ -885,7 +885,7 @@ Ja. De glazen kunnen op sterkte, met glazen van Essilor. Je kunt kiezen voor deg
 
 **Kom rustig passen**
 
-Wil je zien wat er in de kast staat en ontdekken wat je staat? Plan een afspraak voor een oogmeting en montuuradvies, of loop gewoon binnen aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel. Wij houden graag oogcontact.
+Wil je zien wat er aan de wand hangt en ontdekken wat je staat? Plan een afspraak voor een oogmeting en montuuradvies, of loop gewoon binnen aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -931,7 +931,7 @@ Zijn passie zit in brillen en contactlenzen, maar vooral in het gevoel waarmee j
 
 Ons eerste oogcontact hadden we als collega's bij OMC Noord, het huidige Eyescan. Sindsdien vormen we een team, in de winkel en daarbuiten.
 
-Gerda doet de inkoop van de mooie kleinere merken. Zij zoekt de monturen uit die je bij ons in de kast ziet en etaleert ze stijlvol in de winkel. Dat oog voor sfeer maakt het verschil zodra je binnenstapt.
+De monturen zoeken we samen uit, bij kleinere merken die je niet in elke winkelstraat tegenkomt. In de winkel hangen ze aan de wand, en daar komt het oog van Gerda van pas: heeft Gerard je ogen gemeten, dan loopt zij met je langs de wand en pakt ze het montuur dat bij jouw gezicht hoort. Soms eentje waar je zelf overheen was gekeken. Het etaleren doet ze ook, en dat oog voor sfeer merk je zodra je binnenstapt.
 
 De wens om samen een optiekzaak op de juiste plek te beginnen was er altijd. Onze kinderen hebben allemaal meegeholpen om die droom waar te maken. Op dat gezamenlijke avontuur zijn we trots.
 
@@ -943,6 +943,7 @@ Daarom raden we je aan een afspraak te maken, dan weet je zeker dat we rustig me
 
 Een afspraak maak je online via de pagina Afspraak maken, of je belt, mailt of appt ons. Van oogmeting en montuuradvies tot lenzen aanmeten, een loepbril of even je montuur laten bijstellen: er is altijd ruimte om het rustig te doen.
 
+- **Ieder zijn vak** — De oogmeting doet Gerard: meten, nameten en uitleggen wat eruit komt. Daarna neemt Gerda het over en zoekt zij het montuur dat bij je gezicht en je dagelijks leven past. Twee paar ogen aan dezelfde tafel.
 - **Alle tijd voor je** — We plannen ruim, zodat je nooit het gevoel hebt dat je moet opschieten.
 - **Verse koffie** — De koffie wordt vers gezet. Kijken en kiezen mag gerust even duren.
 - **Persoonlijk advies** — We adviseren op basis van jouw ogen, jouw gezicht en jouw dagelijkse bezigheden, niet op basis van wat toevallig op voorraad ligt.

@@ -450,3 +450,53 @@ toestellen zag het er goed uit, op de kleine niet.
   niet en dat mag ik niet verzinnen.
 - **Nog te maken:** een foto van het slijpen, liggend, met Gerard aan de
   machine. Wat er op zo'n foto moet staan, staat in `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (winkel en monturen) — Gerard (Claude Code, cloud)
+
+- **De gelige winkelfoto is vervangen.** De oude (`winkel-bewerkt-website-3.png`)
+  had een sterke gele zweem van het winkellicht, en de warme kleurcorrectie
+  maakte dat erger. Er staat nu `Winkel alles.jpg`, neutraal belicht en 5712
+  pixels breed. Die foto staat op Over ons en is ook het beeld dat meegaat als
+  iemand de site deelt.
+- **Rechtgezet: de inkoop doen Gerard en Gerda samen.** Op vijf plekken stond
+  dat Gerda dat alleen doet. Het etaleren blijft van Gerda.
+- **Rechtgezet: de monturen liggen niet in een kast maar hangen aan de wand.**
+  Zes plekken, inclusief de merkenpagina en de oproep onderaan de collectie.
+- **Nieuw stukje bij "Wie is Gerda"** over hoe het echt gaat: Gerard meet je
+  ogen, daarna loopt Gerda met je langs de wand en pakt het montuur dat bij je
+  gezicht hoort.
+- **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (wie doet wat) — Gerard (Claude Code, cloud)
+
+- **Rechtgezet: de oogmeting doet Gerard, niet allebei.** Stond zo in de eerste
+  zin van de homepage en in de inleiding van de contactlenzenpagina.
+- De homepage begint nu met: "Rust, tijd en aandacht. Gerard meet je ogen
+  nauwkeurig, daarna zoekt Gerda samen met je het montuur dat echt bij je past."
+  Daarmee staat de taakverdeling meteen in het eerste wat iemand leest.
+- **Nieuw kaartje "Ieder zijn vak"** bij "Hoe wij werken" op Over ons, dat het
+  wat uitgebreider vertelt.
+- Zinnen als "wij, Gerard en Gerda, nemen de tijd voor je" zijn blijven staan:
+  die gaan over de winkel, niet over wie meet.
+- **Ook het aanmeten van contactlenzen doet Gerard**, bevestigd door hemzelf.
+- **De dubbele winkelfoto op Over ons is weg.** Daar stonden twee
+  overzichtsfoto's van dezelfde ruimte onder elkaar. De nieuwste blijft; de
+  oude (`Winkel-helemaal-3`) is eruit, ook als slot in `config/beeld.mjs`.
+  Eronder staat nu de foto van Gerard en Gerda in de deuropening, net als
+  hiervoor.
+- **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (portret omgewisseld) — Gerard (Claude Code, cloud)
+
+- **Ander portret van Gerard:** `Geer close-up 2.jpg` in plaats van
+  `Geer close up aan tafel.jpg`. Rustiger beeld, en de achtergrond is bijna
+  helemaal monturenwand, wat naast het portret van Gerda beter samengaat.
+- De alt-tekst zegt niet meer "lachend", want op deze foto kijkt hij rustig.
+- **Nog open:** zie `docs/open-punten.md`; het live zetten wacht nog op een
+  Vercel-token met toegang tot het team.

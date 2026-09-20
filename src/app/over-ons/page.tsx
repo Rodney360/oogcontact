@@ -106,15 +106,18 @@ export default function OverOns() {
 
         {/* De winkel zelf */}
         <Verschijnt vertraging={0.1}>
-          <div className="mt-24 grid gap-5 sm:grid-cols-2">
-            <div className="overflow-hidden rounded-groot border border-ivoor-rand sm:col-span-2">
+          {/*
+            Twee foto's, allebei over de volle breedte: de winkel van binnen en
+            Gerard en Gerda in de deuropening. Er stond hier eerder een derde -
+            nog een overzichtsfoto van dezelfde ruimte - maar twee keer
+            hetzelfde vlak onder elkaar voegde niets toe.
+          */}
+          <div className="mt-24 grid gap-5">
+            <div className="overflow-hidden rounded-groot border border-ivoor-rand">
               <Beeld slot="winkel-tafel" sizes="100vw" vullend />
             </div>
-            <div className="overflow-hidden rounded-kaart border border-ivoor-rand">
-              <Beeld slot="winkel-koffie" sizes="(min-width: 640px) 45vw, 100vw" vullend />
-            </div>
-            <div className="overflow-hidden rounded-kaart border border-ivoor-rand">
-              <Beeld slot="winkel-deur" sizes="(min-width: 640px) 45vw, 100vw" vullend />
+            <div className="overflow-hidden rounded-groot border border-ivoor-rand">
+              <Beeld slot="winkel-deur" sizes="100vw" vullend />
             </div>
           </div>
         </Verschijnt>
