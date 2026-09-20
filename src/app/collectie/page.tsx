@@ -40,8 +40,8 @@ export default async function Collectie() {
         <Verschijnt>
           <h2 className="text-kop-3">De merken die we voeren</h2>
           <p className="mt-5 leesbreedte text-basis text-tekst-zacht">
-            Welke modellen er precies liggen, wisselt met de collectie. Kom gerust langs om te zien
-            wat er nu in de kast staat.
+            Welke modellen er precies hangen, wisselt met de collectie. Kom gerust langs om te
+            zien wat er nu aan de wand hangt.
           </p>
         </Verschijnt>
 

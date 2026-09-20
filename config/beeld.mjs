@@ -220,13 +220,16 @@ export const BEELDEN = {
   },
 
   // --- De winkel ---------------------------------------------------------
+  // De vorige foto hier (2021-06/winkel-bewerkt-website-3.png) had een sterke
+  // gele zweem van het winkellicht; met de warme kleurcorrectie erbovenop werd
+  // dat te veel. Deze is nieuw, neutraal belicht en 5712 pixels breed.
   'winkel-tafel': {
-    bron: '2021-06/winkel-bewerkt-website-3.png',
+    bron: 'Winkel alles.jpg',
     verhouding: BREED,
     zwaartepunt: 'centre',
-    alt: 'De winkel van binnen: visgraatvloer, een lange eiken tafel met leren stoelen en wanden vol brillen.',
+    alt: 'De winkel van binnen: visgraatvloer, een lange eiken tafel met stoelen, en wanden vol monturen.',
     breedtes: GROOT,
-    stijl: 'warm',
+    stijl: 'neutraal',
   },
   'winkel-gevel': {
     bron: '2021-10/IMG_1074-scaled.jpg',

@@ -431,3 +431,21 @@ toestellen zag het er goed uit, op de kleine niet.
   niet en dat mag ik niet verzinnen.
 - **Nog te maken:** een foto van het slijpen, liggend, met Gerard aan de
   machine. Wat er op zo'n foto moet staan, staat in `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (winkel en monturen) — Gerard (Claude Code, cloud)
+
+- **De gelige winkelfoto is vervangen.** De oude (`winkel-bewerkt-website-3.png`)
+  had een sterke gele zweem van het winkellicht, en de warme kleurcorrectie
+  maakte dat erger. Er staat nu `Winkel alles.jpg`, neutraal belicht en 5712
+  pixels breed. Die foto staat op Over ons en is ook het beeld dat meegaat als
+  iemand de site deelt.
+- **Rechtgezet: de inkoop doen Gerard en Gerda samen.** Op vijf plekken stond
+  dat Gerda dat alleen doet. Het etaleren blijft van Gerda.
+- **Rechtgezet: de monturen liggen niet in een kast maar hangen aan de wand.**
+  Zes plekken, inclusief de merkenpagina en de oproep onderaan de collectie.
+- **Nieuw stukje bij "Wie is Gerda"** over hoe het echt gaat: Gerard meet je
+  ogen, daarna loopt Gerda met je langs de wand en pakt het montuur dat bij je
+  gezicht hoort.
+- **Nog open:** zie `docs/open-punten.md`.

@@ -69,7 +69,9 @@ ${diensten}
 - Ruim 40 jaar ervaring in de optiek, waarvan 15 jaar bij OMC-Hanzekliniek
   (nu Eyescan), dus met een medische achtergrond.
 - Gerard en Gerda leerden elkaar daar kennen als collega's en runnen de winkel
-  samen. Gerda doet de inkoop van de kleinere merken en het etaleren.
+  samen. De kleinere merken kopen ze samen in; het etaleren doet Gerda.
+- Werkwijze bij een montuur: Gerard doet de oogmeting, daarna zoekt Gerda samen
+  met de klant langs de wand het montuur dat past.
 - Aangesloten bij ${BEDRIJF.keurmerken.map((k) => k.naam).join(' en ')}.
 
 ## Collectie
