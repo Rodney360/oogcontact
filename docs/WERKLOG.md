@@ -611,6 +611,8 @@ toestellen zag het er goed uit, op de kleine niet.
 - Dat is ook het antwoord op de vraag hoe je een lang weekend meldt zonder het
   breed uit te meten: de dagen invullen bij afwijkende openingstijden, en de
   mededelingenbalk bovenaan ongemoeid laten.
-- **Nog open:** afwijkende dagen doorgeven aan Google via
-  `specialOpeningHoursSpecification` in de structuurgegevens. Nu staat daar
-  alleen de gewone week, dus Google kan op zo'n dag "geopend" tonen.
+- **De afwijkende dagen gaan nu ook naar Google**, als
+  `specialOpeningHoursSpecification`. Een gesloten dag gaat mee als 00:00 tot
+  00:00, wat Google leest als dicht; een dag met andere tijden gaat mee met die
+  tijden. De reden gaat nooit mee. Getest met een lang weekend erin: de
+  structuurgegevens klopten en het woord "weekend" stond nergens op de pagina.
