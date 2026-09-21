@@ -9,7 +9,8 @@
 import type { Metadata } from 'next'
 
 import { BEDRIJF, adresOpEenRegel } from '../content/bedrijf.ts'
-import { alsSchemaOrg } from './openingstijden.ts'
+import type { Uitzondering } from '../content/openingstijden.ts'
+import { alsSchemaOrg, bijzondereDagenSchemaOrg } from './openingstijden.ts'
 
 /**
  * Het adres waarop de site draait.
@@ -72,7 +73,14 @@ export function paginaMeta({
 }
 
 /** De zaak zelf, als gestructureerde data. Staat op elke pagina. */
-export function bedrijfJsonLd() {
+/**
+ * De zaak als gestructureerde gegevens, voor Google.
+ *
+ * Geef je de afwijkende dagen mee, dan komen die er als bijzondere
+ * openingstijden bij. Zonder dat toont Google de gewone week, ook op een dag
+ * dat de winkel dicht is.
+ */
+export function bedrijfJsonLd(bijzondereDagen: Uitzondering[] = []) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Optician',
@@ -101,6 +109,9 @@ export function bedrijfJsonLd() {
       longitude: BEDRIJF.geo.lengtegraad,
     },
     openingHoursSpecification: alsSchemaOrg(),
+    ...(bijzondereDagen.length > 0
+      ? { specialOpeningHoursSpecification: bijzondereDagenSchemaOrg(bijzondereDagen) }
+      : {}),
     sameAs: Object.values(BEDRIJF.socials),
     founder: BEDRIJF.eigenaren.map((naam) => ({ '@type': 'Person', name: naam })),
     foundingDate: BEDRIJF.geopendSinds,

@@ -88,7 +88,9 @@ Voor feestdagen, vakantie, of een dag dat je eerder dichtgaat.
    - **Die dag helemaal gesloten** — laat aan staan als je dicht bent.
    - Ben je die dag wél open, maar korter? Zet het vinkje uit en vul
      **Open vanaf** en **Open tot** in. Schrijf het als `9:30` en `13:00`.
-   - **Reden** — bijvoorbeeld *Eerste kerstdag* of *Vakantie*. Dit zien bezoekers.
+   - **Reden** — bijvoorbeeld *Eerste kerstdag* of *Lang weekend*. **Bezoekers zien
+     dit niet**; het is alleen voor jullie eigen overzicht in deze lijst. Op de
+     site staat alleen dat de winkel dicht is en wanneer hij weer open is.
 4. Klik op **Save**.
 
 De site rekent hier zelf mee. Het groene bolletje met *"Nu geopend"* en de regel
