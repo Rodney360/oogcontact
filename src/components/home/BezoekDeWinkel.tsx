@@ -44,7 +44,7 @@ export function BezoekDeWinkel({
           <Verschijnt vertraging={0.05}>
             <div className="rounded-groot border border-ivoor-rand bg-ivoor-zacht p-7">
               <h3 className="text-kop-4">Openingstijden</h3>
-              <OpeningsStatus opLicht uitzonderingen={uitzonderingen} className="mt-4" />
+              <OpeningsStatus opLicht nadruk uitzonderingen={uitzonderingen} className="mt-4" />
 
               <table className="mt-6 w-full text-basis">
                 <caption className="alleen-voor-schermlezers">Onze openingstijden per dag</caption>

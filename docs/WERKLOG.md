@@ -631,3 +631,15 @@ toestellen zag het er goed uit, op de kleine niet.
 - Wie minder beweging wil, krijgt de omslag zonder overgang. Er verspringt
   niets: een filter verandert alleen de kleur, niet de plek.
 - De alt-teksten zeggen niet meer "in zwart-wit", want dat is de foto niet meer.
+
+---
+## 2026-09-21 (statusregel) — Gerard (Claude Code, cloud)
+
+- **De regel "Gesloten · wij zijn weer open op ..." onderaan de homepage is
+  groter en dikker**: 17px op een telefoon en 18px op een breed scherm, halfvet,
+  met een iets groter stipje. Elders blijft hij zoals hij was (16px, gewoon).
+- Dat is precies de regel die moet opvallen als de winkel een lang weekend
+  dicht is; hij stond in dezelfde maat als de bijschriften eronder.
+- `OpeningsStatus` heeft daarvoor een stand `nadruk`. Het laadmoment is even
+  groot als het eindresultaat, zodat er niets verspringt zodra de tijd bekend
+  is.
