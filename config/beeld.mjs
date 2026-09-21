@@ -48,23 +48,25 @@ export const BEELDEN = {
     stijl: 'warm',
   },
   // De twee portretten: eigen foto's uit de winkel, staand aangeleverd (9:16).
-  // Ze worden bijgesneden op 3:4 en in zwart-wit gezet, net als hiervoor, zodat
-  // ze naast elkaar één geheel blijven.
+  // Ze worden bijgesneden op 3:4 en staan in kleur. Wijs je ze met de muis aan,
+  // dan worden ze zwart-wit - een knipoog, precies andersom dan je verwacht.
+  // Dat zit in de CSS (.zwartwit-bij-muis in globals.css), niet in de foto
+  // zelf; het bestand blijft dus gewoon kleur.
   'gerard-portret': {
     bron: 'Geer close-up 2.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret in zwart-wit van Gerard met bril, voor de monturenwand in de winkel.',
+    alt: 'Portret van Gerard met bril, voor de monturenwand in de winkel.',
     breedtes: MIDDEN,
-    stijl: 'zwartwit',
+    stijl: 'warm',
   },
   'gerda-portret': {
     bron: 'Ger close up refr.ruimte.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret in zwart-wit van Gerda met bril, lachend in de meetruimte.',
+    alt: 'Portret van Gerda met bril, lachend in de meetruimte.',
     breedtes: MIDDEN,
-    stijl: 'zwartwit',
+    stijl: 'warm',
   },
 
   // --- Home: de vier pijlers -------------------------------------------

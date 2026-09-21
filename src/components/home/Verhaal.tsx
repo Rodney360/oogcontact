@@ -29,10 +29,10 @@ export function Verhaal({ sectie }: { sectie: TekstSectie }) {
             <div className="overflow-hidden rounded-groot border border-ivoor-rand sm:col-span-2">
               <Beeld slot="gerard-en-gerda" sizes="(min-width: 1024px) 45vw, 100vw" vullend />
             </div>
-            <div className="overflow-hidden rounded-kaart border border-ivoor-rand">
+            <div className="zwartwit-bij-muis overflow-hidden rounded-kaart border border-ivoor-rand">
               <Beeld slot="gerard-portret" sizes="(min-width: 1024px) 22vw, 50vw" vullend />
             </div>
-            <div className="overflow-hidden rounded-kaart border border-ivoor-rand">
+            <div className="zwartwit-bij-muis overflow-hidden rounded-kaart border border-ivoor-rand">
               <Beeld slot="gerda-portret" sizes="(min-width: 1024px) 22vw, 50vw" vullend />
             </div>
           </div>
