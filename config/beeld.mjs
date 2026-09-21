@@ -47,16 +47,15 @@ export const BEELDEN = {
     breedtes: MIDDEN,
     stijl: 'warm',
   },
-  // De twee portretten: eigen foto's uit de winkel, staand aangeleverd (9:16).
-  // Ze worden bijgesneden op 3:4 en staan in kleur. Wijs je ze met de muis aan,
-  // dan worden ze zwart-wit - een knipoog, precies andersom dan je verwacht.
-  // Dat zit in de CSS (.zwartwit-bij-muis in globals.css), niet in de foto
-  // zelf; het bestand blijft dus gewoon kleur.
+  // De twee portretten staan standaard in zwart-wit en springen in kleur zodra
+  // je ze aanwijst of aantikt. Dat zit in de CSS (.kleurknop in globals.css),
+  // niet in de foto: de bestanden zijn kleur, en een filter maakt er grijs van.
+  // Zo kan het ook weer terug met een enkele regel.
   'gerard-portret': {
-    bron: 'Geer close-up 2.jpg',
+    bron: '2024-02/20240212-DSC06242-scaled.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret van Gerard met bril, voor de monturenwand in de winkel.',
+    alt: 'Portret van Gerard met bril en zwarte coltrui, armen over elkaar, voor de monturenwand in de winkel.',
     breedtes: MIDDEN,
     stijl: 'warm',
   },
