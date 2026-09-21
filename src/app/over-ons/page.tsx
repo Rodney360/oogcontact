@@ -66,7 +66,7 @@ export default function OverOns() {
                       i % 2 === 1 ? 'lg:[direction:rtl] lg:[&>*]:[direction:ltr]' : ''
                     }`}
                   >
-                    <div className="overflow-hidden rounded-groot border border-ivoor-rand">
+                    <div className="zwartwit-bij-muis overflow-hidden rounded-groot border border-ivoor-rand">
                       <Beeld slot={portret} sizes="(min-width: 1024px) 30vw, 100vw" vullend />
                     </div>
                     <div>

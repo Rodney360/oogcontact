@@ -616,3 +616,30 @@ toestellen zag het er goed uit, op de kleine niet.
   00:00, wat Google leest als dicht; een dag met andere tijden gaat mee met die
   tijden. De reden gaat nooit mee. Getest met een lang weekend erin: de
   structuurgegevens klopten en het woord "weekend" stond nergens op de pagina.
+
+---
+
+## 2026-09-21 (portretten in kleur) — Gerard (Claude Code, cloud)
+
+- **De portretten van Gerard en Gerda staan nu in kleur**, en worden zwart-wit
+  zodra je er met de muis op komt. Een knipoog: precies andersom dan je
+  verwacht.
+- Het effect zit in `.zwartwit-bij-muis` in `globals.css`, niet in de foto's
+  zelf. Alleen op een apparaat met een muis (`hover: hover` en `pointer: fine`),
+  want op een telefoon blijft zo'n effect na een tik hangen en lijkt het een
+  fout. Nagemeten op een telefoonscherm: daar gebeurt er niets.
+- Wie minder beweging wil, krijgt de omslag zonder overgang. Er verspringt
+  niets: een filter verandert alleen de kleur, niet de plek.
+- De alt-teksten zeggen niet meer "in zwart-wit", want dat is de foto niet meer.
+
+---
+## 2026-09-21 (statusregel) — Gerard (Claude Code, cloud)
+
+- **De regel "Gesloten · wij zijn weer open op ..." onderaan de homepage is
+  groter en dikker**: 17px op een telefoon en 18px op een breed scherm, halfvet,
+  met een iets groter stipje. Elders blijft hij zoals hij was (16px, gewoon).
+- Dat is precies de regel die moet opvallen als de winkel een lang weekend
+  dicht is; hij stond in dezelfde maat als de bijschriften eronder.
+- `OpeningsStatus` heeft daarvoor een stand `nadruk`. Het laadmoment is even
+  groot als het eindresultaat, zodat er niets verspringt zodra de tijd bekend
+  is.

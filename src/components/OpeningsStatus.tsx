@@ -18,10 +18,21 @@ type Props = {
   uitzonderingen?: Uitzondering[]
   /** Op een donkere of een lichte achtergrond. */
   opLicht?: boolean
+  /**
+   * Wat groter en dikker. Voor de plek waar deze regel het belangrijkste is
+   * van het hele blok - onderaan de homepage bij de openingstijden. Daar moet
+   * meteen opvallen dat de winkel vandaag dicht is.
+   */
+  nadruk?: boolean
   className?: string
 }
 
-export function OpeningsStatus({ uitzonderingen = [], opLicht = false, className = '' }: Props) {
+export function OpeningsStatus({
+  uitzonderingen = [],
+  opLicht = false,
+  nadruk = false,
+  className = '',
+}: Props) {
   const [status, setStatus] = useState<ReturnType<typeof huidigeStatus> | null>(null)
 
   useEffect(() => {
@@ -34,7 +45,11 @@ export function OpeningsStatus({ uitzonderingen = [], opLicht = false, className
 
   if (!status) {
     return (
-      <p className={`text-bijschrift ${opLicht ? 'text-tekst-zacht' : 'text-tekst-licht-zacht'} ${className}`}>
+      <p
+        className={`${nadruk ? 'text-basis font-semibold' : 'text-bijschrift'} ${
+          opLicht ? 'text-tekst-zacht' : 'text-tekst-licht-zacht'
+        } ${className}`}
+      >
         <span className="alleen-voor-schermlezers">De openingsstatus wordt geladen.</span>
         <span aria-hidden="true">&nbsp;</span>
       </p>
@@ -50,8 +65,13 @@ export function OpeningsStatus({ uitzonderingen = [], opLicht = false, className
     : opLicht ? 'text-tekst-zacht' : 'text-tekst-licht-zacht'
 
   return (
-    <p className={`flex items-center gap-2.5 text-bijschrift ${tekstKleur} ${className}`} aria-live="polite">
-      <span className={`relative flex size-2.5 shrink-0 rounded-full ${stipKleur}`}>
+    <p
+      className={`flex items-center gap-2.5 ${
+        nadruk ? 'text-basis font-semibold' : 'text-bijschrift'
+      } ${tekstKleur} ${className}`}
+      aria-live="polite"
+    >
+      <span className={`relative flex ${nadruk ? 'size-3' : 'size-2.5'} shrink-0 rounded-full ${stipKleur}`}>
         {status.open && (
           <span className={`absolute inline-flex size-full rounded-full ${stipKleur} opacity-60 motion-safe:animate-ping`} />
         )}

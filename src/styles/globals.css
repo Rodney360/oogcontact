@@ -184,6 +184,30 @@
 }
 
 /* ---------------------------------------------------------------------------
+   Een knipoog bij de portretten van Gerard en Gerda
+
+   De foto's staan in kleur. Wijs je er met de muis naar, dan worden ze
+   zwart-wit - precies andersom dan je verwacht.
+
+   Alleen op een apparaat met een muis. Op een telefoon blijft zo'n effect na
+   een tik hangen, en dan lijkt het geen grapje maar een fout.
+
+   Wie minder beweging wil, krijgt de omslag zonder overgang: het blok
+   hieronder zet elke overgang op 0,01ms. Er verspringt niets, want een filter
+   verandert alleen de kleur en niet de plek van de foto.
+--------------------------------------------------------------------------- */
+
+@media (hover: hover) and (pointer: fine) {
+  .zwartwit-bij-muis img {
+    transition: filter 600ms var(--ease-rustig);
+  }
+
+  .zwartwit-bij-muis:hover img {
+    filter: grayscale(1);
+  }
+}
+
+/* ---------------------------------------------------------------------------
    Rustiger weergave
 
    Wie in zijn systeem heeft aangegeven minder beweging te willen, krijgt geen
