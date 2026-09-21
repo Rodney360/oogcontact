@@ -659,3 +659,22 @@ toestellen zag het er goed uit, op de kleine niet.
   het ook met het toetsenbord, is er een focusring en weet een schermlezer dat
   er iets te doen valt. De vorige versie deed niets op een telefoon.
 - **Nog niet gemerged:** Gerard kijkt er eerst naar.
+
+---
+
+## 2026-09-21 (meting rustiger) — Gerard (Claude Code, cloud)
+
+- **Het blok "Ultiem nauwkeurig zicht" scrollt weer gewoon mee.** Op een breed
+  scherm werd de pagina daar vastgezet terwijl je door de drie stappen heen
+  scrolde. Dat voelde alsof de pagina vastliep; het vastzetten is eruit. De
+  drie stappen staan nu onder elkaar, met de foto ernaast — op elk scherm
+  dezelfde opbouw.
+- **De foto bij dat blok is kleiner:** 286 px breed op een breed scherm in
+  plaats van bijna de halve schermbreedte, en 340 px op een telefoon.
+- `src/components/home/Meting.tsx` heeft daardoor geen GSAP en geen
+  JavaScript-toestand meer nodig; het is weer een gewoon servercomponent.
+  GSAP staat nu nergens meer in de code, maar wel nog in `package.json`.
+- **Alt-tekst rechtgezet:** de zesde foto in de collectiegalerij
+  (`assets-original/2021-07/IMG_0271-scaled.jpg`) is een portret van Gerard in
+  een blauw overhemd, maar de alt-tekst zei "Brillen op een plank". Voor een
+  schermlezer klopte dat dus niet.

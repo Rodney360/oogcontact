@@ -184,7 +184,7 @@ export const BEELDEN = {
     bron: '2021-07/IMG_0271-scaled.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Brillen op een plank, met warm licht erboven.',
+    alt: 'Gerard in een lichtblauw overhemd en met een ronde bril, kijkt in de camera. Achter hem, onscherp, de monturenwand.',
     breedtes: MIDDEN,
     stijl: 'warm',
   },
