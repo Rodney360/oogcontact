@@ -643,3 +643,19 @@ toestellen zag het er goed uit, op de kleine niet.
 - `OpeningsStatus` heeft daarvoor een stand `nadruk`. Het laadmoment is even
   groot als het eindresultaat, zodat er niets verspringt zodra de tijd bekend
   is.
+
+---
+
+## 2026-09-21 (portret omgedraaid) — Gerard (Claude Code, cloud)
+
+- **Ander portret van Gerard:** de foto uit de fotosessie van februari 2024
+  (`assets-original/2024-02/20240212-DSC06242-scaled.jpg`) in plaats van de
+  telefoonfoto. Die stond al in het archief van de oude site en is scherper:
+  1707 x 2560.
+- **Het kleur-grapje is omgedraaid en werkt nu overal.** De portretten staan
+  standaard in zwart-wit en springen in kleur bij aanwijzen, klikken of
+  aantikken. Klik nog eens en ze gaan terug.
+- De foto zit daarvoor in een knop (`src/components/KleurKnop.tsx`): zo werkt
+  het ook met het toetsenbord, is er een focusring en weet een schermlezer dat
+  er iets te doen valt. De vorige versie deed niets op een telefoon.
+- **Nog niet gemerged:** Gerard kijkt er eerst naar.

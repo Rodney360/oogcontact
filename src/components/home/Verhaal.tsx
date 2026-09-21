@@ -4,6 +4,7 @@
  */
 
 import { Beeld } from '@/components/Beeld'
+import { KleurKnop } from '@/components/KleurKnop'
 import { KnopLink } from '@/components/Knop'
 import { Verschijnt } from '@/components/Beweging'
 import { Sectie } from '@/components/Sectie'
@@ -29,12 +30,12 @@ export function Verhaal({ sectie }: { sectie: TekstSectie }) {
             <div className="overflow-hidden rounded-groot border border-ivoor-rand sm:col-span-2">
               <Beeld slot="gerard-en-gerda" sizes="(min-width: 1024px) 45vw, 100vw" vullend />
             </div>
-            <div className="zwartwit-bij-muis overflow-hidden rounded-kaart border border-ivoor-rand">
+            <KleurKnop wie="Gerard" className="rounded-kaart border border-ivoor-rand">
               <Beeld slot="gerard-portret" sizes="(min-width: 1024px) 22vw, 50vw" vullend />
-            </div>
-            <div className="zwartwit-bij-muis overflow-hidden rounded-kaart border border-ivoor-rand">
+            </KleurKnop>
+            <KleurKnop wie="Gerda" className="rounded-kaart border border-ivoor-rand">
               <Beeld slot="gerda-portret" sizes="(min-width: 1024px) 22vw, 50vw" vullend />
-            </div>
+            </KleurKnop>
           </div>
         </Verschijnt>
 

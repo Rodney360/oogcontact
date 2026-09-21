@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { Beeld } from '@/components/Beeld'
+import { KleurKnop } from '@/components/KleurKnop'
 import { Sectie, SectieKop, Leeskolom, Oproep } from '@/components/Sectie'
 import { Kruimelpad } from '@/components/InhoudsPagina'
 import { Verschijnt } from '@/components/Beweging'
@@ -66,9 +67,12 @@ export default function OverOns() {
                       i % 2 === 1 ? 'lg:[direction:rtl] lg:[&>*]:[direction:ltr]' : ''
                     }`}
                   >
-                    <div className="zwartwit-bij-muis overflow-hidden rounded-groot border border-ivoor-rand">
+                    <KleurKnop
+                      wie={sectie.kop.includes('Gerda') ? 'Gerda' : 'Gerard'}
+                      className="rounded-groot border border-ivoor-rand"
+                    >
                       <Beeld slot={portret} sizes="(min-width: 1024px) 30vw, 100vw" vullend />
-                    </div>
+                    </KleurKnop>
                     <div>
                       <h2 className="text-kop-3">{sectie.kop}</h2>
                       {sectie.alineas.map((a) => (
