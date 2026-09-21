@@ -598,3 +598,19 @@ toestellen zag het er goed uit, op de kleine niet.
 - `InhoudsPagina` kan nu een foto bij één sectie zetten (`beeldBijSectie`).
   Klopt de kop niet, dan komt er gewoon geen foto; er verdwijnt nooit tekst.
 - Voorlopig alleen daar, op verzoek van Gerard.
+
+---
+
+## 2026-09-21 (lang weekend) — Gerard (Claude Code, cloud)
+
+- **Rechtgezet: bij "Afwijkende openingstijden" stond dat bezoekers de reden
+  zien.** Dat klopt niet — de reden wordt nergens op de site getoond, alleen in
+  de lijst in het beheerscherm. De site zegt alleen "Gesloten · wij zijn weer
+  open op woensdag vanaf 9.30 uur". Aangepast in `keystatic.config.ts` en in
+  `docs/handleiding-beheer.md`.
+- Dat is ook het antwoord op de vraag hoe je een lang weekend meldt zonder het
+  breed uit te meten: de dagen invullen bij afwijkende openingstijden, en de
+  mededelingenbalk bovenaan ongemoeid laten.
+- **Nog open:** afwijkende dagen doorgeven aan Google via
+  `specialOpeningHoursSpecification` in de structuurgegevens. Nu staat daar
+  alleen de gewone week, dus Google kan op zo'n dag "geopend" tonen.

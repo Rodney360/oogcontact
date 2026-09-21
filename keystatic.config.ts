@@ -102,7 +102,9 @@ export default config({
             }),
             reden: fields.text({
               label: 'Reden',
-              description: 'Bijvoorbeeld: Eerste kerstdag, of Vakantie. Dit zien bezoekers ook.',
+              description:
+                'Alleen voor jullie eigen overzicht: bezoekers zien dit niet. Op de site staat ' +
+                'alleen dat de winkel dicht is en wanneer hij weer open is.',
               validation: { isRequired: true },
             }),
           }),
