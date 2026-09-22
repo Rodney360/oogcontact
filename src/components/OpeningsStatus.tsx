@@ -19,20 +19,33 @@ type Props = {
   /** Op een donkere of een lichte achtergrond. */
   opLicht?: boolean
   /**
-   * Wat groter en dikker. Voor de plek waar deze regel het belangrijkste is
-   * van het hele blok - onderaan de homepage bij de openingstijden. Daar moet
-   * meteen opvallen dat de winkel vandaag dicht is.
+   * Hoe nadrukkelijk de regel staat.
+   *
+   *   'klein'   het bijschrift-formaat: overal waar de regel meeloopt
+   *   'nadruk'  groter en halfvet: onderaan de homepage bij de openingstijden
+   *   'hero'    nog een maat groter: bovenaan de homepage, over de foto heen
+   *
+   * Op die twee plekken moet meteen opvallen dat de winkel vandaag dicht is.
    */
-  nadruk?: boolean
+  maat?: 'klein' | 'nadruk' | 'hero'
   className?: string
 }
+
+/** Per maat: de tekst en de stip ernaast. */
+const MATEN = {
+  klein: { tekst: 'text-bijschrift', stip: 'size-2.5' },
+  nadruk: { tekst: 'text-basis font-semibold', stip: 'size-3' },
+  hero: { tekst: 'text-groot font-semibold', stip: 'size-3.5' },
+} as const
 
 export function OpeningsStatus({
   uitzonderingen = [],
   opLicht = false,
-  nadruk = false,
+  maat = 'klein',
   className = '',
 }: Props) {
+  const stijl = MATEN[maat]
+
   const [status, setStatus] = useState<ReturnType<typeof huidigeStatus> | null>(null)
 
   useEffect(() => {
@@ -46,7 +59,7 @@ export function OpeningsStatus({
   if (!status) {
     return (
       <p
-        className={`${nadruk ? 'text-basis font-semibold' : 'text-bijschrift'} ${
+        className={`${stijl.tekst} ${
           opLicht ? 'text-tekst-zacht' : 'text-tekst-licht-zacht'
         } ${className}`}
       >
@@ -66,12 +79,10 @@ export function OpeningsStatus({
 
   return (
     <p
-      className={`flex items-center gap-2.5 ${
-        nadruk ? 'text-basis font-semibold' : 'text-bijschrift'
-      } ${tekstKleur} ${className}`}
+      className={`flex items-center gap-2.5 ${stijl.tekst} ${tekstKleur} ${className}`}
       aria-live="polite"
     >
-      <span className={`relative flex ${nadruk ? 'size-3' : 'size-2.5'} shrink-0 rounded-full ${stipKleur}`}>
+      <span className={`relative flex ${stijl.stip} shrink-0 rounded-full ${stipKleur}`}>
         {status.open && (
           <span className={`absolute inline-flex size-full rounded-full ${stipKleur} opacity-60 motion-safe:animate-ping`} />
         )}

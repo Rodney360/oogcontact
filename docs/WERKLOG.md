@@ -711,3 +711,16 @@ toestellen zag het er goed uit, op de kleine niet.
   knop er overal hetzelfde uitziet.
 - Let op: het nummer zit nog wel in de link zelf (`wa.me/31618898599`). Dat kan
   niet anders, want daarmee weet WhatsApp met wie het gesprek moet openen.
+
+---
+
+## 2026-09-22 (openingsregel in de hero) — Gerard (Claude Code, cloud)
+
+- **De regel "Gesloten · wij zijn weer open ..." bovenaan de homepage is
+  groter en halfvet:** 18px op een telefoon en 20px op een breed scherm, was
+  16px gewoon. Het stipje ernaast groeide mee.
+- `OpeningsStatus` heeft daarvoor geen `nadruk` meer maar een `maat`:
+  `klein` (overal), `nadruk` (onderaan de homepage) en `hero` (bovenaan).
+  Zo staan de drie formaten op één plek in het bestand.
+- Het telefoonnummer ernaast blijft op 16px staan: de openingsregel moet het
+  eerst opvallen, het nummer is daar de tweede stap.

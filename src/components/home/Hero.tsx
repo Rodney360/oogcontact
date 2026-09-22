@@ -197,7 +197,7 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
             className="hero-in mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 md:mt-10"
             style={{ animationDelay: `${480 + woorden.length * 85}ms` }}
           >
-            <OpeningsStatus uitzonderingen={uitzonderingen} />
+            <OpeningsStatus maat="hero" uitzonderingen={uitzonderingen} />
             <a
               href={`tel:${BEDRIJF.telefoon.link}`}
               className="inline-flex min-h-11 items-center text-bijschrift text-tekst-licht-zacht no-underline transition-colors hover:text-messing"
