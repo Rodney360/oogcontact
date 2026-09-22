@@ -55,7 +55,8 @@ export default function Privacyverklaring() {
 
           <h2 className="!mt-8">Wie zijn wij</h2>
           <p>
-            {BEDRIJF.naam}, {adresOpEenRegel()}. Je kunt ons bereiken via{' '}
+            {BEDRIJF.naam}, {adresOpEenRegel()}
+            {BEDRIJF.kvkNummer ? `, KvK ${BEDRIJF.kvkNummer}` : ''}. Je kunt ons bereiken via{' '}
             <a href={`mailto:${BEDRIJF.email}`} className="text-messing-diep underline underline-offset-4">
               {BEDRIJF.email}
             </a>{' '}

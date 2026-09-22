@@ -819,3 +819,16 @@ toestellen zag het er goed uit, op de kleine niet.
 - Het is een noodgreep, geen oplossing: hij raakt alles binnen dat vlak. De
   echte oplossing ligt bij OO2; de mail daarvoor staat in
   `docs/agenda-koppelen.md`. Eén getal (`DONKERDER`) zet hem sterker of zwakker.
+
+---
+
+## 2026-09-22 (KvK en de checklist) — Gerard (Claude Code, cloud)
+
+- **KvK-nummer 82055882** staat nu in de voettekst en in "Wie zijn wij" van de
+  privacyverklaring. De plek in `bedrijf.ts` en de regel in de voettekst stonden
+  er al; alleen het nummer ontbrak.
+- **`docs/live-gaan.md` is nieuw:** één papiertje om af te vinken, met per punt
+  wie het doet. Drie dingen blokkeren nog: de mailsleutel van Resend, de duur en
+  de namen van de afspraken in OO2, en het verhuizen van het domein.
+- `docs/open-punten.md` blijft de uitgebreide uitleg; de checklist verwijst
+  ernaar in plaats van het over te schrijven.

@@ -1,0 +1,94 @@
+# Live gaan — de checklist
+
+Eén papiertje om af te vinken. Alles wat hier niet staat, kan ook ná de
+lancering. De uitgebreide uitleg per punt staat in `docs/open-punten.md`.
+
+Bijgewerkt op 22 september 2026.
+
+---
+
+## Dit moet af, anders gaat er iets mis
+
+### 1. De mailsleutel (Resend) — Dennis
+
+Zonder deze sleutel vult iemand het terugbelformulier in, ziet "bedankt", en
+hoort daarna nooit meer iets. De inzending verdwijnt in het logboek.
+
+- [ ] Gratis account op <https://resend.com>
+- [ ] Domein `oogcontactbijgerard.nl` toevoegen
+- [ ] De twee DNS-regels zetten die Resend noemt (SPF en DKIM). Die komen
+      **naast** de bestaande MX-records en raken de gewone e-mail van de winkel
+      dus niet.
+- [ ] In Vercel → Settings → Environment Variables:
+      - `RESEND_API_KEY` → de sleutel
+      - `MAIL_AFZENDER` → `Oogcontact bij Gerard <website@oogcontactbijgerard.nl>`
+      - `MAIL_ONTVANGER` → `info@oogcontactbijgerard.nl`
+- [ ] Opnieuw laten bouwen (redeploy) — een instelling telt pas mee bij een
+      nieuwe bouw
+- [ ] Zelf een testbericht sturen via het formulier en kijken of het aankomt
+
+### 2. De agenda in OO2 gelijktrekken — Gerard
+
+De agenda op de site is die van OO2 zelf. Alles wat de bezoeker daarin ziet
+komt dus **uit OO2**, niet van ons.
+
+- [ ] De duur per afspraak aanpassen. Op de site staat:
+      - oogmeting — 60 minuten
+      - oogmeting en montuuradvies — 90 minuten
+      - montuur bijstellen — 15 minuten
+      - contactlenzen aanmeten — 60 minuten
+      - contactlenzen opnieuw aanmeten — 45 minuten
+- [ ] De namen van de afspraken naast die op `/afspraak-maken/` leggen en
+      gelijkmaken
+- [ ] De taal op Nederlands zetten, als dat in het beheerscherm kan
+      (Settings → General). Lukt dat niet: zie de mail in
+      `docs/agenda-koppelen.md`
+
+### 3. Het domein verhuizen — Dennis
+
+Doen als laatste, pas als Gerard en Gerda zeggen dat alles goed is.
+
+- [ ] `oogcontactbijgerard.nl` bij Vercel zetten (stappen in
+      `docs/vercel-toegang.md`)
+- [ ] `NEXT_PUBLIC_SITE_URL` op `https://oogcontactbijgerard.nl` zetten
+- [ ] Een paar oude adressen nalopen, bijvoorbeeld
+      <https://oogcontactbijgerard.nl/afwijkende-openingstijden/> — die hoort op
+      het nieuwsoverzicht uit te komen
+- [ ] Liever op een rustig moment: er zitten een paar minuten tussen waarin de
+      site niet bereikbaar is
+
+---
+
+## Sterk aan te raden vóór de lancering
+
+- [ ] **De mail naar OO2** over taal, leesbaarheid en de kleur `#C9A96A`. Staat
+      klaar in `docs/agenda-koppelen.md`.
+- [x] ~~KvK-nummer~~ — binnen: 82055882, staat in de voettekst.
+- [ ] **De merkenlijst bevestigen.** Klopt hij nog, en uit welk land komt elk
+      merk? Elf merken hebben nu geen landlabel. Zelf aan te passen via
+      `/keystatic` onder Merken.
+- [ ] **Alle teksten één keer rustig doorlezen.** `docs/teksten-review.md` zet
+      elke pagina onder elkaar, zodat je niet hoeft te klikken.
+
+---
+
+## Kan ook ná de lancering
+
+- [ ] Cloudflare Turnstile (extra spamfilter; de honeypot en de
+      snelheidsbegrenzer houden nu al het meeste tegen)
+- [ ] Link naar het Google Bedrijfsprofiel
+- [ ] Een foto van het slijpen (wat een goede foto is, staat in
+      `docs/open-punten.md` §1.4)
+- [ ] Beslissen over de opslag van de originele foto's — 233 MB in de
+      repository. Advies: zo laten.
+- [ ] Een Lighthouse-rapport op de laatste preview (taak van Dennis)
+
+---
+
+## Wat het al doet, zonder dat er iets geregeld hoeft te worden
+
+- De **agenda van OO2** op `/afspraak-maken/` — echte tijden, echte afspraken
+- **Bellen, appen en mailen** vanaf elke pagina
+- Alle **oude adressen** van de WordPress-site
+- Het **beheerscherm** op `/keystatic`: nieuws, vakantiemelding, afwijkende
+  openingstijden en merken

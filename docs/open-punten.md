@@ -108,7 +108,7 @@ meeste tegen. Dit is een extra laag, geen noodzaak.
 
 | Wat | Waarvoor | Wat er nu staat |
 |---|---|---|
-| **KvK-nummer** | Hoort in de voettekst. Verplicht voor een webshop, netjes voor een winkel. | De regel wordt weggelaten zolang het nummer er niet is. |
+| ~~**KvK-nummer**~~ | **Binnen.** 82055882. | Staat in de voettekst en in de privacyverklaring. |
 | **Link naar het Google Bedrijfsprofiel** | Voor de vindbaarheid en om reviews te kunnen tonen. | Nog geen link op de site. |
 | **Bevestiging van de merkenlijst** | Zie hieronder. | De lijst van de oude site wordt getoond. |
 | **Land van herkomst per merk** | Het kleine label bij elk merk. | Alleen getoond waar ik het zeker weet; de rest blijft leeg. |
