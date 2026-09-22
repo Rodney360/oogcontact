@@ -259,5 +259,17 @@
     ],
     "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoUABsAPuVgpU2pJaOiMAwBIByJQBhmhAqaAYH+JaWzuSURGAmA8SwpR70gAAD9HfWuXmGOTvHOSn3cWsh+1KxGIazNnLGJGJNzzpBO1Wyt4W+r17boeTrFAp5Mn2v2UbH23Wvf1dm2oRvRy+B+6pzEYdLh+5Zh3067hAhqGIC1cYvj6wG+0KCrXjlj5VrlCI0ZtH/JsiXVoV3E9Ksa2yb34q5m8zkHxCE+njwAAAA=",
     "bron": "Visioffice foto winkel.jpg"
+  },
+  "over-ons-boeken": {
+    "alt": "Een bril met rond montuur op twee boeken, op een houten tafel in de avondzon. Op de rug van de boeken staat Oogcontact bij Gerard.",
+    "breedte": 720,
+    "hoogte": 720,
+    "breedtes": [
+      300,
+      480,
+      720
+    ],
+    "blur": "data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAADQBQCdASoUABQAPu1ur1IppiQiqAgBMB2JagCdMoR7Txarg4zNnQ0Kzw0vKjV9uevFEbQui5SwAP1TQeDQ5W9bIxBpEQbmsFxBq4hwrZTCxANkUsfB5qQ2PyqUxV9DQmQnHWy68aSRZmIuzEZdb4RqHZs1mkSHv37M/XHeOJkeLWvkkqatMPPXRp7DwaepUX5UBJ3gTIIEVyc7NotSBvxXa8Gn+YXId34QV1hzGTYTkwUZ1GdVhne+RV7O9nxEpTrVRiWAlCgcXVvlsfokzHSlizwx4HHcEVGIuRfM3ZZoO8R0XIAAAA==",
+    "bron": "boeken-met-bril.webp"
   }
 }

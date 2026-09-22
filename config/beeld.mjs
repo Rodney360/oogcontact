@@ -157,6 +157,18 @@ export const BEELDEN = {
     stijl: 'warm',
   },
 
+  // --- Over ons ----------------------------------------------------------
+  'over-ons-boeken': {
+    bron: 'boeken-met-bril.webp',
+    // De foto is vierkant; zo blijft hij helemaal heel. Een liggende
+    // uitsnede zou de boeken onderaan er precies afsnijden.
+    verhouding: VIERKANT,
+    zwaartepunt: 'attention',
+    alt: 'Een bril met rond montuur op twee boeken, op een houten tafel in de avondzon. Op de rug van de boeken staat Oogcontact bij Gerard.',
+    breedtes: KLEIN,
+    stijl: 'warm',
+  },
+
   // --- Aanbod: de vijf categorieen --------------------------------------
   'aanbod-brillen': {
     bron: '2023-03/OogcontactbijGerard-Brillen.jpg',

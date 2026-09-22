@@ -738,3 +738,21 @@ toestellen zag het er goed uit, op de kleine niet.
 - **Openstaand:** waar komt `assets-new/boeken-met-bril.webp` te staan? Een
   goede kandidaat is de kopfoto van de pagina Collectie & merken; die gebruikt
   nu `collectie-1`, dezelfde monturenwand als op de homepage.
+
+---
+
+## 2026-09-22 (over ons en nieuws) — Gerard (Claude Code, cloud)
+
+- **De boekenfoto staat nu op Over ons**, naast het stuk "Onze winkel aan het
+  Overwinningsplein" — een warme tafel in de avondzon, precies bij "het
+  verlengstuk van onze woonkamer". Vierkant, 318 pixels breed: de foto is
+  vierkant, dus zo wordt er niets afgesneden.
+- **De portretten op Over ons zijn kleiner.** De fotokolom groeide mee met het
+  scherm en werd op een breed scherm ruim 500 pixels. Nu een vaste 288 pixels;
+  op een telefoon maximaal 320.
+- **De vijf oude nieuwsberichten zijn van de site af.** Ze gingen allemaal over
+  2022 en spraken de bezoeker nog met "u" aan. De pagina Nieuws laat nu de
+  tekst zien die daar al voor klaarstond: geen nieuws, kijk op Instagram.
+- De vijf oude adressen (`/afwijkende-openingstijden/` en de andere vier) gaan
+  nu naar `/nieuws/` in plaats van naar het bericht zelf, dus geen enkele oude
+  link geeft een 404. De originelen staan nog in `content-archive/`.
