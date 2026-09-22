@@ -3,6 +3,12 @@
 Eén papiertje om af te vinken. Alles wat hier niet staat, kan ook ná de
 lancering. De uitgebreide uitleg per punt staat in `docs/open-punten.md`.
 
+**Wie doet wat.** Dennis heeft de site samen met Claude gebouwd; het instellen
+en verhuizen is niet zijn vak, en dat hoeft ook niet. Alles wat in Vercel
+gebeurt is aanklikken en kunnen Gerard en Gerda zelf. Het enige echte
+installeerwerk - de DNS omzetten - laten we doen door **Creative Steps**, het
+hostingbedrijf in Friesland waar de huidige site draait.
+
 Bijgewerkt op 22 september 2026.
 
 Gerard heeft de afspraakduren en de namen in OO2 nagelopen. Daarmee staat alles
@@ -52,52 +58,55 @@ komt dus **uit OO2**, niet van ons.
 - [x] ~~De taal op Nederlands zetten~~ — opgelost vanaf de site zelf, OO2
       hoeft daar niets voor te doen
 
-### 3. Het domein verhuizen — Dennis
+### 3. Het domein verhuizen — Gerard en Gerda, met Creative Steps
 
-Doen als laatste, pas als Gerard en Gerda zeggen dat alles goed is. Reken op een
-half uur werk en daarna een uurtje wachten. Kies een rustig moment: geen
-vrijdagmiddag, en niet vlak voor sluitingstijd.
+Dit is het enige stuk waar het echt om instellen gaat. Dennis heeft de site
+gebouwd, maar hoeft dit niet alleen te doen — en dat is ook niet nodig. Het
+verhuizen van een domein is dagelijks werk voor een hostingbedrijf, en dat van
+jullie is **Creative Steps** in Friesland. Zij beheren de huidige site en
+waarschijnlijk ook het domein.
+
+Het valt uiteen in drie stukken, en alleen het middelste ligt buiten de deur.
 
 > **De e-mail van de winkel loopt over ditzelfde domein.**
-> Verander alleen de regels die naar de website wijzen (`A` en `CNAME`). Laat de
-> `MX`-regels en de `TXT`-regels met rust — daar hangt `info@oogcontactbijgerard.nl`
-> aan. Zet je het domein over naar de naamservers van Vercel, dan moet je álle
-> bestaande regels eerst overnemen, anders staat de mail stil. Alleen de
-> A/CNAME-regels aanpassen bij de huidige provider is veiliger.
+> `info@oogcontactbijgerard.nl` hangt aan dezelfde instellingen als de website.
+> Alleen de regels die naar de website wijzen (`A` en `CNAME`) mogen veranderen;
+> de `MX`- en `TXT`-regels moeten precies blijven zoals ze zijn. Zeg dit er
+> expliciet bij als je het uit handen geeft. Een hostingbedrijf weet dit, maar
+> het is te belangrijk om op aan te nemen.
 
-**Vooraf**
+**Stap 1 — in Vercel. Dat doen jullie zelf, het is een knop.**
 
-- [ ] Maak een schermafdruk of export van alle huidige DNS-regels. Dat is je
-      weg terug.
-- [ ] Zet de TTL van de A- en CNAME-regels een dag van tevoren laag (300
-      seconden), dan gaat het omzetten straks snel.
-- [ ] Zeg de oude WordPress-hosting **nog niet** op. Laat hem een paar weken
-      staan voor het geval je terug moet.
+- [ ] Log in op <https://vercel.com>, ga naar het project `oogcontact`
+- [ ] Settings → Environment Variables → `NEXT_PUBLIC_SITE_URL` op
+      `https://oogcontactbijgerard.nl` zetten, en opnieuw laten bouwen. Zonder
+      dat verwijst de sitemap nog naar het oude adres.
+- [ ] Settings → Domains → `oogcontactbijgerard.nl` toevoegen, daarna ook
+      `www.oogcontactbijgerard.nl`
+- [ ] Vercel toont nu per domein **precies welke regel er in de DNS moet**. Maak
+      daar een schermafdruk van. Dat is wat Creative Steps nodig heeft.
 
-**Het omzetten**
+**Stap 2 — bij Creative Steps.** Stuur ze die schermafdruk met de mail die
+hieronder staat. Zij zetten de regels om.
 
-- [ ] In Vercel: Settings → Environment Variables → `NEXT_PUBLIC_SITE_URL` op
-      `https://oogcontactbijgerard.nl`, en opnieuw laten bouwen. Zonder dat
-      verwijst de sitemap nog naar het oude adres.
-- [ ] In Vercel: Settings → Domains → `oogcontactbijgerard.nl` toevoegen, en
-      daarna ook `www.oogcontactbijgerard.nl`.
-- [ ] Vercel toont per domein precies welke DNS-regel erbij hoort. Neem die
-      waarden letterlijk over bij de partij waar het domein nu staat. Verzin ze
-      niet: ze verschillen per situatie.
-- [ ] Wachten tot Vercel bij allebei "Valid Configuration" zegt en het
-      certificaat klaar is. Meestal minuten, soms een uur.
-
-**Daarna controleren**
+**Stap 3 — daarna controleren. Dat doen jullie zelf.**
 
 - [ ] <https://oogcontactbijgerard.nl> toont de nieuwe site, met een slotje
 - [ ] `www.oogcontactbijgerard.nl` komt uit op dezelfde site
 - [ ] Een oud adres: <https://oogcontactbijgerard.nl/afwijkende-openingstijden/>
       hoort op het nieuwsoverzicht uit te komen
-- [ ] <https://oogcontactbijgerard.nl/sitemap.xml> noemt het nieuwe domein, niet
-      het oude of een vercel.app-adres
 - [ ] De agenda op `/afspraak-maken/` doet het, op een telefoon én op een laptop
 - [ ] **Stuur een testmail naar `info@oogcontactbijgerard.nl` en kijk of hij
       aankomt.** Dit is de belangrijkste controle van allemaal.
+- [ ] In Vercel staat bij allebei de domeinen "Valid Configuration"
+
+**Vooraf, om rustig te kunnen werken**
+
+- [ ] Vraag Creative Steps om de huidige DNS-instellingen te bewaren of te
+      exporteren. Dat is de weg terug.
+- [ ] Zeg de oude hosting **nog niet** op. Laat hem een paar weken staan.
+- [ ] Kies een rustig moment: dinsdagochtend, niet vrijdagmiddag en niet vlak
+      voor sluitingstijd.
 
 **De week erna**
 
@@ -105,6 +114,48 @@ vrijdagmiddag, en niet vlak voor sluitingstijd.
       indienen
 - [ ] In het Google Bedrijfsprofiel kijken of de link naar de site nog klopt
 - [ ] Pas als alles een paar weken goed gaat: de oude hosting opzeggen
+
+---
+
+## De mail aan Creative Steps
+
+> **Onderwerp:** Website verhuizen naar nieuwe hosting - DNS aanpassen
+>
+> Goedemiddag,
+>
+> Wij zijn Oogcontact bij Gerard in Groningen. Jullie hosten onze huidige
+> website op oogcontactbijgerard.nl.
+>
+> We hebben een nieuwe website laten bouwen. Die draait bij Vercel en staat
+> klaar; we willen het domein er nu naartoe laten wijzen. Zouden jullie ons
+> daarbij kunnen helpen?
+>
+> Wat er moet gebeuren: de DNS-regels voor de website aanpassen naar wat Vercel
+> aangeeft. In de bijlage staat een schermafdruk uit Vercel met de precieze
+> waarden, voor `oogcontactbijgerard.nl` en voor `www.oogcontactbijgerard.nl`.
+>
+> **Belangrijk:** onze e-mail loopt over ditzelfde domein. Graag alleen de
+> website-regels aanpassen en de mailinstellingen (MX en de bijbehorende
+> TXT-regels) ongewijzigd laten.
+>
+> Een paar vragen daarbij:
+>
+> 1. Beheren jullie het domein zelf, of staat het bij een andere partij? In dat
+>    laatste geval horen we graag waar we moeten zijn.
+> 2. Kunnen jullie de huidige DNS-instellingen bewaren of voor ons exporteren,
+>    zodat we terug kunnen als er iets niet goed gaat?
+> 3. Wanneer schikt het jullie? Wij hebben het liefst een rustig moment op een
+>    doordeweekse ochtend.
+>
+> De oude hosting mag nog even blijven staan; die zeggen we pas op als de
+> nieuwe site een paar weken goed draait.
+>
+> Alvast bedankt.
+>
+> Met vriendelijke groet,
+> Gerard en Gerda Bugel
+> Oogcontact bij Gerard, Overwinningsplein 100, Groningen
+> KvK 82055882
 
 ---
 
@@ -131,7 +182,7 @@ vrijdagmiddag, en niet vlak voor sluitingstijd.
       `docs/open-punten.md` §1.4)
 - [ ] Beslissen over de opslag van de originele foto's — 233 MB in de
       repository. Advies: zo laten.
-- [ ] Een Lighthouse-rapport op de laatste preview (taak van Dennis)
+- [ ] Een Lighthouse-rapport op de laatste preview
 
 ---
 

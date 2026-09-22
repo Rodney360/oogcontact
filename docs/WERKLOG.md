@@ -936,3 +936,18 @@ toestellen zag het er goed uit, op de kleine niet.
   loopt.** Alleen de A- en CNAME-regels aanpassen; MX en TXT met rust laten.
   Een testmail naar info@oogcontactbijgerard.nl is de belangrijkste controle na
   het omzetten.
+
+---
+
+## 2026-09-22 (verhuizing met Creative Steps) — Gerard (Claude Code, cloud)
+
+- **Correctie op de rolverdeling.** In de checklist stond het verhuizen van het
+  domein als taak voor Dennis. Dennis heeft de site samen met Claude gebouwd,
+  maar het instellen en installeren is niet zijn vak. Dat stond er dus verkeerd.
+- `docs/live-gaan.md` verdeelt het nu in drie stukken: wat in Vercel gebeurt
+  (aanklikken, doen Gerard en Gerda zelf), het omzetten van de DNS (werk voor
+  **Creative Steps** in Friesland, waar de huidige site draait) en de controle
+  achteraf (weer zelf).
+- Er staat nu een mail aan Creative Steps in die ze kunnen overnemen, inclusief
+  de waarschuwing dat de e-mail over hetzelfde domein loopt en de vraag of zij
+  het domein zelf beheren.
