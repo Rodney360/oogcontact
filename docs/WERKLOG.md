@@ -904,3 +904,20 @@ toestellen zag het er goed uit, op de kleine niet.
   - alleen D werkt: insluiten kan niet op die telefoon
 - De pagina staat niet in het menu en niet in de sitemap, en zoekmachines wordt
   gevraagd hem te laten staan. Hij mag weg zodra het opgelost is.
+
+---
+
+## 2026-09-22 (agenda doet het weer, ook op mobiel) — Gerard (Claude Code, cloud)
+
+- **Gevonden en opgelost.** Het lege vlak op de iPhone kwam door de
+  kleurcorrectie die we over de agenda hadden gelegd. Safari rekent zo'n vlak
+  dan opnieuw uit en gaf wit terug. Zonder die correctie doet de agenda het weer
+  overal.
+- **De taal is ook goed:** `?language=dutch` doet wat we hoopten, de agenda is
+  Nederlands. OO2 hoeft daar niets voor te doen.
+- Les die in `docs/agenda-koppelen.md` staat: leg niets van onze kant over dat
+  vlak heen - geen filter, geen omhullende div met `overflow-hidden` en een
+  afronding, geen transform. De afronding zit daarom op het vlak zelf.
+- De testpagina `/agenda-test/` heeft zijn werk gedaan en is weer verwijderd.
+- **Wat blijft:** de datums en teksten in de agenda zijn lichtgrijs op wit. Dat
+  is nu volledig een vraag voor OO2; de mail daarvoor staat klaar.

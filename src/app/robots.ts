@@ -5,8 +5,8 @@ import { SITE_URL } from '@/lib/seo'
 /**
  * Wat zoekmachines wel en niet mogen bekijken.
  *
- * Alles mag, behalve het beheerscherm, de API-routes en de twee hulppagina's
- * van de agenda: die hebben voor een zoekmachine geen betekenis.
+ * Alles mag, behalve het beheerscherm, de API-routes en de controlepagina van
+ * de agenda: die hebben voor een zoekmachine geen betekenis.
  */
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/keystatic/', '/agenda-controle/', '/agenda-test/'],
+        disallow: ['/api/', '/keystatic/', '/agenda-controle/'],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

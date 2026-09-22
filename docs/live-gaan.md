@@ -46,9 +46,8 @@ komt dus **uit OO2**, niet van ons.
       - contactlenzen opnieuw aanmeten — 45 minuten
 - [ ] De namen van de afspraken naast die op `/afspraak-maken/` leggen en
       gelijkmaken
-- [ ] De taal op Nederlands zetten, als dat in het beheerscherm kan
-      (Settings → General). Lukt dat niet: zie de mail in
-      `docs/agenda-koppelen.md`
+- [x] ~~De taal op Nederlands zetten~~ — opgelost vanaf de site zelf, OO2
+      hoeft daar niets voor te doen
 
 ### 3. Het domein verhuizen — Dennis
 
@@ -67,8 +66,9 @@ Doen als laatste, pas als Gerard en Gerda zeggen dat alles goed is.
 
 ## Sterk aan te raden vóór de lancering
 
-- [ ] **De mail naar OO2** over taal, leesbaarheid en de kleur `#C9A96A`. Staat
-      klaar in `docs/agenda-koppelen.md`.
+- [ ] **De mail naar OO2** over de leesbaarheid en de kleur `#C9A96A`. De
+      datums en teksten in de agenda zijn lichtgrijs op wit; wij kunnen daar
+      van onze kant niets aan doen. Staat klaar in `docs/agenda-koppelen.md`.
 - [x] ~~KvK-nummer~~ — binnen: 82055882, staat in de voettekst.
 - [ ] **De merkenlijst bevestigen.** Klopt hij nog, en uit welk land komt elk
       merk? Elf merken hebben nu geen landlabel. Zelf aan te passen via

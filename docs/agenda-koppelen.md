@@ -82,30 +82,27 @@ Alles binnen dat vlak is van OO2. Een browser laat onze site daar bewust niet
 aan de binnenkant komen, dus wij kunnen de teksten en de kleuren daarin niet
 aanpassen. Dat gebeurt in OO2 zelf.
 
-**De taal.** De agenda stond in het Engels. Easy!Appointments heeft een
-Nederlandse vertaling ingebouwd. We proberen hem nu op te vragen met
-`?language=dutch` in het adres van de agenda. Helpt dat niet, dan staat de taal
-vast in de instellingen bij OO2: log in als beheerder en kijk bij Settings →
-General naar een keuze als "Language" of "Localization". Kun je daar niet bij,
-dan kan OO2 het omzetten.
+**De taal: opgelost.** De agenda stond in het Engels. Easy!Appointments heeft
+een Nederlandse vertaling ingebouwd en luistert naar `?language=dutch` in het
+adres. Dat staat er nu in, en de agenda is Nederlands. OO2 hoeft daar niets
+voor te doen.
 
 **De kleuren.** Onze enige accentkleur is messing: **#C9A96A** — dezelfde als de
 knop "Afspraak maken". Sommige versies van Easy!Appointments hebben daar een
 instelling voor (een bedrijfskleur of een eigen stukje CSS). Vraag OO2 of dat
 kan, en geef die code door.
 
-**Een noodgreep die weer weg is.** Er heeft een kleurcorrectie over het
-agendavlak gelegen die lichtgrijze tekst donkerder maakte. Op een telefoon bleef
-het vak daarna leeg, terwijl het op een laptop gewoon werkte. Zo'n filter op een
-ingesloten vlak is precies het soort ding waar Safari over struikelt, en een
-agenda die het op een telefoon niet doet weegt zwaarder dan tekst die aan de
-lichte kant is. Hij is er dus weer uit, en de leesbaarheid is daarmee volledig
-een vraag voor OO2 geworden.
+**Geen filters over dat vlak. Dat is een harde regel geworden.**
 
-**Blijft het vak leeg, ook zonder dat filter?** Dan is de volgende verdachte dat
-de telefoon derde-partijcookies blokkeert. Easy!Appointments heeft een
-sessiecookie nodig, en Safari geeft die binnen een ingesloten vlak van een ander
-adres niet altijd. Daar helpt geen enkele aanpassing van onze kant tegen; dan is
-de oplossing om op een telefoon niet in te sluiten, maar een knop te tonen die
-de agenda in een eigen tabblad opent. Dat is één aanpassing in
-`src/components/boeking/OnlineAgenda.tsx`.
+Er heeft even een kleurcorrectie overheen gelegen om die lichtgrijze teksten
+donkerder te maken. Op een laptop werkte dat prima; op een iPhone bleef het vak
+daarna helemaal leeg. Een agenda die het op een telefoon niet doet is veel
+erger dan tekst die aan de lichte kant is, dus die correctie is er weer uit en
+sindsdien doet hij het overal.
+
+Wat we daarvan geleerd hebben: **leg niets van onze kant over dat vlak heen.**
+Geen `filter`, geen omhullende div met `overflow-hidden` en een afronding, geen
+`transform`. Safari rekent zo'n vlak dan opnieuw uit en geeft wit terug. De
+afronding zit daarom op het vlak zelf.
+
+De leesbaarheid blijft daarmee volledig een vraag voor OO2.
