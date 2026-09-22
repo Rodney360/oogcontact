@@ -143,7 +143,7 @@ export default function Contact() {
           <div className="space-y-10">
             <Verschijnt richting="rechts">
               <div className="overflow-hidden rounded-groot border border-ivoor-rand">
-                <Beeld slot="winkel-deur" sizes="(min-width: 1024px) 50vw, 100vw" vullend />
+                <Beeld slot="winkel-gevel" sizes="(min-width: 1024px) 50vw, 100vw" vullend />
               </div>
             </Verschijnt>
             <Verschijnt richting="rechts" vertraging={0.1}>

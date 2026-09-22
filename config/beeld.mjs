@@ -233,14 +233,6 @@ export const BEELDEN = {
     breedtes: MIDDEN,
     stijl: 'neutraal',
   },
-  'winkel-deur': {
-    bron: '2021-06/Winkel-GerGeer-2.jpg',
-    verhouding: LIGGEND,
-    zwaartepunt: 'attention',
-    alt: 'Gerard en Gerda in de deuropening van de winkel aan het Overwinningsplein.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
-  },
 }
 
 /** Het beeld dat gedeeld wordt als iemand een link doorstuurt. */

@@ -756,3 +756,16 @@ toestellen zag het er goed uit, op de kleine niet.
 - De vijf oude adressen (`/afwijkende-openingstijden/` en de andere vier) gaan
   nu naar `/nieuws/` in plaats van naar het bericht zelf, dus geen enkele oude
   link geeft een 404. De originelen staan nog in `content-archive/`.
+
+---
+
+## 2026-09-22 (deurfoto eruit) — Gerard (Claude Code, cloud)
+
+- **De foto van Gerard en Gerda in de deuropening is van de site af.** Naast
+  hen spiegelde de hele straat in de etalageruit - auto's, fietsen, de overkant.
+  Onderaan Over ons blijft nu alleen de binnenfoto van de winkel staan.
+- Diezelfde foto stond ook op de contactpagina, boven het kaartje. Daar staat nu
+  de avondfoto van de etalage met het verlichte logo: die vindt Gerard juist wel
+  mooi, en hij helpt bezoekers de winkel te herkennen als ze aankomen.
+- De plek `winkel-deur` bestaat daarmee niet meer. De avondfoto van de gevel
+  (`winkel-gevel`) en die op de homepage blijven allebei gewoon staan.
