@@ -678,3 +678,20 @@ toestellen zag het er goed uit, op de kleine niet.
   (`assets-original/2021-07/IMG_0271-scaled.jpg`) is een portret van Gerard in
   een blauw overhemd, maar de alt-tekst zei "Brillen op een plank". Voor een
   schermlezer klopte dat dus niet.
+
+---
+
+## 2026-09-22 — Gerard (Claude Code, cloud)
+
+- **De galerij onder "De collectie" toont nu monturen.** Er stonden zes foto's,
+  en daarvan waren er vijf een portret van Gerard of Gerda en één een
+  merkuitstalling van Einstoffen. De alt-teksten beloofden al monturen, maar dat
+  stond er niet op. Nu vier foto's: de monturenwand, een close-up van twee
+  planken, de verlichte planken met de plant, en de bril op de boeken.
+- `collectie-5` en `collectie-6` bestaan niet meer; de galerij telt vier plekken.
+- **Dioptrieën netter geschreven:** `.25, .50, .75 of .00` is overal
+  `0,25, 0,50, 0,75 of 0,00` geworden — op de homepage en twee keer op de
+  pagina Ultiem nauwkeurig zicht. Duidelijker te lezen, zeker hardop.
+- Let op: in de close-up van de monturen staat op een plankje een zwart
+  displaybordje met "Einstoffen". Dat is gewoon de winkel, geen merkfoto, maar
+  het valt wel te lezen — zeg het als het toch weg moet.

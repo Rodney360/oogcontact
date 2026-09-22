@@ -80,7 +80,7 @@ Een bril draag je elke dag. Dan is het fijn als er iemand goed naar je gekeken h
 
 #### Ultiem nauwkeurig zicht
 
-Een brilvoorschrift wordt al jaren afgerond op kwart dioptrieën: .25, .50, .75 of .00. Dat voldoet aan de norm, maar voor veel ogen is het net te grof.
+Een brilvoorschrift wordt al jaren afgerond op kwart dioptrieën: 0,25, 0,50, 0,75 of 0,00. Dat voldoet aan de norm, maar voor veel ogen is het net te grof.
 
 Daarom meten wij in stappen van 0,01 dioptrie, met de AVA-technologie van Essilor. Het verschil zie je niet op papier, maar meteen tijdens de meting. En daarna elke dag, in je glazen.
 
@@ -716,7 +716,7 @@ Een bril is pas echt goed als de meting eronder klopt. Bij Oogcontact bij Gerard
 
 Draag je pas kort een bril of al jaren, dan ben je de term brilvoorschrift vast tegengekomen. Je brilvoorschrift is het resultaat van een oogmeting. Daarmee kunnen wij de brillenglazen kiezen die jouw zicht corrigeren.
 
-Je gezichtsvermogen en de sterkte van je glazen worden gemeten in een eenheid die dioptrie heet. Al jaren worden ogen gemeten in stappen van een kwart dioptrie. Misschien is het je opgevallen dat je voorschrift altijd eindigt op .00D, .25D, .50D of .75D.
+Je gezichtsvermogen en de sterkte van je glazen worden gemeten in een eenheid die dioptrie heet. Al jaren worden ogen gemeten in stappen van een kwart dioptrie. Misschien is het je opgevallen dat je voorschrift altijd eindigt op 0,00D, 0,25D, 0,50D of 0,75D.
 
 #### Waarom een kwart dioptrie vaak te grof is
 
@@ -766,7 +766,7 @@ Wil je langskomen? Bel 050 20 64 015, app ons via 06 18 89 85 99 of mail naar in
 
 Dioptrie is de meeteenheid voor je gezichtsvermogen en voor de sterkte van je brillenglazen. De waarde staat op je brilvoorschrift, en dat voorschrift is het resultaat van een oogmeting.
 
-**Waarom eindigt mijn brilvoorschrift altijd op .25, .50, .75 of .00?**
+**Waarom eindigt mijn brilvoorschrift altijd op 0,25, 0,50, 0,75 of 0,00?**
 
 Omdat ogen al jaren worden gemeten in stappen van een kwart dioptrie. Dat voldoet aan de huidige normen, maar 95% van de bevolking heeft een gevoeliger zicht dan die stap. Met Essilor AVA meten wij tot op 0,01 dioptrie.
 
