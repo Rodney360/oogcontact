@@ -83,7 +83,9 @@ Ook de namen komen nu uit OO2. Staat er in de agenda iets anders dan op de site
 *Wat je doet:* leg de lijst uit OO2 naast die op `/afspraak-maken/` en maak ze
 gelijk - in OO2 of op de site, wat jou het beste lijkt.
 
-**Resend-account voor de e-mail.**
+**Resend-account voor de e-mail.** *Niet meer dringend:* het terugbelformulier
+staat uit (`config/schakelaars.mjs`), dus de site verstuurt nergens meer mail.
+Dit is pas nodig als dat formulier weer aangezet wordt.
 Hiermee gaat het ingevulde formulier naar de winkel en krijgt de klant een
 bevestiging.
 *Wat je doet:* maak een gratis account op <https://resend.com>, voeg het domein
@@ -108,7 +110,7 @@ meeste tegen. Dit is een extra laag, geen noodzaak.
 
 | Wat | Waarvoor | Wat er nu staat |
 |---|---|---|
-| **KvK-nummer** | Hoort in de voettekst. Verplicht voor een webshop, netjes voor een winkel. | De regel wordt weggelaten zolang het nummer er niet is. |
+| ~~**KvK-nummer**~~ | **Binnen.** 82055882. | Staat in de voettekst en in de privacyverklaring. |
 | **Link naar het Google Bedrijfsprofiel** | Voor de vindbaarheid en om reviews te kunnen tonen. | Nog geen link op de site. |
 | **Bevestiging van de merkenlijst** | Zie hieronder. | De lijst van de oude site wordt getoond. |
 | **Land van herkomst per merk** | Het kleine label bij elk merk. | Alleen getoond waar ik het zeker weet; de rest blijft leeg. |

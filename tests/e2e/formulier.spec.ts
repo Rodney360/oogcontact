@@ -1,13 +1,21 @@
 /**
- * Het aanvraagformulier en de boekingsmodule.
+ * Het aanvraagformulier en de afspraakpagina.
  *
  * Er zijn geen API-sleutels nodig: de site draait dan in testmodus, waarin er
- * niets echt verstuurd of geboekt wordt. Precies wat je in een test wilt.
+ * niets echt verstuurd wordt. Precies wat je in een test wilt.
+ *
+ * Het formulier kan uit staan - zie config/schakelaars.mjs. Deze tests lezen
+ * diezelfde schakelaar, zodat ze niet zoeken naar iets wat er met opzet niet
+ * is, en vanzelf weer meedoen zodra het formulier terugkomt.
  */
 
 import { test, expect } from '@playwright/test'
 
+import { TERUGBELFORMULIER_AAN } from '../../config/schakelaars.mjs'
+
 test.describe('Aanvraagformulier', () => {
+  test.skip(!TERUGBELFORMULIER_AAN, 'Het terugbelformulier staat uit')
+
   test.beforeEach(async ({ page }) => {
     await page.goto('/contact/')
   })
@@ -73,7 +81,7 @@ test.describe('Afspraak maken', () => {
 
     const agenda = page.locator('iframe[title="Online agenda van Oogcontact bij Gerard"]')
     await expect(agenda).toBeVisible({ timeout: 15_000 })
-    await expect(agenda).toHaveAttribute('src', 'https://oogcontactbijgerard.oo2.online')
+    await expect(agenda).toHaveAttribute('src', /^https:\/\/oogcontactbijgerard\.oo2\.online/)
 
     // De uitweg voor wie het vlak niet geladen krijgt.
     await expect(
@@ -81,8 +89,15 @@ test.describe('Afspraak maken', () => {
     ).toBeVisible()
   })
 
-  test('je kunt ook om een terugbelverzoek vragen', async ({ page }) => {
-    await page.goto('/afspraak-maken/#terugbellen')
-    await expect(page.getByRole('heading', { name: 'Laat je gegevens achter' })).toBeVisible()
+  test('het terugbelformulier staat er alleen als het aan staat', async ({ page }) => {
+    await page.goto('/afspraak-maken/')
+    const kop = page.getByRole('heading', { name: 'Laat je gegevens achter' })
+    if (TERUGBELFORMULIER_AAN) {
+      await expect(kop).toBeVisible()
+    } else {
+      await expect(kop).toHaveCount(0)
+      // Er moet wel een andere weg naar een mens overblijven.
+      await expect(page.getByRole('link', { name: /App ons/ }).first()).toBeVisible()
+    }
   })
 })

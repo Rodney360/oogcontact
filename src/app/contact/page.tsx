@@ -4,6 +4,7 @@ import { Sectie, SectieKop, Oproep } from '@/components/Sectie'
 import { Kruimelpad } from '@/components/InhoudsPagina'
 import { Verschijnt } from '@/components/Beweging'
 import { ContactFormulier } from '@/components/ContactFormulier'
+import { TERUGBELFORMULIER_AAN } from '../../../config/schakelaars.mjs'
 import { OpeningsStatus } from '@/components/OpeningsStatus'
 import { Kaart } from '@/components/Kaart'
 import { Beeld } from '@/components/Beeld'
@@ -153,7 +154,8 @@ export default function Contact() {
         </div>
       </Sectie>
 
-      {/* Het formulier */}
+      {/* Het formulier. Staat uit; zie config/schakelaars.mjs. */}
+      {TERUGBELFORMULIER_AAN && (
       <Sectie id="formulier">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           <SectieKop
@@ -161,7 +163,8 @@ export default function Contact() {
             kop="Liever dat wij jou bellen?"
             inleiding={
               'Vul hieronder in waar het over gaat, dan nemen we contact met je op. ' +
-              'Wil je liever meteen zelf een moment kiezen? Dat kan op de pagina Afspraak maken.'
+              'Wil je liever meteen zelf een moment kiezen? Dat kan op de pagina ' +
+              'Afspraak maken.'
             }
           />
           <Verschijnt vertraging={0.1}>
@@ -169,6 +172,7 @@ export default function Contact() {
           </Verschijnt>
         </div>
       </Sectie>
+      )}
 
       <Oproep kop={T.oproep.kop} tekst={T.oproep.tekst} knop={T.oproep.knop} licht />
     </>

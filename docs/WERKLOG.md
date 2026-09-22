@@ -792,3 +792,132 @@ toestellen zag het er goed uit, op de kleine niet.
 - **Belangrijk openstaand punt:** de duur en de namen van de afspraken komen nu
   uit OO2. Staan die daar nog op 30 minuten, dan spreken de site en de agenda
   elkaar tegen. Zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-22 (agenda in het Nederlands) — Gerard (Claude Code, cloud)
+
+- De agenda van OO2 kwam in het Engels binnen. We vragen hem nu op met
+  `?language=dutch`; Easy!Appointments heeft een Nederlandse vertaling
+  ingebouwd en luistert in de meeste versies naar die parameter. Werkt het
+  niet, dan verandert er niets en moet de taal in OO2 zelf om.
+- De teksten en de kleuren bínnen dat vlak zijn van OO2 en kunnen van onze kant
+  niet aangepast worden. Wat je daarover aan OO2 kunt vragen - inclusief onze
+  accentkleur #C9A96A - staat nu in `docs/agenda-koppelen.md`.
+
+---
+
+## 2026-09-22 (agenda leesbaarder) — Gerard (Claude Code, cloud)
+
+- **Een kleurcorrectie over het agendavlak heen.** De datums en teksten van OO2
+  zijn lichtgrijs op wit en slecht te lezen. Binnen dat vlak kunnen we niets
+  aanpassen, maar er overheen wel: een gammacorrectie laat wit wit en maakt
+  alles daaronder donkerder.
+- Gemeten in de browser: grijze tekst gaat van #808080 naar #545454, wit blijft
+  precies wit. Het contrast tegen wit gaat daarmee van 3,9:1 naar 7,6:1 - WCAG
+  2.2 AA vraagt 4,5:1.
+- Het is een noodgreep, geen oplossing: hij raakt alles binnen dat vlak. De
+  echte oplossing ligt bij OO2; de mail daarvoor staat in
+  `docs/agenda-koppelen.md`. Eén getal (`DONKERDER`) zet hem sterker of zwakker.
+
+---
+
+## 2026-09-22 (KvK en de checklist) — Gerard (Claude Code, cloud)
+
+- **KvK-nummer 82055882** staat nu in de voettekst en in "Wie zijn wij" van de
+  privacyverklaring. De plek in `bedrijf.ts` en de regel in de voettekst stonden
+  er al; alleen het nummer ontbrak.
+- **`docs/live-gaan.md` is nieuw:** één papiertje om af te vinken, met per punt
+  wie het doet. Drie dingen blokkeren nog: de mailsleutel van Resend, de duur en
+  de namen van de afspraken in OO2, en het verhuizen van het domein.
+- `docs/open-punten.md` blijft de uitgebreide uitleg; de checklist verwijst
+  ernaar in plaats van het over te schrijven.
+
+---
+
+## 2026-09-22 (scherpe kinderbril, steviger filter) — Gerard (Claude Code, cloud)
+
+- **De foto bij kinderbrillen was onscherp.** Er staan twee versies van dezelfde
+  foto in het archief, allebei 667 x 1000. We gebruikten de zachte uit 2023-03;
+  de oude site gebruikte `2023-04/OogcontactbijGerard-Kinderbrillen2.jpg`, die
+  zes keer zoveel detail heeft (gemeten met een randendetectie: 15 tegen 95).
+  Nu staat die op de site.
+- De andere vier categoriefoto's zijn nagemeten: daar is de versie die we al
+  gebruiken de scherpste, of het verschil is er niet. Die blijven staan.
+- **De kleurcorrectie over de agenda staat steviger:** van 1.6 naar 2.2. Bij 1.6
+  zag Gerard geen verschil. Dat het filter werkt is apart bewezen met een
+  testpagina met een ingesloten vlak: grijze tekst ging daar van #a0a0a0 naar
+  #787878, wit bleef wit.
+- **De waarschuwing in de ontwikkelmodus is weg.** De lijntjes van de iris in de
+  hero worden nu op drie decimalen afgerond; server en browser rondden het
+  laatste cijfer soms verschillend af. Je zag er niets van, maar het gaf wel elke
+  keer een melding.
+
+---
+
+## 2026-09-22 (terugbelformulier uit) — Gerard (Claude Code, cloud)
+
+- **Het terugbelformulier staat uit**, op `/afspraak-maken/` en op `/contact/`.
+  De voorkeur gaat uit naar appen of zelf een moment kiezen in de agenda.
+- Er is niets weggegooid. In `config/schakelaars.mjs` staat één regel
+  (`TERUGBELFORMULIER_AAN`); op `true` staat het er weer, op allebei de pagina's
+  tegelijk. De browsertests lezen diezelfde regel en doen dan vanzelf weer mee.
+- Drie teksten op de afspraakpagina verwezen naar het formulier. Die wijzen nu
+  naar bellen en appen, zodat ze in allebei de standen kloppen.
+- **Gevolg voor live gaan:** de site verstuurt nu nergens meer e-mail, dus de
+  sleutel van Resend is niet meer nodig om live te kunnen. Daarmee blijven er
+  nog twee blokkerende punten over: de afspraakduren in OO2 en het domein.
+
+---
+
+## 2026-09-22 (agenda leeg op mobiel) — Gerard (Claude Code, cloud)
+
+- **Het agendavlak bleef leeg op een telefoon**, terwijl het op de laptop gewoon
+  werkte. De kleurcorrectie die er sinds vanmiddag overheen lag is de eerste
+  verdachte: een filter op een ingesloten vlak is een bekend struikelblok voor
+  Safari. Die is er weer uit. Een agenda die het op een telefoon niet doet weegt
+  zwaarder dan tekst die aan de lichte kant is.
+- Om dezelfde reden staat de afronding nu op het vlak zelf in plaats van op een
+  omhullende div met `overflow-hidden`. Ook dat kan in WebKit een ingesloten
+  vlak laten verdwijnen.
+- **De uitweg is een echte knop geworden** in plaats van een klein linkje: blijft
+  het vak leeg, dan zie je meteen waar je heen moet.
+- **Blijft het leeg, dan is de volgende verdachte het blokkeren van
+  derde-partijcookies.** Daar helpt niets van onze kant tegen; dan tonen we op
+  een telefoon een knop naar de agenda in plaats van het vlak zelf. Staat in
+  `docs/agenda-koppelen.md`.
+
+---
+
+## 2026-09-22 (testpagina voor de agenda) — Gerard (Claude Code, cloud)
+
+- **De agenda blijft leeg op Gerards iPhone, maar de oude site toont hem wel op
+  diezelfde telefoon.** Dan ligt het niet aan OO2, niet aan de telefoon en niet
+  aan cookies, maar aan iets op onze eigen pagina.
+- **`/agenda-test/` is een hulppagina om dat uit te zoeken.** Vier varianten
+  onder elkaar: precies zoals de oude site, hetzelfde met `?language=dutch`,
+  zoals hij nu op de site staat, en een knop die de agenda los opent. Welke wel
+  en niet werken, wijst de oorzaak aan:
+  - A werkt, C niet: het ligt aan onze opmaak
+  - A werkt, B niet: het ligt aan de taalinstelling in het adres
+  - niets werkt: het ligt aan de headers van de site (CSP, Permissions-Policy)
+  - alleen D werkt: insluiten kan niet op die telefoon
+- De pagina staat niet in het menu en niet in de sitemap, en zoekmachines wordt
+  gevraagd hem te laten staan. Hij mag weg zodra het opgelost is.
+
+---
+
+## 2026-09-22 (agenda doet het weer, ook op mobiel) — Gerard (Claude Code, cloud)
+
+- **Gevonden en opgelost.** Het lege vlak op de iPhone kwam door de
+  kleurcorrectie die we over de agenda hadden gelegd. Safari rekent zo'n vlak
+  dan opnieuw uit en gaf wit terug. Zonder die correctie doet de agenda het weer
+  overal.
+- **De taal is ook goed:** `?language=dutch` doet wat we hoopten, de agenda is
+  Nederlands. OO2 hoeft daar niets voor te doen.
+- Les die in `docs/agenda-koppelen.md` staat: leg niets van onze kant over dat
+  vlak heen - geen filter, geen omhullende div met `overflow-hidden` en een
+  afronding, geen transform. De afronding zit daarom op het vlak zelf.
+- De testpagina `/agenda-test/` heeft zijn werk gedaan en is weer verwijderd.
+- **Wat blijft:** de datums en teksten in de agenda zijn lichtgrijs op wit. Dat
+  is nu volledig een vraag voor OO2; de mail daarvoor staat klaar.

@@ -73,3 +73,36 @@ tijden in onze eigen vormgeving laten zien. Boeken zou nog steeds via OO2 gaan.
 
 Of OO2 die instelling voor klanten openzet, weten we niet. Het is één mailtje
 waard.
+
+---
+
+## De taal en de kleuren van de agenda
+
+Alles binnen dat vlak is van OO2. Een browser laat onze site daar bewust niet
+aan de binnenkant komen, dus wij kunnen de teksten en de kleuren daarin niet
+aanpassen. Dat gebeurt in OO2 zelf.
+
+**De taal: opgelost.** De agenda stond in het Engels. Easy!Appointments heeft
+een Nederlandse vertaling ingebouwd en luistert naar `?language=dutch` in het
+adres. Dat staat er nu in, en de agenda is Nederlands. OO2 hoeft daar niets
+voor te doen.
+
+**De kleuren.** Onze enige accentkleur is messing: **#C9A96A** — dezelfde als de
+knop "Afspraak maken". Sommige versies van Easy!Appointments hebben daar een
+instelling voor (een bedrijfskleur of een eigen stukje CSS). Vraag OO2 of dat
+kan, en geef die code door.
+
+**Geen filters over dat vlak. Dat is een harde regel geworden.**
+
+Er heeft even een kleurcorrectie overheen gelegen om die lichtgrijze teksten
+donkerder te maken. Op een laptop werkte dat prima; op een iPhone bleef het vak
+daarna helemaal leeg. Een agenda die het op een telefoon niet doet is veel
+erger dan tekst die aan de lichte kant is, dus die correctie is er weer uit en
+sindsdien doet hij het overal.
+
+Wat we daarvan geleerd hebben: **leg niets van onze kant over dat vlak heen.**
+Geen `filter`, geen omhullende div met `overflow-hidden` en een afronding, geen
+`transform`. Safari rekent zo'n vlak dan opnieuw uit en geeft wit terug. De
+afronding zit daarom op het vlak zelf.
+
+De leesbaarheid blijft daarmee volledig een vraag voor OO2.
