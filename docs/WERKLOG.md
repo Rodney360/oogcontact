@@ -867,3 +867,22 @@ toestellen zag het er goed uit, op de kleine niet.
 - **Gevolg voor live gaan:** de site verstuurt nu nergens meer e-mail, dus de
   sleutel van Resend is niet meer nodig om live te kunnen. Daarmee blijven er
   nog twee blokkerende punten over: de afspraakduren in OO2 en het domein.
+
+---
+
+## 2026-09-22 (agenda leeg op mobiel) — Gerard (Claude Code, cloud)
+
+- **Het agendavlak bleef leeg op een telefoon**, terwijl het op de laptop gewoon
+  werkte. De kleurcorrectie die er sinds vanmiddag overheen lag is de eerste
+  verdachte: een filter op een ingesloten vlak is een bekend struikelblok voor
+  Safari. Die is er weer uit. Een agenda die het op een telefoon niet doet weegt
+  zwaarder dan tekst die aan de lichte kant is.
+- Om dezelfde reden staat de afronding nu op het vlak zelf in plaats van op een
+  omhullende div met `overflow-hidden`. Ook dat kan in WebKit een ingesloten
+  vlak laten verdwijnen.
+- **De uitweg is een echte knop geworden** in plaats van een klein linkje: blijft
+  het vak leeg, dan zie je meteen waar je heen moet.
+- **Blijft het leeg, dan is de volgende verdachte het blokkeren van
+  derde-partijcookies.** Daar helpt niets van onze kant tegen; dan tonen we op
+  een telefoon een knop naar de agenda in plaats van het vlak zelf. Staat in
+  `docs/agenda-koppelen.md`.

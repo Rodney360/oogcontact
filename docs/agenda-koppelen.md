@@ -94,10 +94,18 @@ knop "Afspraak maken". Sommige versies van Easy!Appointments hebben daar een
 instelling voor (een bedrijfskleur of een eigen stukje CSS). Vraag OO2 of dat
 kan, en geef die code door.
 
-**Een noodgreep van onze kant.** Over het agendavlak ligt een kleurcorrectie
-(`DONKERDER` in `src/components/boeking/OnlineAgenda.tsx`). Wit blijft wit, maar
-lichtgrijze tekst wordt flink donkerder: gemeten gaat grijs van #808080 naar
-ongeveer #545454, en daarmee het contrast tegen wit van 3,9:1 naar 7,6:1. WCAG
-2.2 AA vraagt 4,5:1, dus dat haalt het ruim. Het is wel een botte maatregel -
-hij raakt alles binnen dat vlak - en hij verdwijnt zodra OO2 het bij de bron
-oplost. Eén getal aanpassen is genoeg om hem sterker of zwakker te zetten.
+**Een noodgreep die weer weg is.** Er heeft een kleurcorrectie over het
+agendavlak gelegen die lichtgrijze tekst donkerder maakte. Op een telefoon bleef
+het vak daarna leeg, terwijl het op een laptop gewoon werkte. Zo'n filter op een
+ingesloten vlak is precies het soort ding waar Safari over struikelt, en een
+agenda die het op een telefoon niet doet weegt zwaarder dan tekst die aan de
+lichte kant is. Hij is er dus weer uit, en de leesbaarheid is daarmee volledig
+een vraag voor OO2 geworden.
+
+**Blijft het vak leeg, ook zonder dat filter?** Dan is de volgende verdachte dat
+de telefoon derde-partijcookies blokkeert. Easy!Appointments heeft een
+sessiecookie nodig, en Safari geeft die binnen een ingesloten vlak van een ander
+adres niet altijd. Daar helpt geen enkele aanpassing van onze kant tegen; dan is
+de oplossing om op een telefoon niet in te sluiten, maar een knop te tonen die
+de agenda in een eigen tabblad opent. Dat is één aanpassing in
+`src/components/boeking/OnlineAgenda.tsx`.

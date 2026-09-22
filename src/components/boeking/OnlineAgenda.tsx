@@ -18,6 +18,7 @@
  * een kwestie van hier weer de andere kant op wijzen.
  */
 
+import { KnopLink } from '@/components/Knop'
 import { BEDRIJF } from '@/content/bedrijf'
 
 /**
@@ -30,67 +31,61 @@ import { BEDRIJF } from '@/content/bedrijf'
  */
 const AGENDA_ADRES = `${BEDRIJF.onlineAgenda}?language=dutch`
 
-/**
- * Hoe veel donkerder de tekst in de agenda gemaakt wordt.
- *
- * De datums en de teksten van OO2 zijn lichtgrijs op wit en daardoor slecht te
- * lezen. Binnen dat vlak kunnen we niets aanpassen - dat is een andere site -
- * maar we kunnen er wel van buitenaf een kleurcorrectie overheen leggen.
- *
- * Het is een gammacorrectie: wit blijft wit (1 tot de macht wat dan ook is 1),
- * maar alles wat er lichtgrijs tussen zit wordt flink donkerder. Lichtgrijs van
- * 80% wordt bij 1.6 zo'n 70%, middengrijs van 50% wordt 33%.
- *
- * Gewoon "meer contrast" werkt hier juist averechts: dat duwt lichte tekst nog
- * dichter naar het wit toe.
- *
- * Eén getal, dus makkelijk bij te stellen. Te hoog en de kleuren binnen de
- * agenda worden modderig; te laag en je ziet er niets van. Bij 1.6 zag Gerard
- * geen verschil, dus hij staat nu steviger.
- */
-const DONKERDER = 2.2
+/*
+  Hier lag een kleurcorrectie over het agendavlak, om de lichtgrijze teksten van
+  OO2 donkerder te maken. Die is er weer uit.
+
+  Reden: op een telefoon bleef het vak leeg, terwijl het op een laptop gewoon
+  werkte. Zo'n filter (`filter: url(#...)` op een iframe) is precies het soort
+  ding waar Safari over struikelt, en een agenda die het op een telefoon niet
+  doet is veel erger dan tekst die aan de lichte kant is. De helft van de
+  bezoekers zit op een telefoon.
+
+  Om dezelfde reden staat de afronding niet meer op de omhullende div met
+  `overflow-hidden`, maar rechtstreeks op het vlak zelf. Ook dat is een bekende
+  plek waar WebKit een ingesloten vlak kan laten verdwijnen.
+
+  De leesbaarheid blijft dus een punt, maar dat hoort bij de bron. Wat je OO2
+  daarover kunt vragen staat in docs/agenda-koppelen.md.
+*/
 
 export function OnlineAgenda() {
   return (
     <div>
+      <iframe
+        src={AGENDA_ADRES}
+        title="Online agenda van Oogcontact bij Gerard"
+        // De hoogte kunnen wij niet meebewegen met de inhoud: het vlak komt van
+        // een ander adres en zegt niet hoe groot het is. Daarom een ruime vaste
+        // hoogte, met een eigen schuifbalk als het niet past.
+        className="block h-[44rem] w-full rounded-groot border border-inkt-rand bg-white md:h-[48rem]"
+      />
+
       {/*
-        De kleurcorrectie zelf. Hij staat hier als een onzichtbaar SVG-tekentje
-        omdat de gewone CSS-filters geen gammacorrectie kennen.
+        De uitweg. Bewust een echte knop en geen klein linkje: blijft het vak om
+        wat voor reden dan ook leeg, dan moet je meteen zien waar je heen moet.
+        Dat gebeurt eerder op een telefoon dan op een laptop.
       */}
-      <svg aria-hidden="true" focusable="false" className="pointer-events-none absolute size-0">
-        <filter id="agenda-leesbaarder" colorInterpolationFilters="sRGB">
-          <feComponentTransfer>
-            <feFuncR type="gamma" exponent={DONKERDER} />
-            <feFuncG type="gamma" exponent={DONKERDER} />
-            <feFuncB type="gamma" exponent={DONKERDER} />
-          </feComponentTransfer>
-        </filter>
-      </svg>
-
-      <div className="overflow-hidden rounded-groot border border-inkt-rand bg-white">
-        <iframe
-          src={AGENDA_ADRES}
-          title="Online agenda van Oogcontact bij Gerard"
-          // De hoogte kunnen wij niet meebewegen met de inhoud: het vlak komt
-          // van een ander adres en zegt niet hoe groot het is. Daarom een
-          // ruime vaste hoogte, met een eigen schuifbalk als het niet past.
-          className="block h-[44rem] w-full border-0 md:h-[48rem]"
-          style={{ filter: 'url(#agenda-leesbaarder)' }}
-        />
-      </div>
-
-      <p className="mt-5 text-bijschrift text-tekst-licht-zacht">
-        Lukt het hierboven niet?{' '}
-        <a
+      <div className="mt-5 flex flex-wrap items-center gap-4">
+        <KnopLink
           href={BEDRIJF.onlineAgenda}
+          uiterlijk="omlijnd"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-messing underline underline-offset-4"
         >
           Open de agenda in een nieuw tabblad
-        </a>{' '}
-        — of bel ons even op {BEDRIJF.telefoon.weergave}, dan plannen we het samen.
-      </p>
+        </KnopLink>
+        <p className="text-bijschrift text-tekst-licht-zacht">
+          Of bel ons even op{' '}
+          <a
+            href={`tel:${BEDRIJF.telefoon.link}`}
+            className="text-messing underline underline-offset-4"
+          >
+            {BEDRIJF.telefoon.weergave}
+          </a>
+          , dan plannen we het samen.
+        </p>
+      </div>
     </div>
   )
 }
