@@ -61,7 +61,7 @@
     {
       "kop": "Ultiem nauwkeurig zicht",
       "alineas": [
-        "Een brilvoorschrift wordt al jaren afgerond op kwart dioptrieën: .25, .50, .75 of .00. Dat voldoet aan de norm, maar voor veel ogen is het net te grof.",
+        "Een brilvoorschrift wordt al jaren afgerond op kwart dioptrieën: 0,25, 0,50, 0,75 of 0,00. Dat voldoet aan de norm, maar voor veel ogen is het net te grof.",
         "Daarom meten wij in stappen van 0,01 dioptrie, met de AVA-technologie van Essilor. Het verschil zie je niet op papier, maar meteen tijdens de meting. En daarna elke dag, in je glazen."
       ],
       "opsomming": [
@@ -82,8 +82,8 @@
     {
       "kop": "De collectie",
       "alineas": [
-        "Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken. Gerda zoekt kleine leveranciers uit die stijlvolle monturen van uitstekende kwaliteit maken, vooral uit Italië en Spanje, aangevuld met degelijk werk uit Zwitserland.",
-        "Zo vind je bij ons monturen die je niet in elke winkel tegenkomt: Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Baruch, Caroline Abram, Colibris, Visionario, Calvin Klein en Liu Jo. Voor sport is er Gloryfy, en voor in de zon ook Randolph.",
+        "Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken. We zoeken kleine leveranciers uit die stijlvolle monturen van uitstekende kwaliteit maken, vooral uit Spanje en Zwitserland, aangevuld met werk uit Frankrijk, België en Nederland.",
+        "Zo vind je bij ons monturen die je niet in elke winkel tegenkomt: Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Caroline Abram en Visionario. Voor sport is er Gloryfy, en voor in de zon Randolph en Serengeti.",
         "Kijk gerust rond en pas alles wat je mooi vindt. We zeggen eerlijk wat bij je gezicht past en wat niet."
       ],
       "opsomming": []
@@ -120,7 +120,7 @@
         },
         {
           "titel": "Bereikbaar",
-          "tekst": "Bel 050 20 64 015, app ons op 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl."
+          "tekst": "Bel 050 20 64 015, app ons via WhatsApp of mail naar info@oogcontactbijgerard.nl."
         }
       ]
     }
@@ -157,7 +157,7 @@
   ],
   "oproep": {
     "kop": "Zullen we eens goed naar je ogen kijken?",
-    "tekst": "Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.",
+    "tekst": "Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, stuur een appje via WhatsApp of mail naar info@oogcontactbijgerard.nl.",
     "knop": "Afspraak maken"
   }
 }

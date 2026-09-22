@@ -9,7 +9,8 @@ import { AanbodTegels } from '@/components/home/AanbodTegels'
 import { Vertrouwen } from '@/components/home/Vertrouwen'
 import { BezoekDeWinkel } from '@/components/home/BezoekDeWinkel'
 import { Instagram } from '@/components/home/Instagram'
-import { Boeking } from '@/components/boeking/Boeking'
+import { KnopLink } from '@/components/Knop'
+import { OpeningsStatus } from '@/components/OpeningsStatus'
 import { Sectie, SectieKop } from '@/components/Sectie'
 import { Vragen } from '@/components/Vragen'
 import { tekst, sectie } from '@/content/teksten/index'
@@ -70,16 +71,30 @@ export default async function Home() {
       {/* 7. Waar je op kunt rekenen */}
       <Vertrouwen sectie={sectie(T, 'Vertrouwen')} />
 
-      {/* 8. De boekingsmodule, gewoon op de pagina zelf */}
+      {/*
+        8. De uitnodiging om een afspraak te maken.
+
+        Hier stond de boekingsmodule zelf. De agenda komt van OO2 en kan alleen
+        als geheel in een pagina gezet worden; die staat nu op /afspraak-maken/.
+        Twee van die vlakken op de site zou de homepage onnodig zwaar maken,
+        dus hier wijzen we er gewoon naartoe - met de telefoon en WhatsApp
+        ernaast, voor wie liever een mens spreekt.
+      */}
       <Sectie id="afspraak">
         <SectieKop
           bovenkop="Afspraak maken"
           kop={T.oproep.kop}
           inleiding={T.oproep.tekst}
         />
-        <div className="mt-12">
-          <Boeking />
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <KnopLink href="/afspraak-maken/" uiterlijk="messing" formaat="groot">
+            Naar de agenda
+          </KnopLink>
+          <KnopLink href={`tel:${BEDRIJF.telefoon.link}`} uiterlijk="omlijnd" formaat="groot">
+            {BEDRIJF.telefoon.weergave}
+          </KnopLink>
         </div>
+        <OpeningsStatus maat="nadruk" uitzonderingen={afwijkendeDagen} className="mt-8" />
       </Sectie>
 
       {/* 9. Bezoek de winkel */}

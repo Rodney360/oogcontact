@@ -46,11 +46,11 @@ veranderd is en nemen de opgebouwde waarde mee naar het nieuwe adres.
 | `/feed/` | `/nieuws/rss.xml` | De WordPress-feed wordt de nieuwe RSS-feed. |
 | `/nieuws/feed/` | `/nieuws/rss.xml` | De WordPress-feed wordt de nieuwe RSS-feed. |
 | `/comments/feed/` | `/nieuws/rss.xml` | Reacties bestonden niet echt; verwijst nu naar het nieuwsoverzicht. |
-| `/12-tot-en-met-19-september-is-de-winkel-gesloten/` | `/nieuws/12-tot-en-met-19-september-is-de-winkel-gesloten/` | Nieuwsberichten staan nu overzichtelijk onder /nieuws/. |
-| `/afwijkende-openingstijden/` | `/nieuws/afwijkende-openingstijden/` | Nieuwsberichten staan nu overzichtelijk onder /nieuws/. |
-| `/kids-oogcheckweken-6-18-jaar/` | `/nieuws/kids-oogcheckweken-6-18-jaar/` | Nieuwsberichten staan nu overzichtelijk onder /nieuws/. |
-| `/oogcontact-bij-gerard-is-op-inkoop/` | `/nieuws/oogcontact-bij-gerard-is-op-inkoop/` | Nieuwsberichten staan nu overzichtelijk onder /nieuws/. |
-| `/extra-drukte-op-het-overwinningsplein/` | `/nieuws/extra-drukte-op-het-overwinningsplein/` | Nieuwsberichten staan nu overzichtelijk onder /nieuws/. |
+| `/12-tot-en-met-19-september-is-de-winkel-gesloten/` | `/nieuws/` | Het bericht zelf is verwijderd; het overzicht vangt het adres op. |
+| `/afwijkende-openingstijden/` | `/nieuws/` | Het bericht zelf is verwijderd; het overzicht vangt het adres op. |
+| `/kids-oogcheckweken-6-18-jaar/` | `/nieuws/` | Het bericht zelf is verwijderd; het overzicht vangt het adres op. |
+| `/oogcontact-bij-gerard-is-op-inkoop/` | `/nieuws/` | Het bericht zelf is verwijderd; het overzicht vangt het adres op. |
+| `/extra-drukte-op-het-overwinningsplein/` | `/nieuws/` | Het bericht zelf is verwijderd; het overzicht vangt het adres op. |
 | `/wp-login.php` | `/` | WordPress bestaat niet meer. |
 | `/wp-admin/:pad*` | `/` | WordPress bestaat niet meer. |
 | `/author/:pad*` | `/nieuws/` | Auteursarchieven van WordPress vervallen. |

@@ -76,7 +76,7 @@ test('geen restjes van de redactie in de teksten', () => {
     /\bLET OP\b/,
     /\bplaatshouder\b/i,
     /\(schrappen/i,
-    /zet als open punt/i,
+    /zet .{0,30}als open punt/i,
     /graag (aanleveren|bevestigen)/i,
     /\bnog (aan te leveren|invullen)\b/i,
     /\blorem ipsum\b/i,

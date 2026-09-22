@@ -18,9 +18,7 @@ import { SectieKop } from '@/components/Sectie'
 import type { BeeldSlot } from '@/content/beeld'
 import type { TekstSectie } from '@/content/teksten'
 
-const FOTOS: BeeldSlot[] = [
-  'collectie-1', 'collectie-2', 'collectie-3', 'collectie-4', 'collectie-5', 'collectie-6',
-]
+const FOTOS: BeeldSlot[] = ['collectie-1', 'collectie-2']
 
 export function Collectie({ sectie, herkomsten }: { sectie: TekstSectie; herkomsten: string[] }) {
   const spoor = useRef<HTMLUListElement>(null)

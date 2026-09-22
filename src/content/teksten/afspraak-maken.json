@@ -3,7 +3,7 @@
   "metaTitel": "Afspraak maken bij je opticien in Groningen",
   "metaOmschrijving": "Plan online je afspraak bij Oogcontact bij Gerard in Groningen, op een moment dat jou schikt. Bellen of appen kan natuurlijk ook.",
   "h1": "Afspraak maken",
-  "inleiding": "Bij Oogcontact bij Gerard, je zelfstandige opticien in Groningen, ben je van harte welkom aan het Overwinningsplein 100. Met een afspraak weten we zeker dat we uitgebreid de tijd voor je hebben: voor de oogmeting, voor het passen en voor de koffie erbij. Hieronder plan je in een paar stappen zelf een moment dat jou uitkomt. Liever dat wij jou bellen? Laat dan je naam en telefoonnummer achter via het terugbelformulier op deze pagina.",
+  "inleiding": "Bij Oogcontact bij Gerard, je zelfstandige opticien in Groningen, ben je van harte welkom aan het Overwinningsplein 100. Met een afspraak weten we zeker dat we uitgebreid de tijd voor je hebben: voor de oogmeting, voor het passen en voor de koffie erbij. Hieronder plan je in een paar stappen zelf een moment dat jou uitkomt. Liever even overleggen? Bel ons of stuur ons een appje.",
   "secties": [
     {
       "kop": "Kies zelf een moment dat jou uitkomt",
@@ -37,9 +37,9 @@
     {
       "kop": "Liever even bellen of appen?",
       "alineas": [
-        "Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 015 of stuur een WhatsApp naar 06 18 89 85 99. Mailen mag ook, naar info@oogcontactbijgerard.nl.",
+        "Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 015 of stuur ons een appje via WhatsApp. Mailen mag ook, naar info@oogcontactbijgerard.nl.",
         "Past geen enkel moment in de agenda? Bel of app ons even, dan zoeken we samen een tijd die voor jou werkt.",
-        "Vul je liever het formulier onderaan deze pagina in? Laat je naam en telefoonnummer achter, dan bellen wij jou terug."
+        "Bellen we een keer niet op omdat we met een klant bezig zijn? Stuur dan een appje met je naam en waar het over gaat, dan komen we bij je terug."
       ],
       "opsomming": [
         {
@@ -70,7 +70,7 @@
   "vragen": [],
   "oproep": {
     "kop": "Zullen we een moment inplannen?",
-    "tekst": "Kies hierboven een dag en tijd die jou uitkomt, of laat je nummer achter in het formulier, dan bellen wij jou terug. Liever direct contact? Bel 050 20 64 015 of app naar 06 18 89 85 99. Wij houden graag oogcontact.",
+    "tekst": "Kies hierboven een dag en tijd die jou uitkomt. Liever direct contact? Bel 050 20 64 015 of stuur ons een appje via WhatsApp. Wij houden graag oogcontact.",
     "knop": "Afspraak maken"
   }
 }

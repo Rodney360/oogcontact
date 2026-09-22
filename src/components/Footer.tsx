@@ -4,6 +4,8 @@
 
 import Link from 'next/link'
 
+import { IcoonWhatsApp } from '@/components/IcoonWhatsApp'
+import { KnopLink } from '@/components/Knop'
 import { BEDRIJF, whatsappLink, routeLink } from '@/content/bedrijf'
 import { WEEK, naarTijd } from '@/content/openingstijden'
 import { VOETMENU } from '@/content/navigatie'
@@ -31,7 +33,7 @@ function Kolom({ titel, items }: { titel: string; items: { naam: string; pad: st
 }
 
 export function Footer() {
-  const { adres, telefoon, whatsapp, email, socials, keurmerken } = BEDRIJF
+  const { adres, telefoon, email, socials, keurmerken } = BEDRIJF
 
   return (
     <footer className="border-t border-inkt-rand bg-inkt pb-28 pt-[var(--spacing-sectie)] md:pb-16">
@@ -64,21 +66,27 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href={whatsappLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-tekst-licht no-underline hover:text-messing"
-                >
-                  WhatsApp {whatsapp.weergave}
-                </a>
-              </li>
-              <li>
                 <a href={`mailto:${email}`} className="break-all text-tekst-licht no-underline hover:text-messing">
                   {email}
                 </a>
               </li>
             </ul>
+
+            {/*
+              Appen gaat via de knop, niet via een nummer. Het 06-nummer staat
+              nergens meer als tekst op de site: wie wil appen, klikt hier en
+              WhatsApp opent het gesprek zelf.
+            */}
+            <KnopLink
+              href={whatsappLink()}
+              uiterlijk="omlijnd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5"
+            >
+              <IcoonWhatsApp />
+              App ons
+            </KnopLink>
           </div>
 
           <Kolom titel="Aanbod" items={VOETMENU.aanbod} />

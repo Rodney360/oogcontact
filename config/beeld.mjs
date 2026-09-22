@@ -47,24 +47,25 @@ export const BEELDEN = {
     breedtes: MIDDEN,
     stijl: 'warm',
   },
-  // De twee portretten: eigen foto's uit de winkel, staand aangeleverd (9:16).
-  // Ze worden bijgesneden op 3:4 en in zwart-wit gezet, net als hiervoor, zodat
-  // ze naast elkaar één geheel blijven.
+  // De twee portretten staan standaard in zwart-wit en springen in kleur zodra
+  // je ze aanwijst of aantikt. Dat zit in de CSS (.kleurknop in globals.css),
+  // niet in de foto: de bestanden zijn kleur, en een filter maakt er grijs van.
+  // Zo kan het ook weer terug met een enkele regel.
   'gerard-portret': {
-    bron: 'Geer close-up 2.jpg',
+    bron: '2024-02/20240212-DSC06242-scaled.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret in zwart-wit van Gerard met bril, voor de monturenwand in de winkel.',
+    alt: 'Portret van Gerard met bril en zwarte coltrui, armen over elkaar, voor de monturenwand in de winkel.',
     breedtes: MIDDEN,
-    stijl: 'zwartwit',
+    stijl: 'warm',
   },
   'gerda-portret': {
     bron: 'Ger close up refr.ruimte.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Portret in zwart-wit van Gerda met bril, lachend in de meetruimte.',
+    alt: 'Portret van Gerda met bril, lachend in de meetruimte.',
     breedtes: MIDDEN,
-    stijl: 'zwartwit',
+    stijl: 'warm',
   },
 
   // --- Home: de vier pijlers -------------------------------------------
@@ -125,53 +126,46 @@ export const BEELDEN = {
     stijl: 'neutraal',
   },
 
+  // De Visioffice-zuil in de winkel, bij het stuk over inmeten op
+  // /ultiem-nauwkeurig-zicht/. Het origineel is een staande telefoonfoto; hij
+  // wordt vanaf de bovenkant bijgesneden ('north'), want daar staat het scherm
+  // met de naam erop. 'attention' koos de onderkant en sneed dat scherm af.
+  visioffice: {
+    bron: 'Visioffice foto winkel.jpg',
+    verhouding: PORTRET,
+    zwaartepunt: 'north',
+    alt: 'De Visioffice-zuil in de winkel, met het scherm aan, naast een wand vol monturen.',
+    breedtes: MIDDEN,
+    stijl: 'warm',
+  },
+
   // --- De collectie ------------------------------------------------------
   'collectie-1': {
-    bron: '2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1030-scaled.jpg',
+    bron: 'Monturen wand.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Monturen op houten standaards in de winkel, met een campagnebeeld op de achtergrond.',
+    alt: 'De monturenwand in de winkel: rij na rij brillen op smalle witte planken.',
     breedtes: MIDDEN,
     stijl: 'warm',
   },
   'collectie-2': {
-    bron: '2021-10/IMG_1011-scaled.jpg',
+    bron: 'Close up monturen.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
-    alt: 'Brillen naast elkaar op een verlichte wandplank in de winkel.',
+    alt: 'Monturen van dichtbij op twee planken: boven een rond goudkleurig en een groot rozé montuur, onder een paars en een zwart rond montuur.',
     breedtes: MIDDEN,
     stijl: 'warm',
   },
-  'collectie-3': {
-    bron: '2021-06/IMG_0038-scaled.jpg',
-    verhouding: PORTRET,
+
+  // --- Over ons ----------------------------------------------------------
+  'over-ons-boeken': {
+    bron: 'boeken-met-bril.webp',
+    // De foto is vierkant; zo blijft hij helemaal heel. Een liggende
+    // uitsnede zou de boeken onderaan er precies afsnijden.
+    verhouding: VIERKANT,
     zwaartepunt: 'attention',
-    alt: 'Een wand vol zonnebrillen op smalle planken in de winkel.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
-  },
-  'collectie-4': {
-    bron: '2021-06/IMG_0051-scaled.jpg',
-    verhouding: PORTRET,
-    zwaartepunt: 'attention',
-    alt: 'Monturen uitgestald op de planken langs de wand van de winkel.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
-  },
-  'collectie-5': {
-    bron: '2021-07/IMG_0267-scaled.jpg',
-    verhouding: PORTRET,
-    zwaartepunt: 'attention',
-    alt: 'Een uitstalling met monturen en een campagnebeeld in de winkel.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
-  },
-  'collectie-6': {
-    bron: '2021-07/IMG_0271-scaled.jpg',
-    verhouding: PORTRET,
-    zwaartepunt: 'attention',
-    alt: 'Brillen op een plank, met warm licht erboven.',
-    breedtes: MIDDEN,
+    alt: 'Een bril met rond montuur op twee boeken, op een houten tafel in de avondzon. Op de rug van de boeken staat Oogcontact bij Gerard.',
+    breedtes: KLEIN,
     stijl: 'warm',
   },
 
@@ -201,7 +195,10 @@ export const BEELDEN = {
     stijl: 'warm',
   },
   'aanbod-kinderbrillen': {
-    bron: '2023-03/OogcontactbijGerard-Kinderbrillen.jpg',
+    // Er staan twee versies van deze foto in het archief, allebei 667 x 1000.
+    // Deze is duidelijk scherper dan die uit 2023-03, en het is ook degene die
+    // de oude site zelf gebruikte.
+    bron: '2023-04/OogcontactbijGerard-Kinderbrillen2.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
     alt: 'Een meisje met een bril met rond montuur kijkt in de camera.',
@@ -238,14 +235,6 @@ export const BEELDEN = {
     alt: 'De winkel van buiten in de avond, met het verlichte logo Oogcontact by Gerard op de ruit.',
     breedtes: MIDDEN,
     stijl: 'neutraal',
-  },
-  'winkel-deur': {
-    bron: '2021-06/Winkel-GerGeer-2.jpg',
-    verhouding: LIGGEND,
-    zwaartepunt: 'attention',
-    alt: 'Gerard en Gerda in de deuropening van de winkel aan het Overwinningsplein.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
   },
 }
 

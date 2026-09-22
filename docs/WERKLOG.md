@@ -562,3 +562,362 @@ toestellen zag het er goed uit, op de kleine niet.
   repository openbaar is, wordt hij wél afgedwongen. Even nalopen of de regels
   staan zoals je ze wilt — zie `docs/open-punten.md`.
 - **Nog open:** zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-20 (merken) — Gerard (Claude Code, cloud)
+
+- **Vier merken eruit** (Calvin Klein, Baruch, Colibris en Liu Jo) en **Serengeti
+  erbij** als zonnebrilmerk. Aangepast in `src/content/merken.ts` en in de
+  merkenrijtjes op de homepage, de brillenpagina en de zonnebrillenpagina.
+- **Er stond een notitie van mij op de site.** In de zonnebrillentekst stond
+  letterlijk "(Zet Randolph als open punt: ...)". Die is eruit, de vraag staat
+  nu in `docs/open-punten.md`, en de test die zulke restjes vangt is
+  aangescherpt zodat er niets meer tussen "zet" en "als open punt" mag staan.
+- **Italië is van de site af.** Liu Jo was het enige Italiaanse merk, en Gerard
+  bevestigde dat er geen Italiaanse merken meer gevoerd worden. Op zes plekken
+  aangepast: homepage, Over ons, collectie (tekst, meta en een vraag), aanbod
+  en llms.txt. De landen die de homepage toont zijn nu België, Frankrijk,
+  Nederland, Oostenrijk, Spanje en Zwitserland.
+- **Bloomdale komt uit Nederland**, bevestigd door Gerard. Daarmee is dat de
+  eerste herkomst in de lijst die niet meer onder voorbehoud staat.
+- **Randolph is een zonnebrilmerk**, ook bevestigd, en staat nu in het rijtje op
+  de zonnebrillenpagina.
+
+---
+
+## 2026-09-20 (Visioffice) — Gerard (Claude Code, cloud)
+
+- **Foto van de Visioffice erbij** op `/ultiem-nauwkeurig-zicht/`, onder de
+  sectie "Van meting naar glas: inmeten met Visioffice". Bewust smal gehouden
+  (maximaal 352 pixels breed): hij staat middenin lopende tekst, niet als
+  banner.
+- Het origineel is een staande telefoonfoto; hij wordt vanaf de bovenkant
+  bijgesneden (`north`), want daar staat het scherm met de naam erop.
+  `attention` koos de onderkant en sneed dat scherm af.
+- `InhoudsPagina` kan nu een foto bij één sectie zetten (`beeldBijSectie`).
+  Klopt de kop niet, dan komt er gewoon geen foto; er verdwijnt nooit tekst.
+- Voorlopig alleen daar, op verzoek van Gerard.
+
+---
+
+## 2026-09-21 (lang weekend) — Gerard (Claude Code, cloud)
+
+- **Rechtgezet: bij "Afwijkende openingstijden" stond dat bezoekers de reden
+  zien.** Dat klopt niet — de reden wordt nergens op de site getoond, alleen in
+  de lijst in het beheerscherm. De site zegt alleen "Gesloten · wij zijn weer
+  open op woensdag vanaf 9.30 uur". Aangepast in `keystatic.config.ts` en in
+  `docs/handleiding-beheer.md`.
+- Dat is ook het antwoord op de vraag hoe je een lang weekend meldt zonder het
+  breed uit te meten: de dagen invullen bij afwijkende openingstijden, en de
+  mededelingenbalk bovenaan ongemoeid laten.
+- **De afwijkende dagen gaan nu ook naar Google**, als
+  `specialOpeningHoursSpecification`. Een gesloten dag gaat mee als 00:00 tot
+  00:00, wat Google leest als dicht; een dag met andere tijden gaat mee met die
+  tijden. De reden gaat nooit mee. Getest met een lang weekend erin: de
+  structuurgegevens klopten en het woord "weekend" stond nergens op de pagina.
+
+---
+
+## 2026-09-21 (portretten in kleur) — Gerard (Claude Code, cloud)
+
+- **De portretten van Gerard en Gerda staan nu in kleur**, en worden zwart-wit
+  zodra je er met de muis op komt. Een knipoog: precies andersom dan je
+  verwacht.
+- Het effect zit in `.zwartwit-bij-muis` in `globals.css`, niet in de foto's
+  zelf. Alleen op een apparaat met een muis (`hover: hover` en `pointer: fine`),
+  want op een telefoon blijft zo'n effect na een tik hangen en lijkt het een
+  fout. Nagemeten op een telefoonscherm: daar gebeurt er niets.
+- Wie minder beweging wil, krijgt de omslag zonder overgang. Er verspringt
+  niets: een filter verandert alleen de kleur, niet de plek.
+- De alt-teksten zeggen niet meer "in zwart-wit", want dat is de foto niet meer.
+
+---
+## 2026-09-21 (statusregel) — Gerard (Claude Code, cloud)
+
+- **De regel "Gesloten · wij zijn weer open op ..." onderaan de homepage is
+  groter en dikker**: 17px op een telefoon en 18px op een breed scherm, halfvet,
+  met een iets groter stipje. Elders blijft hij zoals hij was (16px, gewoon).
+- Dat is precies de regel die moet opvallen als de winkel een lang weekend
+  dicht is; hij stond in dezelfde maat als de bijschriften eronder.
+- `OpeningsStatus` heeft daarvoor een stand `nadruk`. Het laadmoment is even
+  groot als het eindresultaat, zodat er niets verspringt zodra de tijd bekend
+  is.
+
+---
+
+## 2026-09-21 (portret omgedraaid) — Gerard (Claude Code, cloud)
+
+- **Ander portret van Gerard:** de foto uit de fotosessie van februari 2024
+  (`assets-original/2024-02/20240212-DSC06242-scaled.jpg`) in plaats van de
+  telefoonfoto. Die stond al in het archief van de oude site en is scherper:
+  1707 x 2560.
+- **Het kleur-grapje is omgedraaid en werkt nu overal.** De portretten staan
+  standaard in zwart-wit en springen in kleur bij aanwijzen, klikken of
+  aantikken. Klik nog eens en ze gaan terug.
+- De foto zit daarvoor in een knop (`src/components/KleurKnop.tsx`): zo werkt
+  het ook met het toetsenbord, is er een focusring en weet een schermlezer dat
+  er iets te doen valt. De vorige versie deed niets op een telefoon.
+- **Nog niet gemerged:** Gerard kijkt er eerst naar.
+
+---
+
+## 2026-09-21 (meting rustiger) — Gerard (Claude Code, cloud)
+
+- **Het blok "Ultiem nauwkeurig zicht" scrollt weer gewoon mee.** Op een breed
+  scherm werd de pagina daar vastgezet terwijl je door de drie stappen heen
+  scrolde. Dat voelde alsof de pagina vastliep; het vastzetten is eruit. De
+  drie stappen staan nu onder elkaar, met de foto ernaast — op elk scherm
+  dezelfde opbouw.
+- **De foto bij dat blok is kleiner:** 286 px breed op een breed scherm in
+  plaats van bijna de halve schermbreedte, en 340 px op een telefoon.
+- `src/components/home/Meting.tsx` heeft daardoor geen GSAP en geen
+  JavaScript-toestand meer nodig; het is weer een gewoon servercomponent.
+  GSAP staat nu nergens meer in de code, maar wel nog in `package.json`.
+- **Alt-tekst rechtgezet:** de zesde foto in de collectiegalerij
+  (`assets-original/2021-07/IMG_0271-scaled.jpg`) is een portret van Gerard in
+  een blauw overhemd, maar de alt-tekst zei "Brillen op een plank". Voor een
+  schermlezer klopte dat dus niet.
+
+---
+
+## 2026-09-22 — Gerard (Claude Code, cloud)
+
+- **De galerij onder "De collectie" toont nu monturen.** Er stonden zes foto's,
+  en daarvan waren er vijf een portret van Gerard of Gerda en één een
+  merkuitstalling van Einstoffen. De alt-teksten beloofden al monturen, maar dat
+  stond er niet op. Nu vier foto's: de monturenwand, een close-up van twee
+  planken, de verlichte planken met de plant, en de bril op de boeken.
+- `collectie-5` en `collectie-6` bestaan niet meer; de galerij telt vier plekken.
+- **Dioptrieën netter geschreven:** `.25, .50, .75 of .00` is overal
+  `0,25, 0,50, 0,75 of 0,00` geworden — op de homepage en twee keer op de
+  pagina Ultiem nauwkeurig zicht. Duidelijker te lezen, zeker hardop.
+- Let op: in de close-up van de monturen staat op een plankje een zwart
+  displaybordje met "Einstoffen". Dat is gewoon de winkel, geen merkfoto, maar
+  het valt wel te lezen — zeg het als het toch weg moet.
+
+---
+
+## 2026-09-22 (appen via de knop) — Gerard (Claude Code, cloud)
+
+- **Het 06-nummer staat nergens meer als tekst op de site.** Appen gaat overal
+  via de knop "App ons": zwevend rechtsonder op een breed scherm, in de balk
+  onderaan op een telefoon, en nu ook in de voettekst en als tegel op de
+  contactpagina.
+- In elf lopende teksten stond "app naar 06 18 89 85 99" of iets in die geest.
+  Dat is nu "app ons via WhatsApp". Het vaste nummer 050 20 64 015 blijft
+  gewoon staan, dat is het winkelnummer.
+- Het WhatsApp-icoon staat nu in `src/components/IcoonWhatsApp.tsx`, zodat de
+  knop er overal hetzelfde uitziet.
+- Let op: het nummer zit nog wel in de link zelf (`wa.me/31618898599`). Dat kan
+  niet anders, want daarmee weet WhatsApp met wie het gesprek moet openen.
+
+---
+
+## 2026-09-22 (openingsregel in de hero) — Gerard (Claude Code, cloud)
+
+- **De regel "Gesloten · wij zijn weer open ..." bovenaan de homepage is
+  groter en halfvet:** 18px op een telefoon en 20px op een breed scherm, was
+  16px gewoon. Het stipje ernaast groeide mee.
+- `OpeningsStatus` heeft daarvoor geen `nadruk` meer maar een `maat`:
+  `klein` (overal), `nadruk` (onderaan de homepage) en `hero` (bovenaan).
+  Zo staan de drie formaten op één plek in het bestand.
+- Het telefoonnummer ernaast blijft op 16px staan: de openingsregel moet het
+  eerst opvallen, het nummer is daar de tweede stap.
+
+---
+
+## 2026-09-22 (collectie uitgedund) — Gerard (Claude Code, cloud)
+
+- **Twee foto's weg uit de galerij onder "De collectie".** De wazige planken
+  met de scherpe plant ervoor vond Gerard niet mooi genoeg; die is helemaal
+  vervallen. De bril op de boeken is mooi maar hoort er niet: die staat nu
+  nergens meer, in afwachting van een betere plek.
+- De galerij toont nu twee foto's: de monturenwand en de close-up van twee
+  planken. `collectie-3` en `collectie-4` bestaan niet meer.
+- **Openstaand:** waar komt `assets-new/boeken-met-bril.webp` te staan? Een
+  goede kandidaat is de kopfoto van de pagina Collectie & merken; die gebruikt
+  nu `collectie-1`, dezelfde monturenwand als op de homepage.
+
+---
+
+## 2026-09-22 (over ons en nieuws) — Gerard (Claude Code, cloud)
+
+- **De boekenfoto staat nu op Over ons**, naast het stuk "Onze winkel aan het
+  Overwinningsplein" — een warme tafel in de avondzon, precies bij "het
+  verlengstuk van onze woonkamer". Vierkant, 318 pixels breed: de foto is
+  vierkant, dus zo wordt er niets afgesneden.
+- **De portretten op Over ons zijn kleiner.** De fotokolom groeide mee met het
+  scherm en werd op een breed scherm ruim 500 pixels. Nu een vaste 288 pixels;
+  op een telefoon maximaal 320.
+- **De vijf oude nieuwsberichten zijn van de site af.** Ze gingen allemaal over
+  2022 en spraken de bezoeker nog met "u" aan. De pagina Nieuws laat nu de
+  tekst zien die daar al voor klaarstond: geen nieuws, kijk op Instagram.
+- De vijf oude adressen (`/afwijkende-openingstijden/` en de andere vier) gaan
+  nu naar `/nieuws/` in plaats van naar het bericht zelf, dus geen enkele oude
+  link geeft een 404. De originelen staan nog in `content-archive/`.
+
+---
+
+## 2026-09-22 (deurfoto eruit) — Gerard (Claude Code, cloud)
+
+- **De foto van Gerard en Gerda in de deuropening is van de site af.** Naast
+  hen spiegelde de hele straat in de etalageruit - auto's, fietsen, de overkant.
+  Onderaan Over ons blijft nu alleen de binnenfoto van de winkel staan.
+- Diezelfde foto stond ook op de contactpagina, boven het kaartje. Daar staat nu
+  de avondfoto van de etalage met het verlichte logo: die vindt Gerard juist wel
+  mooi, en hij helpt bezoekers de winkel te herkennen als ze aankomen.
+- De plek `winkel-deur` bestaat daarmee niet meer. De avondfoto van de gevel
+  (`winkel-gevel`) en die op de homepage blijven allebei gewoon staan.
+
+---
+
+## 2026-09-22 (de agenda van OO2 erin) — Gerard (Claude Code, cloud)
+
+- **OO2 geeft geen API uit**, niet in dit pakket en ook niet in een duurder.
+  Daarmee vervalt de route waarin onze eigen boekingsmodule de vrije tijden
+  ophaalt en de afspraak wegschrijft.
+- **De agenda van OO2 staat nu ingesloten op `/afspraak-maken/`**, net als op
+  de oude WordPress-site. Echte tijden, echte afspraken, geen dubbele
+  boekingen. Eromheen staat onze eigen tekst, en eronder de weg naar de
+  telefoon voor wie het niet lukt.
+- **Op de homepage stond de module ook.** Daar staat nu een uitnodiging met de
+  knop "Naar de agenda" en het telefoonnummer. Twee van die vlakken zou de
+  homepage onnodig zwaar maken.
+- Onze eigen module, `src/lib/agenda/`, de API-routes en `/agenda-controle/`
+  blijven allemaal staan. Ze worden alleen nergens meer getoond. In
+  `docs/agenda-koppelen.md` staan de drie stappen om terug te schakelen.
+- De cookie- en privacyverklaring vertellen nu dat de agenda van OO2 in de
+  pagina geladen wordt en dat wat je daar invult rechtstreeks naar OO2 gaat.
+- **Belangrijk openstaand punt:** de duur en de namen van de afspraken komen nu
+  uit OO2. Staan die daar nog op 30 minuten, dan spreken de site en de agenda
+  elkaar tegen. Zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-22 (agenda in het Nederlands) — Gerard (Claude Code, cloud)
+
+- De agenda van OO2 kwam in het Engels binnen. We vragen hem nu op met
+  `?language=dutch`; Easy!Appointments heeft een Nederlandse vertaling
+  ingebouwd en luistert in de meeste versies naar die parameter. Werkt het
+  niet, dan verandert er niets en moet de taal in OO2 zelf om.
+- De teksten en de kleuren bínnen dat vlak zijn van OO2 en kunnen van onze kant
+  niet aangepast worden. Wat je daarover aan OO2 kunt vragen - inclusief onze
+  accentkleur #C9A96A - staat nu in `docs/agenda-koppelen.md`.
+
+---
+
+## 2026-09-22 (agenda leesbaarder) — Gerard (Claude Code, cloud)
+
+- **Een kleurcorrectie over het agendavlak heen.** De datums en teksten van OO2
+  zijn lichtgrijs op wit en slecht te lezen. Binnen dat vlak kunnen we niets
+  aanpassen, maar er overheen wel: een gammacorrectie laat wit wit en maakt
+  alles daaronder donkerder.
+- Gemeten in de browser: grijze tekst gaat van #808080 naar #545454, wit blijft
+  precies wit. Het contrast tegen wit gaat daarmee van 3,9:1 naar 7,6:1 - WCAG
+  2.2 AA vraagt 4,5:1.
+- Het is een noodgreep, geen oplossing: hij raakt alles binnen dat vlak. De
+  echte oplossing ligt bij OO2; de mail daarvoor staat in
+  `docs/agenda-koppelen.md`. Eén getal (`DONKERDER`) zet hem sterker of zwakker.
+
+---
+
+## 2026-09-22 (KvK en de checklist) — Gerard (Claude Code, cloud)
+
+- **KvK-nummer 82055882** staat nu in de voettekst en in "Wie zijn wij" van de
+  privacyverklaring. De plek in `bedrijf.ts` en de regel in de voettekst stonden
+  er al; alleen het nummer ontbrak.
+- **`docs/live-gaan.md` is nieuw:** één papiertje om af te vinken, met per punt
+  wie het doet. Drie dingen blokkeren nog: de mailsleutel van Resend, de duur en
+  de namen van de afspraken in OO2, en het verhuizen van het domein.
+- `docs/open-punten.md` blijft de uitgebreide uitleg; de checklist verwijst
+  ernaar in plaats van het over te schrijven.
+
+---
+
+## 2026-09-22 (scherpe kinderbril, steviger filter) — Gerard (Claude Code, cloud)
+
+- **De foto bij kinderbrillen was onscherp.** Er staan twee versies van dezelfde
+  foto in het archief, allebei 667 x 1000. We gebruikten de zachte uit 2023-03;
+  de oude site gebruikte `2023-04/OogcontactbijGerard-Kinderbrillen2.jpg`, die
+  zes keer zoveel detail heeft (gemeten met een randendetectie: 15 tegen 95).
+  Nu staat die op de site.
+- De andere vier categoriefoto's zijn nagemeten: daar is de versie die we al
+  gebruiken de scherpste, of het verschil is er niet. Die blijven staan.
+- **De kleurcorrectie over de agenda staat steviger:** van 1.6 naar 2.2. Bij 1.6
+  zag Gerard geen verschil. Dat het filter werkt is apart bewezen met een
+  testpagina met een ingesloten vlak: grijze tekst ging daar van #a0a0a0 naar
+  #787878, wit bleef wit.
+- **De waarschuwing in de ontwikkelmodus is weg.** De lijntjes van de iris in de
+  hero worden nu op drie decimalen afgerond; server en browser rondden het
+  laatste cijfer soms verschillend af. Je zag er niets van, maar het gaf wel elke
+  keer een melding.
+
+---
+
+## 2026-09-22 (terugbelformulier uit) — Gerard (Claude Code, cloud)
+
+- **Het terugbelformulier staat uit**, op `/afspraak-maken/` en op `/contact/`.
+  De voorkeur gaat uit naar appen of zelf een moment kiezen in de agenda.
+- Er is niets weggegooid. In `config/schakelaars.mjs` staat één regel
+  (`TERUGBELFORMULIER_AAN`); op `true` staat het er weer, op allebei de pagina's
+  tegelijk. De browsertests lezen diezelfde regel en doen dan vanzelf weer mee.
+- Drie teksten op de afspraakpagina verwezen naar het formulier. Die wijzen nu
+  naar bellen en appen, zodat ze in allebei de standen kloppen.
+- **Gevolg voor live gaan:** de site verstuurt nu nergens meer e-mail, dus de
+  sleutel van Resend is niet meer nodig om live te kunnen. Daarmee blijven er
+  nog twee blokkerende punten over: de afspraakduren in OO2 en het domein.
+
+---
+
+## 2026-09-22 (agenda leeg op mobiel) — Gerard (Claude Code, cloud)
+
+- **Het agendavlak bleef leeg op een telefoon**, terwijl het op de laptop gewoon
+  werkte. De kleurcorrectie die er sinds vanmiddag overheen lag is de eerste
+  verdachte: een filter op een ingesloten vlak is een bekend struikelblok voor
+  Safari. Die is er weer uit. Een agenda die het op een telefoon niet doet weegt
+  zwaarder dan tekst die aan de lichte kant is.
+- Om dezelfde reden staat de afronding nu op het vlak zelf in plaats van op een
+  omhullende div met `overflow-hidden`. Ook dat kan in WebKit een ingesloten
+  vlak laten verdwijnen.
+- **De uitweg is een echte knop geworden** in plaats van een klein linkje: blijft
+  het vak leeg, dan zie je meteen waar je heen moet.
+- **Blijft het leeg, dan is de volgende verdachte het blokkeren van
+  derde-partijcookies.** Daar helpt niets van onze kant tegen; dan tonen we op
+  een telefoon een knop naar de agenda in plaats van het vlak zelf. Staat in
+  `docs/agenda-koppelen.md`.
+
+---
+
+## 2026-09-22 (testpagina voor de agenda) — Gerard (Claude Code, cloud)
+
+- **De agenda blijft leeg op Gerards iPhone, maar de oude site toont hem wel op
+  diezelfde telefoon.** Dan ligt het niet aan OO2, niet aan de telefoon en niet
+  aan cookies, maar aan iets op onze eigen pagina.
+- **`/agenda-test/` is een hulppagina om dat uit te zoeken.** Vier varianten
+  onder elkaar: precies zoals de oude site, hetzelfde met `?language=dutch`,
+  zoals hij nu op de site staat, en een knop die de agenda los opent. Welke wel
+  en niet werken, wijst de oorzaak aan:
+  - A werkt, C niet: het ligt aan onze opmaak
+  - A werkt, B niet: het ligt aan de taalinstelling in het adres
+  - niets werkt: het ligt aan de headers van de site (CSP, Permissions-Policy)
+  - alleen D werkt: insluiten kan niet op die telefoon
+- De pagina staat niet in het menu en niet in de sitemap, en zoekmachines wordt
+  gevraagd hem te laten staan. Hij mag weg zodra het opgelost is.
+
+---
+
+## 2026-09-22 (agenda doet het weer, ook op mobiel) — Gerard (Claude Code, cloud)
+
+- **Gevonden en opgelost.** Het lege vlak op de iPhone kwam door de
+  kleurcorrectie die we over de agenda hadden gelegd. Safari rekent zo'n vlak
+  dan opnieuw uit en gaf wit terug. Zonder die correctie doet de agenda het weer
+  overal.
+- **De taal is ook goed:** `?language=dutch` doet wat we hoopten, de agenda is
+  Nederlands. OO2 hoeft daar niets voor te doen.
+- Les die in `docs/agenda-koppelen.md` staat: leg niets van onze kant over dat
+  vlak heen - geen filter, geen omhullende div met `overflow-hidden` en een
+  afronding, geen transform. De afronding zit daarom op het vlak zelf.
+- De testpagina `/agenda-test/` heeft zijn werk gedaan en is weer verwijderd.
+- **Wat blijft:** de datums en teksten in de agenda zijn lichtgrijs op wit. Dat
+  is nu volledig een vraag voor OO2; de mail daarvoor staat klaar.

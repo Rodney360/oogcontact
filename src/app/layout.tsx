@@ -9,7 +9,7 @@ import { NaarHome } from '@/components/NaarHome'
 import { SnelleContact } from '@/components/SnelleContact'
 import { SoepelScrollen } from '@/components/Beweging'
 import { BEDRIJF } from '@/content/bedrijf'
-import { huidigeMededeling } from '@/lib/beheer'
+import { huidigeMededeling, uitzonderingen } from '@/lib/beheer'
 import { SITE_URL, bedrijfJsonLd, JsonLd } from '@/lib/seo'
 
 /**
@@ -86,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NaarHome />
         <SnelleContact />
 
-        <JsonLd data={bedrijfJsonLd()} />
+        <JsonLd data={bedrijfJsonLd(uitzonderingen())} />
         <Analytics />
       </body>
     </html>

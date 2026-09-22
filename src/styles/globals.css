@@ -184,6 +184,39 @@
 }
 
 /* ---------------------------------------------------------------------------
+   Een knipoog bij de portretten van Gerard en Gerda
+
+   De foto's staan in zwart-wit en springen in kleur zodra je ze aanwijst met
+   de muis, erop klikt of ze aantikt op een telefoon. Klik nog eens en ze gaan
+   weer terug.
+
+   Aanwijzen doet alleen iets op een apparaat met een muis; op een telefoon
+   bestaat zweven niet en blijft zo'n effect na een tik hangen. Daar is de klik
+   voor, en die werkt overal - ook met het toetsenbord, want de foto zit in een
+   knop.
+
+   Wie minder beweging wil, krijgt de omslag zonder overgang: het blok
+   hieronder zet elke overgang op 0,01ms. Er verspringt niets, want een filter
+   verandert alleen de kleur en niet de plek van de foto.
+--------------------------------------------------------------------------- */
+
+.kleurknop img {
+  filter: grayscale(1);
+  transition: filter 600ms var(--ease-rustig);
+}
+
+.kleurknop[aria-pressed='true'] img,
+.kleurknop:focus-visible img {
+  filter: grayscale(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .kleurknop:hover img {
+    filter: grayscale(0);
+  }
+}
+
+/* ---------------------------------------------------------------------------
    Rustiger weergave
 
    Wie in zijn systeem heeft aangegeven minder beweging te willen, krijgt geen

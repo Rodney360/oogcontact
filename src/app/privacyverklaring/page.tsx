@@ -55,7 +55,8 @@ export default function Privacyverklaring() {
 
           <h2 className="!mt-8">Wie zijn wij</h2>
           <p>
-            {BEDRIJF.naam}, {adresOpEenRegel()}. Je kunt ons bereiken via{' '}
+            {BEDRIJF.naam}, {adresOpEenRegel()}
+            {BEDRIJF.kvkNummer ? `, KvK ${BEDRIJF.kvkNummer}` : ''}. Je kunt ons bereiken via{' '}
             <a href={`mailto:${BEDRIJF.email}`} className="text-messing-diep underline underline-offset-4">
               {BEDRIJF.email}
             </a>{' '}
@@ -82,9 +83,11 @@ export default function Privacyverklaring() {
 
           <h3>Als je online een afspraak maakt</h3>
           <p>
-            Dan krijgen we je voornaam, achternaam, e-mailadres, telefoonnummer, de dienst die je
-            hebt gekozen, het gekozen moment en je eventuele opmerking. Die gegevens gaan naar
-            onze agenda, zodat de afspraak vastligt, en we sturen je een bevestiging per e-mail.
+            De agenda op de pagina Afspraak maken is die van OO2, en die draait binnen onze
+            pagina. Wat je daar invult - je naam, je e-mailadres, je telefoonnummer, de afspraak
+            die je kiest en het moment - gaat rechtstreeks naar OO2 en komt in onze agenda te
+            staan. Wij zien die afspraak, want het is onze agenda; de website zelf slaat er niets
+            van op.
           </p>
 
           <h3>Als je gewoon wat rondkijkt</h3>
@@ -152,8 +155,8 @@ export default function Privacyverklaring() {
               <strong>Resend</strong> — verstuurt de e-mails van het formulier en de bevestigingen.
             </li>
             <li>
-              <strong>Easy!Appointments</strong> — onze online agenda, waar de afspraak in komt te
-              staan.
+              <strong>OO2</strong> — onze online agenda (Easy!Appointments), waar de afspraak in
+              komt te staan.
             </li>
             <li>
               <strong>Cloudflare</strong> — controleert onzichtbaar of er een mens achter het

@@ -26,7 +26,7 @@
     "bron": "2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1017-scaled.jpg"
   },
   "gerard-portret": {
-    "alt": "Portret in zwart-wit van Gerard met bril, voor de monturenwand in de winkel.",
+    "alt": "Portret van Gerard met bril en zwarte coltrui, armen over elkaar, voor de monturenwand in de winkel.",
     "breedte": 1280,
     "hoogte": 1707,
     "breedtes": [
@@ -35,11 +35,11 @@
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADwBACdASoUABsAPu1oqk8ppiOiMBgIATAdiWkAACn+hClTBbpLaga3qhlK6LPZ9gAA/tOXIHk7qNzu+7z1cG0tpMR556ffGRmg2hPQl5cMChB/0kmQLlWPrDE+fF6D9fHb5d2M/GrcryReEQc1D3kxZChvDjTmXSR5eYD7/cuPsykYF6rJR66jRtCAH3PGu1VscdpGQkwqK4/tJKqH8Gf7XBI00IGNwAA=",
-    "bron": "Geer close-up 2.jpg"
+    "blur": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAABQBQCdASoUABsAPu1wsFIppiSiqAgBMB2JYgC7L8CViod/zhhV4UBrhr8PccTKL3eCeJAA/sX/eeE/AbR5uyqb9Ye/SLvhY09FBqzNTic+Qhc260PVLUPkvY5RxM3NZUrZb1sQkSoJ9eDvZf7tzzenJlb7L/SEzB/FcqdnplmnKztdn48imtlEDe46/gfHnmKjhZHEQbzzCaLXzQquePfFlfF44QwPA/dYJiJfjxPj4h7TPJnAQkH5OGyOWpaKS6PGzEVSxkL3ALsQhxev8mwkwhgSbRTvzp6H6weAAAA=",
+    "bron": "2024-02/20240212-DSC06242-scaled.jpg"
   },
   "gerda-portret": {
-    "alt": "Portret in zwart-wit van Gerda met bril, lachend in de meetruimte.",
+    "alt": "Portret van Gerda met bril, lachend in de meetruimte.",
     "breedte": 1280,
     "hoogte": 1707,
     "breedtes": [
@@ -48,7 +48,7 @@
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAAAQBQCdASoUABsAPu1srVCppaQiqAqpMB2JaQAAL2jmDo+WclcI317EG2vcmvwVzMYAAP7pHqTia8yy7NVugy+qd5JC6+yaoIzHYmpqYaLI9Jgh8ugiBXbUrit6v7ga0BarGEGG+gahQpUaKJ+ooTqx3hdtRKRnugx86R8iF6deDH5LZRPev8qszC7HqfB7ccXHsBHPkD0wjnogpw6s+mrR0tMMuN6s71qDF+tnAgfzDaUk0elzP9PEKtF128AA",
+    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAABQBQCdASoUABsAPu1qrlCppaQiqAqpMB2JZgC1CNiBfktOlHvMLqbPaoA5969qxvLfq4AA/ukeogNPV/j5qNl1K3h+P2v7+0Jj8g1LGCvvYWN2P8Kk0DzjdG5DPxpjmV8sF4XQoxfIxAvkNdKXyK8XXNvGJQelfirAToarRb1kmTMGxhfJQfI5nbtDOum2sUssk4eKKMnXoBR99S6CYKmP0GQLNqsjz8F7Oie5VF23x5SVNQXhqaVupFKMrd5J/tbv+K5RoF61SMVYO4gnwVSgqVxcyr+UBMQAAA==",
     "bron": "Ger close up refr.ruimte.jpg"
   },
   "pijler-aandacht": {
@@ -123,8 +123,8 @@
     "blur": "data:image/webp;base64,UklGRkoBAABXRUJQVlA4WAoAAAAQAAAAEwAADAAAQUxQSJsAAAABgFpt2/Lmeb83FmVkfFZAlVjOAFE90WWYAB1zHQ/QDsBMtqcOFPP3PeaHFSJiAhBYjCCgiRgjACAaAFC0jvc7SfgbZKZ21u/o/h53OxAPxRr/6P7/neV9FOI1yp9/6+js7zy8BdpNy6sHcgTqBUWRjs8vjl2I+BgUaLn3ZNkOlOUPzz7IEjRA+oVs9v8tGgQUlCcr0JQitBiIFwBWUDggiAAAALADAJ0BKhQADQA+7WKpTamlo6IwCAEwHYlpAAPhmKXLWfe//ogAAOvUapJIZc1XVMozwmJEqXq99hEu3fdrF9u8ryIBvPjDVddDvXncPcIpPZpee238eswxvwDNyJvZDIfbZQb698nTJl/yl8mBFqFx6bX/wI75m/maj2h3eAv8VHCNaF40AAA=",
     "bron": "2022-02/Vision-R-800-Left-PNG-768x540-1.png"
   },
-  "collectie-1": {
-    "alt": "Monturen op houten standaards in de winkel, met een campagnebeeld op de achtergrond.",
+  "visioffice": {
+    "alt": "De Visioffice-zuil in de winkel, met het scherm aan, naast een wand vol monturen.",
     "breedte": 1280,
     "hoogte": 1707,
     "breedtes": [
@@ -133,11 +133,24 @@
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAADQBQCdASoUABsAPu1qq08ppiOiMBgIATAdiWYAqQX/5GAAfuL5cDAqGyCMZL4Y6cqvN+kTOHAAAPa+/398ZJ6JN1drDf+lDRimEHACb17ko7RnOfzyxcDsrzm3T/yU6wBrpTJQQAVy0Zslp+xUJYj33VbZ0/9zzQRYT2m9tq94/P7iyJ8OXJ/wI+1uImScS9R/EWhz7JTfdyZxR41HcSiof1qL1w6ydn3dBlDPyeBfpwg4IW3ax7x1sQzMDi2tjCr20273afoPgiKOHwbKDlZf9ZVOgk7Jr0OjEsbEuDWORDeBvUfrg6erubkm13Y1b/qO/AAA",
-    "bron": "2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1030-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoUABsAPuVgpU2pJaOiMAwBIByJQBhmhAqaAYH+JaWzuSURGAmA8SwpR70gAAD9HfWuXmGOTvHOSn3cWsh+1KxGIazNnLGJGJNzzpBO1Wyt4W+r17boeTrFAp5Mn2v2UbH23Wvf1dm2oRvRy+B+6pzEYdLh+5Zh3067hAhqGIC1cYvj6wG+0KCrXjlj5VrlCI0ZtH/JsiXVoV3E9Ksa2yb34q5m8zkHxCE+njwAAAA=",
+    "bron": "Visioffice foto winkel.jpg"
+  },
+  "collectie-1": {
+    "alt": "De monturenwand in de winkel: rij na rij brillen op smalle witte planken.",
+    "breedte": 1280,
+    "hoogte": 1707,
+    "breedtes": [
+      400,
+      640,
+      900,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAACwBQCdASoUABsAPu1iqU2ppaOiMAgBMB2JZwAL7//+itO6HzmQ6+nNc93umCd/i7ZhcpT3R6AAyy47L1KGLRmSZwaB9cUJ7YVeT8BUw9q7a/W99vWOMi3l7CsHjSibfy5PWtwIVgcUNehslecr77adodfToebQFfUOdiFrY4QD49awv8WqGNzgMTHQmaqzbgfm/l/NgFD2tl6tqMMCqoVbY1yMT3pxcB0Tfiq3+Rez0/6hQgoBgeOlBDS/i28dVJPcO7BhapMPe8JH7EQ4CPnk2SulRCrYAAA=",
+    "bron": "Monturen wand.jpg"
   },
   "collectie-2": {
-    "alt": "Brillen naast elkaar op een verlichte wandplank in de winkel.",
+    "alt": "Monturen van dichtbij op twee planken: boven een rond goudkleurig en een groot rozé montuur, onder een paars en een zwart rond montuur.",
     "breedte": 1280,
     "hoogte": 1707,
     "breedtes": [
@@ -146,60 +159,20 @@
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAABwBQCdASoUABsAPu1orVCppaQiqAqpMB2JZgCxHxgBZCiTxdJVokUg2xyH0I4Xqam6JxwAAP6lDJY7XJbGuKyELe5DUbvaFBqtKPUZ6u4yZIsIEs4NeqORv6MtyXr03/27X+HDDEPN3HhX2gHH46lcyhePyXsdePf6qRUZFHUmvBarFeeavu1VI0g64BGsH4ic+BCOMS7fQ5tITVMkWXZoNTgz77ttLroWuyKpS4FaQ7mlNqgioUD0XZinyp2Nh0gbywwjZIgAAA==",
-    "bron": "2021-10/IMG_1011-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAQBQCdASoUABsAPu1mqk2ppaQiMAgBMB2JZQDE2B+UNmvenF9O0bgfgHOqn5R2nfSAAPpNbzba7GDN+wiTQCr2lULDGVkmbgSxe2tmI7tzM8rtRUcMdRZSJkgeMBWW0manOxA25PLTa+duEHipwyRZDImmLdTxab3h/FRveEHIwOubeSil09ADOwsX08lEguee5y6WMabz6ZyCKnfyAX+JvaZSSSxMGHA+MDGeey4ZM2CrCwCZ6qf8y+fHToYi5KP+t95AAAA=",
+    "bron": "Close up monturen.jpg"
   },
-  "collectie-3": {
-    "alt": "Een wand vol zonnebrillen op smalle planken in de winkel.",
-    "breedte": 1280,
-    "hoogte": 1707,
+  "over-ons-boeken": {
+    "alt": "Een bril met rond montuur op twee boeken, op een houten tafel in de avondzon. Op de rug van de boeken staat Oogcontact bij Gerard.",
+    "breedte": 720,
+    "hoogte": 720,
     "breedtes": [
-      400,
-      640,
-      900,
-      1280
+      300,
+      480,
+      720
     ],
-    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAADQBQCdASoUABsAPu1mqU2ppaQiMAgBMB2JZgCsMzRA2CaHmXPUylkheffFzryM3danetQQzgcAAP7v81h7MR+qx5CnTE2S+Qrc/ZXi21nwTLjKgaOQFVhR4AimAWwvIGFhlb8ukfK0D7zMdHfwmMwCap34xebFjShsHvRRTrFHHTl+7KFy3CA3nkESLrviae7xKv1yqDci1HSXE5frJB3fyRF+8kD2ayQmTvD2kbHase3qHC3KA+P9BukXbjRDipgnDEkpnZMQ+CfeawAulGESTq4fF4buFifMAA==",
-    "bron": "2021-06/IMG_0038-scaled.jpg"
-  },
-  "collectie-4": {
-    "alt": "Monturen uitgestald op de planken langs de wand van de winkel.",
-    "breedte": 1280,
-    "hoogte": 1707,
-    "breedtes": [
-      400,
-      640,
-      900,
-      1280
-    ],
-    "blur": "data:image/webp;base64,UklGRvYAAABXRUJQVlA4IOoAAADwBQCdASoUABsAPu1qrVCppaQiqAqpMB2JYgC7GvVt/8u+5h4QlQN/XxqO/mi6nMtm2cZLpzesEAD9bK2KUx18JH77EOfEs6ltbR4ZlRR8qFHiPNkQ6hEIvMs8q7B9KPEtshz5Ni6IDfKkTYThAJCan23JWA3VqvmbRooYtvGavgAF/LTLw82jxtqkyrWBEbNJoV17tJ3JsH5uaHnQuNV1ZRYpcJuuVOx+QxklfB6BRtSAHtez3ieq8xKAX/+JG2vt+UBh9O4Ty9krIn2LBuOCcmSGiolFPsTMJBPuoiYc4b1Oc6gBR9PwAAA=",
-    "bron": "2021-06/IMG_0051-scaled.jpg"
-  },
-  "collectie-5": {
-    "alt": "Een uitstalling met monturen en een campagnebeeld in de winkel.",
-    "breedte": 1280,
-    "hoogte": 1707,
-    "breedtes": [
-      400,
-      640,
-      900,
-      1280
-    ],
-    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAACwBQCdASoUABsAPu1gp02ppSMiMAgBMB2JaACdM2ECZ+v+Aw7baFHbcc86Ue+vyWW8HK0Xn1AA/dF5CaP70tO/GcwEIVsogr1t8J8EmVMoG/J512AWx9ir6fSvkvCn7+3J2TuhdMQjIY2vTcZAPNNR5NHzorcYdvjZilrZ3m9RwtsmQUaLnZ+zQPnBkydG9aHICmfNIeXzdddzKHZ9iyFU09XgMDjoFXZxVbtRGuauQrRKLk101mFwKyV4VZG9WUjw25o7po2Ee3aw/z8mnnVYMjGdC5/I34BAAA==",
-    "bron": "2021-07/IMG_0267-scaled.jpg"
-  },
-  "collectie-6": {
-    "alt": "Brillen op een plank, met warm licht erboven.",
-    "breedte": 1280,
-    "hoogte": 1707,
-    "breedtes": [
-      400,
-      640,
-      900,
-      1280
-    ],
-    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAADQBACdASoUABsAPu1orlCppaQiqAqpMB2JZACdMoABfTsYYF0YLpqtu+HLL6MLeAD4YlJGkq40qrYK6d6qjx3qj97YEkSTJPm96TdeBicJ6F0CtIY76rICyZa3o8Eb+pMp+z0YUpDNUL7ZcDD5/h42aEQ5CLDbjqVzX1sE1mPXS50ViDIFekfgbaYwzIan9zP+heX932QPWiOX1XBTl0VjdUypoprVpMRJJrCQ8CNHpzedsaKHRrndQuTJ48yFZNsDpC5l3HHYDK2oF29QAA==",
-    "bron": "2021-07/IMG_0271-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAADQBQCdASoUABQAPu1ur1IppiQiqAgBMB2JagCdMoR7Txarg4zNnQ0Kzw0vKjV9uevFEbQui5SwAP1TQeDQ5W9bIxBpEQbmsFxBq4hwrZTCxANkUsfB5qQ2PyqUxV9DQmQnHWy68aSRZmIuzEZdb4RqHZs1mkSHv37M/XHeOJkeLWvkkqatMPPXRp7DwaepUX5UBJ3gTIIEVyc7NotSBvxXa8Gn+YXId34QV1hzGTYTkwUZ1GdVhne+RV7O9nxEpTrVRiWAlCgcXVvlsfokzHSlizwx4HHcEVGIuRfM3ZZoO8R0XIAAAA==",
+    "bron": "boeken-met-bril.webp"
   },
   "aanbod-brillen": {
     "alt": "Gerard en Gerda houden lachend twee brillen voor hun ogen.",
@@ -246,8 +219,8 @@
       480,
       667
     ],
-    "blur": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAABQBgCdASoUABsAPu1irVAppSQisBgIATAdiWIArDL1PLDQOyPOjcywQz+b9YDX+YIJ0u4SVxrZKIhrQAD+8CCYl8XDN8pcm9456EO1ed2PbR35GKipyR1EL7Ac6snZ2dULPQVMLo8ATJJmuFTeygtOkWSI0UhSWyetYuzngV+ffibYqFXLJuzigx8SgaySuJCLrhKDLoWGTn3Rc5KwtvYhXfUp1kFCO5ZywALd6AKrBDvrsoS2Ujd7JKTgMTuRwTewU3AelAQicurFrppCLQU4j8E8QaTTa3f6nSzMaxXRQLHlbHVqCzJjM1S5AAAA",
-    "bron": "2023-03/OogcontactbijGerard-Kinderbrillen.jpg"
+    "blur": "data:image/webp;base64,UklGRvYAAABXRUJQVlA4IOoAAACQBQCdASoUABsAPu1qsFAppaUiqAqpMB2JZgCsMvUulCC8NuNuhOgQMG3lrx1m1fTjKU80AAD+8IH0zSUxhHFUayvahSr263M3by24SP9l7LCX6sI9kJ6f/QhdrSN3Shs6UeGOBDx8jFsdjTAfZF60bZkgimazf0P306Z1OV7i0DUzq2amoJrWy4u3rftflWGWWG97gfROvBlDCQXjo/GdqxRbWUjBwMXAGhf/d0Gwd0U+GwHHnR6Q9ypOuNcvZo+dyFFuDOGpcw1jyLIXmbX7Qrb9B/7wGK+O19+bvlGKNkag5jrwqnP3gAA=",
+    "bron": "2023-04/OogcontactbijGerard-Kinderbrillen2.jpg"
   },
   "aanbod-loepbrillen": {
     "alt": "Close-up van een loepbril: twee loepjes in de glazen en een lampje op het montuur.",
@@ -285,18 +258,5 @@
     ],
     "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JQBadBD0u89jd+0gUF07BgAD+7C5aTRKmQfMxZLkvQRgAY953KkHgm/Qof9oJoNcFyFY3PuwfHSn70tf01CQ4eHuJwhXVRFLf6rR6UzLxmeTulbKAifO2BspE9PgVAUc9df+IAAA=",
     "bron": "2021-10/IMG_1074-scaled.jpg"
-  },
-  "winkel-deur": {
-    "alt": "Gerard en Gerda in de deuropening van de winkel aan het Overwinningsplein.",
-    "breedte": 1280,
-    "hoogte": 853,
-    "breedtes": [
-      400,
-      640,
-      900,
-      1280
-    ],
-    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoUAA0APu1iqU2ppaQiMAgBMB2JZQCdACIAaYIgU9frh0DDBAAA9kdDIwN4v8s/y+zBMdgVeX1ZkJNf3Mflov1huQiMikxLqfFnkxdv6bZa3FwlGhaXpm7WbRF+9GyJ42/xevTtPxqeF3vKCoG6YW7LPiQM0vJsCglgJwiuAAA=",
-    "bron": "2021-06/Winkel-GerGeer-2.jpg"
   }
 }

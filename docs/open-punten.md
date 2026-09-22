@@ -59,23 +59,33 @@ merging" en "Require status checks to pass".
 
 ### 1.2 Zodra de site staat
 
-**API-sleutel van de online agenda (Easy!Appointments).**
-Ik heb gecontroleerd dat de API bestaat en werkt: `oogcontactbijgerard.oo2.online`
-antwoordt met "niet ingelogd" in plaats van "bestaat niet". Er is dus alleen een
-sleutel nodig, geen verbouwing.
-*Wat je doet:* zie `docs/agenda-koppelen.md` - daar staan de drie manieren op
-een rij, met een mail aan OO2 die je kunt overnemen.
-*Let op:* in het beheerscherm van OO2 is **geen** knop te vinden om een sleutel
-aan te maken; bij Easy!Appointments staat die in een bestand op de server, waar
-je als klant niet bij kunt. Werkt het inloggen met de gebruikersnaam en het
-wachtwoord van een beheerder ook niet (`EASYAPPOINTMENTS_GEBRUIKER` en
-`EASYAPPOINTMENTS_WACHTWOORD` in Vercel), dan moet OO2 de API aanzetten.
-*Waar je ziet hoe het ervoor staat:* op de site onder `/agenda-controle/`.
-*Zolang die er niet is:* de boekingsmodule draait in testmodus met
-voorbeeldtijden, met een duidelijke melding erbij dat het een test is. De
-bezoeker kan intussen gewoon bellen of appen.
+~~**API-sleutel van de online agenda (Easy!Appointments).**~~
+**Kan niet.** OO2 geeft geen API uit: niet in dit pakket en ook niet in een
+duurder pakket. Gerard heeft het gevraagd en dat is het antwoord.
+*Wat er nu staat:* de agenda van OO2 zelf, ingesloten op `/afspraak-maken/` -
+precies zoals de oude WordPress-site het deed. Echte tijden, echte afspraken,
+geen dubbele boekingen. Zie `docs/agenda-koppelen.md`.
+*Wat dat betekent:* de site kan niet meekijken in de agenda. Alles wat de
+bezoeker daar ziet - de namen van de afspraken en hoe lang ze duren - komt uit
+OO2 en moet dus **in OO2 kloppen**.
 
-**Resend-account voor de e-mail.**
+**De afspraakduren in OO2 gelijktrekken. Nu het belangrijkst.**
+Op de site staat bij elke afspraak hoe lang hij duurt: oogmeting 60 minuten,
+oogmeting met montuuradvies 90, montuur bijstellen 15, contactlenzen aanmeten
+60, opnieuw aanmeten 45. In OO2 stonden die nog allemaal op 30 minuten. Nu de
+echte agenda op de site staat, ziet de bezoeker de tijden **van OO2** - dus als
+die niet gelijkgetrokken worden, spreken de pagina en de agenda elkaar tegen.
+*Wat je doet:* in OO2 inloggen, bij de diensten de duur per afspraak aanpassen.
+
+**De namen van de afspraken in OO2 nalopen.**
+Ook de namen komen nu uit OO2. Staat er in de agenda iets anders dan op de site
+(bijvoorbeeld "Loepbril" tegenover "Loepbril informatie"), dan is dat verwarrend.
+*Wat je doet:* leg de lijst uit OO2 naast die op `/afspraak-maken/` en maak ze
+gelijk - in OO2 of op de site, wat jou het beste lijkt.
+
+**Resend-account voor de e-mail.** *Niet meer dringend:* het terugbelformulier
+staat uit (`config/schakelaars.mjs`), dus de site verstuurt nergens meer mail.
+Dit is pas nodig als dat formulier weer aangezet wordt.
 Hiermee gaat het ingevulde formulier naar de winkel en krijgt de klant een
 bevestiging.
 *Wat je doet:* maak een gratis account op <https://resend.com>, voeg het domein
@@ -96,9 +106,11 @@ meeste tegen. Dit is een extra laag, geen noodzaak.
 
 ### 1.3 Gegevens die ik niet zelf mag verzinnen
 
+
+
 | Wat | Waarvoor | Wat er nu staat |
 |---|---|---|
-| **KvK-nummer** | Hoort in de voettekst. Verplicht voor een webshop, netjes voor een winkel. | De regel wordt weggelaten zolang het nummer er niet is. |
+| ~~**KvK-nummer**~~ | **Binnen.** 82055882. | Staat in de voettekst en in de privacyverklaring. |
 | **Link naar het Google Bedrijfsprofiel** | Voor de vindbaarheid en om reviews te kunnen tonen. | Nog geen link op de site. |
 | **Bevestiging van de merkenlijst** | Zie hieronder. | De lijst van de oude site wordt getoond. |
 | **Land van herkomst per merk** | Het kleine label bij elk merk. | Alleen getoond waar ik het zeker weet; de rest blijft leeg. |
@@ -240,7 +252,9 @@ site zoals hij bij een bezoeker binnenkomt, inclusief het netwerk.
 ## 3. Wat ik zelf nog doe
 
 - [ ] Een Lighthouse-rapport op de Vercel-preview, zodra die er is
-- [ ] De boekingsmodule koppelen aan de echte agenda, zodra de sleutel er is
+- [x] ~~De boekingsmodule koppelen aan de echte agenda~~ - vervallen: OO2 geeft
+      geen API. De agenda van OO2 staat nu ingesloten op `/afspraak-maken/`.
+      Onze eigen module blijft in de repo staan voor als dat ooit verandert.
 - [ ] Het domein overzetten (zie §13 van de opdracht) - pas als jij zegt dat
       alles goed is
 

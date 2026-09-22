@@ -29,9 +29,15 @@ type Props = {
   children?: ReactNode
   /** Waar de knop onderaan naartoe gaat, als dat niet gewoon /afspraak-maken/ is. */
   oproepPad?: string
+  /**
+   * Een foto direct onder de tekst van één sectie. `kop` moet letterlijk
+   * dezelfde kop zijn als in het tekstbestand; klopt hij niet, dan komt er
+   * gewoon geen foto - er verdwijnt dus nooit tekst door een typefout.
+   */
+  beeldBijSectie?: { kop: string; slot: BeeldSlot }
 }
 
-export function InhoudsPagina({ tekst, beeldSlot, bovenkop, kruimels, children, oproepPad }: Props) {
+export function InhoudsPagina({ tekst, beeldSlot, bovenkop, kruimels, children, oproepPad, beeldBijSectie }: Props) {
   return (
     <>
       <JsonLd data={kruimelsJsonLd(kruimels)} />
@@ -92,6 +98,20 @@ export function InhoudsPagina({ tekst, beeldSlot, bovenkop, kruimels, children, 
                     </li>
                   ))}
                 </ul>
+              )}
+
+              {/*
+                De foto die bij deze sectie hoort, als die er is. Bewust smal
+                gehouden: hij staat middenin lopende tekst, niet als banner.
+              */}
+              {beeldBijSectie?.kop === sectie.kop && (
+                <div className="mt-10 aspect-3/4 w-full max-w-[22rem] overflow-hidden rounded-groot border border-ivoor-rand">
+                  <Beeld
+                    slot={beeldBijSectie.slot}
+                    sizes="(min-width: 34rem) 352px, 100vw"
+                    vullend
+                  />
+                </div>
               )}
             </Verschijnt>
           ))}

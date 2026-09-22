@@ -159,3 +159,29 @@ export function alsSchemaOrg() {
     })),
   )
 }
+
+/**
+ * De afwijkende dagen in hetzelfde formaat, zodat Google op een gesloten dag
+ * ook echt "Gesloten" toont en niet de gewone openingstijden.
+ *
+ * Een dag zonder dagdelen is dicht. Google leest dat als een dag waarop de
+ * zaak niet open is wanneer `opens` en `closes` allebei 00:00 zijn.
+ *
+ * Er staat alleen een datum en een tijd in - nooit de reden. Dat de winkel een
+ * lang weekend dicht is hoeft niemand te weten; dát hij dicht is wel.
+ */
+export function bijzondereDagenSchemaOrg(uitzonderingen: Uitzondering[] = []) {
+  const pad = (m: number) => `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`
+
+  return uitzonderingen.flatMap((dag) => {
+    const basis = {
+      '@type': 'OpeningHoursSpecification' as const,
+      validFrom: dag.datum,
+      validThrough: dag.datum,
+    }
+    if (dag.dagdelen.length === 0) {
+      return [{ ...basis, opens: '00:00', closes: '00:00' }]
+    }
+    return dag.dagdelen.map((deel) => ({ ...basis, opens: pad(deel.van), closes: pad(deel.tot) }))
+  })
+}

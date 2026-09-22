@@ -10,7 +10,12 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 
-import { huidigeStatus, inNederland, alsSchemaOrg } from '../../src/lib/openingstijden.ts'
+import {
+  huidigeStatus,
+  inNederland,
+  alsSchemaOrg,
+  bijzondereDagenSchemaOrg,
+} from '../../src/lib/openingstijden.ts'
 import type { Uitzondering } from '../../src/content/openingstijden.ts'
 
 /**
@@ -133,4 +138,38 @@ test('levert openingstijden in het formaat dat Google verwacht', () => {
   })
   assert.equal(spec[3]?.opens, '10:00')
   assert.equal(spec[3]?.closes, '16:00')
+})
+
+test('een gesloten dag gaat als "dicht" naar Google, zonder de reden', () => {
+  const spec = bijzondereDagenSchemaOrg([
+    { datum: '2026-10-03', dagdelen: [], reden: 'Lang weekend' },
+  ])
+
+  assert.deepEqual(spec, [
+    {
+      '@type': 'OpeningHoursSpecification',
+      validFrom: '2026-10-03',
+      validThrough: '2026-10-03',
+      opens: '00:00',
+      closes: '00:00',
+    },
+  ])
+  // De reden is van Gerard en Gerda, niet van Google.
+  assert.doesNotMatch(JSON.stringify(spec), /weekend|vakantie/i)
+})
+
+test('een dag met afwijkende tijden gaat mee met die tijden', () => {
+  const spec = bijzondereDagenSchemaOrg([
+    { datum: '2026-12-24', dagdelen: [{ van: 570, tot: 780 }], reden: 'Kerstavond' },
+  ])
+
+  assert.equal(spec.length, 1)
+  assert.equal(spec[0]?.opens, '09:30')
+  assert.equal(spec[0]?.closes, '13:00')
+  assert.equal(spec[0]?.validFrom, '2026-12-24')
+})
+
+test('zonder afwijkende dagen valt er niets door te geven', () => {
+  assert.deepEqual(bijzondereDagenSchemaOrg([]), [])
+  assert.deepEqual(bijzondereDagenSchemaOrg(), [])
 })

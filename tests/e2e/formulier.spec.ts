@@ -1,13 +1,21 @@
 /**
- * Het aanvraagformulier en de boekingsmodule.
+ * Het aanvraagformulier en de afspraakpagina.
  *
  * Er zijn geen API-sleutels nodig: de site draait dan in testmodus, waarin er
- * niets echt verstuurd of geboekt wordt. Precies wat je in een test wilt.
+ * niets echt verstuurd wordt. Precies wat je in een test wilt.
+ *
+ * Het formulier kan uit staan - zie config/schakelaars.mjs. Deze tests lezen
+ * diezelfde schakelaar, zodat ze niet zoeken naar iets wat er met opzet niet
+ * is, en vanzelf weer meedoen zodra het formulier terugkomt.
  */
 
 import { test, expect } from '@playwright/test'
 
+import { TERUGBELFORMULIER_AAN } from '../../config/schakelaars.mjs'
+
 test.describe('Aanvraagformulier', () => {
+  test.skip(!TERUGBELFORMULIER_AAN, 'Het terugbelformulier staat uit')
+
   test.beforeEach(async ({ page }) => {
     await page.goto('/contact/')
   })
@@ -58,54 +66,38 @@ test.describe('Aanvraagformulier', () => {
 })
 
 test.describe('Afspraak maken', () => {
-  test('je kunt de hele boeking doorlopen', async ({ page }) => {
+  /*
+    De boeking zelf gebeurt in de agenda van OO2, die in de pagina geladen
+    wordt. Wat daarbinnen gebeurt is van hen; wij kunnen er niet in klikken en
+    hoeven dat ook niet te testen. Wat wij wel moeten weten: staat het vlak er,
+    wijst het naar de goede agenda, en is er een weg terug als het niet laadt.
+
+    Onze eigen boekingsmodule staat nog in de repo voor als er ooit een API
+    komt, maar hij staat op geen enkele pagina meer - dus valt er ook niets
+    van te doorlopen.
+  */
+  test('de agenda van OO2 staat op de pagina', async ({ page }) => {
     await page.goto('/afspraak-maken/')
 
-    // Stap 1: waarvoor kom je
-    const dienst = page.getByRole('button', { name: /Oogmeting en montuuradvies/ })
-    await expect(dienst).toBeVisible({ timeout: 15_000 })
-    await dienst.click()
+    const agenda = page.locator('iframe[title="Online agenda van Oogcontact bij Gerard"]')
+    await expect(agenda).toBeVisible({ timeout: 15_000 })
+    await expect(agenda).toHaveAttribute('src', /^https:\/\/oogcontactbijgerard\.oo2\.online/)
 
-    // Stap 2: wanneer
-    await expect(page.getByRole('heading', { name: 'Wanneer schikt het?', exact: true })).toBeVisible()
-    const eersteDag = page.locator('button[aria-pressed]').filter({ hasText: /dag|tijden/ }).first()
-    await expect(eersteDag).toBeVisible({ timeout: 15_000 })
-
-    const tijd = page.getByRole('button', { name: /^\d{1,2}\.\d{2} uur$/ }).first()
-    await expect(tijd).toBeVisible()
-    await tijd.click()
-
-    await page.getByRole('button', { name: /^Verder met/ }).click()
-
-    // Stap 3: je gegevens
-    await expect(page.getByRole('heading', { name: 'Je gegevens', exact: true })).toBeVisible()
-
-    const boeking = page.locator('form').filter({ hasText: 'Afspraak vastleggen' })
-    await boeking.getByLabel('Voornaam').fill('Jantine')
-    await boeking.getByLabel('Achternaam').fill('de Vries')
-    await boeking.getByLabel('E-mailadres').fill('jantine@voorbeeld.nl')
-    await boeking.getByLabel('Telefoonnummer').fill('06 12 34 56 78')
-    await boeking.getByRole('checkbox', { name: /privacyverklaring/ }).check()
-    await boeking.getByRole('button', { name: 'Afspraak vastleggen' }).click()
-
-    // Stap 4: klaar
-    await expect(page.getByRole('heading', { name: 'Tot ziens', exact: true })).toBeVisible({ timeout: 20_000 })
-    await expect(page.getByRole('link', { name: 'Zet in mijn agenda' })).toBeVisible()
+    // De uitweg voor wie het vlak niet geladen krijgt.
+    await expect(
+      page.getByRole('link', { name: 'Open de agenda in een nieuw tabblad' }),
+    ).toBeVisible()
   })
 
-  test('zonder gegevens kun je niet vastleggen', async ({ page }) => {
+  test('het terugbelformulier staat er alleen als het aan staat', async ({ page }) => {
     await page.goto('/afspraak-maken/')
-    const dienst = page.getByRole('button', { name: /Oogmeting/ }).first()
-    await expect(dienst).toBeVisible({ timeout: 15_000 })
-    await dienst.click()
-
-    const tijd = page.getByRole('button', { name: /^\d{1,2}\.\d{2} uur$/ }).first()
-    await expect(tijd).toBeVisible({ timeout: 15_000 })
-    await tijd.click()
-    await page.getByRole('button', { name: /^Verder met/ }).click()
-
-    const boeking = page.locator('form').filter({ hasText: 'Afspraak vastleggen' })
-    await boeking.getByRole('button', { name: 'Afspraak vastleggen' }).click()
-    await expect(boeking.getByText('Vul je voornaam in.')).toBeVisible()
+    const kop = page.getByRole('heading', { name: 'Laat je gegevens achter' })
+    if (TERUGBELFORMULIER_AAN) {
+      await expect(kop).toBeVisible()
+    } else {
+      await expect(kop).toHaveCount(0)
+      // Er moet wel een andere weg naar een mens overblijven.
+      await expect(page.getByRole('link', { name: /App ons/ }).first()).toBeVisible()
+    }
   })
 })

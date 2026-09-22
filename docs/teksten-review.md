@@ -80,7 +80,7 @@ Een bril draag je elke dag. Dan is het fijn als er iemand goed naar je gekeken h
 
 #### Ultiem nauwkeurig zicht
 
-Een brilvoorschrift wordt al jaren afgerond op kwart dioptrieën: .25, .50, .75 of .00. Dat voldoet aan de norm, maar voor veel ogen is het net te grof.
+Een brilvoorschrift wordt al jaren afgerond op kwart dioptrieën: 0,25, 0,50, 0,75 of 0,00. Dat voldoet aan de norm, maar voor veel ogen is het net te grof.
 
 Daarom meten wij in stappen van 0,01 dioptrie, met de AVA-technologie van Essilor. Het verschil zie je niet op papier, maar meteen tijdens de meting. En daarna elke dag, in je glazen.
 
@@ -90,9 +90,9 @@ Daarom meten wij in stappen van 0,01 dioptrie, met de AVA-technologie van Essilo
 
 #### De collectie
 
-Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken. Gerda zoekt kleine leveranciers uit die stijlvolle monturen van uitstekende kwaliteit maken, vooral uit Italië en Spanje, aangevuld met degelijk werk uit Zwitserland.
+Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken. We zoeken kleine leveranciers uit die stijlvolle monturen van uitstekende kwaliteit maken, vooral uit Spanje en Zwitserland, aangevuld met werk uit Frankrijk, België en Nederland.
 
-Zo vind je bij ons monturen die je niet in elke winkel tegenkomt: Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Baruch, Caroline Abram, Colibris, Visionario, Calvin Klein en Liu Jo. Voor sport is er Gloryfy, en voor in de zon ook Randolph.
+Zo vind je bij ons monturen die je niet in elke winkel tegenkomt: Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Caroline Abram en Visionario. Voor sport is er Gloryfy, en voor in de zon Randolph en Serengeti.
 
 Kijk gerust rond en pas alles wat je mooi vindt. We zeggen eerlijk wat bij je gezicht past en wat niet.
 
@@ -114,7 +114,7 @@ En verder: de koffie wordt vers gezet. Kom gerust binnen om rond te kijken.
 
 - **Adres** — Overwinningsplein 100, 9728 GW Groningen.
 - **Openingstijden** — Woensdag tot en met vrijdag van 9.30 tot 17.30 uur, zaterdag van 10.00 tot 16.00 uur. Maandag, dinsdag en zondag zijn we gesloten.
-- **Bereikbaar** — Bel 050 20 64 015, app ons op 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
+- **Bereikbaar** — Bel 050 20 64 015, app ons via WhatsApp of mail naar info@oogcontactbijgerard.nl.
 
 #### Veelgestelde vragen
 
@@ -150,7 +150,7 @@ Wil je eerst weten wat een Admetec loepbril voor je werk kan betekenen, kies dan
 
 **Zullen we eens goed naar je ogen kijken?**
 
-Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
+Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, stuur een appje via WhatsApp of mail naar info@oogcontactbijgerard.nl.
 
 *Knop:* Afspraak maken
 
@@ -177,7 +177,7 @@ Bij Oogcontact bij Gerard draait alles om scherp en comfortabel zicht. Je vindt 
 
 Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken, maar op kleinere leveranciers van mooie, stijlvolle monturen. Kies hieronder de categorie die bij je past.
 
-- **Brillen** — Stijlvolle monturen van kleine merken uit onder meer Italië, Spanje en Zwitserland, gecombineerd met glazen van Essilor. We kijken samen welk model bij je gezicht past en welk glas aansluit op je dagelijkse kijkbehoefte.
+- **Brillen** — Stijlvolle monturen van kleine merken uit onder meer Spanje, Zwitserland en Nederland, gecombineerd met glazen van Essilor. We kijken samen welk model bij je gezicht past en welk glas aansluit op je dagelijkse kijkbehoefte.
 - **Contactlenzen** — Zachte lenzen in dag-, tweewekelijkse en maandvariant, ook met cilinder of multifocaal. Daarnaast harde lenzen, die op maat gemaakt worden en waar je met gemak 1 tot 2 jaar mee doet. Na de aanmeting en een proefperiode kijken we samen of de lenzen je het comfort geven dat je zoekt.
 - **Zonnebrillen** — Zonnebrillen die je ogen echt beschermen tegen uv-straling, desgewenst met gepolariseerde glazen tegen hinderlijke schitteringen. De glazen kunnen ook op sterkte, meekleurend of overlopend van donker naar licht.
 - **Kinderbrillen** — Een kinderbril moet tegen een stootje kunnen én door je kind zelf mooi gevonden worden. Bij bijziendheid zijn er bovendien speciale glazen die de groei van het oog kunnen afremmen.
@@ -250,7 +250,7 @@ Monturen zijn er in veel vormen, kleuren en maten. Het mooiste montuur valt eige
 
 Het materiaal bepaalt hoeveel we later nog kunnen aanpassen. Kies je acetaat of een ander kunststof, dan moet de neusmaat meteen goed zijn. Bij titanium, stainless steel of hout met neuspads kunnen we de neusmaat wel bijstellen.
 
-De kleinere merken zoeken we samen uit; Gerda etaleert ze in de winkel. Je vindt bij ons onder andere Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale, Baruch, Calvin Klein, Liu Jo, Caroline Abram en Colibris, en Gloryfy voor sportbrillen.
+De kleinere merken zoeken we samen uit; Gerda etaleert ze in de winkel. Je vindt bij ons onder andere Etnia Barcelona, Gigi Studios, Gotti, Einstoffen, Odette Lunettes, Penn and Ink, Bloomdale en Caroline Abram, en Gloryfy voor sportbrillen.
 
 Pas gerust alles wat je aanstaat. Voor een uitgebreide oogmeting maken we daarna graag een afspraak met je.
 
@@ -316,7 +316,7 @@ Dat verschilt per werkgever, dus vraag het na op je werk. Wij vertellen je graag
 
 **Kom langs voor je nieuwe bril**
 
-Wil je je ogen laten meten of rustig monturen passen? Maak een afspraak, dan nemen we uitgebreid de tijd voor je. Bellen kan op 050 20 64 015, appen op 06 18 89 85 99 en mailen naar info@oogcontactbijgerard.nl. Wij houden graag oogcontact.
+Wil je je ogen laten meten of rustig monturen passen? Maak een afspraak, dan nemen we uitgebreid de tijd voor je. Bellen kan op 050 20 64 015, appen via WhatsApp en mailen naar info@oogcontactbijgerard.nl. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -395,7 +395,7 @@ Merk je dat zowel veraf zien als dichtbij lezen lastiger wordt? Dan is de multif
 
 Ogen veranderen, en je lenzen mogen daarin meebewegen. Daarom blijven we je volgen nadat de lenzen zijn aangemeten. Voor een lenscontrole of een heraanmeting plan je eenvoudig een nieuwe afspraak in.
 
-Zit een lens tussendoor niet lekker of twijfel je ergens over? Bel ons gerust op 050 20 64 015 of stuur een bericht via WhatsApp op 06 18 89 85 99. Mailen kan ook, naar info@oogcontactbijgerard.nl. We denken graag met je mee.
+Zit een lens tussendoor niet lekker of twijfel je ergens over? Bel ons gerust op 050 20 64 015 of stuur een bericht via WhatsApp. Mailen kan ook, naar info@oogcontactbijgerard.nl. We denken graag met je mee.
 
 #### Langskomen aan het Overwinningsplein
 
@@ -409,7 +409,7 @@ Naast contactlenzen kun je bij ons terecht voor een oogmeting, brillen en zonneb
 
 **Moet ik een afspraak maken voor contactlenzen?**
 
-Voor een lenzenaanmeting, een heraanmeting of een lenscontrole vragen we je een afspraak te maken, zodat we echt de tijd voor je hebben. Dat kan online via Afspraak maken, telefonisch op 050 20 64 015, via WhatsApp op 06 18 89 85 99 of per mail. Even binnenlopen met een vraag mag natuurlijk altijd tijdens onze openingstijden.
+Voor een lenzenaanmeting, een heraanmeting of een lenscontrole vragen we je een afspraak te maken, zodat we echt de tijd voor je hebben. Dat kan online via Afspraak maken, telefonisch op 050 20 64 015, via WhatsApp of per mail. Even binnenlopen met een vraag mag natuurlijk altijd tijdens onze openingstijden.
 
 **Waarom doen jullie een topografisch onderzoek?**
 
@@ -480,7 +480,7 @@ Naast zonnebrillen ben je bij ons ook welkom voor een gewone bril, contactlenzen
 
 We hebben bewust niet gekozen voor de grote modemerken, maar voor kleinere leveranciers die stijlvolle monturen maken. Deze kleinere merken zoeken we samen uit; Gerda etaleert ze in de winkel.
 
-Je vindt bij ons onder andere Odette Lunettes, Einstoffen, Gigi Studios, Liu Jo, Etnia Barcelona, Visionario, Penn and Ink, Colibris en Gotti. Voor sport hebben we de onbreekbare Gloryfy-brillen. Al deze merken voldoen aan de beschermingseisen. (Zet Randolph als open punt: 'Voeren we Randolph ook als zonnebril, en voldoet dat merk aan dezelfde beschermingseisen?')
+Je vindt bij ons onder andere Odette Lunettes, Einstoffen, Gigi Studios, Etnia Barcelona, Visionario, Penn and Ink, Randolph, Serengeti en Gotti. Voor sport hebben we de onbreekbare Gloryfy-brillen. Al deze merken voldoen aan de beschermingseisen.
 
 Pas gerust wat je mooi vindt. We zeggen het eerlijk als een model niet goed op je gezicht staat, en we denken net zo graag mee als je er zelf nog niet uit bent.
 
@@ -523,7 +523,7 @@ Binnenlopen om te kijken en te passen mag tijdens onze openingstijden: woensdag 
 
 **Kom je zonnebril uitzoeken**
 
-Wil je advies over een zonnebril die je ogen goed beschermt? Maak een afspraak via de pagina Afspraak maken, bel 050 20 64 015 of stuur een WhatsApp naar 06 18 89 85 99. Je bent ook zonder afspraak welkom aan het Overwinningsplein 100 in Groningen. De bus stopt pal voor de winkel en parkeren kan direct voor de deur. Wij houden graag oogcontact.
+Wil je advies over een zonnebril die je ogen goed beschermt? Maak een afspraak via de pagina Afspraak maken, bel 050 20 64 015 of stuur een appje via WhatsApp. Je bent ook zonder afspraak welkom aan het Overwinningsplein 100 in Groningen. De bus stopt pal voor de winkel en parkeren kan direct voor de deur. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -611,7 +611,7 @@ Ja, je bent samen met je kind van harte welkom om binnen te lopen, rond te kijke
 
 **Zullen we samen naar de ogen van je kind kijken?**
 
-Plan online een afspraak voor een oogmeting, of bel ons op 050 20 64 015. Een appje naar 06 18 89 85 99 of een mail naar info@oogcontactbijgerard.nl mag ook. Wij houden graag oogcontact.
+Plan online een afspraak voor een oogmeting, of bel ons op 050 20 64 015. Een appje via WhatsApp of een mail naar info@oogcontactbijgerard.nl mag ook. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -716,7 +716,7 @@ Een bril is pas echt goed als de meting eronder klopt. Bij Oogcontact bij Gerard
 
 Draag je pas kort een bril of al jaren, dan ben je de term brilvoorschrift vast tegengekomen. Je brilvoorschrift is het resultaat van een oogmeting. Daarmee kunnen wij de brillenglazen kiezen die jouw zicht corrigeren.
 
-Je gezichtsvermogen en de sterkte van je glazen worden gemeten in een eenheid die dioptrie heet. Al jaren worden ogen gemeten in stappen van een kwart dioptrie. Misschien is het je opgevallen dat je voorschrift altijd eindigt op .00D, .25D, .50D of .75D.
+Je gezichtsvermogen en de sterkte van je glazen worden gemeten in een eenheid die dioptrie heet. Al jaren worden ogen gemeten in stappen van een kwart dioptrie. Misschien is het je opgevallen dat je voorschrift altijd eindigt op 0,00D, 0,25D, 0,50D of 0,75D.
 
 #### Waarom een kwart dioptrie vaak te grof is
 
@@ -758,7 +758,7 @@ Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voo
 
 We zijn open op woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en op zaterdag van 10.00 tot 16.00 uur. Maandag, dinsdag en zondag zijn we gesloten.
 
-Wil je langskomen? Bel 050 20 64 015, app ons via 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl, dan plannen we samen een moment.
+Wil je langskomen? Bel 050 20 64 015, app ons via WhatsApp of mail naar info@oogcontactbijgerard.nl, dan plannen we samen een moment.
 
 #### Veelgestelde vragen
 
@@ -766,7 +766,7 @@ Wil je langskomen? Bel 050 20 64 015, app ons via 06 18 89 85 99 of mail naar in
 
 Dioptrie is de meeteenheid voor je gezichtsvermogen en voor de sterkte van je brillenglazen. De waarde staat op je brilvoorschrift, en dat voorschrift is het resultaat van een oogmeting.
 
-**Waarom eindigt mijn brilvoorschrift altijd op .25, .50, .75 of .00?**
+**Waarom eindigt mijn brilvoorschrift altijd op 0,25, 0,50, 0,75 of 0,00?**
 
 Omdat ogen al jaren worden gemeten in stappen van een kwart dioptrie. Dat voldoet aan de huidige normen, maar 95% van de bevolking heeft een gevoeliger zicht dan die stap. Met Essilor AVA meten wij tot op 0,01 dioptrie.
 
@@ -801,13 +801,13 @@ Wil je zelf ervaren wat meten tot op 0,01 dioptrie met je zicht doet? Plan een o
 ### Wat Google laat zien
 
 > **Collectie & merken bij je opticien in Groningen**
-> Monturen van kleine makers uit Italië, Spanje en Zwitserland. Bij Oogcontact bij Gerard neem je rustig de tijd om te passen, met een kop koffie erbij.
+> Monturen van kleine makers uit Spanje, Zwitserland en Nederland. Bij Oogcontact bij Gerard neem je rustig de tijd om te passen, met een kop koffie erbij.
 
 ### De tekst op de pagina
 
 **Onze collectie: monturen van kleine makers**
 
-Een bril draag je elke dag, dus die mag meer zijn dan een hulpmiddel. Daarom zoeken wij, Gerard en Gerda, onze monturen zelf uit bij kleine makers, vooral in Italië en Spanje en daarnaast in Zwitserland. Je vindt bij ons een zorgvuldig gekozen collectie in plaats van een greep uit de catalogus. Kom gerust langs om te passen; de koffie wordt vers gezet.
+Een bril draag je elke dag, dus die mag meer zijn dan een hulpmiddel. Daarom zoeken wij, Gerard en Gerda, onze monturen zelf uit bij kleine makers, vooral in Spanje en Zwitserland en daarnaast dichter bij huis. Je vindt bij ons een zorgvuldig gekozen collectie in plaats van een greep uit de catalogus. Kom gerust langs om te passen; de koffie wordt vers gezet.
 
 #### Bewust gekozen voor kleine makers
 
@@ -871,7 +871,7 @@ De nadruk ligt op kleine leveranciers van stijlvolle monturen. Daarnaast staan e
 
 **Waar komen de monturen vandaan?**
 
-Vooral uit Italië en Spanje. Daarnaast voeren we degelijke en stijlvolle monturen uit Zwitserland.
+Vooral uit Spanje en Zwitserland. Daarnaast voeren we monturen uit Frankrijk, België, Oostenrijk en Nederland.
 
 **Kan ik mijn bril later laten bijstellen?**
 
@@ -912,7 +912,7 @@ Oogcontact bij Gerard is een zelfstandige opticien aan het Overwinningsplein in 
 
 Onze winkel voelt als het verlengstuk van onze woonkamer. Gerard heeft bijna alles zelf verbouwd, waardoor de sfeer precies is zoals we hem voor ogen hadden: rustig, warm en op je gemak. Jij voelt je hier hopelijk net zo thuis als wij.
 
-Voor de monturen kozen we bewust niet voor de grote modemerken. Ons oog viel op kleine leveranciers van stijlvolle, kwalitatief uitstekende brillen, vooral uit Italië en Spanje en daarnaast degelijke monturen uit Zwitserland. Zo vind je bij ons iets wat je niet overal ziet.
+Voor de monturen kozen we bewust niet voor de grote modemerken. Ons oog viel op kleine leveranciers van stijlvolle, kwalitatief uitstekende brillen, vooral uit Spanje en Zwitserland en daarnaast monturen uit Frankrijk, België en Nederland. Zo vind je bij ons iets wat je niet overal ziet.
 
 Je bent welkom voor brillen, zonnebrillen, contactlenzen, een kinderbril of een loepbril. Langskomen is eenvoudig: parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
 
@@ -970,7 +970,7 @@ Woensdag, donderdag en vrijdag zijn we open van 9.30 tot 17.30 uur en zaterdag v
 
 **Hoe maak ik een afspraak?**
 
-Online via de pagina Afspraak maken, of bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
+Online via de pagina Afspraak maken, of bel 050 20 64 015, app ons via WhatsApp of mail naar info@oogcontactbijgerard.nl.
 
 **Waar kan ik parkeren?**
 
@@ -1011,7 +1011,7 @@ Hier houden we je op de hoogte van wat er speelt bij Oogcontact bij Gerard, je z
 
 Op dit moment staat er nog geen nieuws op deze pagina. Zodra we iets te vertellen hebben, lees je het hier.
 
-Heb je in de tussentijd een vraag? Bel ons gerust op 050 20 64 015, stuur een WhatsApp naar 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl. Gerard en Gerda denken graag even met je mee.
+Heb je in de tussentijd een vraag? Bel ons gerust op 050 20 64 015, stuur een appje via WhatsApp of mail naar info@oogcontactbijgerard.nl. Gerard en Gerda denken graag even met je mee.
 
 #### De uitnodiging onderaan
 
@@ -1054,7 +1054,7 @@ Per soort afspraak reserveren we de tijd die erbij hoort. Zo hoeft niemand zich 
 
 #### Liever even bellen of appen?
 
-Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 015 of stuur een WhatsApp naar 06 18 89 85 99. Mailen mag ook, naar info@oogcontactbijgerard.nl.
+Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 015 of stuur ons een appje via WhatsApp. Mailen mag ook, naar info@oogcontactbijgerard.nl.
 
 Past geen enkel moment in de agenda? Bel of app ons even, dan zoeken we samen een tijd die voor jou werkt.
 
@@ -1078,7 +1078,7 @@ En als je binnenstapt: de koffie wordt vers gezet. Wij, Gerard en Gerda, nemen d
 
 **Zullen we een moment inplannen?**
 
-Kies hierboven een dag en tijd die jou uitkomt, of laat je nummer achter in het formulier, dan bellen wij jou terug. Liever direct contact? Bel 050 20 64 015 of app naar 06 18 89 85 99. Wij houden graag oogcontact.
+Kies hierboven een dag en tijd die jou uitkomt, of laat je nummer achter in het formulier, dan bellen wij jou terug. Liever direct contact? Bel 050 20 64 015 of stuur ons een appje via WhatsApp. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 

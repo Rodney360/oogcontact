@@ -1,0 +1,5 @@
+De map waar Keystatic de nieuwsberichten neerzet.
+
+Hij is nu leeg: de vijf berichten uit 2022 zijn van de site gehaald. Ze staan
+nog wel in content-archive/, dus er is niets verloren. Dit bestandje houdt de
+map in de repo, zodat een nieuw bericht uit /keystatic hier gewoon landt.

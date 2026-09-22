@@ -33,6 +33,11 @@ export const BEDRIJF = {
   },
 
   whatsapp: {
+    /**
+     * Het nummer staat nergens meer als tekst op de site: appen gaat via de
+     * knop "App ons". Dit blijft hier staan omdat het het echte nummer is,
+     * bijvoorbeeld handig als iemand het moet opzoeken.
+     */
     weergave: '06 18 89 85 99',
     /** Internationaal formaat zonder plus, zoals wa.me dat wil. */
     nummer: '31618898599',
@@ -72,8 +77,9 @@ export const BEDRIJF = {
   /** 1 mei 2021: de dag dat de winkel openging. */
   geopendSinds: '2021-05-01',
 
+  /** Aangeleverd door Gerard op 22 september 2026. Staat in de voettekst. */
+  kvkNummer: '82055882' as string | null,
   /** Nog aan te leveren door Gerard - zie docs/open-punten.md */
-  kvkNummer: null as string | null,
   googleBedrijfsprofiel: null as string | null,
 } as const
 

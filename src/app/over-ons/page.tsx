@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 
 import { Beeld } from '@/components/Beeld'
+import { KleurKnop } from '@/components/KleurKnop'
 import { Sectie, SectieKop, Leeskolom, Oproep } from '@/components/Sectie'
 import { Kruimelpad } from '@/components/InhoudsPagina'
 import { Verschijnt } from '@/components/Beweging'
 import { Vragen } from '@/components/Vragen'
+import type { BeeldSlot } from '@/content/beeld'
 import { tekst } from '@/content/teksten/index'
 import { BEDRIJF } from '@/content/bedrijf'
 import { paginaMeta, JsonLd, kruimelsJsonLd, vragenJsonLd } from '@/lib/seo'
@@ -35,6 +37,18 @@ function portretVoor(kop: string) {
   return null
 }
 
+/** Bij een sectie zonder portret kan een sfeerfoto horen. */
+const SFEERBEELD: Record<string, BeeldSlot> = {
+  'Onze winkel': 'over-ons-boeken',
+}
+
+function sfeerbeeldVoor(kop: string) {
+  for (const [stuk, slot] of Object.entries(SFEERBEELD)) {
+    if (kop.includes(stuk)) return slot
+  }
+  return null
+}
+
 export default function OverOns() {
   return (
     <>
@@ -57,25 +71,45 @@ export default function OverOns() {
         <div className="space-y-24">
           {T.secties.map((sectie, i) => {
             const portret = portretVoor(sectie.kop)
+            const sfeer = portret ? null : sfeerbeeldVoor(sectie.kop)
+
+            const tekstBlok = (
+              <div>
+                <h2 className="text-kop-3">{sectie.kop}</h2>
+                {sectie.alineas.map((a) => (
+                  <p key={a.slice(0, 40)} className="mt-5 leesbreedte text-basis text-tekst-zacht">
+                    {a}
+                  </p>
+                ))}
+              </div>
+            )
 
             return (
               <Verschijnt key={sectie.kop} als="section">
                 {portret ? (
+                  /*
+                    De portretkolom is een vaste 18rem breed. Hij groeide eerder
+                    mee met het scherm, en dan werd de foto op een breed scherm
+                    ruim 500 pixels - veel te groot naast de tekst ernaast.
+                  */
                   <div
-                    className={`grid items-start gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16 ${
+                    className={`grid items-start gap-10 lg:grid-cols-[18rem_1fr] lg:gap-16 ${
                       i % 2 === 1 ? 'lg:[direction:rtl] lg:[&>*]:[direction:ltr]' : ''
                     }`}
                   >
-                    <div className="overflow-hidden rounded-groot border border-ivoor-rand">
-                      <Beeld slot={portret} sizes="(min-width: 1024px) 30vw, 100vw" vullend />
-                    </div>
-                    <div>
-                      <h2 className="text-kop-3">{sectie.kop}</h2>
-                      {sectie.alineas.map((a) => (
-                        <p key={a.slice(0, 40)} className="mt-5 leesbreedte text-basis text-tekst-zacht">
-                          {a}
-                        </p>
-                      ))}
+                    <KleurKnop
+                      wie={sectie.kop.includes('Gerda') ? 'Gerda' : 'Gerard'}
+                      className="max-w-[20rem] rounded-groot border border-ivoor-rand lg:max-w-none"
+                    >
+                      <Beeld slot={portret} sizes="(min-width: 1024px) 288px, 320px" vullend />
+                    </KleurKnop>
+                    {tekstBlok}
+                  </div>
+                ) : sfeer ? (
+                  <div className="grid items-start gap-10 lg:grid-cols-[1fr_20rem] lg:gap-16">
+                    {tekstBlok}
+                    <div className="max-w-[20rem] overflow-hidden rounded-groot border border-ivoor-rand">
+                      <Beeld slot={sfeer} sizes="320px" vullend />
                     </div>
                   </div>
                 ) : (
@@ -107,18 +141,12 @@ export default function OverOns() {
         {/* De winkel zelf */}
         <Verschijnt vertraging={0.1}>
           {/*
-            Twee foto's, allebei over de volle breedte: de winkel van binnen en
-            Gerard en Gerda in de deuropening. Er stond hier eerder een derde -
-            nog een overzichtsfoto van dezelfde ruimte - maar twee keer
-            hetzelfde vlak onder elkaar voegde niets toe.
+            Een foto, over de volle breedte: de winkel van binnen. Hieronder
+            stond er nog een - Gerard en Gerda in de deuropening - maar daar
+            spiegelde de hele straat in de etalageruit naast hen.
           */}
-          <div className="mt-24 grid gap-5">
-            <div className="overflow-hidden rounded-groot border border-ivoor-rand">
-              <Beeld slot="winkel-tafel" sizes="100vw" vullend />
-            </div>
-            <div className="overflow-hidden rounded-groot border border-ivoor-rand">
-              <Beeld slot="winkel-deur" sizes="100vw" vullend />
-            </div>
+          <div className="mt-24 overflow-hidden rounded-groot border border-ivoor-rand">
+            <Beeld slot="winkel-tafel" sizes="100vw" vullend />
           </div>
         </Verschijnt>
 
