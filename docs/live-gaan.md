@@ -9,10 +9,16 @@ Bijgewerkt op 22 september 2026.
 
 ## Dit moet af, anders gaat er iets mis
 
-### 1. De mailsleutel (Resend) — Dennis
+### 1. ~~De mailsleutel (Resend)~~ — vervallen, zolang het formulier uit staat
 
-Zonder deze sleutel vult iemand het terugbelformulier in, ziet "bedankt", en
-hoort daarna nooit meer iets. De inzending verdwijnt in het logboek.
+Het terugbelformulier staat uit (`config/schakelaars.mjs`). Daarmee verstuurt de
+site nergens meer e-mail, en is de sleutel van Resend **niet meer nodig om live
+te kunnen**. Bezoekers bellen, appen, mailen, of kiezen zelf een moment in de
+agenda.
+
+Zet je het formulier ooit weer aan, dan moet dit eerst geregeld zijn — anders
+vult iemand het in, ziet "bedankt", en hoort daarna nooit meer iets. De stappen
+staan hieronder, maar ze zijn nu dus niet dringend.
 
 - [ ] Gratis account op <https://resend.com>
 - [ ] Domein `oogcontactbijgerard.nl` toevoegen
@@ -27,7 +33,7 @@ hoort daarna nooit meer iets. De inzending verdwijnt in het logboek.
       nieuwe bouw
 - [ ] Zelf een testbericht sturen via het formulier en kijken of het aankomt
 
-### 2. De agenda in OO2 gelijktrekken — Gerard
+### 2. De agenda in OO2 gelijktrekken — Gerard. **Nu het belangrijkst.**
 
 De agenda op de site is die van OO2 zelf. Alles wat de bezoeker daarin ziet
 komt dus **uit OO2**, niet van ons.
@@ -82,6 +88,24 @@ Doen als laatste, pas als Gerard en Gerda zeggen dat alles goed is.
 - [ ] Beslissen over de opslag van de originele foto's — 233 MB in de
       repository. Advies: zo laten.
 - [ ] Een Lighthouse-rapport op de laatste preview (taak van Dennis)
+
+---
+
+## Het terugbelformulier staat uit
+
+Sinds 22 september 2026. De voorkeur gaat uit naar appen of zelf een moment
+kiezen in de agenda; een formulier waar iemand op moet wachten past daar niet
+bij.
+
+Er is niets weggegooid. In `config/schakelaars.mjs` staat één regel:
+
+```js
+export const TERUGBELFORMULIER_AAN = false
+```
+
+Zet die op `true` en het formulier staat weer op `/afspraak-maken/` én
+`/contact/`. De tests lezen diezelfde regel en doen dan vanzelf weer mee. Denk
+er dan wel aan dat de sleutel van Resend geregeld moet zijn.
 
 ---
 

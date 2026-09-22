@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 import { OnlineAgenda } from '@/components/boeking/OnlineAgenda'
 import { ContactFormulier } from '@/components/ContactFormulier'
+import { TERUGBELFORMULIER_AAN } from '../../../config/schakelaars.mjs'
 import { Sectie, SectieKop, Leeskolom } from '@/components/Sectie'
 import { Kruimelpad } from '@/components/InhoudsPagina'
 import { Verschijnt } from '@/components/Beweging'
@@ -123,7 +124,8 @@ export default async function AfspraakMaken({
         </Sectie>
       )}
 
-      {/* Het terugbelformulier */}
+      {/* Het terugbelformulier. Staat uit; zie config/schakelaars.mjs. */}
+      {TERUGBELFORMULIER_AAN && (
       <Sectie id="terugbellen">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           <div>
@@ -146,6 +148,7 @@ export default async function AfspraakMaken({
           </Verschijnt>
         </div>
       </Sectie>
+      )}
     </>
   )
 }

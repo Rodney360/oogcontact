@@ -852,3 +852,18 @@ toestellen zag het er goed uit, op de kleine niet.
   hero worden nu op drie decimalen afgerond; server en browser rondden het
   laatste cijfer soms verschillend af. Je zag er niets van, maar het gaf wel elke
   keer een melding.
+
+---
+
+## 2026-09-22 (terugbelformulier uit) — Gerard (Claude Code, cloud)
+
+- **Het terugbelformulier staat uit**, op `/afspraak-maken/` en op `/contact/`.
+  De voorkeur gaat uit naar appen of zelf een moment kiezen in de agenda.
+- Er is niets weggegooid. In `config/schakelaars.mjs` staat één regel
+  (`TERUGBELFORMULIER_AAN`); op `true` staat het er weer, op allebei de pagina's
+  tegelijk. De browsertests lezen diezelfde regel en doen dan vanzelf weer mee.
+- Drie teksten op de afspraakpagina verwezen naar het formulier. Die wijzen nu
+  naar bellen en appen, zodat ze in allebei de standen kloppen.
+- **Gevolg voor live gaan:** de site verstuurt nu nergens meer e-mail, dus de
+  sleutel van Resend is niet meer nodig om live te kunnen. Daarmee blijven er
+  nog twee blokkerende punten over: de afspraakduren in OO2 en het domein.

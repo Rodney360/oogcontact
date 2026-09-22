@@ -83,7 +83,9 @@ Ook de namen komen nu uit OO2. Staat er in de agenda iets anders dan op de site
 *Wat je doet:* leg de lijst uit OO2 naast die op `/afspraak-maken/` en maak ze
 gelijk - in OO2 of op de site, wat jou het beste lijkt.
 
-**Resend-account voor de e-mail.**
+**Resend-account voor de e-mail.** *Niet meer dringend:* het terugbelformulier
+staat uit (`config/schakelaars.mjs`), dus de site verstuurt nergens meer mail.
+Dit is pas nodig als dat formulier weer aangezet wordt.
 Hiermee gaat het ingevulde formulier naar de winkel en krijgt de klant een
 bevestiging.
 *Wat je doet:* maak een gratis account op <https://resend.com>, voeg het domein
