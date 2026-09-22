@@ -724,3 +724,17 @@ toestellen zag het er goed uit, op de kleine niet.
   Zo staan de drie formaten op één plek in het bestand.
 - Het telefoonnummer ernaast blijft op 16px staan: de openingsregel moet het
   eerst opvallen, het nummer is daar de tweede stap.
+
+---
+
+## 2026-09-22 (collectie uitgedund) — Gerard (Claude Code, cloud)
+
+- **Twee foto's weg uit de galerij onder "De collectie".** De wazige planken
+  met de scherpe plant ervoor vond Gerard niet mooi genoeg; die is helemaal
+  vervallen. De bril op de boeken is mooi maar hoort er niet: die staat nu
+  nergens meer, in afwachting van een betere plek.
+- De galerij toont nu twee foto's: de monturenwand en de close-up van twee
+  planken. `collectie-3` en `collectie-4` bestaan niet meer.
+- **Openstaand:** waar komt `assets-new/boeken-met-bril.webp` te staan? Een
+  goede kandidaat is de kopfoto van de pagina Collectie & merken; die gebruikt
+  nu `collectie-1`, dezelfde monturenwand als op de homepage.

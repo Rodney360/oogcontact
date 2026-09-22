@@ -156,22 +156,6 @@ export const BEELDEN = {
     breedtes: MIDDEN,
     stijl: 'warm',
   },
-  'collectie-3': {
-    bron: '2022-02/Oogcontactbijgerardhome2.jpg',
-    verhouding: PORTRET,
-    zwaartepunt: 'attention',
-    alt: 'Monturen op verlichte planken langs de wand, met een grote groene plant ervoor.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
-  },
-  'collectie-4': {
-    bron: 'boeken-met-bril.webp',
-    verhouding: PORTRET,
-    zwaartepunt: 'attention',
-    alt: 'Een bril met rond montuur op een stapeltje boeken, in warm avondlicht.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
-  },
 
   // --- Aanbod: de vijf categorieen --------------------------------------
   'aanbod-brillen': {
