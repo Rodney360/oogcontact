@@ -792,3 +792,15 @@ toestellen zag het er goed uit, op de kleine niet.
 - **Belangrijk openstaand punt:** de duur en de namen van de afspraken komen nu
   uit OO2. Staan die daar nog op 30 minuten, dan spreken de site en de agenda
   elkaar tegen. Zie `docs/open-punten.md`.
+
+---
+
+## 2026-09-22 (agenda in het Nederlands) — Gerard (Claude Code, cloud)
+
+- De agenda van OO2 kwam in het Engels binnen. We vragen hem nu op met
+  `?language=dutch`; Easy!Appointments heeft een Nederlandse vertaling
+  ingebouwd en luistert in de meeste versies naar die parameter. Werkt het
+  niet, dan verandert er niets en moet de taal in OO2 zelf om.
+- De teksten en de kleuren bínnen dat vlak zijn van OO2 en kunnen van onze kant
+  niet aangepast worden. Wat je daarover aan OO2 kunt vragen - inclusief onze
+  accentkleur #C9A96A - staat nu in `docs/agenda-koppelen.md`.

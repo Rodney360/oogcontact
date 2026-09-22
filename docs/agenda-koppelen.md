@@ -73,3 +73,23 @@ tijden in onze eigen vormgeving laten zien. Boeken zou nog steeds via OO2 gaan.
 
 Of OO2 die instelling voor klanten openzet, weten we niet. Het is één mailtje
 waard.
+
+---
+
+## De taal en de kleuren van de agenda
+
+Alles binnen dat vlak is van OO2. Een browser laat onze site daar bewust niet
+aan de binnenkant komen, dus wij kunnen de teksten en de kleuren daarin niet
+aanpassen. Dat gebeurt in OO2 zelf.
+
+**De taal.** De agenda stond in het Engels. Easy!Appointments heeft een
+Nederlandse vertaling ingebouwd. We proberen hem nu op te vragen met
+`?language=dutch` in het adres van de agenda. Helpt dat niet, dan staat de taal
+vast in de instellingen bij OO2: log in als beheerder en kijk bij Settings →
+General naar een keuze als "Language" of "Localization". Kun je daar niet bij,
+dan kan OO2 het omzetten.
+
+**De kleuren.** Onze enige accentkleur is messing: **#C9A96A** — dezelfde als de
+knop "Afspraak maken". Sommige versies van Easy!Appointments hebben daar een
+instelling voor (een bedrijfskleur of een eigen stukje CSS). Vraag OO2 of dat
+kan, en geef die code door.

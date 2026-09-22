@@ -20,12 +20,22 @@
 
 import { BEDRIJF } from '@/content/bedrijf'
 
+/**
+ * Een poging om de agenda in het Nederlands te krijgen.
+ *
+ * De agenda stond in het Engels. Easy!Appointments heeft een Nederlandse
+ * vertaling ingebouwd en luistert in de meeste versies naar deze parameter in
+ * het adres. Werkt het niet, dan verandert er niets - een onbekende parameter
+ * wordt gewoon genegeerd - en moet de taal in OO2 zelf omgezet worden.
+ */
+const AGENDA_ADRES = `${BEDRIJF.onlineAgenda}?language=dutch`
+
 export function OnlineAgenda() {
   return (
     <div>
       <div className="overflow-hidden rounded-groot border border-inkt-rand bg-white">
         <iframe
-          src={BEDRIJF.onlineAgenda}
+          src={AGENDA_ADRES}
           title="Online agenda van Oogcontact bij Gerard"
           // De hoogte kunnen wij niet meebewegen met de inhoud: het vlak komt
           // van een ander adres en zegt niet hoe groot het is. Daarom een

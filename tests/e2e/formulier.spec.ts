@@ -73,7 +73,7 @@ test.describe('Afspraak maken', () => {
 
     const agenda = page.locator('iframe[title="Online agenda van Oogcontact bij Gerard"]')
     await expect(agenda).toBeVisible({ timeout: 15_000 })
-    await expect(agenda).toHaveAttribute('src', 'https://oogcontactbijgerard.oo2.online')
+    await expect(agenda).toHaveAttribute('src', /^https:\/\/oogcontactbijgerard\.oo2\.online/)
 
     // De uitweg voor wie het vlak niet geladen krijgt.
     await expect(
