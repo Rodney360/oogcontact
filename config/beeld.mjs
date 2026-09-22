@@ -195,7 +195,10 @@ export const BEELDEN = {
     stijl: 'warm',
   },
   'aanbod-kinderbrillen': {
-    bron: '2023-03/OogcontactbijGerard-Kinderbrillen.jpg',
+    // Er staan twee versies van deze foto in het archief, allebei 667 x 1000.
+    // Deze is duidelijk scherper dan die uit 2023-03, en het is ook degene die
+    // de oude site zelf gebruikte.
+    bron: '2023-04/OogcontactbijGerard-Kinderbrillen2.jpg',
     verhouding: PORTRET,
     zwaartepunt: 'attention',
     alt: 'Een meisje met een bril met rond montuur kijkt in de camera.',

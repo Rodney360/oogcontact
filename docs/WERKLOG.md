@@ -832,3 +832,23 @@ toestellen zag het er goed uit, op de kleine niet.
   de namen van de afspraken in OO2, en het verhuizen van het domein.
 - `docs/open-punten.md` blijft de uitgebreide uitleg; de checklist verwijst
   ernaar in plaats van het over te schrijven.
+
+---
+
+## 2026-09-22 (scherpe kinderbril, steviger filter) — Gerard (Claude Code, cloud)
+
+- **De foto bij kinderbrillen was onscherp.** Er staan twee versies van dezelfde
+  foto in het archief, allebei 667 x 1000. We gebruikten de zachte uit 2023-03;
+  de oude site gebruikte `2023-04/OogcontactbijGerard-Kinderbrillen2.jpg`, die
+  zes keer zoveel detail heeft (gemeten met een randendetectie: 15 tegen 95).
+  Nu staat die op de site.
+- De andere vier categoriefoto's zijn nagemeten: daar is de versie die we al
+  gebruiken de scherpste, of het verschil is er niet. Die blijven staan.
+- **De kleurcorrectie over de agenda staat steviger:** van 1.6 naar 2.2. Bij 1.6
+  zag Gerard geen verschil. Dat het filter werkt is apart bewezen met een
+  testpagina met een ingesloten vlak: grijze tekst ging daar van #a0a0a0 naar
+  #787878, wit bleef wit.
+- **De waarschuwing in de ontwikkelmodus is weg.** De lijntjes van de iris in de
+  hero worden nu op drie decimalen afgerond; server en browser rondden het
+  laatste cijfer soms verschillend af. Je zag er niets van, maar het gaf wel elke
+  keer een melding.

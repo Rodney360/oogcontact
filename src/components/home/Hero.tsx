@@ -107,17 +107,27 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
         <circle cx="200" cy="200" r="190" fill="none" stroke="var(--color-messing)" strokeWidth="1" />
         <circle cx="200" cy="200" r="150" fill="none" stroke="var(--color-messing)" strokeWidth="1" />
         <circle cx="200" cy="200" r="104" fill="none" stroke="var(--color-messing)" strokeWidth="1.5" />
-        {/* De iris: lijntjes vanuit het midden */}
+        {/*
+          De iris: lijntjes vanuit het midden.
+
+          De uitkomsten worden afgerond op drie decimalen. Zonder dat rondde de
+          server het laatste cijfer soms net anders af dan de browser
+          (111.66540881398727 tegenover ...28), en dan klaagde React dat de
+          pagina niet klopte met wat de server gestuurd had. Je zag er niets
+          van - het gaat om een biljoenste pixel - maar het gaf wel elke keer
+          een waarschuwing.
+        */}
         <g stroke="var(--color-messing)" strokeWidth="0.75">
           {Array.from({ length: 48 }, (_, i) => {
             const hoek = (i / 48) * Math.PI * 2
+            const op = (getal: number) => Math.round(getal * 1000) / 1000
             return (
               <line
                 key={i}
-                x1={200 + Math.cos(hoek) * 46}
-                y1={200 + Math.sin(hoek) * 46}
-                x2={200 + Math.cos(hoek) * 102}
-                y2={200 + Math.sin(hoek) * 102}
+                x1={op(200 + Math.cos(hoek) * 46)}
+                y1={op(200 + Math.sin(hoek) * 46)}
+                x2={op(200 + Math.cos(hoek) * 102)}
+                y2={op(200 + Math.sin(hoek) * 102)}
               />
             )
           })}

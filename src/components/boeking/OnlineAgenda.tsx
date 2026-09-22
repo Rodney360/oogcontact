@@ -45,9 +45,10 @@ const AGENDA_ADRES = `${BEDRIJF.onlineAgenda}?language=dutch`
  * dichter naar het wit toe.
  *
  * Eén getal, dus makkelijk bij te stellen. Te hoog en de kleuren binnen de
- * agenda worden modderig; te laag en je ziet er niets van.
+ * agenda worden modderig; te laag en je ziet er niets van. Bij 1.6 zag Gerard
+ * geen verschil, dus hij staat nu steviger.
  */
-const DONKERDER = 1.6
+const DONKERDER = 2.2
 
 export function OnlineAgenda() {
   return (
