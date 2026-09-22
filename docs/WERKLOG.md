@@ -921,3 +921,18 @@ toestellen zag het er goed uit, op de kleine niet.
 - De testpagina `/agenda-test/` heeft zijn werk gedaan en is weer verwijderd.
 - **Wat blijft:** de datums en teksten in de agenda zijn lichtgrijs op wit. Dat
   is nu volledig een vraag voor OO2; de mail daarvoor staat klaar.
+
+---
+
+## 2026-09-22 (klaar om live te gaan) — Gerard (Claude Code, cloud)
+
+- **Gerard heeft de afspraakduren en de namen in OO2 nagelopen en gecontroleerd.**
+  Daarmee is het laatste inhoudelijke punt af en staat alleen het verhuizen van
+  het domein nog open.
+- `docs/live-gaan.md` beschrijft die verhuizing nu stap voor stap: wat er vooraf
+  moet, wat er in Vercel gebeurt, wat er daarna gecontroleerd wordt en wat er de
+  week erna nog komt.
+- **Met nadruk opgeschreven dat de e-mail van de winkel over hetzelfde domein
+  loopt.** Alleen de A- en CNAME-regels aanpassen; MX en TXT met rust laten.
+  Een testmail naar info@oogcontactbijgerard.nl is de belangrijkste controle na
+  het omzetten.
