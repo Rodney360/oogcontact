@@ -114,7 +114,7 @@ En verder: de koffie wordt vers gezet. Kom gerust binnen om rond te kijken.
 
 - **Adres** — Overwinningsplein 100, 9728 GW Groningen.
 - **Openingstijden** — Woensdag tot en met vrijdag van 9.30 tot 17.30 uur, zaterdag van 10.00 tot 16.00 uur. Maandag, dinsdag en zondag zijn we gesloten.
-- **Bereikbaar** — Bel 050 20 64 015, app ons op 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
+- **Bereikbaar** — Bel 050 20 64 015, app ons via WhatsApp of mail naar info@oogcontactbijgerard.nl.
 
 #### Veelgestelde vragen
 
@@ -150,7 +150,7 @@ Wil je eerst weten wat een Admetec loepbril voor je werk kan betekenen, kies dan
 
 **Zullen we eens goed naar je ogen kijken?**
 
-Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
+Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoonlijk overleggen? Bel 050 20 64 015, stuur een appje via WhatsApp of mail naar info@oogcontactbijgerard.nl.
 
 *Knop:* Afspraak maken
 
@@ -316,7 +316,7 @@ Dat verschilt per werkgever, dus vraag het na op je werk. Wij vertellen je graag
 
 **Kom langs voor je nieuwe bril**
 
-Wil je je ogen laten meten of rustig monturen passen? Maak een afspraak, dan nemen we uitgebreid de tijd voor je. Bellen kan op 050 20 64 015, appen op 06 18 89 85 99 en mailen naar info@oogcontactbijgerard.nl. Wij houden graag oogcontact.
+Wil je je ogen laten meten of rustig monturen passen? Maak een afspraak, dan nemen we uitgebreid de tijd voor je. Bellen kan op 050 20 64 015, appen via WhatsApp en mailen naar info@oogcontactbijgerard.nl. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -395,7 +395,7 @@ Merk je dat zowel veraf zien als dichtbij lezen lastiger wordt? Dan is de multif
 
 Ogen veranderen, en je lenzen mogen daarin meebewegen. Daarom blijven we je volgen nadat de lenzen zijn aangemeten. Voor een lenscontrole of een heraanmeting plan je eenvoudig een nieuwe afspraak in.
 
-Zit een lens tussendoor niet lekker of twijfel je ergens over? Bel ons gerust op 050 20 64 015 of stuur een bericht via WhatsApp op 06 18 89 85 99. Mailen kan ook, naar info@oogcontactbijgerard.nl. We denken graag met je mee.
+Zit een lens tussendoor niet lekker of twijfel je ergens over? Bel ons gerust op 050 20 64 015 of stuur een bericht via WhatsApp. Mailen kan ook, naar info@oogcontactbijgerard.nl. We denken graag met je mee.
 
 #### Langskomen aan het Overwinningsplein
 
@@ -409,7 +409,7 @@ Naast contactlenzen kun je bij ons terecht voor een oogmeting, brillen en zonneb
 
 **Moet ik een afspraak maken voor contactlenzen?**
 
-Voor een lenzenaanmeting, een heraanmeting of een lenscontrole vragen we je een afspraak te maken, zodat we echt de tijd voor je hebben. Dat kan online via Afspraak maken, telefonisch op 050 20 64 015, via WhatsApp op 06 18 89 85 99 of per mail. Even binnenlopen met een vraag mag natuurlijk altijd tijdens onze openingstijden.
+Voor een lenzenaanmeting, een heraanmeting of een lenscontrole vragen we je een afspraak te maken, zodat we echt de tijd voor je hebben. Dat kan online via Afspraak maken, telefonisch op 050 20 64 015, via WhatsApp of per mail. Even binnenlopen met een vraag mag natuurlijk altijd tijdens onze openingstijden.
 
 **Waarom doen jullie een topografisch onderzoek?**
 
@@ -523,7 +523,7 @@ Binnenlopen om te kijken en te passen mag tijdens onze openingstijden: woensdag 
 
 **Kom je zonnebril uitzoeken**
 
-Wil je advies over een zonnebril die je ogen goed beschermt? Maak een afspraak via de pagina Afspraak maken, bel 050 20 64 015 of stuur een WhatsApp naar 06 18 89 85 99. Je bent ook zonder afspraak welkom aan het Overwinningsplein 100 in Groningen. De bus stopt pal voor de winkel en parkeren kan direct voor de deur. Wij houden graag oogcontact.
+Wil je advies over een zonnebril die je ogen goed beschermt? Maak een afspraak via de pagina Afspraak maken, bel 050 20 64 015 of stuur een appje via WhatsApp. Je bent ook zonder afspraak welkom aan het Overwinningsplein 100 in Groningen. De bus stopt pal voor de winkel en parkeren kan direct voor de deur. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -611,7 +611,7 @@ Ja, je bent samen met je kind van harte welkom om binnen te lopen, rond te kijke
 
 **Zullen we samen naar de ogen van je kind kijken?**
 
-Plan online een afspraak voor een oogmeting, of bel ons op 050 20 64 015. Een appje naar 06 18 89 85 99 of een mail naar info@oogcontactbijgerard.nl mag ook. Wij houden graag oogcontact.
+Plan online een afspraak voor een oogmeting, of bel ons op 050 20 64 015. Een appje via WhatsApp of een mail naar info@oogcontactbijgerard.nl mag ook. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -758,7 +758,7 @@ Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voo
 
 We zijn open op woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en op zaterdag van 10.00 tot 16.00 uur. Maandag, dinsdag en zondag zijn we gesloten.
 
-Wil je langskomen? Bel 050 20 64 015, app ons via 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl, dan plannen we samen een moment.
+Wil je langskomen? Bel 050 20 64 015, app ons via WhatsApp of mail naar info@oogcontactbijgerard.nl, dan plannen we samen een moment.
 
 #### Veelgestelde vragen
 
@@ -970,7 +970,7 @@ Woensdag, donderdag en vrijdag zijn we open van 9.30 tot 17.30 uur en zaterdag v
 
 **Hoe maak ik een afspraak?**
 
-Online via de pagina Afspraak maken, of bel 050 20 64 015, app 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl.
+Online via de pagina Afspraak maken, of bel 050 20 64 015, app ons via WhatsApp of mail naar info@oogcontactbijgerard.nl.
 
 **Waar kan ik parkeren?**
 
@@ -1011,7 +1011,7 @@ Hier houden we je op de hoogte van wat er speelt bij Oogcontact bij Gerard, je z
 
 Op dit moment staat er nog geen nieuws op deze pagina. Zodra we iets te vertellen hebben, lees je het hier.
 
-Heb je in de tussentijd een vraag? Bel ons gerust op 050 20 64 015, stuur een WhatsApp naar 06 18 89 85 99 of mail naar info@oogcontactbijgerard.nl. Gerard en Gerda denken graag even met je mee.
+Heb je in de tussentijd een vraag? Bel ons gerust op 050 20 64 015, stuur een appje via WhatsApp of mail naar info@oogcontactbijgerard.nl. Gerard en Gerda denken graag even met je mee.
 
 #### De uitnodiging onderaan
 
@@ -1054,7 +1054,7 @@ Per soort afspraak reserveren we de tijd die erbij hoort. Zo hoeft niemand zich 
 
 #### Liever even bellen of appen?
 
-Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 015 of stuur een WhatsApp naar 06 18 89 85 99. Mailen mag ook, naar info@oogcontactbijgerard.nl.
+Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 015 of stuur ons een appje via WhatsApp. Mailen mag ook, naar info@oogcontactbijgerard.nl.
 
 Past geen enkel moment in de agenda? Bel of app ons even, dan zoeken we samen een tijd die voor jou werkt.
 
@@ -1078,7 +1078,7 @@ En als je binnenstapt: de koffie wordt vers gezet. Wij, Gerard en Gerda, nemen d
 
 **Zullen we een moment inplannen?**
 
-Kies hierboven een dag en tijd die jou uitkomt, of laat je nummer achter in het formulier, dan bellen wij jou terug. Liever direct contact? Bel 050 20 64 015 of app naar 06 18 89 85 99. Wij houden graag oogcontact.
+Kies hierboven een dag en tijd die jou uitkomt, of laat je nummer achter in het formulier, dan bellen wij jou terug. Liever direct contact? Bel 050 20 64 015 of stuur ons een appje via WhatsApp. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 

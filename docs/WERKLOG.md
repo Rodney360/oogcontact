@@ -695,3 +695,19 @@ toestellen zag het er goed uit, op de kleine niet.
 - Let op: in de close-up van de monturen staat op een plankje een zwart
   displaybordje met "Einstoffen". Dat is gewoon de winkel, geen merkfoto, maar
   het valt wel te lezen — zeg het als het toch weg moet.
+
+---
+
+## 2026-09-22 (appen via de knop) — Gerard (Claude Code, cloud)
+
+- **Het 06-nummer staat nergens meer als tekst op de site.** Appen gaat overal
+  via de knop "App ons": zwevend rechtsonder op een breed scherm, in de balk
+  onderaan op een telefoon, en nu ook in de voettekst en als tegel op de
+  contactpagina.
+- In elf lopende teksten stond "app naar 06 18 89 85 99" of iets in die geest.
+  Dat is nu "app ons via WhatsApp". Het vaste nummer 050 20 64 015 blijft
+  gewoon staan, dat is het winkelnummer.
+- Het WhatsApp-icoon staat nu in `src/components/IcoonWhatsApp.tsx`, zodat de
+  knop er overal hetzelfde uitziet.
+- Let op: het nummer zit nog wel in de link zelf (`wa.me/31618898599`). Dat kan
+  niet anders, want daarmee weet WhatsApp met wie het gesprek moet openen.

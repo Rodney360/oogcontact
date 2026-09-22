@@ -48,7 +48,7 @@ Parkeren kan direct voor de deur. De bus stopt pal voor de winkel.
 ## Contact
 
 - Telefoon: ${BEDRIJF.telefoon.weergave}
-- WhatsApp: ${BEDRIJF.whatsapp.weergave}
+- WhatsApp: via de knop “App ons” op ${SITE_URL}/contact/
 - E-mail: ${BEDRIJF.email}
 - Afspraak maken: ${SITE_URL}/afspraak-maken/
 
