@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Boeking } from '@/components/boeking/Boeking'
+import { OnlineAgenda } from '@/components/boeking/OnlineAgenda'
 import { ContactFormulier } from '@/components/ContactFormulier'
 import { Sectie, SectieKop, Leeskolom } from '@/components/Sectie'
 import { Kruimelpad } from '@/components/InhoudsPagina'
@@ -26,18 +26,27 @@ const KRUIMELS = [
 ]
 
 /**
- * Met ?voor=loepbrillen in het adres toont de boekingsmodule in stap 1 alleen
- * de afspraken van dat onderwerp. Zo komt iemand die op de loepbrillenpagina
- * op "Afspraak maken" klikt niet in de hele lijst terecht. De rest blijft één
- * klik weg.
+ * Kom je van een pagina over één onderwerp - de loepbrillen bijvoorbeeld - dan
+ * staat dat in het adres als ?voor=loepbrillen. De agenda hieronder is van OO2
+ * en kan daar niet op filteren, dus we zetten er een regel bij: kijk in de
+ * agenda bij dat onderwerp. Zo weet iemand die doorklikt nog waar hij naar
+ * zoekt.
  */
+const ONDERWERPNAMEN: Record<string, string> = {
+  brillen: 'brillen',
+  zonnebrillen: 'zonnebrillen',
+  kinderbrillen: 'kinderbrillen',
+  contactlenzen: 'contactlenzen',
+  loepbrillen: 'loepbrillen',
+}
+
 export default async function AfspraakMaken({
   searchParams,
 }: {
   searchParams: Promise<{ [sleutel: string]: string | string[] | undefined }>
 }) {
   const gevraagd = (await searchParams).voor
-  const voor = typeof gevraagd === 'string' ? gevraagd : undefined
+  const voor = typeof gevraagd === 'string' ? ONDERWERPNAMEN[gevraagd] : undefined
   const afwijkendeDagen = uitzonderingen()
 
   return (
@@ -68,15 +77,21 @@ export default async function AfspraakMaken({
         </div>
       </Sectie>
 
-      {/* De boekingsmodule */}
+      {/* De online agenda */}
       <Sectie compact id="online">
         <h2 className="text-kop-2">Plan je afspraak online</h2>
         <p className="mt-5 leesbreedte text-lead text-tekst-licht-zacht">
-          In een paar stappen: kies waarvoor je komt, wanneer het schikt, en laat je gegevens
-          achter. Je krijgt meteen een bevestiging per e-mail.
+          Kies hieronder waarvoor je komt, en daarna een dag en een tijd die jou uitkomen. Je
+          ziet meteen welke momenten nog vrij zijn.
         </p>
+        {voor && (
+          <p className="mt-4 leesbreedte text-basis text-messing">
+            Je komt hier vanaf de pagina over {voor}. Kies in de agenda de afspraak die daarbij
+            hoort.
+          </p>
+        )}
         <div className="mt-12">
-          <Boeking voor={voor} />
+          <OnlineAgenda />
         </div>
       </Sectie>
 

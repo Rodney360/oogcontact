@@ -769,3 +769,26 @@ toestellen zag het er goed uit, op de kleine niet.
   mooi, en hij helpt bezoekers de winkel te herkennen als ze aankomen.
 - De plek `winkel-deur` bestaat daarmee niet meer. De avondfoto van de gevel
   (`winkel-gevel`) en die op de homepage blijven allebei gewoon staan.
+
+---
+
+## 2026-09-22 (de agenda van OO2 erin) — Gerard (Claude Code, cloud)
+
+- **OO2 geeft geen API uit**, niet in dit pakket en ook niet in een duurder.
+  Daarmee vervalt de route waarin onze eigen boekingsmodule de vrije tijden
+  ophaalt en de afspraak wegschrijft.
+- **De agenda van OO2 staat nu ingesloten op `/afspraak-maken/`**, net als op
+  de oude WordPress-site. Echte tijden, echte afspraken, geen dubbele
+  boekingen. Eromheen staat onze eigen tekst, en eronder de weg naar de
+  telefoon voor wie het niet lukt.
+- **Op de homepage stond de module ook.** Daar staat nu een uitnodiging met de
+  knop "Naar de agenda" en het telefoonnummer. Twee van die vlakken zou de
+  homepage onnodig zwaar maken.
+- Onze eigen module, `src/lib/agenda/`, de API-routes en `/agenda-controle/`
+  blijven allemaal staan. Ze worden alleen nergens meer getoond. In
+  `docs/agenda-koppelen.md` staan de drie stappen om terug te schakelen.
+- De cookie- en privacyverklaring vertellen nu dat de agenda van OO2 in de
+  pagina geladen wordt en dat wat je daar invult rechtstreeks naar OO2 gaat.
+- **Belangrijk openstaand punt:** de duur en de namen van de afspraken komen nu
+  uit OO2. Staan die daar nog op 30 minuten, dan spreken de site en de agenda
+  elkaar tegen. Zie `docs/open-punten.md`.
