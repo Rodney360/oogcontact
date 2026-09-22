@@ -886,3 +886,21 @@ toestellen zag het er goed uit, op de kleine niet.
   derde-partijcookies.** Daar helpt niets van onze kant tegen; dan tonen we op
   een telefoon een knop naar de agenda in plaats van het vlak zelf. Staat in
   `docs/agenda-koppelen.md`.
+
+---
+
+## 2026-09-22 (testpagina voor de agenda) — Gerard (Claude Code, cloud)
+
+- **De agenda blijft leeg op Gerards iPhone, maar de oude site toont hem wel op
+  diezelfde telefoon.** Dan ligt het niet aan OO2, niet aan de telefoon en niet
+  aan cookies, maar aan iets op onze eigen pagina.
+- **`/agenda-test/` is een hulppagina om dat uit te zoeken.** Vier varianten
+  onder elkaar: precies zoals de oude site, hetzelfde met `?language=dutch`,
+  zoals hij nu op de site staat, en een knop die de agenda los opent. Welke wel
+  en niet werken, wijst de oorzaak aan:
+  - A werkt, C niet: het ligt aan onze opmaak
+  - A werkt, B niet: het ligt aan de taalinstelling in het adres
+  - niets werkt: het ligt aan de headers van de site (CSP, Permissions-Policy)
+  - alleen D werkt: insluiten kan niet op die telefoon
+- De pagina staat niet in het menu en niet in de sitemap, en zoekmachines wordt
+  gevraagd hem te laten staan. Hij mag weg zodra het opgelost is.
