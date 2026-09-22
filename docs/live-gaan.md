@@ -53,12 +53,44 @@ komt dus **uit OO2**, niet van ons.
 
 Doen als laatste, pas als Gerard en Gerda zeggen dat alles goed is.
 
-- [ ] `oogcontactbijgerard.nl` bij Vercel zetten (stappen in
-      `docs/vercel-toegang.md`)
-- [ ] `NEXT_PUBLIC_SITE_URL` op `https://oogcontactbijgerard.nl` zetten
+Dit kan alleen de eigenaar van het Vercel-project. Gerard kan er niet bij; zie
+`docs/vercel-toegang.md` voor waarom dat zo is en wat de keuzes zijn.
+
+Het domein draait nu nog op de oude WordPress-site bij Creative Steps
+(nagemeten op 22 september: nginx, PHP, Plesk). Er is dus nog niets verhuisd.
+
+**In Vercel — een kwartier, Dennis**
+
+- [ ] Settings → **Domains** → `oogcontactbijgerard.nl` toevoegen
+- [ ] En ook `www.oogcontactbijgerard.nl` toevoegen. Vercel stuurt de een naar
+      de ander door; welke kant op mag je zelf kiezen
+- [ ] Vercel toont daarna per domein de **DNS-regels** die nodig zijn. Neem die
+      over of maak er een schermafdruk van — die gaan naar Creative Steps
+- [ ] Settings → **Environment Variables** → `NEXT_PUBLIC_SITE_URL` op
+      `https://oogcontactbijgerard.nl`. Zonder dit blijven de sitemap, de
+      deelplaatjes en de verwijzingen voor Google naar `vercel.app` wijzen
+- [ ] **Opnieuw laten bouwen** (Deployments → de bovenste → Redeploy). Een
+      instelling telt pas mee bij een nieuwe bouw
+
+**Bij Creative Steps**
+
+- [ ] De DNS-regels laten omzetten. De mail die je kunt overnemen staat
+      verderop in deze checklist
+- [ ] **Alleen de A- en CNAME-regels.** De MX-regels en de bijbehorende
+      TXT-regels met rust laten: de e-mail van de winkel loopt over hetzelfde
+      domein en gaat er anders uit
+
+**Daarna controleren**
+
+- [ ] `https://oogcontactbijgerard.nl` toont de nieuwe site
+- [ ] `https://www.oogcontactbijgerard.nl` komt op hetzelfde uit
 - [ ] Een paar oude adressen nalopen, bijvoorbeeld
       <https://oogcontactbijgerard.nl/afwijkende-openingstijden/> — die hoort op
       het nieuwsoverzicht uit te komen
+- [ ] De agenda op telefoon én laptop
+- [ ] Ververs hard (Ctrl+Shift+R of Cmd+Shift+R). Je browser onthoudt de oude
+      site langer dan je denkt
+
 - [ ] Liever op een rustig moment: er zitten een paar minuten tussen waarin de
       site niet bereikbaar is
 

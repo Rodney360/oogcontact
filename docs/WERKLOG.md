@@ -921,3 +921,26 @@ toestellen zag het er goed uit, op de kleine niet.
 - De testpagina `/agenda-test/` heeft zijn werk gedaan en is weer verwijderd.
 - **Wat blijft:** de datums en teksten in de agenda zijn lichtgrijs op wit. Dat
   is nu volledig een vraag voor OO2; de mail daarvoor staat klaar.
+
+---
+
+## 2026-09-22 (avond) — Dennis (Claude Code, cloud)
+
+- **`docs/vercel-toegang.md` klopte op vier punten niet meer**, en stuurde
+  daardoor een sessie van Gerard het verkeerde bos in. Nagemeten en rechtgezet:
+  previews zitten niet meer achter een inlogscherm, Gerards samenvoegingen gaan
+  gewoon live, de taak "Live zetten" in `ci.yml` bestaat niet meer, en het
+  domein draait nog op WordPress bij Creative Steps.
+- **Het project overzetten naar Gerard kan niet.** Vercel eist dat je lid bent
+  van het team waar je naartoe overzet, en een gratis account kan geen leden
+  hebben. Dat staat nu met de bron erbij in de handleiding, samen met de drie
+  wegen die wél bestaan: laten zoals het is, Vercel Pro, of een tweede project.
+- Apart benoemd, want het staat los van het eigenaarschap: het gratis
+  abonnement van Vercel is volgens de voorwaarden alleen voor niet-commercieel
+  gebruik, en dit wordt de site van een winkel.
+- **`docs/live-gaan.md` punt 3** bevat nu de stappen zelf in plaats van een
+  verwijzing: de twee domeinen toevoegen, de DNS-regels uitlezen,
+  `NEXT_PUBLIC_SITE_URL` zetten, opnieuw bouwen, en wat je daarna nakijkt. Met
+  de waarschuwing dat alleen de A- en CNAME-regels om mogen: de e-mail van de
+  winkel loopt over hetzelfde domein.
+- **Nog open:** zie `docs/open-punten.md` en `docs/live-gaan.md`.
