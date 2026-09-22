@@ -49,8 +49,9 @@ export default function Contact() {
               uitleg: 'Tijdens openingstijden nemen we gewoon zelf op.',
             },
             {
+              // Geen nummer: de tegel zelf is de knop naar WhatsApp.
               label: 'WhatsApp',
-              waarde: BEDRIJF.whatsapp.weergave,
+              waarde: 'App ons',
               href: whatsappLink(),
               uitleg: 'Handig voor een korte vraag of een foto van je bril.',
             },

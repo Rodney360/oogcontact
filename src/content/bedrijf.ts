@@ -33,6 +33,11 @@ export const BEDRIJF = {
   },
 
   whatsapp: {
+    /**
+     * Het nummer staat nergens meer als tekst op de site: appen gaat via de
+     * knop "App ons". Dit blijft hier staan omdat het het echte nummer is,
+     * bijvoorbeeld handig als iemand het moet opzoeken.
+     */
     weergave: '06 18 89 85 99',
     /** Internationaal formaat zonder plus, zoals wa.me dat wil. */
     nummer: '31618898599',

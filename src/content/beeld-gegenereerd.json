@@ -124,7 +124,7 @@
     "bron": "2022-02/Vision-R-800-Left-PNG-768x540-1.png"
   },
   "collectie-1": {
-    "alt": "Monturen op houten standaards in de winkel, met een campagnebeeld op de achtergrond.",
+    "alt": "De monturenwand in de winkel: rij na rij brillen op smalle witte planken.",
     "breedte": 1280,
     "hoogte": 1707,
     "breedtes": [
@@ -133,11 +133,11 @@
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAADQBQCdASoUABsAPu1qq08ppiOiMBgIATAdiWYAqQX/5GAAfuL5cDAqGyCMZL4Y6cqvN+kTOHAAAPa+/398ZJ6JN1drDf+lDRimEHACb17ko7RnOfzyxcDsrzm3T/yU6wBrpTJQQAVy0Zslp+xUJYj33VbZ0/9zzQRYT2m9tq94/P7iyJ8OXJ/wI+1uImScS9R/EWhz7JTfdyZxR41HcSiof1qL1w6ydn3dBlDPyeBfpwg4IW3ax7x1sQzMDi2tjCr20273afoPgiKOHwbKDlZf9ZVOgk7Jr0OjEsbEuDWORDeBvUfrg6erubkm13Y1b/qO/AAA",
-    "bron": "2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1030-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAACwBQCdASoUABsAPu1iqU2ppaOiMAgBMB2JZwAL7//+itO6HzmQ6+nNc93umCd/i7ZhcpT3R6AAyy47L1KGLRmSZwaB9cUJ7YVeT8BUw9q7a/W99vWOMi3l7CsHjSibfy5PWtwIVgcUNehslecr77adodfToebQFfUOdiFrY4QD49awv8WqGNzgMTHQmaqzbgfm/l/NgFD2tl6tqMMCqoVbY1yMT3pxcB0Tfiq3+Rez0/6hQgoBgeOlBDS/i28dVJPcO7BhapMPe8JH7EQ4CPnk2SulRCrYAAA=",
+    "bron": "Monturen wand.jpg"
   },
   "collectie-2": {
-    "alt": "Brillen naast elkaar op een verlichte wandplank in de winkel.",
+    "alt": "Monturen van dichtbij op twee planken: boven een rond goudkleurig en een groot rozé montuur, onder een paars en een zwart rond montuur.",
     "breedte": 1280,
     "hoogte": 1707,
     "breedtes": [
@@ -146,60 +146,32 @@
       900,
       1280
     ],
-    "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAABwBQCdASoUABsAPu1orVCppaQiqAqpMB2JZgCxHxgBZCiTxdJVokUg2xyH0I4Xqam6JxwAAP6lDJY7XJbGuKyELe5DUbvaFBqtKPUZ6u4yZIsIEs4NeqORv6MtyXr03/27X+HDDEPN3HhX2gHH46lcyhePyXsdePf6qRUZFHUmvBarFeeavu1VI0g64BGsH4ic+BCOMS7fQ5tITVMkWXZoNTgz77ttLroWuyKpS4FaQ7mlNqgioUD0XZinyp2Nh0gbywwjZIgAAA==",
-    "bron": "2021-10/IMG_1011-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAQBQCdASoUABsAPu1mqk2ppaQiMAgBMB2JZQDE2B+UNmvenF9O0bgfgHOqn5R2nfSAAPpNbzba7GDN+wiTQCr2lULDGVkmbgSxe2tmI7tzM8rtRUcMdRZSJkgeMBWW0manOxA25PLTa+duEHipwyRZDImmLdTxab3h/FRveEHIwOubeSil09ADOwsX08lEguee5y6WMabz6ZyCKnfyAX+JvaZSSSxMGHA+MDGeey4ZM2CrCwCZ6qf8y+fHToYi5KP+t95AAAA=",
+    "bron": "Close up monturen.jpg"
   },
   "collectie-3": {
-    "alt": "Een wand vol zonnebrillen op smalle planken in de winkel.",
-    "breedte": 1280,
-    "hoogte": 1707,
+    "alt": "Monturen op verlichte planken langs de wand, met een grote groene plant ervoor.",
+    "breedte": 900,
+    "hoogte": 1200,
     "breedtes": [
       400,
       640,
-      900,
-      1280
+      900
     ],
-    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAADQBQCdASoUABsAPu1mqU2ppaQiMAgBMB2JZgCsMzRA2CaHmXPUylkheffFzryM3danetQQzgcAAP7v81h7MR+qx5CnTE2S+Qrc/ZXi21nwTLjKgaOQFVhR4AimAWwvIGFhlb8ukfK0D7zMdHfwmMwCap34xebFjShsHvRRTrFHHTl+7KFy3CA3nkESLrviae7xKv1yqDci1HSXE5frJB3fyRF+8kD2ayQmTvD2kbHase3qHC3KA+P9BukXbjRDipgnDEkpnZMQ+CfeawAulGESTq4fF4buFifMAA==",
-    "bron": "2021-06/IMG_0038-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAAAwBQCdASoUABsAPu1kqk2ppaQiMAgBMB2JZQDKtCHcmE2xq3L5DzjXS92jr0zDfrEaQAD8cj1PJsx+Oqx0czq5HV/LAma/rr52xNTdblCdlfTyKwRJBWBEhOLk5zXAQFDlEEqn/5tKDJc3jSVV7fueEH9Y+7X+qoS3ddTfq+UYE6Nh5wyy9I6OrlBskjh6ibkAks/pim9DenQn2nyuGUvpOFHXz4ipplI0/uz08r8qxrXMX7Fsc5anG0ZjK5oNJL5iwvc9oAAAAA==",
+    "bron": "2022-02/Oogcontactbijgerardhome2.jpg"
   },
   "collectie-4": {
-    "alt": "Monturen uitgestald op de planken langs de wand van de winkel.",
-    "breedte": 1280,
-    "hoogte": 1707,
+    "alt": "Een bril met rond montuur op een stapeltje boeken, in warm avondlicht.",
+    "breedte": 900,
+    "hoogte": 1200,
     "breedtes": [
       400,
       640,
-      900,
-      1280
+      900
     ],
-    "blur": "data:image/webp;base64,UklGRvYAAABXRUJQVlA4IOoAAADwBQCdASoUABsAPu1qrVCppaQiqAqpMB2JYgC7GvVt/8u+5h4QlQN/XxqO/mi6nMtm2cZLpzesEAD9bK2KUx18JH77EOfEs6ltbR4ZlRR8qFHiPNkQ6hEIvMs8q7B9KPEtshz5Ni6IDfKkTYThAJCan23JWA3VqvmbRooYtvGavgAF/LTLw82jxtqkyrWBEbNJoV17tJ3JsH5uaHnQuNV1ZRYpcJuuVOx+QxklfB6BRtSAHtez3ieq8xKAX/+JG2vt+UBh9O4Ty9krIn2LBuOCcmSGiolFPsTMJBPuoiYc4b1Oc6gBR9PwAAA=",
-    "bron": "2021-06/IMG_0051-scaled.jpg"
-  },
-  "collectie-5": {
-    "alt": "Een uitstalling met monturen en een campagnebeeld in de winkel.",
-    "breedte": 1280,
-    "hoogte": 1707,
-    "breedtes": [
-      400,
-      640,
-      900,
-      1280
-    ],
-    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAACwBQCdASoUABsAPu1gp02ppSMiMAgBMB2JaACdM2ECZ+v+Aw7baFHbcc86Ue+vyWW8HK0Xn1AA/dF5CaP70tO/GcwEIVsogr1t8J8EmVMoG/J512AWx9ir6fSvkvCn7+3J2TuhdMQjIY2vTcZAPNNR5NHzorcYdvjZilrZ3m9RwtsmQUaLnZ+zQPnBkydG9aHICmfNIeXzdddzKHZ9iyFU09XgMDjoFXZxVbtRGuauQrRKLk101mFwKyV4VZG9WUjw25o7po2Ee3aw/z8mnnVYMjGdC5/I34BAAA==",
-    "bron": "2021-07/IMG_0267-scaled.jpg"
-  },
-  "collectie-6": {
-    "alt": "Gerard in een lichtblauw overhemd en met een ronde bril, kijkt in de camera. Achter hem, onscherp, de monturenwand.",
-    "breedte": 1280,
-    "hoogte": 1707,
-    "breedtes": [
-      400,
-      640,
-      900,
-      1280
-    ],
-    "blur": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAADQBACdASoUABsAPu1orlCppaQiqAqpMB2JZACdMoABfTsYYF0YLpqtu+HLL6MLeAD4YlJGkq40qrYK6d6qjx3qj97YEkSTJPm96TdeBicJ6F0CtIY76rICyZa3o8Eb+pMp+z0YUpDNUL7ZcDD5/h42aEQ5CLDbjqVzX1sE1mPXS50ViDIFekfgbaYwzIan9zP+heX932QPWiOX1XBTl0VjdUypoprVpMRJJrCQ8CNHpzedsaKHRrndQuTJ48yFZNsDpC5l3HHYDK2oF29QAA==",
-    "bron": "2021-07/IMG_0271-scaled.jpg"
+    "blur": "data:image/webp;base64,UklGRhYBAABXRUJQVlA4IAoBAACQBgCdASoUABsAPu1qrVCppaQiqAqpMB2JbACdMoRwJoIqhz4Atk84yIkp8O8whGyN9mS4slQAfRxys5twAP6/yZViyhJz57HLfoK2fcOMPr6i8/2+9YBr71/N+CSs+xO50CRGJFClKitlTRsG8g4QjmoqqiyOrsW6fKz9E1xpwvFKOH9OeKcaijhpUrtrrt6lu23qlJ4TLFRl2Dey0HnAKs/hZYDdsnmZQajyv5A5kKNS36M6NJ2XZ7hm4yflzKay4JwvrII8Hcalzwj6c+5cKqH2/Fd34PeA02ndrjphRmCDcgi/xpA/aoFxMJS0vhm9xqPnQY4KeROayoXdHi4AqTwMRu5z854gAA==",
+    "bron": "boeken-met-bril.webp"
   },
   "aanbod-brillen": {
     "alt": "Gerard en Gerda houden lachend twee brillen voor hun ogen.",

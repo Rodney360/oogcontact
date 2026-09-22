@@ -678,3 +678,49 @@ toestellen zag het er goed uit, op de kleine niet.
   (`assets-original/2021-07/IMG_0271-scaled.jpg`) is een portret van Gerard in
   een blauw overhemd, maar de alt-tekst zei "Brillen op een plank". Voor een
   schermlezer klopte dat dus niet.
+
+---
+
+## 2026-09-22 — Gerard (Claude Code, cloud)
+
+- **De galerij onder "De collectie" toont nu monturen.** Er stonden zes foto's,
+  en daarvan waren er vijf een portret van Gerard of Gerda en één een
+  merkuitstalling van Einstoffen. De alt-teksten beloofden al monturen, maar dat
+  stond er niet op. Nu vier foto's: de monturenwand, een close-up van twee
+  planken, de verlichte planken met de plant, en de bril op de boeken.
+- `collectie-5` en `collectie-6` bestaan niet meer; de galerij telt vier plekken.
+- **Dioptrieën netter geschreven:** `.25, .50, .75 of .00` is overal
+  `0,25, 0,50, 0,75 of 0,00` geworden — op de homepage en twee keer op de
+  pagina Ultiem nauwkeurig zicht. Duidelijker te lezen, zeker hardop.
+- Let op: in de close-up van de monturen staat op een plankje een zwart
+  displaybordje met "Einstoffen". Dat is gewoon de winkel, geen merkfoto, maar
+  het valt wel te lezen — zeg het als het toch weg moet.
+
+---
+
+## 2026-09-22 (appen via de knop) — Gerard (Claude Code, cloud)
+
+- **Het 06-nummer staat nergens meer als tekst op de site.** Appen gaat overal
+  via de knop "App ons": zwevend rechtsonder op een breed scherm, in de balk
+  onderaan op een telefoon, en nu ook in de voettekst en als tegel op de
+  contactpagina.
+- In elf lopende teksten stond "app naar 06 18 89 85 99" of iets in die geest.
+  Dat is nu "app ons via WhatsApp". Het vaste nummer 050 20 64 015 blijft
+  gewoon staan, dat is het winkelnummer.
+- Het WhatsApp-icoon staat nu in `src/components/IcoonWhatsApp.tsx`, zodat de
+  knop er overal hetzelfde uitziet.
+- Let op: het nummer zit nog wel in de link zelf (`wa.me/31618898599`). Dat kan
+  niet anders, want daarmee weet WhatsApp met wie het gesprek moet openen.
+
+---
+
+## 2026-09-22 (openingsregel in de hero) — Gerard (Claude Code, cloud)
+
+- **De regel "Gesloten · wij zijn weer open ..." bovenaan de homepage is
+  groter en halfvet:** 18px op een telefoon en 20px op een breed scherm, was
+  16px gewoon. Het stipje ernaast groeide mee.
+- `OpeningsStatus` heeft daarvoor geen `nadruk` meer maar een `maat`:
+  `klein` (overal), `nadruk` (onderaan de homepage) en `hero` (bovenaan).
+  Zo staan de drie formaten op één plek in het bestand.
+- Het telefoonnummer ernaast blijft op 16px staan: de openingsregel moet het
+  eerst opvallen, het nummer is daar de tweede stap.
