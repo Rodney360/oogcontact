@@ -75,16 +75,52 @@ Het valt uiteen in drie stukken, en alleen het middelste ligt buiten de deur.
 > expliciet bij als je het uit handen geeft. Een hostingbedrijf weet dit, maar
 > het is te belangrijk om op aan te nemen.
 
-**Stap 1 — in Vercel. Dat doen jullie zelf, het is een knop.**
+**Stap 1 — in Vercel. Dat doen jullie zelf.**
 
-- [ ] Log in op <https://vercel.com>, ga naar het project `oogcontact`
-- [ ] Settings → Environment Variables → `NEXT_PUBLIC_SITE_URL` op
-      `https://oogcontactbijgerard.nl` zetten, en opnieuw laten bouwen. Zonder
-      dat verwijst de sitemap nog naar het oude adres.
-- [ ] Settings → Domains → `oogcontactbijgerard.nl` toevoegen, daarna ook
-      `www.oogcontactbijgerard.nl`
-- [ ] Vercel toont nu per domein **precies welke regel er in de DNS moet**. Maak
-      daar een schermafdruk van. Dat is wat Creative Steps nodig heeft.
+Vercel heeft veel schermen. Zoek niet, maar open deze twee adressen
+rechtstreeks (je moet ingelogd zijn):
+
+| Waarvoor | Adres |
+|---|---|
+| Het webadres instellen | <https://vercel.com/projects-c1cc/oogcontact/settings/environment-variables> |
+| De domeinen toevoegen | <https://vercel.com/projects-c1cc/oogcontact/settings/domains> |
+
+*1a. Het webadres instellen.* Zonder dit verwijst de sitemap nog naar het oude
+adres.
+
+- [ ] Open het eerste adres hierboven
+- [ ] Staat er al een regel `NEXT_PUBLIC_SITE_URL`? Bewerk die. Zo niet, maak
+      hem aan.
+- [ ] Naam: `NEXT_PUBLIC_SITE_URL` — waarde: `https://oogcontactbijgerard.nl`
+- [ ] Zet hem aan voor alle omgevingen (Production, Preview, Development)
+- [ ] Opslaan
+
+*1b. Opnieuw laten bouwen.* Een instelling telt pas mee bij een nieuwe bouw.
+
+- [ ] Ga naar <https://vercel.com/projects-c1cc/oogcontact/deployments>
+- [ ] De bovenste met het label **Production** → het knopje met de drie puntjes
+      → **Redeploy**
+- [ ] Wachten tot hij groen is (een paar minuten)
+
+*1c. De domeinen toevoegen.*
+
+- [ ] Open het tweede adres hierboven
+- [ ] Typ `oogcontactbijgerard.nl` in het invoerveld en voeg hem toe
+- [ ] Vercel biedt meestal aan om `www.oogcontactbijgerard.nl` erbij te doen en
+      door te verwijzen naar het hoofddomein. Doe dat.
+- [ ] Er verschijnt nu **"Invalid Configuration"** of iets in die geest. **Dat
+      is goed en hoort zo** — het domein wijst immers nog naar de oude hosting.
+- [ ] Klap die melding open. Daar staat precies welke DNS-regel waar moet
+      komen. **Maak daar een schermafdruk van.** Dat is wat Creative Steps
+      nodig heeft.
+
+> Ziet Vercel een keuze tussen losse DNS-regels en het overzetten van de
+> naamservers ("Nameservers")? Kies de **DNS-regels**. Naamservers overzetten
+> raakt ook de e-mail, en dat willen we hier niet.
+
+De knoppen kunnen er net iets anders uitzien dan hierboven staat; Vercel
+verandert zijn schermen regelmatig. Kom je er niet uit, maak dan een
+schermafdruk van wat je ziet.
 
 **Stap 2 — bij Creative Steps.** Stuur ze die schermafdruk met de mail die
 hieronder staat. Zij zetten de regels om.
