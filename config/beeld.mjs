@@ -156,20 +156,16 @@ export const BEELDEN = {
     breedtes: MIDDEN,
     stijl: 'warm',
   },
-  'collectie-3': {
-    bron: '2022-02/Oogcontactbijgerardhome2.jpg',
-    verhouding: PORTRET,
-    zwaartepunt: 'attention',
-    alt: 'Monturen op verlichte planken langs de wand, met een grote groene plant ervoor.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
-  },
-  'collectie-4': {
+
+  // --- Over ons ----------------------------------------------------------
+  'over-ons-boeken': {
     bron: 'boeken-met-bril.webp',
-    verhouding: PORTRET,
+    // De foto is vierkant; zo blijft hij helemaal heel. Een liggende
+    // uitsnede zou de boeken onderaan er precies afsnijden.
+    verhouding: VIERKANT,
     zwaartepunt: 'attention',
-    alt: 'Een bril met rond montuur op een stapeltje boeken, in warm avondlicht.',
-    breedtes: MIDDEN,
+    alt: 'Een bril met rond montuur op twee boeken, op een houten tafel in de avondzon. Op de rug van de boeken staat Oogcontact bij Gerard.',
+    breedtes: KLEIN,
     stijl: 'warm',
   },
 
@@ -236,14 +232,6 @@ export const BEELDEN = {
     alt: 'De winkel van buiten in de avond, met het verlichte logo Oogcontact by Gerard op de ruit.',
     breedtes: MIDDEN,
     stijl: 'neutraal',
-  },
-  'winkel-deur': {
-    bron: '2021-06/Winkel-GerGeer-2.jpg',
-    verhouding: LIGGEND,
-    zwaartepunt: 'attention',
-    alt: 'Gerard en Gerda in de deuropening van de winkel aan het Overwinningsplein.',
-    breedtes: MIDDEN,
-    stijl: 'warm',
   },
 }
 

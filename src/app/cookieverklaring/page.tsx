@@ -74,6 +74,16 @@ export default function Cookieverklaring() {
             een formulier, het is puur om spam tegen te houden, en er wordt niets mee gevolgd.
           </p>
 
+          <h3 className="mt-8 text-kop-4">De online agenda</h3>
+          <p>
+            Op de pagina Afspraak maken staat onze online agenda. Die draait bij OO2, het bedrijf
+            waar wij onze afsprakenagenda hebben, en wordt in de pagina zelf geladen. Je browser
+            legt daarvoor verbinding met oogcontactbijgerard.oo2.online, en OO2 kan daarbij iets
+            in je browser opslaan om te onthouden waar je in het invullen bent. Dat is nodig om te
+            kunnen boeken. Bekijk je die pagina alleen maar, dan gebeurt er verder niets met je
+            gegevens. Wat OO2 met een afspraak doet, staat in de privacyverklaring.
+          </p>
+
           <h3 className="mt-8 text-kop-4">De video over de oogmeting</h3>
           <p>
             Op de pagina over nauwkeurig meten staat een video van YouTube. Die wordt pas geladen

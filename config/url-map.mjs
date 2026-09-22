@@ -37,7 +37,14 @@ export const NIEUW = [
   { url: '/cookieverklaring/', titel: 'Cookieverklaring' },
 ]
 
-/** Nieuwsberichten: van los pad naar /nieuws/<slug>/. */
+/**
+ * De slugs van de vijf nieuwsberichten van de oude WordPress-site.
+ *
+ * De berichten zelf staan niet meer op de site - ze gingen over 2022 - maar de
+ * adressen kunnen nog in Google of in iemands geschiedenis staan. Ze worden
+ * daarom doorgestuurd naar het nieuwsoverzicht. De originelen staan in
+ * content-archive/.
+ */
 export const BERICHTEN = [
   '12-tot-en-met-19-september-is-de-winkel-gesloten',
   'afwijkende-openingstijden',
@@ -83,11 +90,14 @@ export const REDIRECTS = [
     naar: '/nieuws/rss.xml',
     reden: 'Reacties bestonden niet echt; verwijst nu naar het nieuwsoverzicht.',
   },
-  // Nieuwsberichten stonden los in de root en verhuizen onder /nieuws/.
+  // De oude nieuwsberichten stonden los in de root. Ze zijn van de site
+  // gehaald - ze gingen over 2022 - maar de adressen blijven werken: wie er
+  // nog eentje in zijn geschiedenis of in Google vindt, komt op het
+  // nieuwsoverzicht uit in plaats van op een 404.
   ...BERICHTEN.map((slug) => ({
     van: `/${slug}/`,
-    naar: `/nieuws/${slug}/`,
-    reden: 'Nieuwsberichten staan nu overzichtelijk onder /nieuws/.',
+    naar: '/nieuws/',
+    reden: 'Het bericht zelf is verwijderd; het overzicht vangt het adres op.',
   })),
   // WordPress-restanten die zoekmachines nog kennen.
   {

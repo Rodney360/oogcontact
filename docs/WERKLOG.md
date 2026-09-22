@@ -724,3 +724,71 @@ toestellen zag het er goed uit, op de kleine niet.
   Zo staan de drie formaten op één plek in het bestand.
 - Het telefoonnummer ernaast blijft op 16px staan: de openingsregel moet het
   eerst opvallen, het nummer is daar de tweede stap.
+
+---
+
+## 2026-09-22 (collectie uitgedund) — Gerard (Claude Code, cloud)
+
+- **Twee foto's weg uit de galerij onder "De collectie".** De wazige planken
+  met de scherpe plant ervoor vond Gerard niet mooi genoeg; die is helemaal
+  vervallen. De bril op de boeken is mooi maar hoort er niet: die staat nu
+  nergens meer, in afwachting van een betere plek.
+- De galerij toont nu twee foto's: de monturenwand en de close-up van twee
+  planken. `collectie-3` en `collectie-4` bestaan niet meer.
+- **Openstaand:** waar komt `assets-new/boeken-met-bril.webp` te staan? Een
+  goede kandidaat is de kopfoto van de pagina Collectie & merken; die gebruikt
+  nu `collectie-1`, dezelfde monturenwand als op de homepage.
+
+---
+
+## 2026-09-22 (over ons en nieuws) — Gerard (Claude Code, cloud)
+
+- **De boekenfoto staat nu op Over ons**, naast het stuk "Onze winkel aan het
+  Overwinningsplein" — een warme tafel in de avondzon, precies bij "het
+  verlengstuk van onze woonkamer". Vierkant, 318 pixels breed: de foto is
+  vierkant, dus zo wordt er niets afgesneden.
+- **De portretten op Over ons zijn kleiner.** De fotokolom groeide mee met het
+  scherm en werd op een breed scherm ruim 500 pixels. Nu een vaste 288 pixels;
+  op een telefoon maximaal 320.
+- **De vijf oude nieuwsberichten zijn van de site af.** Ze gingen allemaal over
+  2022 en spraken de bezoeker nog met "u" aan. De pagina Nieuws laat nu de
+  tekst zien die daar al voor klaarstond: geen nieuws, kijk op Instagram.
+- De vijf oude adressen (`/afwijkende-openingstijden/` en de andere vier) gaan
+  nu naar `/nieuws/` in plaats van naar het bericht zelf, dus geen enkele oude
+  link geeft een 404. De originelen staan nog in `content-archive/`.
+
+---
+
+## 2026-09-22 (deurfoto eruit) — Gerard (Claude Code, cloud)
+
+- **De foto van Gerard en Gerda in de deuropening is van de site af.** Naast
+  hen spiegelde de hele straat in de etalageruit - auto's, fietsen, de overkant.
+  Onderaan Over ons blijft nu alleen de binnenfoto van de winkel staan.
+- Diezelfde foto stond ook op de contactpagina, boven het kaartje. Daar staat nu
+  de avondfoto van de etalage met het verlichte logo: die vindt Gerard juist wel
+  mooi, en hij helpt bezoekers de winkel te herkennen als ze aankomen.
+- De plek `winkel-deur` bestaat daarmee niet meer. De avondfoto van de gevel
+  (`winkel-gevel`) en die op de homepage blijven allebei gewoon staan.
+
+---
+
+## 2026-09-22 (de agenda van OO2 erin) — Gerard (Claude Code, cloud)
+
+- **OO2 geeft geen API uit**, niet in dit pakket en ook niet in een duurder.
+  Daarmee vervalt de route waarin onze eigen boekingsmodule de vrije tijden
+  ophaalt en de afspraak wegschrijft.
+- **De agenda van OO2 staat nu ingesloten op `/afspraak-maken/`**, net als op
+  de oude WordPress-site. Echte tijden, echte afspraken, geen dubbele
+  boekingen. Eromheen staat onze eigen tekst, en eronder de weg naar de
+  telefoon voor wie het niet lukt.
+- **Op de homepage stond de module ook.** Daar staat nu een uitnodiging met de
+  knop "Naar de agenda" en het telefoonnummer. Twee van die vlakken zou de
+  homepage onnodig zwaar maken.
+- Onze eigen module, `src/lib/agenda/`, de API-routes en `/agenda-controle/`
+  blijven allemaal staan. Ze worden alleen nergens meer getoond. In
+  `docs/agenda-koppelen.md` staan de drie stappen om terug te schakelen.
+- De cookie- en privacyverklaring vertellen nu dat de agenda van OO2 in de
+  pagina geladen wordt en dat wat je daar invult rechtstreeks naar OO2 gaat.
+- **Belangrijk openstaand punt:** de duur en de namen van de afspraken komen nu
+  uit OO2. Staan die daar nog op 30 minuten, dan spreken de site en de agenda
+  elkaar tegen. Zie `docs/open-punten.md`.
