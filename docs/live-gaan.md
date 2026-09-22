@@ -75,10 +75,21 @@ Het valt uiteen in drie stukken, en alleen het middelste ligt buiten de deur.
 > expliciet bij als je het uit handen geeft. Een hostingbedrijf weet dit, maar
 > het is te belangrijk om op aan te nemen.
 
-**Stap 1 — in Vercel. Dat doen jullie zelf.**
+**Stap 1 — in Vercel.**
+
+> **Eerst dit, anders loop je vast.** Het Vercel-project staat in het team
+> `projects-c1cc`, en Gerards account `g-bugel-6898` zit daar niet in. Open je
+> een instellingenpagina, dan geeft Vercel **404** - niet omdat de link stuk is,
+> maar omdat je hem niet mag zien. Zolang dat zo is, kan Gerard hieronder niets
+> doen.
+>
+> Los dat eerst op, want straks hangt het domein aan dit project: kun je er niet
+> bij, dan heb je voor elke hapering iemand anders nodig. Hoe dat moet staat in
+> `docs/vercel-toegang.md` - overzetten als dat kan, en anders zet Gerard er een
+> eigen project naast uit dezelfde repository.
 
 Vercel heeft veel schermen. Zoek niet, maar open deze twee adressen
-rechtstreeks (je moet ingelogd zijn):
+rechtstreeks (je moet ingelogd zijn met een account dat bij het project kan):
 
 | Waarvoor | Adres |
 |---|---|
