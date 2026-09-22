@@ -804,3 +804,18 @@ toestellen zag het er goed uit, op de kleine niet.
 - De teksten en de kleuren bínnen dat vlak zijn van OO2 en kunnen van onze kant
   niet aangepast worden. Wat je daarover aan OO2 kunt vragen - inclusief onze
   accentkleur #C9A96A - staat nu in `docs/agenda-koppelen.md`.
+
+---
+
+## 2026-09-22 (agenda leesbaarder) — Gerard (Claude Code, cloud)
+
+- **Een kleurcorrectie over het agendavlak heen.** De datums en teksten van OO2
+  zijn lichtgrijs op wit en slecht te lezen. Binnen dat vlak kunnen we niets
+  aanpassen, maar er overheen wel: een gammacorrectie laat wit wit en maakt
+  alles daaronder donkerder.
+- Gemeten in de browser: grijze tekst gaat van #808080 naar #545454, wit blijft
+  precies wit. Het contrast tegen wit gaat daarmee van 3,9:1 naar 7,6:1 - WCAG
+  2.2 AA vraagt 4,5:1.
+- Het is een noodgreep, geen oplossing: hij raakt alles binnen dat vlak. De
+  echte oplossing ligt bij OO2; de mail daarvoor staat in
+  `docs/agenda-koppelen.md`. Eén getal (`DONKERDER`) zet hem sterker of zwakker.

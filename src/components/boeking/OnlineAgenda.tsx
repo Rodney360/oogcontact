@@ -30,9 +30,42 @@ import { BEDRIJF } from '@/content/bedrijf'
  */
 const AGENDA_ADRES = `${BEDRIJF.onlineAgenda}?language=dutch`
 
+/**
+ * Hoe veel donkerder de tekst in de agenda gemaakt wordt.
+ *
+ * De datums en de teksten van OO2 zijn lichtgrijs op wit en daardoor slecht te
+ * lezen. Binnen dat vlak kunnen we niets aanpassen - dat is een andere site -
+ * maar we kunnen er wel van buitenaf een kleurcorrectie overheen leggen.
+ *
+ * Het is een gammacorrectie: wit blijft wit (1 tot de macht wat dan ook is 1),
+ * maar alles wat er lichtgrijs tussen zit wordt flink donkerder. Lichtgrijs van
+ * 80% wordt bij 1.6 zo'n 70%, middengrijs van 50% wordt 33%.
+ *
+ * Gewoon "meer contrast" werkt hier juist averechts: dat duwt lichte tekst nog
+ * dichter naar het wit toe.
+ *
+ * Eén getal, dus makkelijk bij te stellen. Te hoog en de kleuren binnen de
+ * agenda worden modderig; te laag en je ziet er niets van.
+ */
+const DONKERDER = 1.6
+
 export function OnlineAgenda() {
   return (
     <div>
+      {/*
+        De kleurcorrectie zelf. Hij staat hier als een onzichtbaar SVG-tekentje
+        omdat de gewone CSS-filters geen gammacorrectie kennen.
+      */}
+      <svg aria-hidden="true" focusable="false" className="pointer-events-none absolute size-0">
+        <filter id="agenda-leesbaarder" colorInterpolationFilters="sRGB">
+          <feComponentTransfer>
+            <feFuncR type="gamma" exponent={DONKERDER} />
+            <feFuncG type="gamma" exponent={DONKERDER} />
+            <feFuncB type="gamma" exponent={DONKERDER} />
+          </feComponentTransfer>
+        </filter>
+      </svg>
+
       <div className="overflow-hidden rounded-groot border border-inkt-rand bg-white">
         <iframe
           src={AGENDA_ADRES}
@@ -41,6 +74,7 @@ export function OnlineAgenda() {
           // van een ander adres en zegt niet hoe groot het is. Daarom een
           // ruime vaste hoogte, met een eigen schuifbalk als het niet past.
           className="block h-[44rem] w-full border-0 md:h-[48rem]"
+          style={{ filter: 'url(#agenda-leesbaarder)' }}
         />
       </div>
 

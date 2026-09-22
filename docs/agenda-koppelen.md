@@ -93,3 +93,11 @@ dan kan OO2 het omzetten.
 knop "Afspraak maken". Sommige versies van Easy!Appointments hebben daar een
 instelling voor (een bedrijfskleur of een eigen stukje CSS). Vraag OO2 of dat
 kan, en geef die code door.
+
+**Een noodgreep van onze kant.** Over het agendavlak ligt een kleurcorrectie
+(`DONKERDER` in `src/components/boeking/OnlineAgenda.tsx`). Wit blijft wit, maar
+lichtgrijze tekst wordt flink donkerder: gemeten gaat grijs van #808080 naar
+ongeveer #545454, en daarmee het contrast tegen wit van 3,9:1 naar 7,6:1. WCAG
+2.2 AA vraagt 4,5:1, dus dat haalt het ruim. Het is wel een botte maatregel -
+hij raakt alles binnen dat vlak - en hij verdwijnt zodra OO2 het bij de bron
+oplost. Eén getal aanpassen is genoeg om hem sterker of zwakker te zetten.
