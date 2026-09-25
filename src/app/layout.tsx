@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   description:
     'Zelfstandige opticien aan het Overwinningsplein in Groningen. Wij nemen de tijd voor je, ' +
-    'met een kop koffie erbij. Oogmeting, montuuradvies, brillen, contactlenzen en loepbrillen.',
+    'met een kop koffie erbij. Oogmeting, montuuradvies, brillen en contactlenzen.',
   applicationName: BEDRIJF.naam,
   authors: BEDRIJF.eigenaren.map((naam) => ({ name: naam })),
   creator: BEDRIJF.naam,

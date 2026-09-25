@@ -10,7 +10,7 @@ zoekresultaat raakt kapot.
 
 ---
 
-## Blijft precies zoals het was (13 pagina's)
+## Blijft precies zoals het was (12 pagina's)
 
 Geen redirect nodig. Deze adressen werken na de overstap nog gewoon.
 
@@ -23,7 +23,6 @@ Geen redirect nodig. Deze adressen werken na de overstap nog gewoon.
 | `/contactlenzen/` | Contactlenzen |
 | `/zonnebrillen/` | Zonnebrillen |
 | `/kinderbrillen/` | Kinderbrillen |
-| `/loepbrillen/` | Loepbrillen |
 | `/nieuws/` | Nieuws |
 | `/over-ons/` | Over ons |
 | `/contact/` | Contact |
@@ -32,13 +31,14 @@ Geen redirect nodig. Deze adressen werken na de overstap nog gewoon.
 
 ---
 
-## Verhuist, met een permanente doorverwijzing (16 regels)
+## Verhuist, met een permanente doorverwijzing (17 regels)
 
 Deze adressen krijgen een 301: zoekmachines weten dan dat het adres definitief
 veranderd is en nemen de opgebouwde waarde mee naar het nieuwe adres.
 
 | Oud adres | Nieuw adres | Waarom |
 |---|---|---|
+| `/loepbrillen/` | `/aanbod/` | Loepbrillen worden tijdelijk niet aangeboden. |
 | `/privacybeleid/` | `/privacyverklaring/` | Duidelijkere naam; inhoud is opnieuw geschreven op basis van wat de site echt doet. |
 | `/home/ultiem-nauwkeurig-zicht/` | `/ultiem-nauwkeurig-zicht/` | Dubbele pagina in WordPress. Er is er nog maar een. |
 | `/category/geen-categorie/` | `/nieuws/` | Categorie-archieven van WordPress vervallen; al het nieuws staat op een plek. |

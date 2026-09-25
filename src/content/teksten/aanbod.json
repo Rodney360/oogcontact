@@ -1,9 +1,9 @@
 {
   "slug": "aanbod",
   "metaTitel": "Ons aanbod als opticien in Groningen",
-  "metaOmschrijving": "Brillen, contactlenzen, zonnebrillen, kinderbrillen en loepbrillen. Bekijk waarvoor je bij ons in Groningen terecht kunt en maak rustig een afspraak.",
+  "metaOmschrijving": "Brillen, contactlenzen, zonnebrillen en kinderbrillen. Bekijk waarvoor je bij ons in Groningen terecht kunt en maak rustig een afspraak.",
   "h1": "Ons aanbod",
-  "inleiding": "Bij Oogcontact bij Gerard draait alles om scherp en comfortabel zicht. Je vindt bij ons brillen, contactlenzen, zonnebrillen, kinderbrillen en loepbrillen. Wij, Gerard en Gerda, nemen daar graag de tijd voor, met een verse kop koffie erbij. Hieronder lees je kort wat elke categorie inhoudt, zodat je meteen doorklikt naar wat je zoekt.",
+  "inleiding": "Bij Oogcontact bij Gerard draait alles om scherp en comfortabel zicht. Je vindt bij ons brillen, contactlenzen, zonnebrillen en kinderbrillen. Wij, Gerard en Gerda, nemen daar graag de tijd voor, met een verse kop koffie erbij. Hieronder lees je kort wat elke categorie inhoudt, zodat je meteen doorklikt naar wat je zoekt.",
   "secties": [
     {
       "kop": "Waar kunnen we je mee helpen?",
@@ -26,10 +26,6 @@
         {
           "titel": "Kinderbrillen",
           "tekst": "Een kinderbril moet tegen een stootje kunnen én door je kind zelf mooi gevonden worden. Bij bijziendheid zijn er bovendien speciale glazen die de groei van het oog kunnen afremmen."
-        },
-        {
-          "titel": "Loepbrillen",
-          "tekst": "Handgemaakte loepbrillen van Admetec met bijbehorende verlichting, voor iedereen die in het werk heel nauwkeurig van dichtbij moet kijken. We plannen ruim de tijd in, zowel voor informatie vooraf als voor de aanmeting."
         }
       ]
     },

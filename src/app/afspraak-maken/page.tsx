@@ -38,7 +38,6 @@ const ONDERWERPNAMEN: Record<string, string> = {
   zonnebrillen: 'zonnebrillen',
   kinderbrillen: 'kinderbrillen',
   contactlenzen: 'contactlenzen',
-  loepbrillen: 'loepbrillen',
 }
 
 export default async function AfspraakMaken({

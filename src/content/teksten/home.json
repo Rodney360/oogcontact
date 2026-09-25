@@ -91,7 +91,7 @@
     {
       "kop": "Aanbod",
       "alineas": [
-        "Brillen, zonnebrillen, contactlenzen, een kinderbril of een loepbril: voor alles nemen we dezelfde tijd en dezelfde zorg. Kies waar je meer over wilt weten."
+        "Brillen, zonnebrillen, contactlenzen of een kinderbril: voor alles nemen we dezelfde tijd en dezelfde zorg. Kies waar je meer over wilt weten."
       ],
       "opsomming": []
     },
@@ -149,10 +149,6 @@
     {
       "vraag": "Kan ik bij jullie terecht voor een kinderbril?",
       "antwoord": "Ja, kinderbrillen horen bij ons aanbod. Ook voor kinderen nemen we rustig de tijd, zodat het passen en meten geen haastklus wordt."
-    },
-    {
-      "vraag": "Hoe werkt het aanmeten van een loepbril?",
-      "antwoord": "Wil je eerst weten wat een Admetec loepbril voor je werk kan betekenen, kies dan een informatieafspraak van 30 minuten. Ben je eruit, dan plan je een oogmeting en aanmeting van 60 minuten."
     }
   ],
   "oproep": {
