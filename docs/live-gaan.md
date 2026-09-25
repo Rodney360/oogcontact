@@ -3,16 +3,7 @@
 Eén papiertje om af te vinken. Alles wat hier niet staat, kan ook ná de
 lancering. De uitgebreide uitleg per punt staat in `docs/open-punten.md`.
 
-**Wie doet wat.** Dennis heeft de site samen met Claude gebouwd; het instellen
-en verhuizen is niet zijn vak, en dat hoeft ook niet. Alles wat in Vercel
-gebeurt is aanklikken en kunnen Gerard en Gerda zelf. Het enige echte
-installeerwerk - de DNS omzetten - laten we doen door **Creative Steps**, het
-hostingbedrijf in Friesland waar de huidige site draait.
-
 Bijgewerkt op 22 september 2026.
-
-Gerard heeft de afspraakduren en de namen in OO2 nagelopen. Daarmee staat alles
-op groen behalve het verhuizen van het domein.
 
 ---
 
@@ -42,7 +33,7 @@ staan hieronder, maar ze zijn nu dus niet dringend.
       nieuwe bouw
 - [ ] Zelf een testbericht sturen via het formulier en kijken of het aankomt
 
-### 2. ~~De agenda in OO2 gelijktrekken~~ — Gerard. **Gedaan op 22 september.**
+### 2. De agenda in OO2 gelijktrekken — Gerard. **Nu het belangrijkst.**
 
 De agenda op de site is die van OO2 zelf. Alles wat de bezoeker daarin ziet
 komt dus **uit OO2**, niet van ons.
@@ -58,151 +49,50 @@ komt dus **uit OO2**, niet van ons.
 - [x] ~~De taal op Nederlands zetten~~ — opgelost vanaf de site zelf, OO2
       hoeft daar niets voor te doen
 
-### 3. Het domein verhuizen — Gerard en Gerda, met Creative Steps
+### 3. Het domein verhuizen — Dennis
 
-Dit is het enige stuk waar het echt om instellen gaat. Dennis heeft de site
-gebouwd, maar hoeft dit niet alleen te doen — en dat is ook niet nodig. Het
-verhuizen van een domein is dagelijks werk voor een hostingbedrijf, en dat van
-jullie is **Creative Steps** in Friesland. Zij beheren de huidige site en
-waarschijnlijk ook het domein.
+Doen als laatste, pas als Gerard en Gerda zeggen dat alles goed is.
 
-Het valt uiteen in drie stukken, en alleen het middelste ligt buiten de deur.
+Dit kan alleen de eigenaar van het Vercel-project. Gerard kan er niet bij; zie
+`docs/vercel-toegang.md` voor waarom dat zo is en wat de keuzes zijn.
 
-> **De e-mail van de winkel loopt over ditzelfde domein.**
-> `info@oogcontactbijgerard.nl` hangt aan dezelfde instellingen als de website.
-> Alleen de regels die naar de website wijzen (`A` en `CNAME`) mogen veranderen;
-> de `MX`- en `TXT`-regels moeten precies blijven zoals ze zijn. Zeg dit er
-> expliciet bij als je het uit handen geeft. Een hostingbedrijf weet dit, maar
-> het is te belangrijk om op aan te nemen.
+Het domein draait nu nog op de oude WordPress-site bij Creative Steps
+(nagemeten op 22 september: nginx, PHP, Plesk). Er is dus nog niets verhuisd.
 
-**Stap 1 — in Vercel.**
+**In Vercel — een kwartier, Dennis**
 
-> **Eerst dit, anders loop je vast.** Het Vercel-project staat in het team
-> `projects-c1cc`, en Gerards account `g-bugel-6898` zit daar niet in. Open je
-> een instellingenpagina, dan geeft Vercel **404** - niet omdat de link stuk is,
-> maar omdat je hem niet mag zien. Zolang dat zo is, kan Gerard hieronder niets
-> doen.
->
-> Los dat eerst op, want straks hangt het domein aan dit project: kun je er niet
-> bij, dan heb je voor elke hapering iemand anders nodig. Hoe dat moet staat in
-> `docs/vercel-toegang.md` - overzetten als dat kan, en anders zet Gerard er een
-> eigen project naast uit dezelfde repository.
+- [ ] Settings → **Domains** → `oogcontactbijgerard.nl` toevoegen
+- [ ] En ook `www.oogcontactbijgerard.nl` toevoegen. Vercel stuurt de een naar
+      de ander door; welke kant op mag je zelf kiezen
+- [ ] Vercel toont daarna per domein de **DNS-regels** die nodig zijn. Neem die
+      over of maak er een schermafdruk van — die gaan naar Creative Steps
+- [ ] Settings → **Environment Variables** → `NEXT_PUBLIC_SITE_URL` op
+      `https://oogcontactbijgerard.nl`. Zonder dit blijven de sitemap, de
+      deelplaatjes en de verwijzingen voor Google naar `vercel.app` wijzen
+- [ ] **Opnieuw laten bouwen** (Deployments → de bovenste → Redeploy). Een
+      instelling telt pas mee bij een nieuwe bouw
 
-Vercel heeft veel schermen. Zoek niet, maar open deze twee adressen
-rechtstreeks (je moet ingelogd zijn met een account dat bij het project kan):
+**Bij Creative Steps**
 
-| Waarvoor | Adres |
-|---|---|
-| Het webadres instellen | <https://vercel.com/projects-c1cc/oogcontact/settings/environment-variables> |
-| De domeinen toevoegen | <https://vercel.com/projects-c1cc/oogcontact/settings/domains> |
+- [ ] De DNS-regels laten omzetten. De mail die je kunt overnemen staat
+      verderop in deze checklist
+- [ ] **Alleen de A- en CNAME-regels.** De MX-regels en de bijbehorende
+      TXT-regels met rust laten: de e-mail van de winkel loopt over hetzelfde
+      domein en gaat er anders uit
 
-*1a. Het webadres instellen.* Zonder dit verwijst de sitemap nog naar het oude
-adres.
+**Daarna controleren**
 
-- [ ] Open het eerste adres hierboven
-- [ ] Staat er al een regel `NEXT_PUBLIC_SITE_URL`? Bewerk die. Zo niet, maak
-      hem aan.
-- [ ] Naam: `NEXT_PUBLIC_SITE_URL` — waarde: `https://oogcontactbijgerard.nl`
-- [ ] Zet hem aan voor alle omgevingen (Production, Preview, Development)
-- [ ] Opslaan
+- [ ] `https://oogcontactbijgerard.nl` toont de nieuwe site
+- [ ] `https://www.oogcontactbijgerard.nl` komt op hetzelfde uit
+- [ ] Een paar oude adressen nalopen, bijvoorbeeld
+      <https://oogcontactbijgerard.nl/afwijkende-openingstijden/> — die hoort op
+      het nieuwsoverzicht uit te komen
+- [ ] De agenda op telefoon én laptop
+- [ ] Ververs hard (Ctrl+Shift+R of Cmd+Shift+R). Je browser onthoudt de oude
+      site langer dan je denkt
 
-*1b. Opnieuw laten bouwen.* Een instelling telt pas mee bij een nieuwe bouw.
-
-- [ ] Ga naar <https://vercel.com/projects-c1cc/oogcontact/deployments>
-- [ ] De bovenste met het label **Production** → het knopje met de drie puntjes
-      → **Redeploy**
-- [ ] Wachten tot hij groen is (een paar minuten)
-
-*1c. De domeinen toevoegen.*
-
-- [ ] Open het tweede adres hierboven
-- [ ] Typ `oogcontactbijgerard.nl` in het invoerveld en voeg hem toe
-- [ ] Vercel biedt meestal aan om `www.oogcontactbijgerard.nl` erbij te doen en
-      door te verwijzen naar het hoofddomein. Doe dat.
-- [ ] Er verschijnt nu **"Invalid Configuration"** of iets in die geest. **Dat
-      is goed en hoort zo** — het domein wijst immers nog naar de oude hosting.
-- [ ] Klap die melding open. Daar staat precies welke DNS-regel waar moet
-      komen. **Maak daar een schermafdruk van.** Dat is wat Creative Steps
-      nodig heeft.
-
-> Ziet Vercel een keuze tussen losse DNS-regels en het overzetten van de
-> naamservers ("Nameservers")? Kies de **DNS-regels**. Naamservers overzetten
-> raakt ook de e-mail, en dat willen we hier niet.
-
-De knoppen kunnen er net iets anders uitzien dan hierboven staat; Vercel
-verandert zijn schermen regelmatig. Kom je er niet uit, maak dan een
-schermafdruk van wat je ziet.
-
-**Stap 2 — bij Creative Steps.** Stuur ze die schermafdruk met de mail die
-hieronder staat. Zij zetten de regels om.
-
-**Stap 3 — daarna controleren. Dat doen jullie zelf.**
-
-- [ ] <https://oogcontactbijgerard.nl> toont de nieuwe site, met een slotje
-- [ ] `www.oogcontactbijgerard.nl` komt uit op dezelfde site
-- [ ] Een oud adres: <https://oogcontactbijgerard.nl/afwijkende-openingstijden/>
-      hoort op het nieuwsoverzicht uit te komen
-- [ ] De agenda op `/afspraak-maken/` doet het, op een telefoon én op een laptop
-- [ ] **Stuur een testmail naar `info@oogcontactbijgerard.nl` en kijk of hij
-      aankomt.** Dit is de belangrijkste controle van allemaal.
-- [ ] In Vercel staat bij allebei de domeinen "Valid Configuration"
-
-**Vooraf, om rustig te kunnen werken**
-
-- [ ] Vraag Creative Steps om de huidige DNS-instellingen te bewaren of te
-      exporteren. Dat is de weg terug.
-- [ ] Zeg de oude hosting **nog niet** op. Laat hem een paar weken staan.
-- [ ] Kies een rustig moment: dinsdagochtend, niet vrijdagmiddag en niet vlak
-      voor sluitingstijd.
-
-**De week erna**
-
-- [ ] Het nieuwe adres aanmelden bij Google Search Console en de sitemap
-      indienen
-- [ ] In het Google Bedrijfsprofiel kijken of de link naar de site nog klopt
-- [ ] Pas als alles een paar weken goed gaat: de oude hosting opzeggen
-
----
-
-## De mail aan Creative Steps
-
-> **Onderwerp:** Website verhuizen naar nieuwe hosting - DNS aanpassen
->
-> Goedemiddag,
->
-> Wij zijn Oogcontact bij Gerard in Groningen. Jullie hosten onze huidige
-> website op oogcontactbijgerard.nl.
->
-> We hebben een nieuwe website laten bouwen. Die draait bij Vercel en staat
-> klaar; we willen het domein er nu naartoe laten wijzen. Zouden jullie ons
-> daarbij kunnen helpen?
->
-> Wat er moet gebeuren: de DNS-regels voor de website aanpassen naar wat Vercel
-> aangeeft. In de bijlage staat een schermafdruk uit Vercel met de precieze
-> waarden, voor `oogcontactbijgerard.nl` en voor `www.oogcontactbijgerard.nl`.
->
-> **Belangrijk:** onze e-mail loopt over ditzelfde domein. Graag alleen de
-> website-regels aanpassen en de mailinstellingen (MX en de bijbehorende
-> TXT-regels) ongewijzigd laten.
->
-> Een paar vragen daarbij:
->
-> 1. Beheren jullie het domein zelf, of staat het bij een andere partij? In dat
->    laatste geval horen we graag waar we moeten zijn.
-> 2. Kunnen jullie de huidige DNS-instellingen bewaren of voor ons exporteren,
->    zodat we terug kunnen als er iets niet goed gaat?
-> 3. Wanneer schikt het jullie? Wij hebben het liefst een rustig moment op een
->    doordeweekse ochtend.
->
-> De oude hosting mag nog even blijven staan; die zeggen we pas op als de
-> nieuwe site een paar weken goed draait.
->
-> Alvast bedankt.
->
-> Met vriendelijke groet,
-> Gerard en Gerda Bugel
-> Oogcontact bij Gerard, Overwinningsplein 100, Groningen
-> KvK 82055882
+- [ ] Liever op een rustig moment: er zitten een paar minuten tussen waarin de
+      site niet bereikbaar is
 
 ---
 
@@ -229,7 +119,7 @@ hieronder staat. Zij zetten de regels om.
       `docs/open-punten.md` §1.4)
 - [ ] Beslissen over de opslag van de originele foto's — 233 MB in de
       repository. Advies: zo laten.
-- [ ] Een Lighthouse-rapport op de laatste preview
+- [ ] Een Lighthouse-rapport op de laatste preview (taak van Dennis)
 
 ---
 

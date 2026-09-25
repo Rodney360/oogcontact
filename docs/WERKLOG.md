@@ -929,28 +929,34 @@ toestellen zag het er goed uit, op de kleine niet.
 - **Gerard heeft de afspraakduren en de namen in OO2 nagelopen en gecontroleerd.**
   Daarmee is het laatste inhoudelijke punt af en staat alleen het verhuizen van
   het domein nog open.
-- `docs/live-gaan.md` beschrijft die verhuizing nu stap voor stap: wat er vooraf
-  moet, wat er in Vercel gebeurt, wat er daarna gecontroleerd wordt en wat er de
-  week erna nog komt.
-- **Met nadruk opgeschreven dat de e-mail van de winkel over hetzelfde domein
-  loopt.** Alleen de A- en CNAME-regels aanpassen; MX en TXT met rust laten.
-  Een testmail naar info@oogcontactbijgerard.nl is de belangrijkste controle na
-  het omzetten.
+- Er stond hier ook een stuk over de verhuizing dat ik in `docs/live-gaan.md`
+  had geschreven, met Gerard die zelf in Vercel zou klikken. Dat klopte niet:
+  Gerard komt helemaal niet bij dat project. Dennis heeft het diezelfde avond
+  nagemeten en opnieuw opgeschreven; die versie staat er nu, en die van mij is
+  vervallen.
 
 ---
 
-## 2026-09-22 (verhuizing met Creative Steps) — Gerard (Claude Code, cloud)
+## 2026-09-22 (avond) — Dennis (Claude Code, cloud)
 
-- **Correctie op de rolverdeling.** In de checklist stond het verhuizen van het
-  domein als taak voor Dennis. Dennis heeft de site samen met Claude gebouwd,
-  maar het instellen en installeren is niet zijn vak. Dat stond er dus verkeerd.
-- `docs/live-gaan.md` verdeelt het nu in drie stukken: wat in Vercel gebeurt
-  (aanklikken, doen Gerard en Gerda zelf), het omzetten van de DNS (werk voor
-  **Creative Steps** in Friesland, waar de huidige site draait) en de controle
-  achteraf (weer zelf).
-- Er staat nu een mail aan Creative Steps in die ze kunnen overnemen, inclusief
-  de waarschuwing dat de e-mail over hetzelfde domein loopt en de vraag of zij
-  het domein zelf beheren.
+- **`docs/vercel-toegang.md` klopte op vier punten niet meer**, en stuurde
+  daardoor een sessie van Gerard het verkeerde bos in. Nagemeten en rechtgezet:
+  previews zitten niet meer achter een inlogscherm, Gerards samenvoegingen gaan
+  gewoon live, de taak "Live zetten" in `ci.yml` bestaat niet meer, en het
+  domein draait nog op WordPress bij Creative Steps.
+- **Het project overzetten naar Gerard kan niet.** Vercel eist dat je lid bent
+  van het team waar je naartoe overzet, en een gratis account kan geen leden
+  hebben. Dat staat nu met de bron erbij in de handleiding, samen met de drie
+  wegen die wél bestaan: laten zoals het is, Vercel Pro, of een tweede project.
+- Apart benoemd, want het staat los van het eigenaarschap: het gratis
+  abonnement van Vercel is volgens de voorwaarden alleen voor niet-commercieel
+  gebruik, en dit wordt de site van een winkel.
+- **`docs/live-gaan.md` punt 3** bevat nu de stappen zelf in plaats van een
+  verwijzing: de twee domeinen toevoegen, de DNS-regels uitlezen,
+  `NEXT_PUBLIC_SITE_URL` zetten, opnieuw bouwen, en wat je daarna nakijkt. Met
+  de waarschuwing dat alleen de A- en CNAME-regels om mogen: de e-mail van de
+  winkel loopt over hetzelfde domein.
+- **Nog open:** zie `docs/open-punten.md` en `docs/live-gaan.md`.
 
 ---
 
