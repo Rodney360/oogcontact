@@ -76,12 +76,12 @@ export function OnlineAgenda() {
           Open de agenda in een nieuw tabblad
         </KnopLink>
         <p className="text-bijschrift text-tekst-licht-zacht">
-          Of bel ons even op{' '}
+          Of{' '}
           <a
             href={`tel:${BEDRIJF.telefoon.link}`}
             className="text-messing underline underline-offset-4"
           >
-            {BEDRIJF.telefoon.weergave}
+            bel ons even
           </a>
           , dan plannen we het samen.
         </p>

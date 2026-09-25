@@ -983,3 +983,24 @@ toestellen zag het er goed uit, op de kleine niet.
   afspraken dan ook in OO2 weer aan moeten.
 - De teksten van de pagina zelf (`loepbrillen.json`) en de foto's zijn niet
   aangeraakt.
+
+---
+
+## 2026-09-25 (telefoonnummer alleen nog op knoppen) — Gerard (Claude Code, cloud)
+
+- **Het nummer 050 20 64 015 stond op te veel plekken.** Het is overal uit de
+  lopende tekst gehaald: veertien zinnen in de paginateksten, plus de algemene
+  voorwaarden, de regel onder de agenda en "Wie zijn wij" in de
+  privacyverklaring. Daar staat nu een link "bel ons" in plaats van het nummer.
+- **In de voettekst is het een knop geworden.** "Bel ons" met een
+  telefoonicoontje, naast "App ons" — dezelfde aanpak als bij het 06-nummer.
+  Het mailadres blijft er wel gewoon staan.
+- **In de hero is het losse nummer naast de openingsregel weg.** De knop "Bel of
+  app ons" staat er vlak boven; het nummer eronder voegde niets toe.
+- **Waar het nog staat: alleen op knoppen.** Vier plekken: twee op de homepage
+  (de knop bij "Naar de agenda" en de knop bij Bezoek de winkel), de tegel
+  "Bellen" op de contactpagina, en het blok "Liever even bellen?" op de
+  afspraakpagina. Daar hoort het ook: op een laptop doet zo'n knop niets, dus
+  daar wil je het nummer kunnen lezen.
+- Niet aangeraakt: de bevestigingsmails, het agendabestand en `llms.txt`. Dat
+  zijn geen pagina's, en daar is het nummer juist nuttig.

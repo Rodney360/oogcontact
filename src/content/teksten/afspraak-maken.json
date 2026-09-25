@@ -33,7 +33,7 @@
     {
       "kop": "Liever even bellen of appen?",
       "alineas": [
-        "Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 015 of stuur ons een appje via WhatsApp. Mailen mag ook, naar info@oogcontactbijgerard.nl.",
+        "Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons even, of stuur ons een appje via WhatsApp. Mailen mag ook, naar info@oogcontactbijgerard.nl.",
         "Past geen enkel moment in de agenda? Bel of app ons even, dan zoeken we samen een tijd die voor jou werkt.",
         "Bellen we een keer niet op omdat we met een klant bezig zijn? Stuur dan een appje met je naam en waar het over gaat, dan komen we bij je terug."
       ],
@@ -66,7 +66,7 @@
   "vragen": [],
   "oproep": {
     "kop": "Zullen we een moment inplannen?",
-    "tekst": "Kies hierboven een dag en tijd die jou uitkomt. Liever direct contact? Bel 050 20 64 015 of stuur ons een appje via WhatsApp. Wij houden graag oogcontact.",
+    "tekst": "Kies hierboven een dag en tijd die jou uitkomt. Liever direct contact? Bel of app ons even. Wij houden graag oogcontact.",
     "knop": "Afspraak maken"
   }
 }
