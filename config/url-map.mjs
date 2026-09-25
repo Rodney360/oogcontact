@@ -14,6 +14,8 @@
 /** @typedef {{ van: string, naar: string, reden: string }} Redirect */
 
 /** Pagina's die op precies dezelfde URL blijven staan. Geen redirect nodig. */
+import { LOEPBRILLEN_AAN } from './schakelaars.mjs'
+
 export const ONGEWIJZIGD = [
   { url: '/', titel: 'Home' },
   { url: '/ultiem-nauwkeurig-zicht/', titel: 'Ultiem nauwkeurig zicht' },
@@ -22,7 +24,6 @@ export const ONGEWIJZIGD = [
   { url: '/contactlenzen/', titel: 'Contactlenzen' },
   { url: '/zonnebrillen/', titel: 'Zonnebrillen' },
   { url: '/kinderbrillen/', titel: 'Kinderbrillen' },
-  { url: '/loepbrillen/', titel: 'Loepbrillen' },
   { url: '/nieuws/', titel: 'Nieuws' },
   { url: '/over-ons/', titel: 'Over ons' },
   { url: '/contact/', titel: 'Contact' },
@@ -55,6 +56,18 @@ export const BERICHTEN = [
 
 /** @type {Redirect[]} */
 export const REDIRECTS = [
+  // Loepbrillen staan tijdelijk uit (config/schakelaars.mjs). Het adres bestond
+  // al op de oude WordPress-site, dus hij mag niet doodlopen: zolang het uit
+  // staat komt hij op het aanbod uit.
+  ...(LOEPBRILLEN_AAN
+    ? []
+    : [
+        {
+          van: '/loepbrillen/',
+          naar: '/aanbod/',
+          reden: 'Loepbrillen worden tijdelijk niet aangeboden.',
+        },
+      ]),
   {
     van: '/privacybeleid/',
     naar: '/privacyverklaring/',

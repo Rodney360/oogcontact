@@ -98,7 +98,7 @@ Kijk gerust rond en pas alles wat je mooi vindt. We zeggen eerlijk wat bij je ge
 
 #### Aanbod
 
-Brillen, zonnebrillen, contactlenzen, een kinderbril of een loepbril: voor alles nemen we dezelfde tijd en dezelfde zorg. Kies waar je meer over wilt weten.
+Brillen, zonnebrillen, contactlenzen of een kinderbril: voor alles nemen we dezelfde tijd en dezelfde zorg. Kies waar je meer over wilt weten.
 
 #### Vertrouwen
 
@@ -142,10 +142,6 @@ Het is aan te raden om elke twee jaar langs een opticien te gaan. Een oogonderzo
 
 Ja, kinderbrillen horen bij ons aanbod. Ook voor kinderen nemen we rustig de tijd, zodat het passen en meten geen haastklus wordt.
 
-**Hoe werkt het aanmeten van een loepbril?**
-
-Wil je eerst weten wat een Admetec loepbril voor je werk kan betekenen, kies dan een informatieafspraak van 30 minuten. Ben je eruit, dan plan je een oogmeting en aanmeting van 60 minuten.
-
 #### De uitnodiging onderaan
 
 **Zullen we eens goed naar je ogen kijken?**
@@ -165,13 +161,13 @@ Een afspraak plan je online in, op een moment dat jou schikt. Liever even persoo
 ### Wat Google laat zien
 
 > **Ons aanbod als opticien in Groningen**
-> Brillen, contactlenzen, zonnebrillen, kinderbrillen en loepbrillen. Bekijk waarvoor je bij ons in Groningen terecht kunt en maak rustig een afspraak.
+> Brillen, contactlenzen, zonnebrillen en kinderbrillen. Bekijk waarvoor je bij ons in Groningen terecht kunt en maak rustig een afspraak.
 
 ### De tekst op de pagina
 
 **Ons aanbod**
 
-Bij Oogcontact bij Gerard draait alles om scherp en comfortabel zicht. Je vindt bij ons brillen, contactlenzen, zonnebrillen, kinderbrillen en loepbrillen. Wij, Gerard en Gerda, nemen daar graag de tijd voor, met een verse kop koffie erbij. Hieronder lees je kort wat elke categorie inhoudt, zodat je meteen doorklikt naar wat je zoekt.
+Bij Oogcontact bij Gerard draait alles om scherp en comfortabel zicht. Je vindt bij ons brillen, contactlenzen, zonnebrillen en kinderbrillen. Wij, Gerard en Gerda, nemen daar graag de tijd voor, met een verse kop koffie erbij. Hieronder lees je kort wat elke categorie inhoudt, zodat je meteen doorklikt naar wat je zoekt.
 
 #### Waar kunnen we je mee helpen?
 
@@ -181,7 +177,6 @@ Ons oog is niet in de eerste plaats gevallen op de bekendste modemerken, maar op
 - **Contactlenzen** — Zachte lenzen in dag-, tweewekelijkse en maandvariant, ook met cilinder of multifocaal. Daarnaast harde lenzen, die op maat gemaakt worden en waar je met gemak 1 tot 2 jaar mee doet. Na de aanmeting en een proefperiode kijken we samen of de lenzen je het comfort geven dat je zoekt.
 - **Zonnebrillen** — Zonnebrillen die je ogen echt beschermen tegen uv-straling, desgewenst met gepolariseerde glazen tegen hinderlijke schitteringen. De glazen kunnen ook op sterkte, meekleurend of overlopend van donker naar licht.
 - **Kinderbrillen** — Een kinderbril moet tegen een stootje kunnen én door je kind zelf mooi gevonden worden. Bij bijziendheid zijn er bovendien speciale glazen die de groei van het oog kunnen afremmen.
-- **Loepbrillen** — Handgemaakte loepbrillen van Admetec met bijbehorende verlichting, voor iedereen die in het werk heel nauwkeurig van dichtbij moet kijken. We plannen ruim de tijd in, zowel voor informatie vooraf als voor de aanmeting.
 
 #### Persoonlijk advies en een precieze oogmeting
 
@@ -280,11 +275,9 @@ Een beeldschermbril is afgestemd op de afstand waarop jij naar je scherm kijkt. 
 
 Werk je veel achter een beeldscherm? Vraag bij je werkgever na of een beeldschermbril vergoed wordt. Wij leggen je graag uit wat je precies nodig hebt.
 
-#### Ook voor een kinderbril of een loepbril
+#### Ook voor een kinderbril
 
 Een oogmeting bij kinderen vraagt om extra aandacht en geduld, en een kinderbril moet vooral tegen een stootje kunnen én cool zijn in de ogen van je kind. We helpen graag bij de eerste kinderbril, en denken mee over glazen die passen bij groeiende ogen.
-
-Werk je veel met kleine details op korte afstand? Dan kan een loepbril je werk een stuk comfortabeler maken. We meten loepbrillen van Admetec aan en plannen daar alle tijd voor in. Wil je eerst weten wat de mogelijkheden zijn, dan maken we een afspraak voor een informatiegesprek.
 
 #### Veelgestelde vragen
 
@@ -403,7 +396,7 @@ Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voo
 
 We zijn open op woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en op zaterdag van 10.00 tot 16.00 uur. Op maandag, dinsdag en zondag zijn we gesloten.
 
-Naast contactlenzen kun je bij ons terecht voor een oogmeting, brillen en zonnebrillen, een kinderbril en een loepbril. Loop gerust binnen om te kijken en te vragen; de koffie wordt vers gezet.
+Naast contactlenzen kun je bij ons terecht voor een oogmeting, brillen en zonnebrillen en een kinderbril. Loop gerust binnen om te kijken en te vragen; de koffie wordt vers gezet.
 
 #### Veelgestelde vragen
 
@@ -474,7 +467,7 @@ Achter de winkel zit ruim 40 jaar ervaring in de optiek, waarvan 15 jaar bij OMC
 
 Samen kijken we naar de vorm van je gezicht, naar je sterkte en naar wat je met de bril gaat doen. Fietsen op een winterse ochtend vraagt iets anders dan een week aan zee. Wil je een oogmeting in Groningen combineren met het uitzoeken van een zonnebril, kies dan in de online agenda voor Oogmeting & montuuradvies.
 
-Naast zonnebrillen ben je bij ons ook welkom voor een gewone bril, contactlenzen, een kinderbril of een loepbril.
+Naast zonnebrillen ben je bij ons ook welkom voor een gewone bril, contactlenzen of een kinderbril.
 
 #### De merken die je bij ons vindt
 
@@ -750,8 +743,6 @@ Of je nu voor het eerst een bril nodig hebt of al jaren multifocale glazen draag
 
 Bij kinderen vraagt een oogmeting om extra aandacht. Een oogmeting bij een kind vraagt om een andere aanpak, want een kinderbril moet niet alleen technisch kloppen, hij moet ook leuk zijn om te dragen.
 
-Werk je met een loepbril? Voor het aanmeten van een Admetec loepbril plannen we een ruimere afspraak van zestig minuten, inclusief oogmeting. Wil je eerst alleen informatie, dan reserveren we dertig minuten.
-
 #### Langskomen aan het Overwinningsplein
 
 Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
@@ -849,7 +840,6 @@ De ene klant komt voor één bril die overal bij past, de andere zoekt iets spec
 - **Zonnebrillen** — Ook op sterkte, en als je wilt met gepolariseerde glazen die hinderlijke schitteringen wegnemen.
 - **Sportbrillen** — Monturen die meebewegen en tegen een stootje kunnen, voor als een gewone bril te kwetsbaar is.
 - **Kinderbrillen** — Een kinderbril moet cool zijn in de ogen van je kind én technisch kloppen. We letten op pasvorm en flexibele pootjes.
-- **Loepbrillen** — Handgemaakte vergrootloepen met bijpassende verlichting, voor wie precisiewerk doet. Voor een loepbril plannen we een apart gesprek in.
 
 #### Van montuur naar bril
 
@@ -914,7 +904,7 @@ Onze winkel voelt als het verlengstuk van onze woonkamer. Gerard heeft bijna all
 
 Voor de monturen kozen we bewust niet voor de grote modemerken. Ons oog viel op kleine leveranciers van stijlvolle, kwalitatief uitstekende brillen, vooral uit Spanje en Zwitserland en daarnaast monturen uit Frankrijk, België en Nederland. Zo vind je bij ons iets wat je niet overal ziet.
 
-Je bent welkom voor brillen, zonnebrillen, contactlenzen, een kinderbril of een loepbril. Langskomen is eenvoudig: parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
+Je bent welkom voor brillen, zonnebrillen, contactlenzen of een kinderbril. Langskomen is eenvoudig: parkeren kan direct voor de deur en de bus stopt pal voor de winkel.
 
 - **Parkeren voor de deur** — Parkeren kan direct voor de winkel.
 - **Met de bus** — De bus stopt pal voor de winkel, een mooie uitkomst als je met het openbaar vervoer komt.
@@ -941,7 +931,7 @@ Wij nemen de tijd voor je. Een oogmeting of montuuradvies is geen kwestie van ev
 
 Daarom raden we je aan een afspraak te maken, dan weet je zeker dat we rustig met je aan de slag kunnen. Binnenlopen zonder afspraak mag natuurlijk ook; je bent altijd welkom voor een kop koffie en een eerste blik.
 
-Een afspraak maak je online via de pagina Afspraak maken, of je belt, mailt of appt ons. Van oogmeting en montuuradvies tot lenzen aanmeten, een loepbril of even je montuur laten bijstellen: er is altijd ruimte om het rustig te doen.
+Een afspraak maak je online via de pagina Afspraak maken, of je belt, mailt of appt ons. Van oogmeting en montuuradvies tot lenzen aanmeten of even je montuur laten bijstellen: er is altijd ruimte om het rustig te doen.
 
 - **Ieder zijn vak** — De oogmeting doet Gerard: meten, nameten en uitleggen wat eruit komt. Daarna neemt Gerda het over en zoekt zij het montuur dat bij je gezicht en je dagelijks leven past. Twee paar ogen aan dezelfde tafel.
 - **Alle tijd voor je** — We plannen ruim, zodat je nooit het gevoel hebt dat je moet opschieten.
@@ -954,7 +944,7 @@ Een afspraak maak je online via de pagina Afspraak maken, of je belt, mailt of a
 
 Oogcontact bij Gerard draagt de keurmerken ANVC en NUVO. Daarnaast brengen we een medische achtergrond mee uit vijftien jaar werken in een oogkliniek.
 
-Met moderne apparatuur voeren we een precieze oogmeting uit en meten we je glazen nauwkeurig in. Die zorgvuldigheid geldt net zo goed voor een kinderbril als voor een loepbril of een set contactlenzen.
+Met moderne apparatuur voeren we een precieze oogmeting uit en meten we je glazen nauwkeurig in. Die zorgvuldigheid geldt net zo goed voor een kinderbril als voor een set contactlenzen.
 
 Wat ons betreft is een bril geen hulpmiddel dat je moet verdragen, maar iets waar je je prettig bij voelt. Vandaar de woordgrap die we graag in ere houden: wij houden graag oogcontact.
 
@@ -1017,7 +1007,7 @@ Heb je in de tussentijd een vraag? Bel ons gerust op 050 20 64 015, stuur een ap
 
 **Liever even persoonlijk**
 
-Een afspraak is zo gemaakt. We nemen rustig de tijd voor je, met een kop koffie erbij, of het nu gaat om een oogmeting, montuuradvies, contactlenzen of een loepbril.
+Een afspraak is zo gemaakt. We nemen rustig de tijd voor je, met een kop koffie erbij, of het nu gaat om een oogmeting, montuuradvies of contactlenzen.
 
 *Knop:* Afspraak maken
 
@@ -1038,7 +1028,7 @@ Een afspraak is zo gemaakt. We nemen rustig de tijd voor je, met een kop koffie 
 
 **Afspraak maken**
 
-Bij Oogcontact bij Gerard, je zelfstandige opticien in Groningen, ben je van harte welkom aan het Overwinningsplein 100. Met een afspraak weten we zeker dat we uitgebreid de tijd voor je hebben: voor de oogmeting, voor het passen en voor de koffie erbij. Hieronder plan je in een paar stappen zelf een moment dat jou uitkomt. Liever dat wij jou bellen? Laat dan je naam en telefoonnummer achter via het terugbelformulier op deze pagina.
+Bij Oogcontact bij Gerard, je zelfstandige opticien in Groningen, ben je van harte welkom aan het Overwinningsplein 100. Met een afspraak weten we zeker dat we uitgebreid de tijd voor je hebben: voor de oogmeting, voor het passen en voor de koffie erbij. Hieronder plan je in een paar stappen zelf een moment dat jou uitkomt. Liever even overleggen? Bel ons of stuur ons een appje.
 
 #### Kies zelf een moment dat jou uitkomt
 
@@ -1049,7 +1039,6 @@ Per soort afspraak reserveren we de tijd die erbij hoort. Zo hoeft niemand zich 
 - **Oogmeting** — Een oogmeting in Groningen met onze moderne apparatuur, rustig en nauwkeurig.
 - **Oogmeting en montuuradvies** — De meting en daarna samen zoeken naar een montuur dat bij je past.
 - **Contactlenzen** — Een aanmeting, een heraanmeting of een lenscontrole.
-- **Loepbril Admetec** — Eerst informatie over het werken met een loepbril (30 minuten), of meteen aanmeten met oogmeting (60 minuten).
 - **Bril afhalen of bijstellen** — Je nieuwe bril ophalen, glazen inmeten met de Visioffice of je montuur laten bijstellen.
 
 #### Liever even bellen of appen?
@@ -1058,7 +1047,7 @@ Niet iedereen plant graag online, en dat hoeft ook niet. Bel ons op 050 20 64 01
 
 Past geen enkel moment in de agenda? Bel of app ons even, dan zoeken we samen een tijd die voor jou werkt.
 
-Vul je liever het formulier onderaan deze pagina in? Laat je naam en telefoonnummer achter, dan bellen wij jou terug.
+Bellen we een keer niet op omdat we met een klant bezig zijn? Stuur dan een appje met je naam en waar het over gaat, dan komen we bij je terug.
 
 - **Woensdag tot en met vrijdag** — 9.30 tot 17.30 uur
 - **Zaterdag** — 10.00 tot 16.00 uur
@@ -1078,7 +1067,7 @@ En als je binnenstapt: de koffie wordt vers gezet. Wij, Gerard en Gerda, nemen d
 
 **Zullen we een moment inplannen?**
 
-Kies hierboven een dag en tijd die jou uitkomt, of laat je nummer achter in het formulier, dan bellen wij jou terug. Liever direct contact? Bel 050 20 64 015 of stuur ons een appje via WhatsApp. Wij houden graag oogcontact.
+Kies hierboven een dag en tijd die jou uitkomt. Liever direct contact? Bel 050 20 64 015 of stuur ons een appje via WhatsApp. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 
@@ -1116,7 +1105,7 @@ Van woensdag tot en met zaterdag staan we voor je klaar. Op maandag, dinsdag en 
 
 Komen die tijden je niet uit? Bel of app ons even, dan zoeken we samen een moment dat past.
 
-Wil je zeker weten dat we rustig de tijd voor je hebben, bijvoorbeeld voor een oogmeting in Groningen of advies over een loepbril of kinderbril? Plan dan zelf een moment via de pagina Afspraak maken.
+Wil je zeker weten dat we rustig de tijd voor je hebben, bijvoorbeeld voor een oogmeting in Groningen of advies over een kinderbril? Plan dan zelf een moment via de pagina Afspraak maken.
 
 #### Bij de winkel
 
@@ -1130,7 +1119,7 @@ Je vindt ons aan het Overwinningsplein 100 in Groningen. De winkel ligt aan het 
 
 **Liever meteen een afspraak?**
 
-Kies online zelf een dag en tijd die je uitkomen, voor een oogmeting, montuuradvies, lenscontrole of een loepbril. De koffie staat klaar. Wij houden graag oogcontact.
+Kies online zelf een dag en tijd die je uitkomen, voor een oogmeting, montuuradvies of een lenscontrole. De koffie staat klaar. Wij houden graag oogcontact.
 
 *Knop:* Afspraak maken
 

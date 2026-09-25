@@ -951,3 +951,29 @@ toestellen zag het er goed uit, op de kleine niet.
 - Er staat nu een mail aan Creative Steps in die ze kunnen overnemen, inclusief
   de waarschuwing dat de e-mail over hetzelfde domein loopt en de vraag of zij
   het domein zelf beheren.
+
+---
+
+## 2026-09-25 (loepbrillen tijdelijk uit) — Gerard (Claude Code, cloud)
+
+- **Oogcontact bij Gerard is tijdelijk gestopt met de loepbrillen van Admetec.**
+  Alles wat daarmee te maken heeft is van de site af, maar niets is weggegooid.
+- Eén schakelaar regelt het structurele deel: `LOEPBRILLEN_AAN` in
+  `config/schakelaars.mjs`. Die haalt de loepbrillen uit het menu, uit de
+  voettekst en uit de beeldtegels, stuurt `/loepbrillen/` door naar `/aanbod/`,
+  laat de twee loepbrilafspraken weg bij de diensten, haalt Admetec bij de
+  merken vandaan en past de kop op de collectiepagina aan.
+- `/loepbrillen/` bestond al op de oude WordPress-site, dus het adres mag niet
+  doodlopen: het gaat nu naar het aanbod in plaats van een 404. De pagina zelf
+  staat er nog en zit dubbel op slot.
+- **Elf losse zinnen** op tien pagina's noemden de loepbrillen in een rijtje, en
+  **zes hele blokken** gingen er helemaal over (een tegel bij Aanbod, een stuk
+  op Brillen, een item bij Collectie, een alinea bij Nauwkeurig meten, een item
+  bij Afspraak maken en een veelgestelde vraag op de homepage). Die zijn met de
+  hand aangepast; de schakelaar doet dat niet.
+- **`docs/loepbrillen-terugzetten.md` is nieuw.** Daar staat de schakelaar, een
+  tabel met alle aangepaste zinnen, en alle verwijderde blokken woordelijk,
+  zodat het in één keer terug kan. Inclusief de herinnering dat de twee
+  afspraken dan ook in OO2 weer aan moeten.
+- De teksten van de pagina zelf (`loepbrillen.json`) en de foto's zijn niet
+  aangeraakt.
