@@ -32,6 +32,18 @@ function Kolom({ titel, items }: { titel: string; items: { naam: string; pad: st
   )
 }
 
+/** Het telefoonicoontje bij de knop "Bel ons". */
+function IcoonTelefoon() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-5" aria-hidden="true">
+      <path
+        d="M6.6 3h3l1.5 4-2 1.4a12 12 0 006.5 6.5l1.4-2 4 1.5v3a2 2 0 01-2.2 2A17 17 0 014.6 5.2 2 2 0 016.6 3z"
+        fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 export function Footer() {
   const { adres, telefoon, email, socials, keurmerken } = BEDRIJF
 
@@ -59,34 +71,32 @@ export function Footer() {
               </a>
             </address>
 
-            <ul className="mt-6 space-y-2.5 text-basis">
-              <li>
-                <a href={`tel:${telefoon.link}`} className="text-tekst-licht no-underline hover:text-messing">
-                  {telefoon.weergave}
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${email}`} className="break-all text-tekst-licht no-underline hover:text-messing">
-                  {email}
-                </a>
-              </li>
-            </ul>
+            <p className="mt-6 text-basis">
+              <a href={`mailto:${email}`} className="break-all text-tekst-licht no-underline hover:text-messing">
+                {email}
+              </a>
+            </p>
 
             {/*
-              Appen gaat via de knop, niet via een nummer. Het 06-nummer staat
-              nergens meer als tekst op de site: wie wil appen, klikt hier en
-              WhatsApp opent het gesprek zelf.
+              Bellen en appen gaan via een knop, niet via een nummer in de
+              tekst. Allebei de nummers stonden op te veel plekken op de site;
+              nu klik je hier en opent je telefoon of WhatsApp het zelf.
             */}
-            <KnopLink
-              href={whatsappLink()}
-              uiterlijk="omlijnd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5"
-            >
-              <IcoonWhatsApp />
-              App ons
-            </KnopLink>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <KnopLink href={`tel:${telefoon.link}`} uiterlijk="omlijnd">
+                <IcoonTelefoon />
+                Bel ons
+              </KnopLink>
+              <KnopLink
+                href={whatsappLink()}
+                uiterlijk="omlijnd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IcoonWhatsApp />
+                App ons
+              </KnopLink>
+            </div>
           </div>
 
           <Kolom titel="Aanbod" items={VOETMENU.aanbod} />
