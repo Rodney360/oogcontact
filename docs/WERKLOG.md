@@ -1004,3 +1004,20 @@ toestellen zag het er goed uit, op de kleine niet.
   daar wil je het nummer kunnen lezen.
 - Niet aangeraakt: de bevestigingsmails, het agendabestand en `llms.txt`. Dat
   zijn geen pagina's, en daar is het nummer juist nuttig.
+
+---
+
+## 2026-09-26 (geen dubbele koppen meer) — Gerard (Claude Code, cloud)
+
+- **Boven een kop stond soms hetzelfde als in de kop zelf.** "DE COLLECTIE" in
+  kapitalen, en daaronder "De collectie" in het groot. Dat leest als een
+  vergissing.
+- `SectieKop` laat dat kleine regeltje nu weg zodra het hetzelfde zegt als de
+  kop. Hoofdletters en leestekens tellen daarbij niet mee. Eén plek in de code,
+  dus het kan ook niet opnieuw insluipen bij een nieuwe pagina.
+- Nagemeten in de browser op vijftien pagina's: **zeven dubbele koppen** stonden
+  er, nu nul. Vijf op de homepage (Waarom Oogcontact, Ultiem nauwkeurig zicht,
+  De collectie, Aanbod, Bezoek de winkel) en twee die Gerard nog niet gezien
+  had: Zonnebrillen en Afspraak maken.
+- Waar de bovenkop iets anders zegt dan de kop blijft hij gewoon staan, zoals
+  "OPTICIEN IN GRONINGEN" boven "Advies op maat".
