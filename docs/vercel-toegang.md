@@ -112,16 +112,43 @@ preview de goede is.
 Dat is alles. Verder heeft het project niets nodig: de foto's, de teksten, de
 openingstijden en de agenda zitten allemaal in de repository.
 
-### De stappen
+### Eerst dit: de repository moet van Gerard worden
+
+Op 27 september geprobeerd. Gerard ziet in de importlijst van Vercel alleen
+`gbugel`; **`Rodney360` staat er niet tussen**, en dat is geen instelling die
+hij ergens aan kan zetten.
+
+Nagekeken bij GitHub:
+
+- `Rodney360` is een **persoonlijk account**, geen organisatie
+  (`"type": "User"`)
+- Gerard heeft op de repository `push`, maar **geen `admin`**
+
+Op een persoonlijk account kan alleen de eigenaar bepalen welke apps erbij
+mogen. Een medewerker kan dat account daarom nooit in zijn eigen Vercel-lijst
+krijgen. Zolang de repository bij `Rodney360` staat, kan Gerard er dus geen
+eigen project van maken - hoe vaak hij ook opnieuw inlogt.
+
+**De oplossing: Dennis draagt de repository over aan Gerard.** GitHub →
+Settings → onderaan bij "Danger Zone" → **Transfer ownership** → `gbugel`.
+Gerard krijgt een verzoek en accepteert. Alles gaat mee: de geschiedenis, de
+pull requests, de instellingen. Het oude adres blijft doorverwijzen, dus er
+breekt niets. Dennis kan daarna gewoon als medewerker blijven meewerken.
+
+Dat is meteen het nette einde: de code én de hosting staan dan op naam van de
+winkel.
+
+> Let op voor daarna: een sessie van Claude Code is gekoppeld aan de naam van
+> de repository. Na de overdracht heet hij `gbugel/oogcontact` en moet die
+> eenmalig opnieuw toegevoegd worden aan de sessie.
+
+### De stappen, zodra de repository van Gerard is
 
 1. Log in op <https://vercel.com> met je eigen account.
 2. **Add New → Project**. Vercel vraagt of het bij GitHub mag kijken; zeg ja en
    kies het account `gbugel`.
-3. Kies de repository **`Rodney360/oogcontact`**.
-   *Zie je hem niet staan?* Dan moet de Vercel-app toegang krijgen tot die
-   repository. Dat is het enige waar je Dennis nog even voor nodig hebt, en het
-   is een half minuutje werk: hij gaat naar GitHub → Settings → Applications →
-   Vercel → Configure, en zet die repository erbij.
+3. Kies de repository **`oogcontact`**. Die staat er nu wel tussen, want je bent
+   nu zelf de eigenaar.
 4. **Project Name**: kies iets herkenbaars, bijvoorbeeld
    `oogcontact-bij-gerard`. Dat bepaalt alleen het tijdelijke
    `...vercel.app`-adres, niet het echte domein.

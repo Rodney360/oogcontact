@@ -1062,3 +1062,21 @@ toestellen zag het er goed uit, op de kleine niet.
   stappen erbij.
 - Het enige waar Dennis nog voor nodig kan zijn: de Vercel-app toegang geven tot
   de repository, als Gerard hem niet in de lijst ziet staan. Half minuutje werk.
+
+---
+
+## 2026-09-27 (zelf importeren kan nog niet) — Gerard (Claude Code, cloud)
+
+- Gerard probeerde het nieuwe Vercel-project te maken. In de importlijst staat
+  alleen `gbugel`; **`Rodney360` verschijnt niet**, en dat is geen instelling
+  die hij ergens kan aanzetten.
+- Nagekeken bij GitHub: `Rodney360` is een **persoonlijk account**, geen
+  organisatie, en Gerard heeft daar wel `push` maar **geen `admin`**. Op een
+  persoonlijk account bepaalt alleen de eigenaar welke apps erbij mogen.
+- Mijn stappen van gisteren gingen ervan uit dat Dennis de Vercel-app even
+  toegang kon geven. Dat is niet genoeg: zolang de repository bij `Rodney360`
+  staat, kan Gerard er geen eigen project van maken. Rechtgezet in
+  `docs/vercel-toegang.md`.
+- **Wat wel werkt: Dennis draagt de repository over** (GitHub → Settings →
+  Danger Zone → Transfer ownership → `gbugel`). Alles gaat mee, het oude adres
+  blijft doorverwijzen, en daarna kan Gerard alles zelf.
