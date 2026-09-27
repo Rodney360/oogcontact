@@ -85,11 +85,64 @@ het team aan en nodigt Dennis uit, Dennis zet het project over, en daarna kan
 Dennis eruit. Alles verhuist mee: het domein, de sleutels, de koppeling met
 GitHub, de geschiedenis, zonder dat de site eruit ligt.
 
-**3. Gerard maakt er zelf een nieuw project van** — gratis. Werkt, maar de
-sleutels moeten opnieuw ingevuld worden, het project krijgt een ander
-`vercel.app`-adres, en het oude project moet eerst van de repository
-losgekoppeld worden. Anders bouwen er twee tegelijk en weet niemand meer welke
+**3. Gerard maakt er zelf een nieuw project van** — gratis, en makkelijker dan
+het klinkt. Zie de stappen hieronder. Het project krijgt een ander
+`vercel.app`-adres, en het oude project moet daarna van de repository
+losgekoppeld worden; anders bouwen er twee tegelijk en weet niemand meer welke
 preview de goede is.
+
+> Hier stond eerder dat de sleutels dan opnieuw ingevuld moeten worden.
+> **Dat klopt niet meer.** Nagelopen op 27 september: er is er nog maar één die
+> ertoe doet.
+
+---
+
+## Zelf een nieuw project maken, stap voor stap
+
+### Wat er overgezet moet worden: één regel
+
+| Instelling | Nodig? |
+|---|---|
+| `EASYAPPOINTMENTS_*` | **Nee.** OO2 geeft geen API; de agenda is een ingesloten venster en heeft geen sleutel nodig |
+| `RESEND_API_KEY`, `MAIL_*` | **Nee.** Het terugbelformulier staat uit, de site verstuurt nergens e-mail |
+| `TURNSTILE_*` | **Nee.** Hoort bij datzelfde formulier |
+| `KEYSTATIC_GITHUB_REPO` | **Nee.** De GitHub-koppeling van het beheerscherm is nooit ingesteld, dus er valt niets te kopiëren |
+| `NEXT_PUBLIC_SITE_URL` | **Ja.** Op `https://oogcontactbijgerard.nl`, zodra het domein om is |
+
+Dat is alles. Verder heeft het project niets nodig: de foto's, de teksten, de
+openingstijden en de agenda zitten allemaal in de repository.
+
+### De stappen
+
+1. Log in op <https://vercel.com> met je eigen account.
+2. **Add New → Project**. Vercel vraagt of het bij GitHub mag kijken; zeg ja en
+   kies het account `gbugel`.
+3. Kies de repository **`Rodney360/oogcontact`**.
+   *Zie je hem niet staan?* Dan moet de Vercel-app toegang krijgen tot die
+   repository. Dat is het enige waar je Dennis nog even voor nodig hebt, en het
+   is een half minuutje werk: hij gaat naar GitHub → Settings → Applications →
+   Vercel → Configure, en zet die repository erbij.
+4. **Project Name**: kies iets herkenbaars, bijvoorbeeld
+   `oogcontact-bij-gerard`. Dat bepaalt alleen het tijdelijke
+   `...vercel.app`-adres, niet het echte domein.
+5. Framework staat vanzelf op **Next.js**. De rest kan op de standaard blijven.
+6. **Deploy**, en wacht een paar minuten. De eerste bouw duurt langer, want alle
+   foto's worden opnieuw omgezet.
+7. Bekijk het resultaat op het nieuwe `...vercel.app`-adres en kijk of alles
+   klopt. **Pas daarna het domein**; zie `docs/live-gaan.md`.
+8. Als het domein eenmaal om is: vraag Dennis om zijn project los te koppelen
+   van GitHub (Settings → Git → Disconnect). Anders bouwen er twee bij elke
+   wijziging.
+
+### Waar je op moet letten
+
+- Doe dit **voordat** je het domein omzet, niet erna. Een domein kan maar bij
+  één project horen.
+- Het oude project mag blijven staan tot alles goed werkt. Dat is je weg terug.
+- Het beheerscherm `/keystatic` werkt op de live site pas als de
+  GitHub-koppeling ingesteld is. Dat geldt nu ook al, dus je levert er niets
+  mee in.
+
 
 ### Eén ding dat losstaat van wie de eigenaar is
 

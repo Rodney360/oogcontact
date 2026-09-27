@@ -1045,3 +1045,20 @@ toestellen zag het er goed uit, op de kleine niet.
   foto's nog in het geheugen van zijn browser zitten onder de oude naam. Die
   oude namen bestaan niet meer, dus vanaf nu wordt alles opnieuw opgehaald. Dit
   was de laatste keer dat dit kon gebeuren.
+
+---
+
+## 2026-09-27 (zelf een Vercel-project) — Gerard (Claude Code, cloud)
+
+- Gerard vroeg of hij niet zelf een vers project in Vercel kan opzetten en het
+  vandaaruit met Creative Steps kan regelen. **Dat kan, en het is nu het
+  makkelijkst dat het ooit wordt.**
+- Nagelopen wat er overgezet zou moeten worden: **één instelling**,
+  `NEXT_PUBLIC_SITE_URL`. De agenda heeft geen sleutel (OO2 geeft er geen), de
+  mail en de spamcontrole horen bij het formulier dat uit staat, en de
+  GitHub-koppeling van het beheerscherm is nooit ingesteld.
+- In `docs/vercel-toegang.md` stond bij die derde weg nog dat "de sleutels
+  opnieuw ingevuld moeten worden". Dat klopt niet meer; rechtgezet, met de
+  stappen erbij.
+- Het enige waar Dennis nog voor nodig kan zijn: de Vercel-app toegang geven tot
+  de repository, als Gerard hem niet in de lijst ziet staan. Half minuutje werk.
