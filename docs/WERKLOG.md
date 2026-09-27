@@ -1021,3 +1021,27 @@ toestellen zag het er goed uit, op de kleine niet.
   had: Zonnebrillen en Afspraak maken.
 - Waar de bovenkop iets anders zegt dan de kop blijft hij gewoon staan, zoals
   "OPTICIEN IN GRONINGEN" boven "Advies op maat".
+
+---
+
+## 2026-09-27 (oude foto's op de iPhone) — Gerard (Claude Code, cloud)
+
+- **Op de iPhones bleven oude foto's staan, ook na verversen.** Op de MacBook
+  hielp hard verversen wel. Dat lag niet aan Safari maar aan ons.
+- De verwerkte foto's kregen van de server `max-age=31536000, immutable` mee:
+  een jaar bewaren, niet navragen. Het commentaar erbij zei dat de namen een
+  hash bevatten en nooit veranderen - **maar die hash was er niet.** De namen
+  waren `collectie-1-1280.webp`, en achter zo'n naam hebben we deze week
+  meerdere keren een andere foto gezet. Een telefoon die de oude al had, vroeg
+  dus niet eens na. Op een iPhone kun je dat niet wegverversen.
+- **Nu zit er wel een vingerafdruk in**, acht tekens uit de inhoud van de
+  bronfoto plus de uitsnede-instellingen: `collectie-1-1280.7f3a9c02.webp`.
+  Wissel je een foto, dan verandert het adres en ziet iedereen hem meteen.
+  Daarmee klopt `immutable` eindelijk wel.
+- Aangepast: `scripts/process-images.mjs` (vingerafdruk berekenen en in de naam
+  zetten), `src/content/beeld.ts` (veld `merk`), `src/components/Beeld.tsx` en
+  `src/lib/seo.tsx` (de deelfoto). Alle 21 plekken opnieuw gegenereerd.
+- **Let op voor deze ene keer:** wie de site al bezocht heeft, heeft de oude
+  foto's nog in het geheugen van zijn browser zitten onder de oude naam. Die
+  oude namen bestaan niet meer, dus vanaf nu wordt alles opnieuw opgehaald. Dit
+  was de laatste keer dat dit kon gebeuren.

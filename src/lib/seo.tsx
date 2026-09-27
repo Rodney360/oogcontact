@@ -11,6 +11,7 @@ import type { Metadata } from 'next'
 import { BEDRIJF, adresOpEenRegel } from '../content/bedrijf.ts'
 import type { Uitzondering } from '../content/openingstijden.ts'
 import { alsSchemaOrg, bijzondereDagenSchemaOrg } from './openingstijden.ts'
+import { beeld } from '@/content/beeld'
 
 /**
  * Het adres waarop de site draait.
@@ -34,6 +35,9 @@ function bepaalSiteUrl(): string {
 }
 
 export const SITE_URL = bepaalSiteUrl()
+
+/** De foto die meegaat als iemand de site deelt. */
+const DEEL = beeld('winkel-tafel')
 
 /** Bouwt de metagegevens van een pagina. */
 export function paginaMeta({
@@ -92,7 +96,9 @@ export function bedrijfJsonLd(bijzondereDagen: Uitzondering[] = []) {
     url: SITE_URL,
     telephone: `+${BEDRIJF.whatsapp.nummer.slice(0, 2)}${BEDRIJF.telefoon.link.slice(3)}`,
     email: BEDRIJF.email,
-    image: `${SITE_URL}/beeld/winkel-tafel-1440.webp`,
+    // Via beeld() opgehaald, want in de bestandsnaam zit een vingerafdruk die
+    // meeverandert zodra de foto wisselt.
+    image: `${SITE_URL}/beeld/winkel-tafel-${DEEL.breedtes[DEEL.breedtes.length - 1]}.${DEEL.merk}.webp`,
     logo: `${SITE_URL}/logo/oogcontact-bij-gerard-licht.svg`,
     priceRange: '€€',
     currenciesAccepted: 'EUR',
