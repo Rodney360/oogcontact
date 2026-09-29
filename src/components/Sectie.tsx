@@ -50,7 +50,12 @@ export function Leeskolom({ children, className = '' }: { children: ReactNode; c
 }
 
 type KopProps = {
-  /** Het kleine woordje boven de kop. */
+  /**
+   * Het kleine woordje boven de kop.
+   *
+   * Zegt het hetzelfde als de kop zelf, dan blijft het weg: twee keer dezelfde
+   * woorden onder elkaar leest als een fout. Zie `zelfdeTekst` hieronder.
+   */
   bovenkop?: string
   kop: string
   inleiding?: string
@@ -59,6 +64,21 @@ type KopProps = {
   licht?: boolean
   gecentreerd?: boolean
   className?: string
+}
+
+/**
+ * Of twee stukjes tekst hetzelfde zeggen.
+ *
+ * Hoofdletters en leestekens tellen niet mee: de bovenkop staat in
+ * kapitalen, dus "DE COLLECTIE" en "De collectie" zijn hetzelfde woord.
+ */
+function zelfdeTekst(a: string, b: string): boolean {
+  const kaal = (t: string) =>
+    t
+      .toLowerCase()
+      .replace(/[^\p{Letter}\p{Number}]+/gu, ' ')
+      .trim()
+  return kaal(a) === kaal(b)
 }
 
 export function SectieKop({
@@ -71,9 +91,15 @@ export function SectieKop({
   className = '',
 }: KopProps) {
   const Kop = niveau === 1 ? 'h1' : 'h2'
+
+  // Staat er boven de kop hetzelfde als in de kop, dan laten we het kleine
+  // regeltje weg. Dat gebeurde op zes plekken - "DE COLLECTIE / De collectie" -
+  // en dat leest als een vergissing.
+  const toonBovenkop = bovenkop && !zelfdeTekst(bovenkop, kop)
+
   return (
     <Verschijnt className={`${gecentreerd ? 'mx-auto text-center' : ''} max-w-[46rem] ${className}`}>
-      {bovenkop && (
+      {toonBovenkop && (
         <p
           className={`mb-4 text-bijschrift font-semibold uppercase tracking-[0.16em] ${
             licht ? 'text-messing-diep' : 'text-messing'

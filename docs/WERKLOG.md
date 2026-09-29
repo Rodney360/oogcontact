@@ -924,6 +924,22 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-09-22 (klaar om live te gaan) — Gerard (Claude Code, cloud)
+
+- **Gerard heeft de afspraakduren en de namen in OO2 nagelopen en gecontroleerd.**
+  Daarmee is het laatste inhoudelijke punt af en staat alleen het verhuizen van
+  het domein nog open.
+- Er stond hier ook een stuk over de verhuizing dat ik in `docs/live-gaan.md`
+  had geschreven, met Gerard die zelf in Vercel zou klikken. Dat klopte niet:
+  Gerard komt helemaal niet bij dat project. Dennis heeft het diezelfde avond
+  nagemeten en opnieuw opgeschreven; die versie staat er nu, en die van mij is
+  vervallen.
+
+---
+
+---
+
+
 ## 2026-09-22 (avond) — Dennis (Claude Code, cloud)
 
 - **`docs/vercel-toegang.md` klopte op vier punten niet meer**, en stuurde
@@ -944,3 +960,66 @@ toestellen zag het er goed uit, op de kleine niet.
   de waarschuwing dat alleen de A- en CNAME-regels om mogen: de e-mail van de
   winkel loopt over hetzelfde domein.
 - **Nog open:** zie `docs/open-punten.md` en `docs/live-gaan.md`.
+---
+
+## 2026-09-25 (loepbrillen tijdelijk uit) — Gerard (Claude Code, cloud)
+
+- **Oogcontact bij Gerard is tijdelijk gestopt met de loepbrillen van Admetec.**
+  Alles wat daarmee te maken heeft is van de site af, maar niets is weggegooid.
+- Eén schakelaar regelt het structurele deel: `LOEPBRILLEN_AAN` in
+  `config/schakelaars.mjs`. Die haalt de loepbrillen uit het menu, uit de
+  voettekst en uit de beeldtegels, stuurt `/loepbrillen/` door naar `/aanbod/`,
+  laat de twee loepbrilafspraken weg bij de diensten, haalt Admetec bij de
+  merken vandaan en past de kop op de collectiepagina aan.
+- `/loepbrillen/` bestond al op de oude WordPress-site, dus het adres mag niet
+  doodlopen: het gaat nu naar het aanbod in plaats van een 404. De pagina zelf
+  staat er nog en zit dubbel op slot.
+- **Elf losse zinnen** op tien pagina's noemden de loepbrillen in een rijtje, en
+  **zes hele blokken** gingen er helemaal over (een tegel bij Aanbod, een stuk
+  op Brillen, een item bij Collectie, een alinea bij Nauwkeurig meten, een item
+  bij Afspraak maken en een veelgestelde vraag op de homepage). Die zijn met de
+  hand aangepast; de schakelaar doet dat niet.
+- **`docs/loepbrillen-terugzetten.md` is nieuw.** Daar staat de schakelaar, een
+  tabel met alle aangepaste zinnen, en alle verwijderde blokken woordelijk,
+  zodat het in één keer terug kan. Inclusief de herinnering dat de twee
+  afspraken dan ook in OO2 weer aan moeten.
+- De teksten van de pagina zelf (`loepbrillen.json`) en de foto's zijn niet
+  aangeraakt.
+
+---
+
+## 2026-09-25 (telefoonnummer alleen nog op knoppen) — Gerard (Claude Code, cloud)
+
+- **Het nummer 050 20 64 015 stond op te veel plekken.** Het is overal uit de
+  lopende tekst gehaald: veertien zinnen in de paginateksten, plus de algemene
+  voorwaarden, de regel onder de agenda en "Wie zijn wij" in de
+  privacyverklaring. Daar staat nu een link "bel ons" in plaats van het nummer.
+- **In de voettekst is het een knop geworden.** "Bel ons" met een
+  telefoonicoontje, naast "App ons" — dezelfde aanpak als bij het 06-nummer.
+  Het mailadres blijft er wel gewoon staan.
+- **In de hero is het losse nummer naast de openingsregel weg.** De knop "Bel of
+  app ons" staat er vlak boven; het nummer eronder voegde niets toe.
+- **Waar het nog staat: alleen op knoppen.** Vier plekken: twee op de homepage
+  (de knop bij "Naar de agenda" en de knop bij Bezoek de winkel), de tegel
+  "Bellen" op de contactpagina, en het blok "Liever even bellen?" op de
+  afspraakpagina. Daar hoort het ook: op een laptop doet zo'n knop niets, dus
+  daar wil je het nummer kunnen lezen.
+- Niet aangeraakt: de bevestigingsmails, het agendabestand en `llms.txt`. Dat
+  zijn geen pagina's, en daar is het nummer juist nuttig.
+
+---
+
+## 2026-09-26 (geen dubbele koppen meer) — Gerard (Claude Code, cloud)
+
+- **Boven een kop stond soms hetzelfde als in de kop zelf.** "DE COLLECTIE" in
+  kapitalen, en daaronder "De collectie" in het groot. Dat leest als een
+  vergissing.
+- `SectieKop` laat dat kleine regeltje nu weg zodra het hetzelfde zegt als de
+  kop. Hoofdletters en leestekens tellen daarbij niet mee. Eén plek in de code,
+  dus het kan ook niet opnieuw insluipen bij een nieuwe pagina.
+- Nagemeten in de browser op vijftien pagina's: **zeven dubbele koppen** stonden
+  er, nu nul. Vijf op de homepage (Waarom Oogcontact, Ultiem nauwkeurig zicht,
+  De collectie, Aanbod, Bezoek de winkel) en twee die Gerard nog niet gezien
+  had: Zonnebrillen en Afspraak maken.
+- Waar de bovenkop iets anders zegt dan de kop blijft hij gewoon staan, zoals
+  "OPTICIEN IN GRONINGEN" boven "Advies op maat".

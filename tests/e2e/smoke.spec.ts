@@ -6,6 +6,8 @@
 
 import { test, expect } from '@playwright/test'
 
+import { LOEPBRILLEN_AAN } from '../../config/schakelaars.mjs'
+
 test('de homepage laadt met een duidelijke titel en kop', async ({ page }) => {
   await page.goto('/')
   await expect(page).toHaveTitle(/Oogcontact bij Gerard/)
@@ -15,8 +17,10 @@ test('de homepage laadt met een duidelijke titel en kop', async ({ page }) => {
 test('elke pagina heeft precies één h1', async ({ page }) => {
   const paginas = [
     '/', '/aanbod/', '/brillen/', '/contactlenzen/', '/zonnebrillen/',
-    '/kinderbrillen/', '/loepbrillen/', '/collectie/', '/over-ons/',
+    '/kinderbrillen/', '/collectie/', '/over-ons/',
     '/contact/', '/afspraak-maken/', '/nieuws/', '/ultiem-nauwkeurig-zicht/',
+    // Loepbrillen kunnen uit staan; zie config/schakelaars.mjs.
+    ...(LOEPBRILLEN_AAN ? ['/loepbrillen/'] : []),
   ]
   for (const pad of paginas) {
     await page.goto(pad)

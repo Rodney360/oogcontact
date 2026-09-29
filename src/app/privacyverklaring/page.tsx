@@ -60,9 +60,9 @@ export default function Privacyverklaring() {
             <a href={`mailto:${BEDRIJF.email}`} className="text-messing-diep underline underline-offset-4">
               {BEDRIJF.email}
             </a>{' '}
-            of{' '}
+            , of{' '}
             <a href={`tel:${BEDRIJF.telefoon.link}`} className="text-messing-diep underline underline-offset-4">
-              {BEDRIJF.telefoon.weergave}
+              bel ons
             </a>
             . Wij zijn verantwoordelijk voor de gegevens die via deze website binnenkomen.
           </p>

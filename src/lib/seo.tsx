@@ -88,7 +88,7 @@ export function bedrijfJsonLd(bijzondereDagen: Uitzondering[] = []) {
     name: BEDRIJF.naam,
     description:
       'Zelfstandige opticien in Groningen. Oogmeting, montuuradvies, brillen, ' +
-      'contactlenzen, zonnebrillen, kinderbrillen en loepbrillen.',
+      'contactlenzen, zonnebrillen en kinderbrillen.',
     url: SITE_URL,
     telephone: `+${BEDRIJF.whatsapp.nummer.slice(0, 2)}${BEDRIJF.telefoon.link.slice(3)}`,
     email: BEDRIJF.email,

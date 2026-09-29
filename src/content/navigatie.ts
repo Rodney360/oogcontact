@@ -1,5 +1,7 @@
 /** De hoofdnavigatie van de site. */
 
+import { LOEPBRILLEN_AAN } from '../../config/schakelaars.mjs'
+
 export type NavItem = {
   naam: string
   pad: string
@@ -8,12 +10,20 @@ export type NavItem = {
   kinderen?: NavItem[]
 }
 
+/**
+ * Het aanbod. Voedt zowel het uitklapmenu als de beeldtegels op de homepage,
+ * dus wat hier niet in staat, is nergens te zien.
+ *
+ * De loepbrillen kunnen uit; zie config/schakelaars.mjs.
+ */
 export const AANBOD: NavItem[] = [
   { naam: 'Brillen', pad: '/brillen/', uitleg: 'Monturen en glazen, afgestemd op je ogen en je gezicht.' },
   { naam: 'Contactlenzen', pad: '/contactlenzen/', uitleg: 'Zacht of hard, dag of maand, ook multifocaal.' },
   { naam: 'Zonnebrillen', pad: '/zonnebrillen/', uitleg: 'Met bescherming die klopt, eventueel op sterkte.' },
   { naam: 'Kinderbrillen', pad: '/kinderbrillen/', uitleg: 'Stevig, leuk en technisch goed. Ook myopiecontrole.' },
-  { naam: 'Loepbrillen', pad: '/loepbrillen/', uitleg: 'Admetec loepbrillen voor precies werk.' },
+  ...(LOEPBRILLEN_AAN
+    ? [{ naam: 'Loepbrillen', pad: '/loepbrillen/', uitleg: 'Admetec loepbrillen voor precies werk.' }]
+    : []),
 ]
 
 export const HOOFDMENU: NavItem[] = [

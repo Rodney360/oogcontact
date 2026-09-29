@@ -10,6 +10,8 @@
  * (content/merken/). Zolang daar niets staat, wordt deze lijst getoond.
  */
 
+import { LOEPBRILLEN_AAN } from '../../config/schakelaars.mjs'
+
 export type Merk = {
   naam: string
   /** Land van herkomst. null = nog te bevestigen, wordt dan niet getoond. */
@@ -38,7 +40,7 @@ export const MERKEN: Merk[] = [
 ]
 
 /** Glazen en loepbrillen zijn geen montuurmerken, maar horen er wel bij. */
-export const LEVERANCIERS = [
+const ALLE_LEVERANCIERS = [
   {
     naam: 'Essilor',
     waarvoor: 'Brillenglazen',
@@ -54,6 +56,14 @@ export const LEVERANCIERS = [
       'moet zien.',
   },
 ]
+
+/**
+ * Admetec staat tijdelijk niet in de lijst: de loepbrillen worden even niet
+ * aangeboden. Zie config/schakelaars.mjs; de gegevens blijven hierboven staan.
+ */
+export const LEVERANCIERS = ALLE_LEVERANCIERS.filter(
+  (l) => LOEPBRILLEN_AAN || l.naam !== 'Admetec',
+)
 
 /** De herkomsten die we (onder voorbehoud) kennen, voor het overzicht. */
 export function herkomsten(): string[] {

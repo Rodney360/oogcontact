@@ -6,6 +6,7 @@ import { tekst } from '@/content/teksten/index'
 import { merken } from '@/lib/beheer'
 import { LEVERANCIERS } from '@/content/merken'
 import { paginaMeta } from '@/lib/seo'
+import { LOEPBRILLEN_AAN } from '../../../config/schakelaars.mjs'
 
 const T = tekst('collectie')
 
@@ -78,7 +79,7 @@ export default async function Collectie() {
         </ul>
 
         <Verschijnt vertraging={0.1}>
-          <h2 className="mt-20 text-kop-3">Glazen en loepbrillen</h2>
+          <h2 className="mt-20 text-kop-3">{LOEPBRILLEN_AAN ? 'Glazen en loepbrillen' : 'Glazen'}</h2>
           <ul className="mt-8 grid gap-5 md:grid-cols-2">
             {LEVERANCIERS.map((leverancier) => (
               <li

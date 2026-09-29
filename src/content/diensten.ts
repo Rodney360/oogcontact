@@ -9,6 +9,8 @@
  * De `sleutel` moet overeenkomen met de naam van de dienst in de agenda.
  */
 
+import { LOEPBRILLEN_AAN } from '../../config/schakelaars.mjs'
+
 export type Dienst = {
   sleutel: string
   naam: string
@@ -28,7 +30,7 @@ export type Dienst = {
   uitgelicht?: boolean
 }
 
-export const DIENSTEN: Dienst[] = [
+const ALLE_DIENSTEN: Dienst[] = [
   {
     sleutel: 'Oogmeting & montuuradvies',
     naam: 'Oogmeting en montuuradvies',
@@ -116,6 +118,17 @@ export const DIENSTEN: Dienst[] = [
   },
 ]
 
+/**
+ * De diensten die de site laat zien.
+ *
+ * De loepbrillen van Admetec staan tijdelijk uit; zie config/schakelaars.mjs.
+ * De twee afspraken blijven hierboven gewoon staan, ze worden alleen niet meer
+ * meegegeven.
+ */
+export const DIENSTEN: Dienst[] = ALLE_DIENSTEN.filter(
+  (d) => LOEPBRILLEN_AAN || d.groep !== 'loepbrillen',
+)
+
 export const GROEPEN = ['ogen meten', 'brillen', 'contactlenzen', 'loepbrillen'] as const
 
 /**
@@ -134,7 +147,7 @@ export const ONDERWERPEN: Record<string, readonly Dienst['groep'][]> = {
   zonnebrillen: ['ogen meten', 'brillen'],
   kinderbrillen: ['ogen meten', 'brillen'],
   contactlenzen: ['contactlenzen'],
-  loepbrillen: ['loepbrillen'],
+  ...(LOEPBRILLEN_AAN ? { loepbrillen: ['loepbrillen'] as const } : {}),
 }
 
 /** De uitleg bij een dienst uit de agenda, op naam gezocht. */

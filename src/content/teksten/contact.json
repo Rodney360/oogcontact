@@ -34,7 +34,7 @@
       "alineas": [
         "Van woensdag tot en met zaterdag staan we voor je klaar. Op maandag, dinsdag en zondag is de winkel gesloten.",
         "Komen die tijden je niet uit? Bel of app ons even, dan zoeken we samen een moment dat past.",
-        "Wil je zeker weten dat we rustig de tijd voor je hebben, bijvoorbeeld voor een oogmeting in Groningen of advies over een loepbril of kinderbril? Plan dan zelf een moment via de pagina Afspraak maken."
+        "Wil je zeker weten dat we rustig de tijd voor je hebben, bijvoorbeeld voor een oogmeting in Groningen of advies over een kinderbril? Plan dan zelf een moment via de pagina Afspraak maken."
       ],
       "opsomming": []
     },
@@ -62,7 +62,7 @@
   "vragen": [],
   "oproep": {
     "kop": "Liever meteen een afspraak?",
-    "tekst": "Kies online zelf een dag en tijd die je uitkomen, voor een oogmeting, montuuradvies, lenscontrole of een loepbril. De koffie staat klaar. Wij houden graag oogcontact.",
+    "tekst": "Kies online zelf een dag en tijd die je uitkomen, voor een oogmeting, montuuradvies of een lenscontrole. De koffie staat klaar. Wij houden graag oogcontact.",
     "knop": "Afspraak maken"
   }
 }

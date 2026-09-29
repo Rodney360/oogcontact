@@ -73,9 +73,9 @@ export default function AlgemeneVoorwaarden() {
           </div>
 
           <p className="mt-12 border-t border-ivoor-rand pt-8">
-            Iets niet duidelijk, of ergens niet tevreden over? Laat het ons vooral weten. Bel{' '}
+            Iets niet duidelijk, of ergens niet tevreden over? Laat het ons vooral weten.{' '}
             <a href={`tel:${BEDRIJF.telefoon.link}`} className="text-messing-diep underline underline-offset-4">
-              {BEDRIJF.telefoon.weergave}
+              Bel ons
             </a>{' '}
             of mail naar{' '}
             <a href={`mailto:${BEDRIJF.email}`} className="text-messing-diep underline underline-offset-4">
