@@ -94,6 +94,69 @@ Het domein draait nu nog op de oude WordPress-site bij Creative Steps
 - [ ] Liever op een rustig moment: er zitten een paar minuten tussen waarin de
       site niet bereikbaar is
 
+
+### 4. Het beheerscherm aan GitHub koppelen — Dennis
+
+**Zonder dit kunnen Gerard en Gerda niets opslaan.** Het beheerscherm op
+`/keystatic` schrijft dan in de bestanden op de computer waar de site draait,
+en op Vercel bestaat die maar heel even en is hij alleen-lezen. Opslaan doet
+dan niets, zónder foutmelding.
+
+De site vangt dat nu af: is de koppeling er niet, dan toont `/keystatic` een
+melding "Nog niet gekoppeld" in plaats van een scherm dat doet alsof het werkt.
+Dat is een vangnet, geen oplossing — dit moet dus nog gebeuren.
+
+**1. Zet de repository klaar in Vercel.**
+
+Settings → Environment Variables → Add New:
+
+| Veld | Invullen |
+|---|---|
+| Key | `KEYSTATIC_GITHUB_REPO` |
+| Value | `Rodney360/oogcontact` |
+| Type | **Config** (geen wachtwoord) |
+| Environments | Production |
+
+Daarna **Deployments → ⋯ → Redeploy**.
+
+**2. Laat Keystatic de GitHub-app voor je maken.**
+
+Ga naar `https://oogcontactbijgerard.nl/keystatic`. Je krijgt nu een knop om
+een GitHub-app aan te maken. Die regelt zelf de juiste instellingen:
+
+- rechten: **Contents** schrijven, **Metadata** lezen, **Pull requests** lezen
+- het terugkeeradres `https://oogcontactbijgerard.nl/api/keystatic/github/oauth/callback`
+- inloggen met GitHub meteen bij het installeren
+
+Installeer de app daarna op `Rodney360/oogcontact`.
+
+**3. Zet de vier waarden in Vercel.** Keystatic laat ze na afloop zien:
+
+| Key | Type |
+|---|---|
+| `KEYSTATIC_GITHUB_CLIENT_ID` | Secret |
+| `KEYSTATIC_GITHUB_CLIENT_SECRET` | Secret |
+| `KEYSTATIC_SECRET` | Secret |
+| `NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG` | **Config** — die begint met `NEXT_PUBLIC_` en komt dus in de browser |
+
+Daarna weer **Redeploy**.
+
+**4. Controleren.** Open `/keystatic`, log in met GitHub, verander iets kleins
+(bijvoorbeeld een punt in de mededeling), klik **Save**, en kijk of er een
+nieuwe commit in de repo verschijnt. Zo ja: het werkt, en Gerard en Gerda
+kunnen zelf aan de slag.
+
+- [ ] `KEYSTATIC_GITHUB_REPO` gezet en opnieuw gebouwd
+- [ ] GitHub-app aangemaakt en geïnstalleerd op de repository
+- [ ] De vier waarden in Vercel gezet en opnieuw gebouwd
+- [ ] Een testwijziging opgeslagen en teruggezien als commit
+
+*Lukt de knop in stap 2 niet, dan kun je de app ook met de hand aanmaken op
+GitHub → Settings → Developer settings → GitHub Apps → New GitHub App, met
+precies de rechten en het terugkeeradres hierboven, webhook uit, en "Request
+user authorization (OAuth) during installation" aan.*
+
+
 ---
 
 ## Sterk aan te raden vóór de lancering
