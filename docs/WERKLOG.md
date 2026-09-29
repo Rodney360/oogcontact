@@ -937,6 +937,9 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+---
+
+
 ## 2026-09-22 (avond) — Dennis (Claude Code, cloud)
 
 - **`docs/vercel-toegang.md` klopte op vier punten niet meer**, en stuurde
@@ -957,7 +960,6 @@ toestellen zag het er goed uit, op de kleine niet.
   de waarschuwing dat alleen de A- en CNAME-regels om mogen: de e-mail van de
   winkel loopt over hetzelfde domein.
 - **Nog open:** zie `docs/open-punten.md` en `docs/live-gaan.md`.
-
 ---
 
 ## 2026-09-25 (loepbrillen tijdelijk uit) — Gerard (Claude Code, cloud)
@@ -1021,3 +1023,29 @@ toestellen zag het er goed uit, op de kleine niet.
   had: Zonnebrillen en Afspraak maken.
 - Waar de bovenkop iets anders zegt dan de kop blijft hij gewoon staan, zoals
   "OPTICIEN IN GRONINGEN" boven "Advies op maat".
+
+---
+
+## 2026-09-29 — Dennis (Claude Code, cloud)
+
+- **Het beheerscherm kon niets opslaan, en dat was niet te zien.** Op de live
+  site stond `/keystatic` in de stand "schrijf naar de bestanden op deze
+  computer". Op Vercel is die computer alleen-lezen en tijdelijk: Gerda had een
+  vakantiemelding kunnen typen, op Save kunnen klikken, geen foutmelding
+  gekregen, en er was niets gebeurd. Gemeten aan de live pagina, die letterlijk
+  "Local" bevatte.
+- **Oorzaak:** `keystatic.config.ts` valt terug op `local` als
+  `KEYSTATIC_GITHUB_REPO` niet is ingevuld, en die stond niet in Vercel — en
+  ook niet in `.env.example`.
+- **Vangnet ingebouwd.** `src/lib/beheer-koppeling.ts` beantwoordt op één plek
+  de vraag of opslaan kan. Kan het niet, dan toont `/keystatic` een melding
+  "Nog niet gekoppeld" in plaats van een scherm dat doet alsof het werkt, en
+  antwoordt de bijbehorende API 503 met dezelfde uitleg. Beide kanten
+  nagemeten in de gebouwde versie: zonder de variabele geblokkeerd, met de
+  variabele gewoon het echte scherm.
+- **De stappen staan nu in `docs/live-gaan.md` punt 4**, met de rechten en het
+  terugkeeradres rechtstreeks uit het Keystatic-pakket overgenomen
+  (`contents: write`, `metadata: read`, `pull_requests: read`, en
+  `/api/keystatic/github/oauth/callback`) in plaats van uit het hoofd. De vijf
+  variabelen staan in `.env.example`.
+- **Nog open:** de koppeling zelf, en zie verder `docs/live-gaan.md`.
