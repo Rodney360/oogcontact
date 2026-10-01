@@ -36,7 +36,10 @@ export function Beeld({
   vullend = false,
 }: Props) {
   const g = beeld(slot)
-  const srcSet = (ext: string) => g.breedtes.map((b) => `/beeld/${slot}-${b}.${ext} ${b}w`).join(', ')
+  // De vingerafdruk zit in de naam, zodat een gewisselde foto een nieuw adres
+  // krijgt. Zie scripts/process-images.mjs.
+  const srcSet = (ext: string) =>
+    g.breedtes.map((b) => `/beeld/${slot}-${b}.${g.merk}.${ext} ${b}w`).join(', ')
   const grootste = g.breedtes[g.breedtes.length - 1] ?? g.breedte
 
   return (
@@ -44,7 +47,7 @@ export function Beeld({
       <source type="image/avif" srcSet={srcSet('avif')} sizes={sizes} />
       <source type="image/webp" srcSet={srcSet('webp')} sizes={sizes} />
       <img
-        src={`/beeld/${slot}-${grootste}.webp`}
+        src={`/beeld/${slot}-${grootste}.${g.merk}.webp`}
         srcSet={srcSet('webp')}
         sizes={sizes}
         width={g.breedte}

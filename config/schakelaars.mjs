@@ -49,3 +49,24 @@ export const TERUGBELFORMULIER_AAN = false
  * zinnen het waren.
  */
 export const LOEPBRILLEN_AAN = false
+
+/**
+ * De video over de oogmeting op /ultiem-nauwkeurig-zicht/.
+ *
+ * Staat uit sinds 1 oktober 2026, tot er een nieuwe link voor de video is.
+ * Tot die tijd staat het hele blok "Zien hoe het werkt" eraf - de kop, de zin
+ * erboven en de video zelf.
+ *
+ * Alles blijft bestaan: de speler (`src/components/Video.tsx`), het nummer van
+ * de video in `src/content/bedrijf.ts` en de uitleg in de cookieverklaring.
+ * Zet deze regel op `true` en het staat er weer; de cookieverklaring vertelt
+ * dan ook weer over YouTube.
+ *
+ * Komt er een nieuwe video? Dan hoeft alleen `video.youtubeId` in
+ * `src/content/bedrijf.ts` vervangen te worden, met de titel erbij.
+ *
+ * De regels voor YouTube in `next.config.ts` (`frame-src` en `img-src`) blijven
+ * staan. Ze laten op zichzelf niets zien en niets laden; ze staan klaar voor
+ * als de video terugkomt.
+ */
+export const VIDEO_AAN = false

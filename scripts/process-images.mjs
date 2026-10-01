@@ -20,6 +20,7 @@
 
 import sharp from 'sharp'
 import { mkdir, writeFile, rm, access, stat, readFile } from 'node:fs/promises'
+import { createHash } from 'node:crypto'
 import path from 'node:path'
 import os from 'node:os'
 
@@ -68,9 +69,10 @@ async function alKlaar() {
     for (const slot of slots) {
       const gegevens = overzicht[slot]
       if (!gegevens?.breedtes?.length) return false
+      if (!gegevens.merk) return false
       for (const breedte of gegevens.breedtes) {
         for (const ext of ['avif', 'webp']) {
-          if (!(await bestaat(path.join(UIT, `${slot}-${breedte}.${ext}`)))) return false
+          if (!(await bestaat(path.join(UIT, `${slot}-${breedte}.${gegevens.merk}.${ext}`)))) return false
         }
       }
       // Is de bronfoto zelf veranderd, dan moet hij opnieuw verwerkt worden.
@@ -126,6 +128,27 @@ async function blurPlaatje(bron, verhouding, zwaartepunt, stijl) {
   return `data:image/webp;base64,${buf.toString('base64')}`
 }
 
+/**
+ * Een korte vingerafdruk van wat er in de foto gaat.
+ *
+ * Dit staat in de bestandsnaam. Zolang de foto en de instellingen hetzelfde
+ * blijven, blijft de naam hetzelfde; wissel je de foto of de uitsnede, dan
+ * krijgt hij een nieuwe naam en dus een nieuw adres.
+ *
+ * Dat is nodig omdat de server deze bestanden een jaar lang laat bewaren zonder
+ * navragen (`immutable`). Zonder vingerafdruk bleef een telefoon die de oude
+ * foto al had die oude foto tonen - een jaar lang, en op een iPhone kun je dat
+ * niet eens wegverversen.
+ */
+async function vingerafdruk(bron, beeld) {
+  const inhoud = await readFile(bron)
+  return createHash('sha256')
+    .update(inhoud)
+    .update(JSON.stringify([beeld.verhouding, beeld.zwaartepunt ?? null, beeld.stijl ?? null]))
+    .digest('hex')
+    .slice(0, 8)
+}
+
 async function verwerkEen(slot, beeld) {
   const bron = await vindBron(beeld.bron)
   if (!bron) throw new Error(`bronbestand niet gevonden: ${beeld.bron}`)
@@ -140,6 +163,7 @@ async function verwerkEen(slot, beeld) {
   const grootste = Math.max(...breedtes)
 
   const teKlein = beeld.breedtes.filter((b) => b > maxBreedte)
+  const merk = await vingerafdruk(bron, beeld)
 
   const bestanden = []
   for (const breedte of breedtes) {
@@ -154,8 +178,8 @@ async function verwerkEen(slot, beeld) {
     // Verkleinen maakt een foto altijd iets zachter; dit zet dat terug.
     pijp = pijp.sharpen({ sigma: 0.7, m1: 0.6, m2: 0.4 })
 
-    await pijp.clone().avif({ quality: 58, effort: 4 }).toFile(path.join(UIT, `${slot}-${breedte}.avif`))
-    await pijp.clone().webp({ quality: 78, effort: 4 }).toFile(path.join(UIT, `${slot}-${breedte}.webp`))
+    await pijp.clone().avif({ quality: 58, effort: 4 }).toFile(path.join(UIT, `${slot}-${breedte}.${merk}.avif`))
+    await pijp.clone().webp({ quality: 78, effort: 4 }).toFile(path.join(UIT, `${slot}-${breedte}.${merk}.webp`))
     bestanden.push(breedte)
   }
 
@@ -170,6 +194,7 @@ async function verwerkEen(slot, beeld) {
       breedte: grootste,
       hoogte,
       breedtes: bestanden,
+      merk,
       blur: await blurPlaatje(bron, beeld.verhouding, beeld.zwaartepunt, beeld.stijl),
       bron: beeld.bron,
     },

@@ -14,6 +14,12 @@ export type BeeldGegevens = {
   breedte: number
   hoogte: number
   breedtes: number[]
+  /**
+   * De vingerafdruk in de bestandsnaam. Verandert de foto of de uitsnede, dan
+   * verandert deze mee, en daarmee het adres van het bestand. Zo ziet iedereen
+   * meteen de nieuwe foto, ook op een telefoon die de oude al bewaard had.
+   */
+  merk: string
   blur: string
   bron: string
 }

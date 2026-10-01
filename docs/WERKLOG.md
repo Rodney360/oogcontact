@@ -1026,6 +1026,40 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-01 (video tijdelijk eraf) — Gerard (Claude Code, cloud)
+
+- De YouTube-video op `/ultiem-nauwkeurig-zicht/` staat eraf tot er een nieuwe
+  link is, samen met de kop "Zien hoe het werkt" en de zin erboven. Ook het
+  stukje over YouTube in de cookieverklaring is weg, want dat klopte dan niet
+  meer.
+- Niets weggegooid: nieuwe schakelaar `VIDEO_AAN` in `config/schakelaars.mjs`.
+  Op `true` en alles staat er weer; nagemeten in beide standen.
+- **Nog open:** de nieuwe link. Dan alleen `video.youtubeId` in
+  `src/content/bedrijf.ts` vervangen en de schakelaar aanzetten.
+
+---
+
+## 2026-10-01 (verwijzing werkt nog niet) — Gerard (Claude Code, cloud)
+
+- Creative Steps had de verwijzing doorgevoerd, maar de site kwam niet
+  tevoorschijn. **Nagemeten:** `oogcontactbijgerard.nl` en `www.` wijzen beide
+  naar `93.119.12.33`, en dat is geen adres van Vercel (die antwoordt vanaf
+  `216.198.79.x`, `64.29.17.x` of `76.76.21.x`).
+- **En er mist een stap aan onze kant:** het domein staat nog niet ín het
+  Vercel-project. Vercel zoekt per domeinnaam het bijbehorende project; staat
+  het er niet bij, dan krijgt de bezoeker een foutpagina van Vercel, hoe goed de
+  DNS ook staat. Datzelfde toevoegen zet ook het SSL-certificaat in gang. Eerst
+  Vercel, dan de DNS.
+- `docs/live-gaan.md` punt 3 uitgebreid met de meting en met die reden, en de
+  **mail aan Creative Steps** staat er nu echt in — daar werd al naar verwezen
+  maar hij was er nooit geschreven. De twee DNS-regels staan er als TODO in:
+  die noemt Vercel pas ná het toevoegen en ze verschillen per project. Ook
+  genoteerd in `docs/open-punten.md` §1.2.
+- **Nog open:** alleen de eigenaar van het Vercel-project kan het domein
+  toevoegen; zie `docs/vercel-toegang.md`.
+
+---
+
 ## 2026-09-29 — Dennis (Claude Code, cloud)
 
 - **Het beheerscherm kon niets opslaan, en dat was niet te zien.** Op de live
@@ -1049,3 +1083,62 @@ toestellen zag het er goed uit, op de kleine niet.
   `/api/keystatic/github/oauth/callback`) in plaats van uit het hoofd. De vijf
   variabelen staan in `.env.example`.
 - **Nog open:** de koppeling zelf, en zie verder `docs/live-gaan.md`.
+
+---
+
+## 2026-09-27 (oude foto's op de iPhone) — Gerard (Claude Code, cloud)
+
+- **Op de iPhones bleven oude foto's staan, ook na verversen.** Op de MacBook
+  hielp hard verversen wel. Dat lag niet aan Safari maar aan ons.
+- De verwerkte foto's kregen van de server `max-age=31536000, immutable` mee:
+  een jaar bewaren, niet navragen. Het commentaar erbij zei dat de namen een
+  hash bevatten en nooit veranderen - **maar die hash was er niet.** De namen
+  waren `collectie-1-1280.webp`, en achter zo'n naam hebben we deze week
+  meerdere keren een andere foto gezet. Een telefoon die de oude al had, vroeg
+  dus niet eens na. Op een iPhone kun je dat niet wegverversen.
+- **Nu zit er wel een vingerafdruk in**, acht tekens uit de inhoud van de
+  bronfoto plus de uitsnede-instellingen: `collectie-1-1280.7f3a9c02.webp`.
+  Wissel je een foto, dan verandert het adres en ziet iedereen hem meteen.
+  Daarmee klopt `immutable` eindelijk wel.
+- Aangepast: `scripts/process-images.mjs` (vingerafdruk berekenen en in de naam
+  zetten), `src/content/beeld.ts` (veld `merk`), `src/components/Beeld.tsx` en
+  `src/lib/seo.tsx` (de deelfoto). Alle 21 plekken opnieuw gegenereerd.
+- **Let op voor deze ene keer:** wie de site al bezocht heeft, heeft de oude
+  foto's nog in het geheugen van zijn browser zitten onder de oude naam. Die
+  oude namen bestaan niet meer, dus vanaf nu wordt alles opnieuw opgehaald. Dit
+  was de laatste keer dat dit kon gebeuren.
+
+---
+
+## 2026-09-27 (zelf een Vercel-project) — Gerard (Claude Code, cloud)
+
+- Gerard vroeg of hij niet zelf een vers project in Vercel kan opzetten en het
+  vandaaruit met Creative Steps kan regelen. **Dat kan, en het is nu het
+  makkelijkst dat het ooit wordt.**
+- Nagelopen wat er overgezet zou moeten worden: **één instelling**,
+  `NEXT_PUBLIC_SITE_URL`. De agenda heeft geen sleutel (OO2 geeft er geen), de
+  mail en de spamcontrole horen bij het formulier dat uit staat, en de
+  GitHub-koppeling van het beheerscherm is nooit ingesteld.
+- In `docs/vercel-toegang.md` stond bij die derde weg nog dat "de sleutels
+  opnieuw ingevuld moeten worden". Dat klopt niet meer; rechtgezet, met de
+  stappen erbij.
+- Het enige waar Dennis nog voor nodig kan zijn: de Vercel-app toegang geven tot
+  de repository, als Gerard hem niet in de lijst ziet staan. Half minuutje werk.
+
+---
+
+## 2026-09-27 (zelf importeren kan nog niet) — Gerard (Claude Code, cloud)
+
+- Gerard probeerde het nieuwe Vercel-project te maken. In de importlijst staat
+  alleen `gbugel`; **`Rodney360` verschijnt niet**, en dat is geen instelling
+  die hij ergens kan aanzetten.
+- Nagekeken bij GitHub: `Rodney360` is een **persoonlijk account**, geen
+  organisatie, en Gerard heeft daar wel `push` maar **geen `admin`**. Op een
+  persoonlijk account bepaalt alleen de eigenaar welke apps erbij mogen.
+- Mijn stappen van gisteren gingen ervan uit dat Dennis de Vercel-app even
+  toegang kon geven. Dat is niet genoeg: zolang de repository bij `Rodney360`
+  staat, kan Gerard er geen eigen project van maken. Rechtgezet in
+  `docs/vercel-toegang.md`.
+- **Wat wel werkt: Dennis draagt de repository over** (GitHub → Settings →
+  Danger Zone → Transfer ownership → `gbugel`). Alles gaat mee, het oude adres
+  blijft doorverwijzen, en daarna kan Gerard alles zelf.

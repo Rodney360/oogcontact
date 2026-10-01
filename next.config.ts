@@ -70,7 +70,16 @@ const nextConfig: NextConfig = {
     return [
       { source: '/:pad*', headers: securityHeaders },
       {
-        // Verwerkte afbeeldingen krijgen een hash in de naam en veranderen nooit.
+        /*
+          Verwerkte foto's mogen een jaar bewaard blijven zonder navragen. Dat
+          mag nu ook echt: sinds er een vingerafdruk in de bestandsnaam zit
+          (zie scripts/process-images.mjs) krijgt een gewisselde foto een nieuw
+          adres, en ziet iedereen hem meteen.
+
+          Zonder die vingerafdruk klopte deze regel niet. Een telefoon die de
+          oude foto al had, bleef hem een jaar lang tonen - en op een iPhone kun
+          je dat niet wegverversen zoals op een laptop.
+        */
         source: '/beeld/:pad*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
