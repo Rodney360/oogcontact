@@ -3,7 +3,7 @@
 Eén papiertje om af te vinken. Alles wat hier niet staat, kan ook ná de
 lancering. De uitgebreide uitleg per punt staat in `docs/open-punten.md`.
 
-Bijgewerkt op 22 september 2026.
+Bijgewerkt op 1 oktober 2026.
 
 ---
 
@@ -59,6 +59,20 @@ Dit kan alleen de eigenaar van het Vercel-project. Gerard kan er niet bij; zie
 Het domein draait nu nog op de oude WordPress-site bij Creative Steps
 (nagemeten op 22 september: nginx, PHP, Plesk). Er is dus nog niets verhuisd.
 
+**Nagemeten op 1 oktober 2026.** `oogcontactbijgerard.nl` en
+`www.oogcontactbijgerard.nl` wijzen allebei naar `93.119.12.33`. Dat is geen
+adres van Vercel: Vercel antwoordt vanaf `216.198.79.x`, `64.29.17.x` of
+`76.76.21.x`. Creative Steps heeft dus wél iets gezet, maar het wijst niet naar
+Vercel. Een verwijzing kan er een paar uur over doen om overal bekend te zijn,
+dus meet het nog eens na voordat je ze erop aanspreekt.
+
+**Waarom een verwijzing alleen niet genoeg is.** Vercel kijkt bij elk bezoek
+naar de domeinnaam in het verzoek en zoekt daar het bijbehorende project bij.
+Staat het domein niet ín het project, dan kent Vercel die naam niet en krijgt de
+bezoeker een foutpagina van Vercel — hoe goed de DNS ook staat. Datzelfde
+toevoegen zet ook het SSL-certificaat in gang. **Dus eerst Vercel, dan de DNS**,
+en niet andersom.
+
 **In Vercel — een kwartier, Dennis**
 
 - [ ] Settings → **Domains** → `oogcontactbijgerard.nl` toevoegen
@@ -75,7 +89,7 @@ Het domein draait nu nog op de oude WordPress-site bij Creative Steps
 **Bij Creative Steps**
 
 - [ ] De DNS-regels laten omzetten. De mail die je kunt overnemen staat
-      verderop in deze checklist
+      verderop in deze checklist, onder "De mail aan Creative Steps"
 - [ ] **Alleen de A- en CNAME-regels.** De MX-regels en de bijbehorende
       TXT-regels met rust laten: de e-mail van de winkel loopt over hetzelfde
       domein en gaat er anders uit
@@ -156,6 +170,56 @@ GitHub → Settings → Developer settings → GitHub Apps → New GitHub App, m
 precies de rechten en het terugkeeradres hierboven, webhook uit, en "Request
 user authorization (OAuth) during installation" aan.*
 
+
+---
+
+## De mail aan Creative Steps
+
+Versturen pas nadat de twee domeinen in Vercel staan — dan heb je de regels die
+hieronder ingevuld moeten worden. Vercel noemt ze per domein op het
+Domains-scherm; neem ze letterlijk over en verzin ze niet zelf, want ze
+verschillen per project.
+
+> Beste Creative Steps,
+>
+> Dank voor het meedenken, fijn dat jullie meteen reageren.
+>
+> Onze nieuwe website is klaar en komt te draaien bij Vercel. Daarvoor moet de
+> DNS van `oogcontactbijgerard.nl` verhuizen. Een SSL-certificaat hoeven jullie
+> niet te regelen: Vercel maakt en vernieuwt dat automatisch zodra het domein
+> naar hen wijst. We kunnen het ook niet aanleveren, want de sleutel blijft bij
+> Vercel. Scheelt jullie in elk geval werk.
+>
+> Twee regels zijn het:
+>
+> - `oogcontactbijgerard.nl` → TODO: de regel uit het Domains-scherm van Vercel
+> - `www.oogcontactbijgerard.nl` → TODO: de regel uit het Domains-scherm van
+>   Vercel
+>
+> Het websiteverkeer loopt daarna rechtstreeks naar Vercel en niet meer via
+> jullie server. Mochten jullie overwegen het via jullie server door te sturen:
+> dat hoeft wat ons betreft niet, het mag gerust rechtstreeks. Maar hoor het
+> graag als jullie daar anders over denken.
+>
+> Eén ding waar ik jullie aandacht voor wil vragen: onze e-mail loopt over
+> hetzelfde domein. Zouden alleen die twee website-regels aangepast kunnen
+> worden, en de MX-regels met de bijbehorende TXT-regels ongewijzigd blijven?
+> Dan houden we `info@oogcontactbijgerard.nl` gewoon draaiend.
+>
+> Voor jullie techneut staat de achtergrond hier:
+> <https://vercel.com/docs/domains/working-with-ssl>
+>
+> Alvast bedankt, en laat vooral weten wanneer het jullie schikt.
+>
+> Met vriendelijke groet,
+> Gerard en Gerda Bugel
+> Oogcontact bij Gerard
+> Overwinningsplein 100, Groningen
+
+Wat er daarna gebeurt: Vercel ziet de nieuwe regels zelf, zet het certificaat
+klaar — meestal binnen een paar minuten, soms een uur — en het domein komt op
+"Valid Configuration" te staan. In dat tussenpoosje kan een browser kort
+waarschuwen over een onveilige verbinding. Dat lost zichzelf op; ververs even.
 
 ---
 

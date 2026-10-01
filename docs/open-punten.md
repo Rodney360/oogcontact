@@ -59,6 +59,14 @@ merging" en "Require status checks to pass".
 
 ### 1.2 Zodra de site staat
 
+**De twee DNS-regels voor het domein. TODO: nog niet bekend.**
+Welke regels Creative Steps moet zetten, zegt Vercel pas nadat
+`oogcontactbijgerard.nl` en `www.oogcontactbijgerard.nl` in het project zijn
+toegevoegd (Settings → Domains). Ze verschillen per project, dus ze staan
+nergens in deze repo en ze mogen niet uit het hoofd overgenomen worden.
+*Nagemeten op 1 oktober 2026:* het domein wijst naar `93.119.12.33`, nog steeds
+niet naar Vercel. Zie `docs/live-gaan.md` punt 3 en de mail die daar klaarstaat.
+
 ~~**API-sleutel van de online agenda (Easy!Appointments).**~~
 **Kan niet.** OO2 geeft geen API uit: niet in dit pakket en ook niet in een
 duurder pakket. Gerard heeft het gevraagd en dat is het antwoord.

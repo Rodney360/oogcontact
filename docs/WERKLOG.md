@@ -1026,6 +1026,27 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-01 (verwijzing werkt nog niet) — Gerard (Claude Code, cloud)
+
+- Creative Steps had de verwijzing doorgevoerd, maar de site kwam niet
+  tevoorschijn. **Nagemeten:** `oogcontactbijgerard.nl` en `www.` wijzen beide
+  naar `93.119.12.33`, en dat is geen adres van Vercel (die antwoordt vanaf
+  `216.198.79.x`, `64.29.17.x` of `76.76.21.x`).
+- **En er mist een stap aan onze kant:** het domein staat nog niet ín het
+  Vercel-project. Vercel zoekt per domeinnaam het bijbehorende project; staat
+  het er niet bij, dan krijgt de bezoeker een foutpagina van Vercel, hoe goed de
+  DNS ook staat. Datzelfde toevoegen zet ook het SSL-certificaat in gang. Eerst
+  Vercel, dan de DNS.
+- `docs/live-gaan.md` punt 3 uitgebreid met de meting en met die reden, en de
+  **mail aan Creative Steps** staat er nu echt in — daar werd al naar verwezen
+  maar hij was er nooit geschreven. De twee DNS-regels staan er als TODO in:
+  die noemt Vercel pas ná het toevoegen en ze verschillen per project. Ook
+  genoteerd in `docs/open-punten.md` §1.2.
+- **Nog open:** alleen de eigenaar van het Vercel-project kan het domein
+  toevoegen; zie `docs/vercel-toegang.md`.
+
+---
+
 ## 2026-09-29 — Dennis (Claude Code, cloud)
 
 - **Het beheerscherm kon niets opslaan, en dat was niet te zien.** Op de live
