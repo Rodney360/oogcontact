@@ -24,9 +24,14 @@ De eerste keer wordt gevraagd of je wilt inloggen met GitHub. Dat is de plek
 waar de site bewaard wordt. Log in met het account dat je daarvoor gekregen
 hebt.
 
-> **Nog niet ingesteld?** Dan werkt dit alleen op een computer waar de site
-> lokaal draait. Het instellen van de GitHub-koppeling is eenmalig werk — vraag
-> Dennis erom.
+> **Zie je "Nog niet gekoppeld"?** Dan kan het beheerscherm nog niets opslaan,
+> en laat de site het daarom bewust niet zien — anders zou je van alles kunnen
+> invullen zonder dat het ooit op de site komt. Het koppelen is eenmalig werk
+> van een kwartier; de stappen staan in `docs/live-gaan.md` onder punt 4.
+> Vraag Dennis erom.
+>
+> Ondertussen kunnen nieuws, een mededeling en afwijkende openingstijden ook
+> zonder dit scherm op de site gezet worden. Vraag Gerard.
 
 Je ziet links een menu met de onderdelen. Klik erop en je kunt aan de slag.
 
