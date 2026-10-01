@@ -1142,3 +1142,18 @@ toestellen zag het er goed uit, op de kleine niet.
 - **Wat wel werkt: Dennis draagt de repository over** (GitHub → Settings →
   Danger Zone → Transfer ownership → `gbugel`). Alles gaat mee, het oude adres
   blijft doorverwijzen, en daarna kan Gerard alles zelf.
+
+---
+
+## 2026-10-01 (favicon) — Dennis (Claude Code, cloud)
+
+- **Het domein staat live op Vercel.** Nagemeten: `oogcontactbijgerard.nl`
+  wijst naar Vercel met een geldig certificaat, `www` stuurt door, de oude
+  links werken. `mail.` en `webmail.` wijzen nog naar Creative Steps.
+- **De favicon was op een tabblad niet te zien.** Er was alleen een icoon van
+  512 pixels met de dunne lijnen van het logo; verkleind tot 16 of 32 pixels
+  bleef daar een grijs vlekje van over. `/favicon.ico` gaf een 404.
+- **Nu:** `scripts/maak-logo.mjs` maakt een `favicon.ico` (16, 32 en 48 pixels)
+  en een `icon.png` van 192 pixels: een witte bril op zwart, groter in het vlak
+  en met dikkere lijnen. Op verzoek van Dennis zwart-wit in plaats van ivoor op
+  inkt. Het icoon voor het beginscherm van de telefoon is ongewijzigd.
