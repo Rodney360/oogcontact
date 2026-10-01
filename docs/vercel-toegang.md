@@ -85,11 +85,91 @@ het team aan en nodigt Dennis uit, Dennis zet het project over, en daarna kan
 Dennis eruit. Alles verhuist mee: het domein, de sleutels, de koppeling met
 GitHub, de geschiedenis, zonder dat de site eruit ligt.
 
-**3. Gerard maakt er zelf een nieuw project van** — gratis. Werkt, maar de
-sleutels moeten opnieuw ingevuld worden, het project krijgt een ander
-`vercel.app`-adres, en het oude project moet eerst van de repository
-losgekoppeld worden. Anders bouwen er twee tegelijk en weet niemand meer welke
+**3. Gerard maakt er zelf een nieuw project van** — gratis, en makkelijker dan
+het klinkt. Zie de stappen hieronder. Het project krijgt een ander
+`vercel.app`-adres, en het oude project moet daarna van de repository
+losgekoppeld worden; anders bouwen er twee tegelijk en weet niemand meer welke
 preview de goede is.
+
+> Hier stond eerder dat de sleutels dan opnieuw ingevuld moeten worden.
+> **Dat klopt niet meer.** Nagelopen op 27 september: er is er nog maar één die
+> ertoe doet.
+
+---
+
+## Zelf een nieuw project maken, stap voor stap
+
+### Wat er overgezet moet worden: één regel
+
+| Instelling | Nodig? |
+|---|---|
+| `EASYAPPOINTMENTS_*` | **Nee.** OO2 geeft geen API; de agenda is een ingesloten venster en heeft geen sleutel nodig |
+| `RESEND_API_KEY`, `MAIL_*` | **Nee.** Het terugbelformulier staat uit, de site verstuurt nergens e-mail |
+| `TURNSTILE_*` | **Nee.** Hoort bij datzelfde formulier |
+| `KEYSTATIC_GITHUB_REPO` | **Nee.** De GitHub-koppeling van het beheerscherm is nooit ingesteld, dus er valt niets te kopiëren |
+| `NEXT_PUBLIC_SITE_URL` | **Ja.** Op `https://oogcontactbijgerard.nl`, zodra het domein om is |
+
+Dat is alles. Verder heeft het project niets nodig: de foto's, de teksten, de
+openingstijden en de agenda zitten allemaal in de repository.
+
+### Eerst dit: de repository moet van Gerard worden
+
+Op 27 september geprobeerd. Gerard ziet in de importlijst van Vercel alleen
+`gbugel`; **`Rodney360` staat er niet tussen**, en dat is geen instelling die
+hij ergens aan kan zetten.
+
+Nagekeken bij GitHub:
+
+- `Rodney360` is een **persoonlijk account**, geen organisatie
+  (`"type": "User"`)
+- Gerard heeft op de repository `push`, maar **geen `admin`**
+
+Op een persoonlijk account kan alleen de eigenaar bepalen welke apps erbij
+mogen. Een medewerker kan dat account daarom nooit in zijn eigen Vercel-lijst
+krijgen. Zolang de repository bij `Rodney360` staat, kan Gerard er dus geen
+eigen project van maken - hoe vaak hij ook opnieuw inlogt.
+
+**De oplossing: Dennis draagt de repository over aan Gerard.** GitHub →
+Settings → onderaan bij "Danger Zone" → **Transfer ownership** → `gbugel`.
+Gerard krijgt een verzoek en accepteert. Alles gaat mee: de geschiedenis, de
+pull requests, de instellingen. Het oude adres blijft doorverwijzen, dus er
+breekt niets. Dennis kan daarna gewoon als medewerker blijven meewerken.
+
+Dat is meteen het nette einde: de code én de hosting staan dan op naam van de
+winkel.
+
+> Let op voor daarna: een sessie van Claude Code is gekoppeld aan de naam van
+> de repository. Na de overdracht heet hij `gbugel/oogcontact` en moet die
+> eenmalig opnieuw toegevoegd worden aan de sessie.
+
+### De stappen, zodra de repository van Gerard is
+
+1. Log in op <https://vercel.com> met je eigen account.
+2. **Add New → Project**. Vercel vraagt of het bij GitHub mag kijken; zeg ja en
+   kies het account `gbugel`.
+3. Kies de repository **`oogcontact`**. Die staat er nu wel tussen, want je bent
+   nu zelf de eigenaar.
+4. **Project Name**: kies iets herkenbaars, bijvoorbeeld
+   `oogcontact-bij-gerard`. Dat bepaalt alleen het tijdelijke
+   `...vercel.app`-adres, niet het echte domein.
+5. Framework staat vanzelf op **Next.js**. De rest kan op de standaard blijven.
+6. **Deploy**, en wacht een paar minuten. De eerste bouw duurt langer, want alle
+   foto's worden opnieuw omgezet.
+7. Bekijk het resultaat op het nieuwe `...vercel.app`-adres en kijk of alles
+   klopt. **Pas daarna het domein**; zie `docs/live-gaan.md`.
+8. Als het domein eenmaal om is: vraag Dennis om zijn project los te koppelen
+   van GitHub (Settings → Git → Disconnect). Anders bouwen er twee bij elke
+   wijziging.
+
+### Waar je op moet letten
+
+- Doe dit **voordat** je het domein omzet, niet erna. Een domein kan maar bij
+  één project horen.
+- Het oude project mag blijven staan tot alles goed werkt. Dat is je weg terug.
+- Het beheerscherm `/keystatic` werkt op de live site pas als de
+  GitHub-koppeling ingesteld is. Dat geldt nu ook al, dus je levert er niets
+  mee in.
+
 
 ### Eén ding dat losstaat van wie de eigenaar is
 

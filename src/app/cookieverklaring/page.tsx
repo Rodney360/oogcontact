@@ -5,6 +5,7 @@ import { Sectie, SectieKop, Leeskolom } from '@/components/Sectie'
 import { Kruimelpad } from '@/components/InhoudsPagina'
 import { BEDRIJF } from '@/content/bedrijf'
 import { paginaMeta, JsonLd, kruimelsJsonLd } from '@/lib/seo'
+import { VIDEO_AAN } from '../../../config/schakelaars.mjs'
 
 export const metadata: Metadata = paginaMeta({
   titel: 'Cookieverklaring',
@@ -84,13 +85,18 @@ export default function Cookieverklaring() {
             gegevens. Wat OO2 met een afspraak doet, staat in de privacyverklaring.
           </p>
 
-          <h3 className="mt-8 text-kop-4">De video over de oogmeting</h3>
-          <p>
-            Op de pagina over nauwkeurig meten staat een video van YouTube. Die wordt pas geladen
-            als je op afspelen klikt, en dan via youtube-nocookie.com. Zolang je niet klikt, legt
-            je browser dus geen verbinding met YouTube en wordt er niets opgeslagen. Klik je wel,
-            dan gelden vanaf dat moment de voorwaarden van YouTube.
-          </p>
+          {/* Staat de video uit, dan klopt dit stuk niet; zie config/schakelaars.mjs. */}
+          {VIDEO_AAN && (
+            <>
+              <h3 className="mt-8 text-kop-4">De video over de oogmeting</h3>
+              <p>
+                Op de pagina over nauwkeurig meten staat een video van YouTube. Die wordt pas
+                geladen als je op afspelen klikt, en dan via youtube-nocookie.com. Zolang je niet
+                klikt, legt je browser dus geen verbinding met YouTube en wordt er niets
+                opgeslagen. Klik je wel, dan gelden vanaf dat moment de voorwaarden van YouTube.
+              </p>
+            </>
+          )}
 
           <h3 className="mt-8 text-kop-4">De kaart</h3>
           <p>
