@@ -1026,6 +1026,19 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-01 (video tijdelijk eraf) — Gerard (Claude Code, cloud)
+
+- De YouTube-video op `/ultiem-nauwkeurig-zicht/` staat eraf tot er een nieuwe
+  link is, samen met de kop "Zien hoe het werkt" en de zin erboven. Ook het
+  stukje over YouTube in de cookieverklaring is weg, want dat klopte dan niet
+  meer.
+- Niets weggegooid: nieuwe schakelaar `VIDEO_AAN` in `config/schakelaars.mjs`.
+  Op `true` en alles staat er weer; nagemeten in beide standen.
+- **Nog open:** de nieuwe link. Dan alleen `video.youtubeId` in
+  `src/content/bedrijf.ts` vervangen en de schakelaar aanzetten.
+
+---
+
 ## 2026-10-01 (verwijzing werkt nog niet) — Gerard (Claude Code, cloud)
 
 - Creative Steps had de verwijzing doorgevoerd, maar de site kwam niet
