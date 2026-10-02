@@ -1031,9 +1031,12 @@ toestellen zag het er goed uit, op de kleine niet.
 - De site is live. Op Google stond dat de winkel vandaag eerder dicht is, op de
   site niet: die twee zijn niet gekoppeld. De site heeft zijn eigen lijst,
   `src/content/beheer/uitzonderingen.json`, en die was leeg.
-- Ingevuld zoals Gerard het opgaf: vrijdag 2 oktober open tot 13:30, woensdag 7
-  en donderdag 8 oktober dicht (maandag en dinsdag zijn al standaard dicht).
-  Nagerekend: "weer open op vrijdag vanaf 9.30 uur" vanaf zaterdagmiddag.
+- Ingevuld zoals Gerard het opgaf: vrijdag 2 oktober open tot 13:30, zaterdag 3,
+  woensdag 7 en donderdag 8 oktober dicht (maandag en dinsdag zijn al standaard
+  dicht).
+- **Fout in de statusregel gevonden:** op vrijdagmiddag stond er "weer open op
+  vrijdag", wat leest als vandaag. Ligt de heropening een week of verder weg,
+  dan staat de datum er nu bij: "weer open op vrijdag 9 oktober". Met een test.
 - **Nog open:** het beheerscherm koppelen (`docs/live-gaan.md` punt 4), zodat
   Gerard en Gerda dit voortaan zelf doen. Tot die tijd: een afwijkende dag op
   twee plekken invullen, in Google en op de site.

@@ -8,18 +8,25 @@
       "reden": "Eenmalig eerder dicht"
     },
     {
+      "datum": "2026-10-03",
+      "gesloten": true,
+      "van": "",
+      "tot": "",
+      "reden": "Gesloten, zaterdag tot en met donderdag"
+    },
+    {
       "datum": "2026-10-07",
       "gesloten": true,
       "van": "",
       "tot": "",
-      "reden": "Gesloten, maandag tot en met donderdag"
+      "reden": "Gesloten, zaterdag tot en met donderdag"
     },
     {
       "datum": "2026-10-08",
       "gesloten": true,
       "van": "",
       "tot": "",
-      "reden": "Gesloten, maandag tot en met donderdag"
+      "reden": "Gesloten, zaterdag tot en met donderdag"
     }
   ]
 }
