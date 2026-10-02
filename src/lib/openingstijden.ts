@@ -63,6 +63,17 @@ function datumPlus(isoDatum: string, dagen: number): string {
   return d.toISOString().slice(0, 10)
 }
 
+const MAANDEN = [
+  'januari', 'februari', 'maart', 'april', 'mei', 'juni',
+  'juli', 'augustus', 'september', 'oktober', 'november', 'december',
+]
+
+/** "2026-10-09" wordt "9 oktober". */
+function datumInWoorden(isoDatum: string): string {
+  const [, maand, dag] = isoDatum.split('-').map(Number)
+  return `${dag} ${MAANDEN[(maand ?? 1) - 1]}`
+}
+
 /** Van een ISO-datum naar de weekdag (maandag = 1). */
 function weekdagVan(isoDatum: string): Weekdag {
   const [jaar, maand, dag] = isoDatum.split('-').map(Number)
@@ -127,7 +138,10 @@ export function huidigeStatus(nu: Date = new Date(), uitzonderingen: Uitzonderin
     const eerste = dagdelen[0]
     if (!eerste) continue
 
-    const naam = over === 1 ? 'morgen' : dagSchema(weekdagVan(dag)).naam
+    // Een week of verder weg: dan alleen "op vrijdag" zeggen is dubbelzinnig -
+    // op een vrijdag leest dat als vandaag. Zet er dan de datum bij.
+    const weekdag = dagSchema(weekdagVan(dag)).naam
+    const naam = over === 1 ? 'morgen' : over >= 7 ? `${weekdag} ${datumInWoorden(dag)}` : weekdag
     const voorzetsel = over === 1 ? '' : 'op '
     return {
       open: false,

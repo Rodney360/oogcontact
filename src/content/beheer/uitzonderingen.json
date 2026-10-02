@@ -1,3 +1,32 @@
 {
-  "dagen": []
+  "dagen": [
+    {
+      "datum": "2026-10-02",
+      "gesloten": false,
+      "van": "9:30",
+      "tot": "13:30",
+      "reden": "Eenmalig eerder dicht"
+    },
+    {
+      "datum": "2026-10-03",
+      "gesloten": true,
+      "van": "",
+      "tot": "",
+      "reden": "Gesloten, zaterdag tot en met donderdag"
+    },
+    {
+      "datum": "2026-10-07",
+      "gesloten": true,
+      "van": "",
+      "tot": "",
+      "reden": "Gesloten, zaterdag tot en met donderdag"
+    },
+    {
+      "datum": "2026-10-08",
+      "gesloten": true,
+      "van": "",
+      "tot": "",
+      "reden": "Gesloten, zaterdag tot en met donderdag"
+    }
+  ]
 }

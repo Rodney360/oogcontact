@@ -127,6 +127,23 @@ test('een langere vakantie wijst naar de eerste dag erna', () => {
   assert.match(s.tekst, /weer open op/)
 })
 
+test('een week of verder weg: de datum staat erbij, anders leest het als vandaag', () => {
+  // Vrijdag eerder dicht, daarna dicht tot en met donderdag: op vrijdagmiddag
+  // zou "weer open op vrijdag" klinken alsof het vandaag is.
+  const uitzonderingen: Uitzondering[] = [
+    { datum: '2026-10-02', dagdelen: [{ van: 9 * 60 + 30, tot: 13 * 60 + 30 }], reden: 'Eerder dicht' },
+    { datum: '2026-10-03', dagdelen: [], reden: 'Gesloten' },
+    { datum: '2026-10-07', dagdelen: [], reden: 'Gesloten' },
+    { datum: '2026-10-08', dagdelen: [], reden: 'Gesloten' },
+  ]
+  const vrijdag = huidigeStatus(zomer('2026-10-02T14:00'), uitzonderingen)
+  assert.match(vrijdag.tekst, /weer open op vrijdag 9 oktober vanaf 9\.30/)
+
+  // Minder dan een week weg: gewoon de weekdag, zoals altijd.
+  const zaterdag = huidigeStatus(zomer('2026-10-03T12:00'), uitzonderingen)
+  assert.match(zaterdag.tekst, /weer open op vrijdag vanaf 9\.30/)
+})
+
 test('levert openingstijden in het formaat dat Google verwacht', () => {
   const spec = alsSchemaOrg()
   assert.equal(spec.length, 4, 'wo, do, vr, za')
