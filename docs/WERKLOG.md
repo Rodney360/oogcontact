@@ -1026,6 +1026,20 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-02 (afwijkende openingstijden) — Gerard (Claude Code, cloud)
+
+- De site is live. Op Google stond dat de winkel vandaag eerder dicht is, op de
+  site niet: die twee zijn niet gekoppeld. De site heeft zijn eigen lijst,
+  `src/content/beheer/uitzonderingen.json`, en die was leeg.
+- Ingevuld zoals Gerard het opgaf: vrijdag 2 oktober open tot 13:30, woensdag 7
+  en donderdag 8 oktober dicht (maandag en dinsdag zijn al standaard dicht).
+  Nagerekend: "weer open op vrijdag vanaf 9.30 uur" vanaf zaterdagmiddag.
+- **Nog open:** het beheerscherm koppelen (`docs/live-gaan.md` punt 4), zodat
+  Gerard en Gerda dit voortaan zelf doen. Tot die tijd: een afwijkende dag op
+  twee plekken invullen, in Google en op de site.
+
+---
+
 ## 2026-10-01 (video tijdelijk eraf) — Gerard (Claude Code, cloud)
 
 - De YouTube-video op `/ultiem-nauwkeurig-zicht/` staat eraf tot er een nieuwe
