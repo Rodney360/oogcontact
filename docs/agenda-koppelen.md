@@ -106,3 +106,40 @@ Geen `filter`, geen omhullende div met `overflow-hidden` en een afronding, geen
 afronding zit daarom op het vlak zelf.
 
 De leesbaarheid blijft daarmee volledig een vraag voor OO2.
+
+## De laatste knop: daar vallen afspraken weg
+
+Gerard, 5 oktober 2026: de knop aan het eind van de stappen in de agenda is de
+belangrijkste, want zonder die klik staat de afspraak er niet in. En juist die
+knop valt niet genoeg op.
+
+**Wat wij gedaan hebben, op onze eigen pagina.** Boven de agenda staan nu de
+vier stappen, met de vierde in een messing kader: "Bevestig je afspraak — pas
+dan staat hij echt in onze agenda." Direct onder de agenda staat het nog een
+keer, op de plek waar je bent als je klaar bent met invullen, met de tip om in
+het agendavak zelf naar beneden te scrollen als je de knop niet ziet. Op een
+telefoon is het agendavak namelijk niet hoog genoeg om alles in één keer te
+laten zien. Zie `src/components/boeking/AgendaStappen.tsx`.
+
+**Wat alleen OO2 kan.** De knop zelf staat in hun vlak. Een mail die je kunt
+overnemen:
+
+> Beste OO2,
+>
+> Onze online agenda staat sinds kort op onze nieuwe website, en dat werkt
+> prima. Eén ding merken we wel: klanten slaan de laatste stap soms over. Ze
+> vullen alles in, maar klikken niet op de knop aan het eind, en dan staat de
+> afspraak er niet in. Die knop valt net niet genoeg op.
+>
+> Zouden jullie kunnen kijken of dat in onze agenda beter kan? We denken aan:
+>
+> - de knop groter en in onze eigen kleur, **#C9A96A**, met donkere tekst
+> - een duidelijkere tekst op de knop, bijvoorbeeld **"Afspraak bevestigen"**
+> - als het kan: de teksten en datums in de agenda wat donkerder. Veel van onze
+>   klanten zijn wat ouder, en het lichtgrijs is voor hen lastig te lezen
+>
+> Alvast hartelijk dank, en laat gerust weten als iets van onze kant nodig is.
+>
+> Met vriendelijke groet,
+> Gerard en Gerda Bugel
+> Oogcontact bij Gerard
