@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { OnlineAgenda } from '@/components/boeking/OnlineAgenda'
+import { AgendaStappen } from '@/components/boeking/AgendaStappen'
 import { ContactFormulier } from '@/components/ContactFormulier'
 import { TERUGBELFORMULIER_AAN } from '../../../config/schakelaars.mjs'
 import { Sectie, SectieKop, Leeskolom } from '@/components/Sectie'
@@ -81,9 +82,11 @@ export default async function AfspraakMaken({
       <Sectie compact id="online">
         <h2 className="text-kop-2">Plan je afspraak online</h2>
         <p className="mt-5 leesbreedte text-lead text-tekst-licht-zacht">
-          Kies hieronder waarvoor je komt, en daarna een dag en een tijd die jou uitkomen. Je
-          ziet meteen welke momenten nog vrij zijn.
+          Je ziet meteen welke momenten nog vrij zijn. Het gaat in vier stappen:
         </p>
+        <div className="mt-8">
+          <AgendaStappen />
+        </div>
         {voor && (
           <p className="mt-4 leesbreedte text-basis text-messing">
             Je komt hier vanaf de pagina over {voor}. Kies in de agenda de afspraak die daarbij

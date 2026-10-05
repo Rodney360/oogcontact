@@ -1026,6 +1026,19 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-05 (de laatste knop in de agenda) — Gerard (Claude Code, cloud)
+
+- Klanten missen de knop aan het eind van de agenda van OO2, en dan staat er
+  geen afspraak. Die knop zit in het vlak van OO2 en kunnen wij niet aanpassen.
+- Daarom op `/afspraak-maken/` de vier stappen boven de agenda gezet, met de
+  laatste in een messing kader, en eronder nog een herinnering met de tip om in
+  het agendavak te scrollen (`src/components/boeking/AgendaStappen.tsx`).
+  Bekeken op telefoon en laptop; geen tekst kleiner dan 16px.
+- **Nog open:** de knop zelf. Mail aan OO2 staat klaar in
+  `docs/agenda-koppelen.md`, onderaan.
+
+---
+
 ## 2026-10-02 (afwijkende openingstijden) — Gerard (Claude Code, cloud)
 
 - De site is live. Op Google stond dat de winkel vandaag eerder dicht is, op de

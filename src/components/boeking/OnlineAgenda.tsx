@@ -21,6 +21,8 @@
 import { KnopLink } from '@/components/Knop'
 import { BEDRIJF } from '@/content/bedrijf'
 
+import { AgendaHerinnering } from './AgendaStappen'
+
 /**
  * Een poging om de agenda in het Nederlands te krijgen.
  *
@@ -60,6 +62,11 @@ export function OnlineAgenda() {
         // hoogte, met een eigen schuifbalk als het niet past.
         className="block h-[44rem] w-full rounded-groot border border-inkt-rand bg-white md:h-[48rem]"
       />
+
+      {/* De laatste knop in de agenda wordt makkelijk gemist; zie AgendaStappen.tsx. */}
+      <div className="mt-5">
+        <AgendaHerinnering />
+      </div>
 
       {/*
         De uitweg. Bewust een echte knop en geen klein linkje: blijft het vak om
