@@ -1026,6 +1026,17 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-06 (nabestellen in het eerste scherm) — Gerard (Claude Code, cloud)
+
+- Gerard miste een snelkoppeling: het kader "Al lensklant?" staat ver onderaan,
+  en nabestellen komt vaak voor. Nu staat er een knop "Lenzen nabestellen"
+  bovenaan de homepage, direct onder de regel open/gesloten, ook op een
+  telefoon. Omlijnd, zodat "Afspraak maken" de opvallendste knop blijft.
+- Nagemeten: op 390 en 1440 pixels breed in het eerste scherm, niet onder de
+  vaste balk, en de klik gaat naar `/lenzen-nabestellen/`.
+
+---
+
 ## 2026-10-06 (doosjes van 6) — Gerard (Claude Code, cloud)
 
 - Tweewekelijkse lenzen gaan per doosje van 6, net als maandlenzen. De

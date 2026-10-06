@@ -214,6 +214,21 @@ export function Hero({ kop, inleiding, uitzonderingen }: Props) {
             */}
             <OpeningsStatus maat="hero" uitzonderingen={uitzonderingen} />
           </div>
+
+          {/*
+            Nabestellen komt vaak voor, en wie al lenzen bij ons draagt moet
+            daar niet eerst voor door het aanbod hoeven scrollen. Ook op een
+            telefoon, want de vaste balk onderin heeft er geen plek voor.
+            Omlijnd, zodat "Afspraak maken" de knop blijft die het meest opvalt.
+          */}
+          <div
+            className="hero-in mt-6"
+            style={{ animationDelay: `${540 + woorden.length * 85}ms` }}
+          >
+            <KnopLink href="/lenzen-nabestellen/" uiterlijk="omlijnd">
+              Lenzen nabestellen
+            </KnopLink>
+          </div>
         </div>
       </div>
 
