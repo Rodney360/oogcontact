@@ -1038,6 +1038,8 @@ toestellen zag het er goed uit, op de kleine niet.
 - Op verzoek van Gerard erbij: tweewekelijkse lenzen (in doosjes, aantal per
   doosje nog onbekend), harde lenzen (per lens) en een geboortedatum die niet
   verplicht is, net als het telefoonnummer.
+- Op de pagina staat nu ook dat Gerard en Gerda een bericht sturen zodra de
+  lenzen binnen zijn (via WhatsApp of e-mail, hoe de klant besteld heeft).
 - **Nog open:** de aannames in `docs/open-punten.md` §1.2, en de uitwerking
   van de maandlenzen en de tweewekelijkse lenzen.
 

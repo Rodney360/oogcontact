@@ -68,10 +68,18 @@ export function NabestelFormulier() {
     }
     const bericht = nabestelBericht(b)
     setGeopend(kanaal)
-    window.location.href =
-      kanaal === 'whatsapp'
-        ? whatsappLink(bericht)
-        : `mailto:${BEDRIJF.email}?subject=${encodeURIComponent(NABESTEL_ONDERWERP)}&body=${encodeURIComponent(bericht)}`
+    if (kanaal === 'mail') {
+      // Een mailto-link verlaat de pagina niet; het mailprogramma gaat ernaast open.
+      window.location.href = `mailto:${BEDRIJF.email}?subject=${encodeURIComponent(NABESTEL_ONDERWERP)}&body=${encodeURIComponent(bericht)}`
+      return
+    }
+    // WhatsApp in een nieuw tabblad. In hetzelfde tabblad zou op een laptop deze
+    // pagina verdwijnen, en daarmee de melding dat je nog op verzenden moet
+    // drukken. Op een telefoon gaat gewoon de app open. Houdt de browser het
+    // nieuwe tabblad tegen, dan toch maar in dit tabblad.
+    const venster = window.open(whatsappLink(bericht), '_blank')
+    if (venster) venster.opener = null
+    else window.location.href = whatsappLink(bericht)
   }
 
   const regel = b.soort ? REGELS[b.soort] : null
@@ -200,7 +208,8 @@ export function NabestelFormulier() {
         <p role="status" className="mt-10 rounded-groot border-2 border-messing p-5 text-basis text-tekst-licht">
           <span className="font-semibold text-messing">Bijna klaar.</span>{' '}
           {geopend === 'whatsapp' ? 'WhatsApp' : 'Je e-mail'} gaat open met je bestelling erin. Druk daar nog
-          op verzenden: pas dan komt hij bij ons binnen.
+          op verzenden: pas dan hebben we hem. Zodra je lenzen bij ons binnen zijn, laten we het je weten
+          via {geopend === 'whatsapp' ? 'WhatsApp' : 'e-mail'}.
         </p>
       )}
 
@@ -214,8 +223,8 @@ export function NabestelFormulier() {
         </Knop>
       </div>
       <p className="mt-4 text-bijschrift text-tekst-licht-zacht">
-        Je bestelling gaat als bericht naar ons, vanuit je eigen WhatsApp of e-mail. Via deze website
-        wordt niets opgeslagen. Velden met een <span aria-hidden="true">*</span>
+        Je bestelling gaat als bericht naar ons, vanuit je eigen WhatsApp of e-mail. Zodra je lenzen bij
+        ons binnen zijn, laten we het je weten. Via deze website wordt niets opgeslagen. Velden met een <span aria-hidden="true">*</span>
         <span className="alleen-voor-schermlezers">sterretje</span> zijn verplicht.
       </p>
     </form>
