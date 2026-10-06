@@ -65,11 +65,8 @@ vroeg, met deze aannames:
 - *Per oog.* Het aantal geldt per oog ("90 daglenzen per oog"), met een keuze
   voor beide ogen, alleen links of alleen rechts. Klopt dat met hoe jullie
   bestellen?
-- *Maandlenzen.* Nu gewoon "aantal doosjes van 6". Gerard: "dit laatste kunnen
-  we later nog uitwerken." TODO: hoe precies.
-- *Tweewekelijkse lenzen.* Nu "aantal doosjes", zonder getal erbij: niet bekend
-  hoeveel er in een doosje zitten. TODO: navragen bij Gerard en Gerda, en dan
-  in `REGELS` zetten zoals bij de maandlenzen.
+- ~~*Maandlenzen en tweewekelijkse lenzen.*~~ Afgerond: allebei per doosje van
+  6. Gerard: "De uitzonderingen laten we maar achterwege."
 - *Harde lenzen.* Per lens, beginnend bij 1.
 - *Lenzenvloeistof* wordt bij beide soorten gevraagd, zoals gevraagd. Bij
   daglenzen is dat meestal niet nodig; de vraag kan daar ook weg.

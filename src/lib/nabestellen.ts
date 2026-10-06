@@ -22,7 +22,7 @@ export type Bestelling = {
   geboortedatum: string
   soort: Soort | ''
   ogen: Ogen
-  /** Per oog. Bij daglenzen in stuks, bij harde lenzen in lenzen, anders in doosjes. */
+  /** Per oog. Bij daglenzen in stuks, bij harde lenzen in lenzen, anders in doosjes van 6. */
   aantal: number
   vloeistof: 'ja' | 'nee' | ''
   opmerking: string
@@ -31,13 +31,12 @@ export type Bestelling = {
 /**
  * Hoe er besteld wordt, per soort lens.
  *
- * Daglenzen gaan per 30 stuks: dat is de kleinste hoeveelheid. Maandlenzen
- * alleen per doosje van 6. Dat laatste wordt later nog verder uitgewerkt
- * (Gerard, 6 oktober 2026); zie docs/open-punten.md.
+ * Daglenzen gaan per 30 stuks: dat is de kleinste hoeveelheid. Tweewekelijkse
+ * lenzen en maandlenzen per doosje van 6. Harde lenzen per lens.
  *
- * Bij tweewekelijkse lenzen is niet bekend hoeveel er in een doosje zitten, dus
- * daar staat alleen "doosjes", zonder een getal dat we zelf verzonnen hebben.
- * Harde lenzen worden per lens besteld.
+ * Er bestaan uitzonderingen op die doosjes, maar die laten we bewust buiten
+ * het formulier (Gerard, 6 oktober 2026). Wie iets anders nodig heeft, zet het
+ * bij de opmerking.
  */
 export const REGELS: Record<Soort, { stap: number; eenheid: (n: number) => string; uitleg: string }> = {
   dag: {
@@ -47,8 +46,8 @@ export const REGELS: Record<Soort, { stap: number; eenheid: (n: number) => strin
   },
   tweeweeks: {
     stap: 1,
-    eenheid: (n) => (n === 1 ? '1 doosje' : `${n} doosjes`),
-    uitleg: 'Geef aan hoeveel doosjes je nodig hebt.',
+    eenheid: (n) => (n === 1 ? '1 doosje van 6' : `${n} doosjes van 6`),
+    uitleg: 'Tweewekelijkse lenzen gaan per doosje van 6. Een doosje is ongeveer drie maanden per oog.',
   },
   maand: {
     stap: 1,

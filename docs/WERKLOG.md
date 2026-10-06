@@ -1026,6 +1026,14 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-06 (doosjes van 6) — Gerard (Claude Code, cloud)
+
+- Tweewekelijkse lenzen gaan per doosje van 6, net als maandlenzen. De
+  uitzonderingen laat Gerard bewust buiten het formulier. Daarmee zijn de twee
+  open punten over doosjes afgerond.
+
+---
+
 ## 2026-10-06 (lenzen nabestellen) — Gerard (Claude Code, cloud)
 
 - Nieuwe pagina `/lenzen-nabestellen/` voor bestaande lensklanten, zonder

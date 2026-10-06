@@ -69,11 +69,11 @@ test('maandlenzen voor een oog en met vloeistof', () => {
   assert.doesNotMatch(tekst, /Telefoon:/, 'geen lege regel voor een telefoon die niet is ingevuld')
 })
 
-test('tweewekelijkse lenzen in doosjes, zonder een verzonnen aantal per doosje', () => {
+test('tweewekelijkse lenzen per doosje van 6', () => {
   assert.equal(beginAantal('tweeweeks'), 1)
   const tekst = nabestelBericht({ ...goed, soort: 'tweeweeks', aantal: 2 })
   assert.match(tekst, /Soort: Tweewekelijkse lenzen/)
-  assert.match(tekst, /Aantal: 2 doosjes per oog, voor beide ogen/)
+  assert.match(tekst, /Aantal: 2 doosjes van 6 per oog, voor beide ogen/)
 })
 
 test('harde lenzen per lens', () => {
