@@ -36,6 +36,7 @@ export const NIEUW = [
   { url: '/collectie/', titel: 'Collectie & merken' },
   { url: '/privacyverklaring/', titel: 'Privacyverklaring' },
   { url: '/cookieverklaring/', titel: 'Cookieverklaring' },
+  { url: '/lenzen-nabestellen/', titel: 'Lenzen nabestellen' },
 ]
 
 /**
