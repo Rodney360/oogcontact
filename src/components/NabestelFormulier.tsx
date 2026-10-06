@@ -97,6 +97,15 @@ export function NabestelFormulier() {
           onChange={(e) => zet('telefoon', e.target.value)}
           fout={fouten.telefoon}
         />
+        <Veld
+          label="Geboortedatum"
+          uitleg="Niet verplicht. Handig om je gegevens snel te vinden."
+          type="date"
+          autoComplete="bday"
+          value={b.geboortedatum}
+          onChange={(e) => zet('geboortedatum', e.target.value)}
+          fout={fouten.geboortedatum}
+        />
       </div>
 
       <div className="mt-8">

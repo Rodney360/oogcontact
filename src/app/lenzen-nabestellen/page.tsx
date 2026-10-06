@@ -9,7 +9,7 @@ export const metadata: Metadata = paginaMeta({
   titel: 'Contactlenzen nabestellen',
   omschrijving:
     'Draag je al contactlenzen van Oogcontact bij Gerard? Bestel ze hier na, zonder ' +
-    'controleafspraak. Daglenzen of maandlenzen, met of zonder lenzenvloeistof.',
+    'controleafspraak. Daglenzen, tweewekelijkse lenzen, maandlenzen of harde lenzen.',
   pad: '/lenzen-nabestellen/',
 })
 

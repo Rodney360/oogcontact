@@ -59,7 +59,7 @@ merging" en "Require status checks to pass".
 
 ### 1.2 Zodra de site staat
 
-**Lenzen nabestellen: drie dingen om na te lopen.** Het formulier op
+**Lenzen nabestellen: een paar dingen om na te lopen.** Het formulier op
 `/lenzen-nabestellen/` staat sinds 6 oktober 2026. Gemaakt naar wat Gerard
 vroeg, met deze aannames:
 - *Per oog.* Het aantal geldt per oog ("90 daglenzen per oog"), met een keuze
@@ -67,6 +67,10 @@ vroeg, met deze aannames:
   bestellen?
 - *Maandlenzen.* Nu gewoon "aantal doosjes van 6". Gerard: "dit laatste kunnen
   we later nog uitwerken." TODO: hoe precies.
+- *Tweewekelijkse lenzen.* Nu "aantal doosjes", zonder getal erbij: niet bekend
+  hoeveel er in een doosje zitten. TODO: navragen bij Gerard en Gerda, en dan
+  in `REGELS` zetten zoals bij de maandlenzen.
+- *Harde lenzen.* Per lens, beginnend bij 1.
 - *Lenzenvloeistof* wordt bij beide soorten gevraagd, zoals gevraagd. Bij
   daglenzen is dat meestal niet nodig; de vraag kan daar ook weg.
 De regels staan in `src/lib/nabestellen.ts` (`REGELS`), met tests.

@@ -1035,8 +1035,11 @@ toestellen zag het er goed uit, op de kleine niet.
 - Het formulier verstuurt zelf niets: het opent WhatsApp of de mail met de
   bestelling erin, en de klant drukt daar op verzenden. Zo werkt het zonder
   mailsleutel (het terugbelformulier staat juist uit omdat die er niet is).
-- **Nog open:** drie aannames in `docs/open-punten.md` §1.2, en de uitwerking
-  van de maandlenzen.
+- Op verzoek van Gerard erbij: tweewekelijkse lenzen (in doosjes, aantal per
+  doosje nog onbekend), harde lenzen (per lens) en een geboortedatum die niet
+  verplicht is, net als het telefoonnummer.
+- **Nog open:** de aannames in `docs/open-punten.md` §1.2, en de uitwerking
+  van de maandlenzen en de tweewekelijkse lenzen.
 
 ---
 

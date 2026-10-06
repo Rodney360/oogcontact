@@ -68,3 +68,30 @@ test('maandlenzen voor een oog en met vloeistof', () => {
   assert.match(tekst, /Lenzenvloeistof: ja, graag/)
   assert.doesNotMatch(tekst, /Telefoon:/, 'geen lege regel voor een telefoon die niet is ingevuld')
 })
+
+test('tweewekelijkse lenzen in doosjes, zonder een verzonnen aantal per doosje', () => {
+  assert.equal(beginAantal('tweeweeks'), 1)
+  const tekst = nabestelBericht({ ...goed, soort: 'tweeweeks', aantal: 2 })
+  assert.match(tekst, /Soort: Tweewekelijkse lenzen/)
+  assert.match(tekst, /Aantal: 2 doosjes per oog, voor beide ogen/)
+})
+
+test('harde lenzen per lens', () => {
+  const tekst = nabestelBericht({ ...goed, soort: 'hard', aantal: 1, ogen: 'rechts' })
+  assert.match(tekst, /Soort: Harde lenzen/)
+  assert.match(tekst, /Aantal: 1 lens, alleen voor rechts/)
+})
+
+test('geboortedatum is niet verplicht, maar als hij er staat moet hij kloppen', () => {
+  const vandaag = new Date(Date.UTC(2026, 9, 6))
+  assert.equal(nabestelFouten(goed, vandaag).geboortedatum, undefined, 'leeg mag')
+  assert.equal(nabestelFouten({ ...goed, geboortedatum: '1970-03-15' }, vandaag).geboortedatum, undefined)
+  assert.ok(nabestelFouten({ ...goed, geboortedatum: '1970-02-31' }, vandaag).geboortedatum, 'bestaat niet')
+  assert.ok(nabestelFouten({ ...goed, geboortedatum: '2030-01-01' }, vandaag).geboortedatum, 'in de toekomst')
+})
+
+test('de geboortedatum staat op z\'n Nederlands in het bericht', () => {
+  const tekst = nabestelBericht({ ...goed, geboortedatum: '1970-03-15' })
+  assert.match(tekst, /Geboortedatum: 15-03-1970/)
+  assert.doesNotMatch(nabestelBericht(goed), /Geboortedatum:/)
+})
