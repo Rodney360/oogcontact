@@ -19,6 +19,7 @@ test('elke pagina heeft precies één h1', async ({ page }) => {
     '/', '/aanbod/', '/brillen/', '/contactlenzen/', '/zonnebrillen/',
     '/kinderbrillen/', '/collectie/', '/over-ons/',
     '/contact/', '/afspraak-maken/', '/nieuws/', '/ultiem-nauwkeurig-zicht/',
+    '/lenzen-nabestellen/',
     // Loepbrillen kunnen uit staan; zie config/schakelaars.mjs.
     ...(LOEPBRILLEN_AAN ? ['/loepbrillen/'] : []),
   ]

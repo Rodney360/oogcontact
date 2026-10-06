@@ -25,6 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/loepbrillen/': 0.8,
     '/over-ons/': 0.7,
     '/collectie/': 0.7,
+    '/lenzen-nabestellen/': 0.7,
     '/ultiem-nauwkeurig-zicht/': 0.7,
     '/nieuws/': 0.6,
   }

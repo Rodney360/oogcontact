@@ -95,6 +95,19 @@ export default async function Home() {
           </KnopLink>
         </div>
         <OpeningsStatus maat="nadruk" uitzonderingen={afwijkendeDagen} className="mt-8" />
+
+        {/* Voor wie al lenzen bij ons draagt: nabestellen zonder controleafspraak. */}
+        <div className="mt-14 flex flex-col gap-5 rounded-groot border border-inkt-rand-sterk p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
+          <div>
+            <h3 className="text-kop-4">Al lensklant?</h3>
+            <p className="mt-2 text-basis text-tekst-licht-zacht">
+              Bestel je contactlenzen na, zonder controleafspraak.
+            </p>
+          </div>
+          <KnopLink href="/lenzen-nabestellen/" uiterlijk="ivoor" formaat="groot" className="shrink-0">
+            Lenzen nabestellen
+          </KnopLink>
+        </div>
       </Sectie>
 
       {/* 9. Bezoek de winkel */}
