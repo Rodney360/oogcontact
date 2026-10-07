@@ -1026,6 +1026,17 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-07 (vrijdag 9 oktober dicht) — Gerard (Claude Code, cloud)
+
+- Vlucht geannuleerd, een dag later terug: vrijdag 9 oktober toegevoegd aan de
+  afwijkende dagen. De statusregel zegt nu "weer open op zaterdag vanaf 10.00
+  uur".
+- Eerste nieuwsbericht op de nieuwe site, luchtig van toon:
+  `/nieuws/vrijdag-9-oktober-nog-even-dicht/`. Daarmee is de nieuwspagina ook
+  niet meer leeg.
+
+---
+
 ## 2026-10-06 (nabestellen in het eerste scherm) — Gerard (Claude Code, cloud)
 
 - Gerard miste een snelkoppeling: het kader "Al lensklant?" staat ver onderaan,
