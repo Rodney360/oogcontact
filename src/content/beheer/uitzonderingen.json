@@ -27,6 +27,13 @@
       "van": "",
       "tot": "",
       "reden": "Gesloten, zaterdag tot en met donderdag"
+    },
+    {
+      "datum": "2026-10-09",
+      "gesloten": true,
+      "van": "",
+      "tot": "",
+      "reden": "Vlucht geannuleerd, een dag later terug"
     }
   ]
 }
