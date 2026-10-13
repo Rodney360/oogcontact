@@ -1026,6 +1026,14 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-13 (koffie vers gemaakt) — Gerard (Claude Code, cloud)
+
+- Op verzoek van Gerard overal "de koffie wordt vers gezet" vervangen door
+  "vers gemaakt": 9 plekken op 8 pagina's. Andere koffiezinnen ("de koffie
+  staat klaar") ongewijzigd. `docs/teksten-review.md` opnieuw gegenereerd.
+
+---
+
 ## 2026-10-07 (vrijdag 9 oktober dicht) — Gerard (Claude Code, cloud)
 
 - Vlucht geannuleerd, een dag later terug: vrijdag 9 oktober toegevoegd aan de

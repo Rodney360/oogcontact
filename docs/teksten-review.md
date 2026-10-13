@@ -110,7 +110,7 @@ Voor jou betekent dat vooral dit: je hebt te maken met een vakman en een vakvrou
 
 Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voor de deur en de bus stopt pal voor de winkel, handig als je met het openbaar vervoer komt.
 
-En verder: de koffie wordt vers gezet. Kom gerust binnen om rond te kijken.
+En verder: de koffie wordt vers gemaakt. Kom gerust binnen om rond te kijken.
 
 - **Adres** — Overwinningsplein 100, 9728 GW Groningen.
 - **Openingstijden** — Woensdag tot en met vrijdag van 9.30 tot 17.30 uur, zaterdag van 10.00 tot 16.00 uur. Maandag, dinsdag en zondag zijn we gesloten.
@@ -188,7 +188,7 @@ Loop gerust binnen om rond te kijken en monturen te passen. Voor een oogmeting i
 
 **Wij houden graag oogcontact**
 
-Wil je overleggen over wat bij je past, of meteen een oogmeting inplannen? Je bent welkom aan het Overwinningsplein 100 in Groningen, de koffie wordt vers gezet. Plan je afspraak online, of bel ons even.
+Wil je overleggen over wat bij je past, of meteen een oogmeting inplannen? Je bent welkom aan het Overwinningsplein 100 in Groningen, de koffie wordt vers gemaakt. Plan je afspraak online, of bel ons even.
 
 *Knop:* Afspraak maken
 
@@ -209,7 +209,7 @@ Wil je overleggen over wat bij je past, of meteen een oogmeting inplannen? Je be
 
 **Brillen en brillenglazen**
 
-Je bril draag je elke dag, en hij hoort bij je gezicht. Daarom nemen wij, Gerard en Gerda, rustig de tijd voor je: voor je ogen, voor je montuur en voor je glazen. In onze winkel aan het Overwinningsplein in Groningen zoeken we samen naar wat bij je ogen past en bij jou. De koffie wordt vers gezet.
+Je bril draag je elke dag, en hij hoort bij je gezicht. Daarom nemen wij, Gerard en Gerda, rustig de tijd voor je: voor je ogen, voor je montuur en voor je glazen. In onze winkel aan het Overwinningsplein in Groningen zoeken we samen naar wat bij je ogen past en bij jou. De koffie wordt vers gemaakt.
 
 #### Wat je kunt verwachten als je langskomt
 
@@ -396,7 +396,7 @@ Je vindt ons aan het Overwinningsplein 100 in Groningen. Parkeren kan direct voo
 
 We zijn open op woensdag, donderdag en vrijdag van 9.30 tot 17.30 uur en op zaterdag van 10.00 tot 16.00 uur. Op maandag, dinsdag en zondag zijn we gesloten.
 
-Naast contactlenzen kun je bij ons terecht voor een oogmeting, brillen en zonnebrillen en een kinderbril. Loop gerust binnen om te kijken en te vragen; de koffie wordt vers gezet.
+Naast contactlenzen kun je bij ons terecht voor een oogmeting, brillen en zonnebrillen en een kinderbril. Loop gerust binnen om te kijken en te vragen; de koffie wordt vers gemaakt.
 
 #### Veelgestelde vragen
 
@@ -777,7 +777,7 @@ Je bent altijd welkom om rond te kijken en de winkel te bekijken. Voor een oogme
 
 **Wij houden graag oogcontact**
 
-Wil je zelf ervaren wat meten tot op 0,01 dioptrie met je zicht doet? Plan een oogmeting bij Oogcontact bij Gerard. We nemen rustig de tijd voor je en de koffie wordt vers gezet.
+Wil je zelf ervaren wat meten tot op 0,01 dioptrie met je zicht doet? Plan een oogmeting bij Oogcontact bij Gerard. We nemen rustig de tijd voor je en de koffie wordt vers gemaakt.
 
 *Knop:* Afspraak maken
 
@@ -798,7 +798,7 @@ Wil je zelf ervaren wat meten tot op 0,01 dioptrie met je zicht doet? Plan een o
 
 **Onze collectie: monturen van kleine makers**
 
-Een bril draag je elke dag, dus die mag meer zijn dan een hulpmiddel. Daarom zoeken wij, Gerard en Gerda, onze monturen zelf uit bij kleine makers, vooral in Spanje en Zwitserland en daarnaast dichter bij huis. Je vindt bij ons een zorgvuldig gekozen collectie in plaats van een greep uit de catalogus. Kom gerust langs om te passen; de koffie wordt vers gezet.
+Een bril draag je elke dag, dus die mag meer zijn dan een hulpmiddel. Daarom zoeken wij, Gerard en Gerda, onze monturen zelf uit bij kleine makers, vooral in Spanje en Zwitserland en daarnaast dichter bij huis. Je vindt bij ons een zorgvuldig gekozen collectie in plaats van een greep uit de catalogus. Kom gerust langs om te passen; de koffie wordt vers gemaakt.
 
 #### Bewust gekozen voor kleine makers
 
@@ -896,7 +896,7 @@ Wil je zien wat er aan de wand hangt en ontdekken wat je staat? Plan een afspraa
 
 **Gerard en Gerda, jouw opticien in Groningen**
 
-Oogcontact bij Gerard is een zelfstandige opticien aan het Overwinningsplein in Groningen. Wij, Gerard en Gerda Bugel, openden de winkel op 1 mei 2021 en nemen sindsdien graag uitgebreid de tijd voor je. Met ruim 40 jaar ervaring en moderne apparatuur zoeken we samen met jou naar de oplossing die bij je ogen en bij je past. En ja, de koffie wordt vers gezet.
+Oogcontact bij Gerard is een zelfstandige opticien aan het Overwinningsplein in Groningen. Wij, Gerard en Gerda Bugel, openden de winkel op 1 mei 2021 en nemen sindsdien graag uitgebreid de tijd voor je. Met ruim 40 jaar ervaring en moderne apparatuur zoeken we samen met jou naar de oplossing die bij je ogen en bij je past. En ja, de koffie wordt vers gemaakt.
 
 #### Onze winkel aan het Overwinningsplein
 
@@ -935,7 +935,7 @@ Een afspraak maak je online via de pagina Afspraak maken, of je belt, mailt of a
 
 - **Ieder zijn vak** — De oogmeting doet Gerard: meten, nameten en uitleggen wat eruit komt. Daarna neemt Gerda het over en zoekt zij het montuur dat bij je gezicht en je dagelijks leven past. Twee paar ogen aan dezelfde tafel.
 - **Alle tijd voor je** — We plannen ruim, zodat je nooit het gevoel hebt dat je moet opschieten.
-- **Verse koffie** — De koffie wordt vers gezet. Kijken en kiezen mag gerust even duren.
+- **Verse koffie** — De koffie wordt vers gemaakt. Kijken en kiezen mag gerust even duren.
 - **Persoonlijk advies** — We adviseren op basis van jouw ogen, jouw gezicht en jouw dagelijkse bezigheden, niet op basis van wat toevallig op voorraad ligt.
 - **Samen kiezen** — Gerard en Gerda denken samen met je mee: over de vorm en de kleur die bij je passen en over de techniek achter je glazen en lenzen.
 - **Eigen werkplaats** — De glazen slijpen we zelf, in de werkplaats in de winkel. Zo bepalen we zelf hoe ze in je montuur komen te zitten, en hoeft je bril daarvoor niet de deur uit.
@@ -1061,7 +1061,7 @@ Kom je met de auto? Parkeren kan direct voor de deur. Reis je met de bus, dan st
 
 Lukt het toch niet, of wil je je afspraak verzetten? Bel of app ons even, dan zetten we er samen een nieuw moment voor in de plaats.
 
-En als je binnenstapt: de koffie wordt vers gezet. Wij, Gerard en Gerda, nemen dan rustig de tijd voor je ogen.
+En als je binnenstapt: de koffie wordt vers gemaakt. Wij, Gerard en Gerda, nemen dan rustig de tijd voor je ogen.
 
 #### De uitnodiging onderaan
 
