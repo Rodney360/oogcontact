@@ -1026,6 +1026,13 @@ toestellen zag het er goed uit, op de kleine niet.
 
 ---
 
+## 2026-10-14 (zin op afspraak maken) — Gerard (Claude Code, cloud)
+
+- Inleiding van `/afspraak-maken/`: "voor de oogmeting, voor het passen en voor
+  de koffie erbij" wordt "voor de oogmeting en voor het passen van monturen".
+
+---
+
 ## 2026-10-13 (koffie vers gemaakt) — Gerard (Claude Code, cloud)
 
 - Op verzoek van Gerard overal "de koffie wordt vers gezet" vervangen door
