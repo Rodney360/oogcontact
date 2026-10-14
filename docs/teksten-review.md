@@ -1028,7 +1028,7 @@ Een afspraak is zo gemaakt. We nemen rustig de tijd voor je, met een kop koffie 
 
 **Afspraak maken**
 
-Bij Oogcontact bij Gerard, je zelfstandige opticien in Groningen, ben je van harte welkom aan het Overwinningsplein 100. Met een afspraak weten we zeker dat we uitgebreid de tijd voor je hebben: voor de oogmeting, voor het passen en voor de koffie erbij. Hieronder plan je in een paar stappen zelf een moment dat jou uitkomt. Liever even overleggen? Bel ons of stuur ons een appje.
+Bij Oogcontact bij Gerard, je zelfstandige opticien in Groningen, ben je van harte welkom aan het Overwinningsplein 100. Met een afspraak weten we zeker dat we uitgebreid de tijd voor je hebben: voor de oogmeting en voor het passen van monturen. Hieronder plan je in een paar stappen zelf een moment dat jou uitkomt. Liever even overleggen? Bel ons of stuur ons een appje.
 
 #### Kies zelf een moment dat jou uitkomt
 
