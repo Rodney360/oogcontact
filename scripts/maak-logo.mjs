@@ -122,7 +122,22 @@ async function maakIconen(bril) {
 
   const inkt = { r: 0x11, g: 0x15, b: 0x1c, alpha: 1 }
 
-  await writeFile(path.join(APP, 'icon.png'), await vierkant(512, 0.14, inkt, IVOOR))
+  // Het tabblad van de browser. Daar is het icoon maar 16 of 32 pixels groot,
+  // en dan verdwijnen de dunne lijnen van het logo in een grijs vlekje. Voor
+  // die maten staat de bril daarom groter in het vlak en zijn de lijnen
+  // dikker; de vorm zelf blijft precies die van het logo. Een witte bril op
+  // zwart: zo springt hij er tussen de andere tabbladen het meest uit.
+  const klein = await kleineIconen(bril, { r: 0, g: 0, b: 0, alpha: 1 }, '#FFFFFF')
+  await writeFile(
+    path.join(APP, 'favicon.ico'),
+    naarIco([await klein(16, 1.3, 0.03), await klein(32, 2.2, 0.05), await klein(48, 2.8, 0.06)]),
+  )
+  // Wordt ook vooral klein getoond (tabblad, zoekresultaten van Google), dus
+  // dezelfde stevige versie. Google wil een veelvoud van 48 pixels.
+  await writeFile(path.join(APP, 'icon.png'), await klein(192, 13, 0.05))
+
+  // Het beginscherm van de telefoon toont het icoon groot genoeg voor de
+  // dunne lijnen van het logo.
   await writeFile(path.join(APP, 'apple-icon.png'), await vierkant(180, 0.13, inkt, IVOOR))
   await writeFile(path.join(UIT, 'icoon-192.png'), await vierkant(192, 0.14, inkt, IVOOR))
   await writeFile(path.join(UIT, 'icoon-512.png'), await vierkant(512, 0.14, inkt, IVOOR))
@@ -131,6 +146,99 @@ async function maakIconen(bril) {
 
   // Het losse merkteken zonder achtergrond, voor gebruik in de site zelf.
   await writeFile(path.join(UIT, 'brilvorm-licht.svg'), svg)
+}
+
+/**
+ * Geeft een functie terug die de brilvorm tekent voor kleine maten: zo breed
+ * als het vlak toelaat, met lijnen van een vaste dikte in pixels.
+ *
+ * Dikker maken gaat door de vorm op groot formaat aan alle kanten even veel
+ * te laten uitdijen (het "dilate" van sharp) en hem pas daarna te verkleinen.
+ * Rondingen, de brug en het open rechterglas (de C van Oogcontact) blijven zo
+ * op hun plek.
+ */
+async function kleineIconen(bril, achtergrond, kleur) {
+  const stap = async (invoer, bewerk) => bewerk(sharp(invoer)).png().toBuffer()
+
+  // Sharp ziet zwart als de vorm en wit als de achtergrond, dus zwart op wit.
+  let vorm = await stap(Buffer.from(svgBestand({ ...bril, kleur: '#000000', titel: '' })), (s) =>
+    s.resize({ width: 2048 }).flatten({ background: '#ffffff' }))
+  vorm = await stap(vorm, (s) => s.greyscale().threshold(128))
+  vorm = await stap(vorm, (s) => s.trim({ background: '#ffffff', threshold: 10 }))
+  const { width: breedte } = await sharp(vorm).metadata()
+
+  // Hoe dik de lijn nu is: tel de zwarte pixels bovenin het linkerglas, recht
+  // boven het midden ervan.
+  const { data } = await sharp(vorm).greyscale().raw().toBuffer({ resolveWithObject: true })
+  const x = Math.round(breedte * 0.27)
+  let y = 0
+  while (data[y * breedte + x] >= 128) y++
+  let lijn = 0
+  while (data[(y + lijn) * breedte + x] < 128) lijn++
+
+  return async function (formaat, lijnPx, marge) {
+    const inhoud = Math.round(formaat * (1 - marge * 2))
+    const erbij = Math.max(0, Math.round((lijnPx * (breedte / inhoud) - lijn) / 2))
+
+    let masker = vorm
+    if (erbij > 0) {
+      masker = await stap(masker, (s) =>
+        s.extend({ top: erbij, bottom: erbij, left: erbij, right: erbij, background: '#ffffff' }))
+      masker = await stap(masker, (s) => s.dilate(erbij))
+    }
+    const { data: dekking, info } = await sharp(masker)
+      .greyscale()
+      .negate()
+      .resize({ width: inhoud, height: inhoud, fit: 'inside', kernel: 'lanczos3' })
+      .raw()
+      .toBuffer({ resolveWithObject: true })
+
+    const kleurlaag = await sharp({
+      create: { width: info.width, height: info.height, channels: 3, background: kleur },
+    })
+      .joinChannel(dekking, { raw: { width: info.width, height: info.height, channels: 1 } })
+      .png()
+      .toBuffer()
+
+    return sharp({ create: { width: formaat, height: formaat, channels: 4, background: achtergrond } })
+      .composite([{
+        input: kleurlaag,
+        left: Math.round((formaat - info.width) / 2),
+        top: Math.round((formaat - info.height) / 2),
+      }])
+      .png()
+      .toBuffer()
+  }
+}
+
+/**
+ * Zet een paar PNG's samen in één .ico-bestand. Sharp kan dat niet zelf, maar
+ * het formaat is eenvoudig: een kopje, per afbeelding een regel met maat en
+ * plek, en daarna de PNG's achter elkaar. Elke browser van na 2010 leest dit.
+ */
+function naarIco(pngs) {
+  const kop = Buffer.alloc(6)
+  kop.writeUInt16LE(0, 0) // gereserveerd
+  kop.writeUInt16LE(1, 2) // 1 = icoon
+  kop.writeUInt16LE(pngs.length, 4)
+
+  let plek = 6 + 16 * pngs.length
+  const regels = pngs.map((png) => {
+    const formaat = png.readUInt32BE(16) // breedte uit het IHDR-blok van de PNG
+    const regel = Buffer.alloc(16)
+    regel.writeUInt8(formaat >= 256 ? 0 : formaat, 0)
+    regel.writeUInt8(formaat >= 256 ? 0 : formaat, 1)
+    regel.writeUInt8(0, 2) // geen palet
+    regel.writeUInt8(0, 3)
+    regel.writeUInt16LE(1, 4) // vlakken
+    regel.writeUInt16LE(32, 6) // bits per pixel
+    regel.writeUInt32LE(png.length, 8)
+    regel.writeUInt32LE(plek, 12)
+    plek += png.length
+    return regel
+  })
+
+  return Buffer.concat([kop, ...regels, ...pngs])
 }
 
 main().catch((err) => { console.error('[logo] mislukt:', err); process.exitCode = 1 })
