@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { Beeld } from '@/components/Beeld'
+import { WisselBeeld } from '@/components/WisselBeeld'
 import { KleurKnop } from '@/components/KleurKnop'
 import { Sectie, SectieKop, Leeskolom, Oproep } from '@/components/Sectie'
 import { Kruimelpad } from '@/components/InhoudsPagina'
@@ -60,9 +61,13 @@ export default function OverOns() {
         <div className="mt-6 grid items-end gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <SectieKop niveau={1} bovenkop="Over ons" kop={T.h1} inleiding={T.inleiding} />
           <Verschijnt richting="rechts" vertraging={0.1}>
-            <div className="overflow-hidden rounded-groot border border-inkt-rand">
-              <Beeld slot="gerard-en-gerda" sizes="(min-width: 1024px) 45vw, 100vw" prioriteit vullend />
-            </div>
+            {/* De tekening; met de muis erop (of een tik) de foto. */}
+            <WisselBeeld
+              boven="gerard-en-gerda-tekening"
+              onder="gerard-en-gerda"
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              prioriteit
+            />
           </Verschijnt>
         </div>
       </Sectie>

@@ -13,6 +13,20 @@
     "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoUAAsAPu1iqU2ppaOiMAgBMB2JaQAD5XH2/7CSSeyMdYb0AAD+ifplGuY2M6ksqyZPWFNKWMiiH3JT5T7jcdhG9H/IoyDqv0ctNIusCUKQUahCAAwZnw1Lv9V2d6/F5g/hrY4Afroiz7jPxTdRsVSGbAxg9G+AAAA=",
     "bron": "2025-01/cropped-James-Dean.png"
   },
+  "gerard-en-gerda-tekening": {
+    "alt": "Getekende illustratie van Gerard en Gerda, allebei met een zonnebril op, lachend naast elkaar.",
+    "breedte": 1280,
+    "hoogte": 853,
+    "breedtes": [
+      400,
+      640,
+      900,
+      1280
+    ],
+    "merk": "f632c646",
+    "blur": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACsLwAVfM1YFJCFuht0zmAAAP7kQ2J+Jwjp/czj7FE5zjrbG3ivrGPc30TwiwS/sHk/GUxK9E5FzldpPdvmdtBFehBGM5xxS4SLPgvvJGLYe5/4ohFzmXVXrGFx2JKL1jZLpu2hvr0GZrqd6aJAH8UqfsSt+AqAAA==",
+    "bron": "Vrolijke Geometrische Selfie Samen.png"
+  },
   "gerard-en-gerda": {
     "alt": "Gerard en Gerda samen in de winkel, lachend naar elkaar.",
     "breedte": 1280,
