@@ -64,7 +64,7 @@ export default function OverOns() {
             {/* De tekening; met de muis erop (of een tik) de foto. */}
             <WisselBeeld
               boven="gerard-en-gerda-tekening"
-              onder="gerard-en-gerda"
+              onder="gerard-en-gerda-brug"
               sizes="(min-width: 1024px) 45vw, 100vw"
               prioriteit
             />
