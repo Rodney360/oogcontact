@@ -227,7 +227,7 @@ We werken met moderne apparatuur en meten in honderdsten van een dioptrie, in pl
 
 Onze medische achtergrond helpt daarbij. Oogcontact bij Gerard heeft ruim veertig jaar ervaring in de optiek, waarvan vijftien jaar bij OMC-Hanzekliniek, het huidige Eyescan. Daar leerden we elkaar als collega's kennen.
 
-Daarna zoeken we samen een montuur. Is de keuze gemaakt, dan meten we de glazen in met onze Visioffice, zodat ze precies op de juiste plek in het montuur komen te staan. Bij het afhalen stellen we je bril nog een keer goed af, en ook later kun je bij ons terecht om je bril te laten bijstellen..
+Daarna zoeken we samen een montuur. Is de keuze gemaakt, dan meten we de glazen in met onze Visioffice, zodat ze precies op de juiste plek in het montuur komen te staan. Bij het afhalen stellen we je bril nog een keer goed af, en ook later kun je bij ons terecht om je bril te laten bijstellen.
 
 #### Wat we meten tijdens een oogmeting
 

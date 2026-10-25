@@ -8,6 +8,18 @@ Nieuwste bovenaan.
 
 ---
 
+## 2026-10-25 (tekening op Over ons) — Gerard (Claude Code, cloud)
+
+- Gerard uploadde een getekende illustratie van hen samen (twee keer: als JPG
+  en als PNG, PR #37). De PNG staat nu bovenaan `/over-ons/`; met de muis erop,
+  een tik op de telefoon of de tabtoets verschijnt de foto die er stond.
+- Nieuw onderdeel `src/components/WisselBeeld.tsx`, alleen `opacity`, en een
+  nieuwe plek `gerard-en-gerda-tekening` in `config/beeld.mjs`. De foto op de
+  homepage is ongewijzigd.
+- **Nog open:** PR #37 en de branch met de JPG (`gbugel-patch-1`) kunnen dicht.
+
+---
+
 ## 2026-09-16 — Dennis (Claude Code, cloud)
 
 De hele site opnieuw opgebouwd, vanaf niets, als vervanging van WordPress.

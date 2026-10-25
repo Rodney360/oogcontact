@@ -39,6 +39,15 @@ export const BEELDEN = {
   },
 
   // --- Home: het verhaal van Gerard en Gerda ---------------------------
+  // Bovenaan Over ons: de getekende versie. Met de muis erop (of een tik op
+  // een telefoon) komt de foto hieronder, 'gerard-en-gerda', tevoorschijn.
+  'gerard-en-gerda-tekening': {
+    bron: 'Vrolijke Geometrische Selfie Samen.png',
+    verhouding: LIGGEND,
+    zwaartepunt: 'north',
+    alt: 'Getekende illustratie van Gerard en Gerda, allebei met een zonnebril op, lachend naast elkaar.',
+    breedtes: MIDDEN,
+  },
   'gerard-en-gerda': {
     bron: '2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1017-scaled.jpg',
     verhouding: LIGGEND,
