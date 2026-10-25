@@ -27,6 +27,20 @@
     "blur": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACsLwAVfM1YFJCFuht0zmAAAP7kQ2J+Jwjp/czj7FE5zjrbG3ivrGPc30TwiwS/sHk/GUxK9E5FzldpPdvmdtBFehBGM5xxS4SLPgvvJGLYe5/4ohFzmXVXrGFx2JKL1jZLpu2hvr0GZrqd6aJAH8UqfsSt+AqAAA==",
     "bron": "Vrolijke Geometrische Selfie Samen.png"
   },
+  "gerard-en-gerda-brug": {
+    "alt": "Gerard en Gerda op een brug boven een rivier, allebei met een zonnebril op, lachend in de camera.",
+    "breedte": 1280,
+    "hoogte": 853,
+    "breedtes": [
+      400,
+      640,
+      900,
+      1280
+    ],
+    "merk": "5bcd2a5e",
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwAwCdASoUAA0APu1iqk2ppaQiMAgBMB2JZAC+SCHZwdA1LuqCp4oAAP7vv0vSiZbMbLOth0T9OYG8o2CvcqMB/pnS7mwKkCzSfFea9rqsYLDEvcXPonNDUhZMl6Vvl+WnSm61DsMWTkRa56MmRkCOqo//yekACp6PotanvYL5HpqQIAA=",
+    "bron": "Ger en Geer op de brug.JPG"
+  },
   "gerard-en-gerda": {
     "alt": "Gerard en Gerda samen in de winkel, lachend naar elkaar.",
     "breedte": 1280,

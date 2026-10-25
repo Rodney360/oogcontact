@@ -40,12 +40,21 @@ export const BEELDEN = {
 
   // --- Home: het verhaal van Gerard en Gerda ---------------------------
   // Bovenaan Over ons: de getekende versie. Met de muis erop (of een tik op
-  // een telefoon) komt de foto hieronder, 'gerard-en-gerda', tevoorschijn.
+  // een telefoon) komt de foto tevoorschijn waar hij van gemaakt is,
+  // 'gerard-en-gerda-brug'.
   'gerard-en-gerda-tekening': {
     bron: 'Vrolijke Geometrische Selfie Samen.png',
     verhouding: LIGGEND,
     zwaartepunt: 'north',
     alt: 'Getekende illustratie van Gerard en Gerda, allebei met een zonnebril op, lachend naast elkaar.',
+    breedtes: MIDDEN,
+  },
+  // De foto waar de tekening van gemaakt is; verschijnt achter de tekening.
+  'gerard-en-gerda-brug': {
+    bron: 'Ger en Geer op de brug.JPG',
+    verhouding: LIGGEND,
+    zwaartepunt: 'attention',
+    alt: 'Gerard en Gerda op een brug boven een rivier, allebei met een zonnebril op, lachend in de camera.',
     breedtes: MIDDEN,
   },
   'gerard-en-gerda': {

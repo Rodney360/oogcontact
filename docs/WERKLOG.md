@@ -8,6 +8,16 @@ Nieuwste bovenaan.
 
 ---
 
+## 2026-10-25 (de brugfoto achter de tekening) — Gerard (Claude Code, cloud)
+
+- Achter de tekening op `/over-ons/` staat nu de foto waar hij van gemaakt is:
+  "Ger en Geer op de brug" (nieuwe plek `gerard-en-gerda-brug`). De winkelfoto
+  blijft op de homepage.
+- **Nog open:** de upload-branches `gbugel-patch-1`, `-2` en `-3` kunnen weg;
+  dat kan alleen Gerard (via GitHub → Branches → prullenbak).
+
+---
+
 ## 2026-10-25 (tekening op Over ons) — Gerard (Claude Code, cloud)
 
 - Gerard uploadde een getekende illustratie van hen samen (twee keer: als JPG
