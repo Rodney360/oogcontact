@@ -78,10 +78,10 @@ export const BEELDEN = {
     stijl: 'warm',
   },
   'gerda-portret': {
-    bron: 'Ger close up refr.ruimte.jpg',
+    bron: 'Gerda close up refr.ruimte nw.jpg',
     verhouding: PORTRET,
-    zwaartepunt: 'attention',
-    alt: 'Portret van Gerda met bril, lachend in de meetruimte.',
+    zwaartepunt: 'north',
+    alt: 'Portret van Gerda met bril, grijze trui en witte kraag, zittend en lachend in de meetruimte.',
     breedtes: MIDDEN,
     stijl: 'warm',
   },
