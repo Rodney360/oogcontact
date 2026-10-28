@@ -8,6 +8,17 @@ Nieuwste bovenaan.
 
 ---
 
+## 2026-10-28 (nieuw portret Gerda) — Gerard (Claude Code, cloud)
+
+- Het portret van Gerda op `/over-ons/` is vervangen door een nieuwe foto in de
+  meetruimte (grijze trui, witte kraag). Het zwart-wit dat met de muis in kleur
+  overgaat, werkt zoals bij het oude portret. Bovenkant vast bij het bijsnijden.
+- Gerards upload stond in de hoofdmap van de repo (branch `gbugel-patch-4`); het
+  bestand staat nu als `assets-new/Gerda close up refr.ruimte nw.jpg`.
+- **Nog open:** upload-branches `gbugel-patch-1` t/m `-4` kunnen weg.
+
+---
+
 ## 2026-10-25 (de brugfoto achter de tekening) — Gerard (Claude Code, cloud)
 
 - Achter de tekening op `/over-ons/` staat nu de foto waar hij van gemaakt is:
