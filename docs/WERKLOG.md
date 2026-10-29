@@ -8,6 +8,16 @@ Nieuwste bovenaan.
 
 ---
 
+## 2026-10-29 (weer een nieuw portret Gerda) — Gerard (Claude Code, cloud)
+
+- Het portret van Gerda opnieuw vervangen, nu door een foto in de okergele
+  coltrui (`assets-new/20261029_134907114_iOS.jpg`). Dezelfde plek
+  `gerda-portret`, dus hij staat meteen op de homepage én op Over ons, met het
+  zwart-wit dat bij een klik of de muis in kleur overgaat.
+- **Nog open:** upload-branches `gbugel-patch-1` t/m `-5` kunnen weg.
+
+---
+
 ## 2026-10-28 (nieuw portret Gerda) — Gerard (Claude Code, cloud)
 
 - Het portret van Gerda op `/over-ons/` is vervangen door een nieuwe foto in de
