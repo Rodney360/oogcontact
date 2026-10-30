@@ -70,10 +70,10 @@ export const BEELDEN = {
   // niet in de foto: de bestanden zijn kleur, en een filter maakt er grijs van.
   // Zo kan het ook weer terug met een enkele regel.
   'gerard-portret': {
-    bron: '2024-02/20240212-DSC06242-scaled.jpg',
+    bron: '20261030_122653454_iOS.jpg',
     verhouding: PORTRET,
-    zwaartepunt: 'attention',
-    alt: 'Portret van Gerard met bril en zwarte coltrui, armen over elkaar, voor de monturenwand in de winkel.',
+    zwaartepunt: 'north',
+    alt: 'Portret van Gerard met bril en een donker overhemd, glimlachend in de winkel.',
     breedtes: MIDDEN,
     stijl: 'warm',
   },
