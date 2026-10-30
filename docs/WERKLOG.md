@@ -8,6 +8,15 @@ Nieuwste bovenaan.
 
 ---
 
+## 2026-10-30 (nieuw portret Gerard) — Gerard (Claude Code, cloud)
+
+- Het portret van Gerard (was: zwarte coltrui, armen over elkaar) vervangen
+  door een nieuwe close-up in de winkel (`assets-new/20261030_122653454_iOS.jpg`).
+  Plek `gerard-portret`, dus homepage én Over ons, met zwart-wit naar kleur.
+- **Nog open:** upload-branches `gbugel-patch-1` t/m `-6` kunnen weg.
+
+---
+
 ## 2026-10-29 (weer een nieuw portret Gerda) — Gerard (Claude Code, cloud)
 
 - Het portret van Gerda opnieuw vervangen, nu door een foto in de okergele
