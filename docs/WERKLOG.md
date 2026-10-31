@@ -8,6 +8,14 @@ Nieuwste bovenaan.
 
 ---
 
+## 2026-10-31 (woensdag 4 november tot 17:00) — Gerard (Claude Code, cloud)
+
+- Eenmalig: woensdag 4 november 2026 open van 9:30 tot 17:00 in plaats van
+  17:30. Toegevoegd aan de afwijkende dagen; de statusregel zegt die dag
+  "Nu geopend · tot 17.00 uur".
+
+---
+
 ## 2026-10-30 (nieuw portret Gerard) — Gerard (Claude Code, cloud)
 
 - Het portret van Gerard (was: zwarte coltrui, armen over elkaar) vervangen

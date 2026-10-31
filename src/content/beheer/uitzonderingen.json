@@ -34,6 +34,13 @@
       "van": "",
       "tot": "",
       "reden": "Vlucht geannuleerd, een dag later terug"
+    },
+    {
+      "datum": "2026-11-04",
+      "gesloten": false,
+      "van": "9:30",
+      "tot": "17:00",
+      "reden": "Eenmalig om 17:00 dicht"
     }
   ]
 }
