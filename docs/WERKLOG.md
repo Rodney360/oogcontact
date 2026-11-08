@@ -8,6 +8,14 @@ Nieuwste bovenaan.
 
 ---
 
+## 2026-11-08 (later) · Claude (met Gerard)
+
+- Homepage: de losse portretten van Gerard en Gerda zijn weg bij het verhaal;
+  die staan alleen nog op Over ons. Het geschilderde portret staat er nu
+  alleen, onbijgesneden.
+- Gerepareerd: in `config/beeld.mjs` stond bij die tekening nog een oude regel
+  `stijl: 'warm'` die `'neutraal'` overschreef; die is weg.
+
 ## 2026-11-08 · Claude (met Gerard)
 
 - Homepage, stukje "Het verhaal van Gerard en Gerda": de grote foto boven de

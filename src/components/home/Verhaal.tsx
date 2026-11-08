@@ -4,7 +4,6 @@
  */
 
 import { Beeld } from '@/components/Beeld'
-import { KleurKnop } from '@/components/KleurKnop'
 import { KnopLink } from '@/components/Knop'
 import { Verschijnt } from '@/components/Beweging'
 import { Sectie } from '@/components/Sectie'
@@ -26,16 +25,9 @@ export function Verhaal({ sectie }: { sectie: TekstSectie }) {
     <Sectie licht>
       <div className="grid items-start gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
         <Verschijnt richting="links">
-          <div className="grid gap-5 sm:grid-cols-2 lg:sticky lg:top-28">
-            <div className="overflow-hidden rounded-groot border border-ivoor-rand sm:col-span-2">
-              <Beeld slot="gerard-en-gerda" sizes="(min-width: 1024px) 45vw, 100vw" vullend />
-            </div>
-            <KleurKnop wie="Gerard" className="rounded-kaart border border-ivoor-rand">
-              <Beeld slot="gerard-portret" sizes="(min-width: 1024px) 22vw, 50vw" vullend />
-            </KleurKnop>
-            <KleurKnop wie="Gerda" className="rounded-kaart border border-ivoor-rand">
-              <Beeld slot="gerda-portret" sizes="(min-width: 1024px) 22vw, 50vw" vullend />
-            </KleurKnop>
+          {/* Alleen het geschilderde portret; de losse portretten staan op Over ons. */}
+          <div className="overflow-hidden rounded-groot border border-ivoor-rand lg:sticky lg:top-28">
+            <Beeld slot="gerard-en-gerda" sizes="(min-width: 1024px) 45vw, 100vw" vullend />
           </div>
         </Verschijnt>
 
