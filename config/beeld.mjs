@@ -57,18 +57,17 @@ export const BEELDEN = {
     alt: 'Gerard en Gerda op een brug boven een rivier, allebei met een zonnebril op, lachend in de camera.',
     breedtes: MIDDEN,
   },
-  // Op de homepage, boven de twee portretten. Een geschilderde versie in
+  // Op de homepage, bij het verhaal. Een geschilderde versie in
   // waterverf; de witte rafelranden zijn er in het bestand al afgesneden.
-  // 5:4 en niet 3:2, anders valt Gerda's kin eraf.
+  // Hij staat er alleen, dus hij wordt niet bijgesneden: het hele schilderij.
   'gerard-en-gerda': {
     bron: 'Ger en Geer aquarel.jpg',
-    verhouding: [5, 4],
+    verhouding: null,
     zwaartepunt: 'north',
     alt: 'Geschilderd portret in waterverf van Gerard en Gerda, wang aan wang, allebei met een bril op en lachend.',
     breedtes: MIDDEN,
     // Het schilderij is al warm van kleur; niet nog eens opwarmen.
     stijl: 'neutraal',
-    stijl: 'warm',
   },
   // De twee portretten staan standaard in zwart-wit en springen in kleur zodra
   // je ze aanwijst of aantikt. Dat zit in de CSS (.kleurknop in globals.css),
