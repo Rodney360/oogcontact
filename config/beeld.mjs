@@ -57,12 +57,17 @@ export const BEELDEN = {
     alt: 'Gerard en Gerda op een brug boven een rivier, allebei met een zonnebril op, lachend in de camera.',
     breedtes: MIDDEN,
   },
+  // Op de homepage, boven de twee portretten. Een geschilderde versie in
+  // waterverf; de witte rafelranden zijn er in het bestand al afgesneden.
+  // 5:4 en niet 3:2, anders valt Gerda's kin eraf.
   'gerard-en-gerda': {
-    bron: '2023-02/Oogcontact__Natasja_Nienhuis_Fotografie-1017-scaled.jpg',
-    verhouding: LIGGEND,
-    zwaartepunt: 'attention',
-    alt: 'Gerard en Gerda samen in de winkel, lachend naar elkaar.',
+    bron: 'Ger en Geer aquarel.jpg',
+    verhouding: [5, 4],
+    zwaartepunt: 'north',
+    alt: 'Geschilderd portret in waterverf van Gerard en Gerda, wang aan wang, allebei met een bril op en lachend.',
     breedtes: MIDDEN,
+    // Het schilderij is al warm van kleur; niet nog eens opwarmen.
+    stijl: 'neutraal',
     stijl: 'warm',
   },
   // De twee portretten staan standaard in zwart-wit en springen in kleur zodra

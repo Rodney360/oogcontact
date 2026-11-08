@@ -8,6 +8,15 @@ Nieuwste bovenaan.
 
 ---
 
+## 2026-11-08 · Claude (met Gerard)
+
+- Homepage, stukje "Het verhaal van Gerard en Gerda": de grote foto boven de
+  twee portretten is nu het geschilderde portret in waterverf
+  (`assets-new/Ger en Geer aquarel.jpg`, witte rafelranden er al af). Uitsnede
+  5:4 zodat hij in verhouding blijft met de portretten.
+- Open: het bestand is 1010 px breed; een groter origineel geeft een scherpere
+  versie op brede schermen.
+
 ## 2026-10-31 (woensdag 4 november tot 17:00) — Gerard (Claude Code, cloud)
 
 - Eenmalig: woensdag 4 november 2026 open van 9:30 tot 17:00 in plaats van
